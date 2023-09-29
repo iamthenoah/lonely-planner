@@ -1,4 +1,4 @@
-import { Image, ImageProps, StyleSheet, View } from 'react-native'
+import { Image, StyleSheet, View } from 'react-native'
 import { Widget } from './generics/widget'
 import { Title } from './generics/title'
 import { Link } from './generics/link'

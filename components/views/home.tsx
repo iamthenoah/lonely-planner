@@ -42,7 +42,7 @@ export const Home = () => {
 			<Section>
 				<Title text="Discover" />
 				{discover.map(trip => (
-					<TripWidget {...trip} />
+					<TripWidget key={Math.random()} {...trip} />
 				))}
 			</Section>
 		</Content>
