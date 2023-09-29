@@ -23,6 +23,12 @@
 		},
 		"web": {
 			"favicon": "./assets/favicon.png"
-		}
+		},
+		"extra": {
+			"eas": {
+				"projectId": "187c6a2e-0c9a-41aa-9993-56e6b7a976c7"
+			}
+		},
+		"owner": "inoah"
 	}
 }
