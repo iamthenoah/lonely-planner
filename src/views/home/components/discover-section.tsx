@@ -1,6 +1,6 @@
 import { DiscoverWidget } from './discover-widget'
-import { Title } from '../../../components/elements/generics/title'
-import { Section } from '../../../components/layouts/section'
+import { Title } from '../../../components/title'
+import { Section } from '../../../components/layout/section'
 
 const discover = [
 	{

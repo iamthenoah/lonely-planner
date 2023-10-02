@@ -1,16 +1,17 @@
 import { PropsWithChildren, ReactNode } from 'react'
-import { StyleSheet, TouchableOpacity, View } from 'react-native'
+import { StyleSheet, TouchableOpacity, View, ViewStyle } from 'react-native'
 import { Shadow } from './shadow'
 
 export type WidgetProps = PropsWithChildren & {
 	footer?: ReactNode
 	shadow?: boolean
+	style?: ViewStyle
 	onClick?: () => void
 }
 
-export const Widget = ({ children, footer, shadow, onClick }: WidgetProps) => {
+export const Widget = ({ children, footer, shadow, style, onClick }: WidgetProps) => {
 	let content = (
-		<View style={styles.container}>
+		<View style={{ ...styles.container, ...style }}>
 			{children}
 			{footer && <View style={styles.footer}>{footer}</View>}
 		</View>

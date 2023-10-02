@@ -1,4 +1,4 @@
-import { Content } from '../../components/layouts/content'
+import { Content } from '../../components/layout/content'
 import { TripSection } from './components/trip-section'
 import { TripsSection } from './components/trips-section'
 import { DiscoverSection } from './components/discover-section'

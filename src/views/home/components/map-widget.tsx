@@ -1,8 +1,8 @@
 import { PropsWithChildren } from 'react'
 import { StyleSheet, View } from 'react-native'
 import { useNavigation } from '@react-navigation/native'
-import { Widget } from '../../../components/elements/generics/widget'
-import { Title } from '../../../components/elements/generics/title'
+import { Widget } from '../../../components/widget'
+import { Title } from '../../../components/title'
 import MapView from 'react-native-maps'
 
 export type ProgressProps = {

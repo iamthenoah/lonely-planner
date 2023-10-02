@@ -1,16 +1,13 @@
 import { PropsWithChildren } from 'react'
-import { StyleSheet, View } from 'react-native'
-import { Widget } from '../../../components/elements/generics/widget'
-import { useNavigation } from '@react-navigation/native'
-import { Link } from '../../../components/elements/generics/link'
+import { StyleSheet } from 'react-native'
+import { Widget } from '../../../components/widget'
+import { Link } from '../../../components/link'
 
-export type ProgressProps = {}
+export type TripWidgetFooterProps = {}
 
-export type TripWidgetProps = PropsWithChildren & ProgressProps
+export type TripWidgetProps = PropsWithChildren & TripWidgetFooterProps
 
-export const TripWidget = ({ ...props }: TripWidgetProps) => {
-	const navigation = useNavigation()
-
+export const TripWidget = ({}: TripWidgetProps) => {
 	return (
 		<Widget onClick={console.log} style={styles.container}>
 			<Link text="create" />

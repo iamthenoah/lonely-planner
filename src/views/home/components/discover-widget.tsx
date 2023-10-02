@@ -1,18 +1,18 @@
 import { Image, StyleSheet, View } from 'react-native'
-import { Widget } from '../../../components/elements/generics/widget'
-import { Title } from '../../../components/elements/generics/title'
-import { Link } from '../../../components/elements/generics/link'
+import { Widget } from '../../../components/widget'
+import { Title } from '../../../components/title'
+import { Link } from '../../../components/link'
 
-export type FooterProps = {
+export type DiscoverFooterProps = {
 	name: string
 	location: string
 }
 
-export type TripWidgetProps = FooterProps & {
+export type DiscoverProps = DiscoverFooterProps & {
 	image: string
 }
 
-export const DiscoverWidget = ({ image, ...props }: TripWidgetProps) => {
+export const DiscoverWidget = ({ image, ...props }: DiscoverProps) => {
 	return (
 		<View style={styles.container}>
 			<Widget footer={<Footer {...props} />}>
@@ -22,7 +22,7 @@ export const DiscoverWidget = ({ image, ...props }: TripWidgetProps) => {
 	)
 }
 
-const Footer = ({ name, location }: FooterProps) => {
+const Footer = ({ name, location }: DiscoverFooterProps) => {
 	return (
 		<View style={styles.footer}>
 			<Title text={name} />

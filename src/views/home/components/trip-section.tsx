@@ -1,6 +1,6 @@
-import { Title } from '../../../components/elements/generics/title'
+import { Title } from '../../../components/title'
 import { MapWidget } from './map-widget'
-import { Section } from '../../../components/layouts/section'
+import { Section } from '../../../components/layout/section'
 
 export const TripSection = () => {
 	return (
