@@ -1,8 +1,8 @@
-import { Title } from '../elements/generics/title'
-import { TripWidget } from '../elements/trip-widget'
-import { Content } from '../layouts/content'
-import { Section } from '../layouts/section'
-import { MapWidget } from '../elements/map-widget'
+import { Title } from '../components/elements/generics/title'
+import { TripWidget } from '../components/elements/trip-widget'
+import { Content } from '../components/layouts/content'
+import { Section } from '../components/layouts/section'
+import { MapWidget } from '../components/elements/map-widget'
 
 const discover = [
 	{
