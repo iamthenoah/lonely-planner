@@ -1,8 +1,6 @@
-import { Title } from '../components/elements/generics/title'
-import { TripWidget } from '../components/elements/trip-widget'
-import { Content } from '../components/layouts/content'
-import { Section } from '../components/layouts/section'
-import { MapWidget } from '../components/elements/map-widget'
+import { DiscoverWidget } from './discover-widget'
+import { Title } from '../../../components/elements/generics/title'
+import { Section } from '../../../components/layouts/section'
 
 const discover = [
 	{
@@ -32,19 +30,13 @@ const discover = [
 	}
 ]
 
-export const Home = () => {
+export const DiscoverSection = () => {
 	return (
-		<Content>
-			<Section>
-				<Title text="Current Trip" />
-				<MapWidget title="Day 2" />
-			</Section>
-			<Section>
-				<Title text="Discover" />
-				{discover.map(trip => (
-					<TripWidget key={Math.random()} {...trip} />
-				))}
-			</Section>
-		</Content>
+		<Section>
+			<Title text="Discover" />
+			{discover.map(trip => (
+				<DiscoverWidget key={Math.random()} {...trip} />
+			))}
+		</Section>
 	)
 }
