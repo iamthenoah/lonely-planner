@@ -1,16 +1,23 @@
 import { PropsWithChildren } from 'react'
-import { StyleSheet } from 'react-native'
+import { ImageBackground, StyleSheet, Text } from 'react-native'
+import { LinearGradient } from 'expo-linear-gradient'
 import { Widget } from '../../../components/widget'
-import { Link } from '../../../components/link'
 
-export type TripWidgetFooterProps = {}
+export type TripWidgetProps = PropsWithChildren & {
+	location: string
+	date: string
+	image: string
+}
 
-export type TripWidgetProps = PropsWithChildren & TripWidgetFooterProps
-
-export const TripWidget = ({}: TripWidgetProps) => {
+export const TripWidget = ({ location, date, image }: TripWidgetProps) => {
 	return (
-		<Widget onClick={console.log} style={styles.container}>
-			<Link text="create" />
+		<Widget onClick={console.log} style={{ marginLeft: 10 }}>
+			<ImageBackground source={{ uri: image }}>
+				<LinearGradient style={styles.container} colors={['rgba(0,0,0,0)', 'rgba(0,0,0,.5)']}>
+					<Text style={styles.location}>{location}</Text>
+					<Text style={styles.date}>{date}</Text>
+				</LinearGradient>
+			</ImageBackground>
 		</Widget>
 	)
 }
@@ -20,6 +27,17 @@ const styles = StyleSheet.create({
 		width: 100,
 		height: 100,
 		alignItems: 'center',
-		justifyContent: 'center'
+		justifyContent: 'flex-end',
+		padding: 10
+	},
+	location: {
+		fontSize: 16,
+		fontWeight: 'bold',
+		color: 'white'
+	},
+	date: {
+		fontSize: 10,
+		fontWeight: 'bold',
+		color: 'white'
 	}
 })

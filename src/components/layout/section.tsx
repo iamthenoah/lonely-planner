@@ -1,18 +1,26 @@
 import { PropsWithChildren } from 'react'
 import { StyleSheet, View, ViewProps } from 'react-native'
+import { Title } from '../title'
 
-export type SectionProps = PropsWithChildren & ViewProps
+export type SectionProps = PropsWithChildren &
+	ViewProps & {
+		name: string
+	}
 
-export const Section = ({ children, ...props }: SectionProps) => {
+export const Section = ({ name, children, ...props }: SectionProps) => {
 	return (
 		<View style={styles.container} {...props}>
-			{children}
+			<Title text={name} />
+			<View style={styles.content}>{children}</View>
 		</View>
 	)
 }
 
 const styles = StyleSheet.create({
 	container: {
-		marginVertical: 20
+		marginBottom: 25
+	},
+	content: {
+		marginTop: 10
 	}
 })

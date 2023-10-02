@@ -1,5 +1,4 @@
 import { DiscoverWidget } from './discover-widget'
-import { Title } from '../../../components/title'
 import { Section } from '../../../components/layout/section'
 
 const discover = [
@@ -32,8 +31,7 @@ const discover = [
 
 export const DiscoverSection = () => {
 	return (
-		<Section>
-			<Title text="Discover" />
+		<Section name="Discover">
 			{discover.map(trip => (
 				<DiscoverWidget key={Math.random()} {...trip} />
 			))}
