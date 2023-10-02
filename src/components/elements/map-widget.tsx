@@ -3,6 +3,7 @@ import { StyleSheet, View } from 'react-native'
 import { Widget } from './generics/widget'
 import { Title } from './generics/title'
 import MapView from 'react-native-maps'
+import { useNavigation } from '@react-navigation/native'
 
 export type ProgressProps = {
 	title: string
@@ -11,8 +12,10 @@ export type ProgressProps = {
 export type MapWidgetProps = PropsWithChildren & ProgressProps
 
 export const MapWidget = ({ ...props }: MapWidgetProps) => {
+	const navigation = useNavigation()
+
 	return (
-		<Widget footer={<Footer {...props} />} shadow>
+		<Widget footer={<Footer {...props} />} shadow onClick={() => navigation.navigate('Map')}>
 			<MapView style={styles.map} showsUserLocation />
 		</Widget>
 	)
