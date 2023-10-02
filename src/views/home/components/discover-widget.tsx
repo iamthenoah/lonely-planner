@@ -16,7 +16,7 @@ export const DiscoverWidget = ({ image, ...props }: DiscoverProps) => {
 	return (
 		<View style={styles.container}>
 			<Widget footer={<Footer {...props} />}>
-				<Image style={{ width: '100%', height: 150 }} source={{ uri: image }} />
+				<Image style={styles.image} source={{ uri: image }} />
 			</Widget>
 		</View>
 	)
@@ -34,6 +34,10 @@ const Footer = ({ name, location }: DiscoverFooterProps) => {
 const styles = StyleSheet.create({
 	container: {
 		paddingBottom: 15
+	},
+	image: {
+		width: '100%',
+		height: 150
 	},
 	footer: {
 		paddingHorizontal: 15,

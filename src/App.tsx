@@ -9,8 +9,8 @@ export default () => {
 	return (
 		<NavigationContainer>
 			<Navigator initialRouteName="Home">
-				<Screen name="Home" component={Home} options={{ headerShown: false }} />
-				<Screen name="Map" component={Map} options={{ headerShown: false }} />
+				<Screen name="/home" component={Home} options={{ headerShown: false }} />
+				<Screen name="/map" component={Map} options={{ headerShown: false }} />
 			</Navigator>
 		</NavigationContainer>
 	)
