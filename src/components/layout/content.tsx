@@ -1,15 +1,13 @@
 import { PropsWithChildren } from 'react'
-import { SafeAreaView, ScrollView, StyleSheet, View, ViewProps } from 'react-native'
+import { SafeAreaView, ScrollView, ScrollViewProps, StyleSheet } from 'react-native'
 
-export type ContentProps = PropsWithChildren & ViewProps
+export type ContentProps = PropsWithChildren & ScrollViewProps
 
 export const Content = ({ children, ...props }: ContentProps) => {
 	return (
 		<SafeAreaView style={styles.container}>
-			<ScrollView>
-				<View style={styles.content} {...props}>
-					{children}
-				</View>
+			<ScrollView style={styles.content} {...props}>
+				{children}
 			</ScrollView>
 		</SafeAreaView>
 	)
