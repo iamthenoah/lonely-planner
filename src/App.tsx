@@ -8,7 +8,7 @@ const { Screen, Navigator } = createNativeStackNavigator()
 export default () => {
 	return (
 		<NavigationContainer>
-			<Navigator initialRouteName="Home">
+			<Navigator initialRouteName="/home">
 				<Screen name="/home" component={Home} options={{ headerShown: false }} />
 				<Screen name="/map" component={Map} options={{ headerShown: false }} />
 			</Navigator>
