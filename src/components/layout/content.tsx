@@ -15,6 +15,8 @@ export const Content = ({ children, ...props }: ContentProps) => {
 
 const styles = StyleSheet.create({
 	container: {
+		borderWidth: 2,
+		borderColor: '#EDEEEF',
 		backgroundColor: 'white'
 	},
 	content: {

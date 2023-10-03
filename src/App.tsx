@@ -5,12 +5,14 @@ import { Map } from './views/map'
 
 const { Screen, Navigator } = createNativeStackNavigator()
 
+const options = { headerShown: false, gestureEnabled: true }
+
 export default () => {
 	return (
 		<NavigationContainer>
 			<Navigator initialRouteName="/home">
-				<Screen name="/home" component={Home} options={{ headerShown: false }} />
-				<Screen name="/map" component={Map} options={{ headerShown: false }} />
+				<Screen name="/home" component={Home} options={options} />
+				<Screen name="/map" component={Map} options={options} />
 			</Navigator>
 		</NavigationContainer>
 	)

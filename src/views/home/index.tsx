@@ -5,7 +5,7 @@ import { DiscoverSection } from './components/discover-section'
 
 export const Home = () => {
 	return (
-		<Content>
+		<Content scrollEnabled>
 			<CurrentTripSection />
 			<TripsSection />
 			<DiscoverSection />

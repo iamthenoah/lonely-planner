@@ -16,7 +16,18 @@ export const MapWidget = ({ ...props }: MapWidgetProps) => {
 
 	return (
 		<Widget footer={<Footer {...props} />} shadow onClick={() => navigation.navigate('/map' as never)}>
-			<MapView style={styles.map} showsUserLocation />
+			<MapView
+				style={styles.map}
+				showsUserLocation
+				followsUserLocation
+				zoomEnabled={false}
+				zoomTapEnabled={false}
+				pitchEnabled={false}
+				rotateEnabled={false}
+				scrollEnabled={false}
+				zoomControlEnabled={false}
+				scrollDuringRotateOrZoomEnabled={false}
+			/>
 		</Widget>
 	)
 }

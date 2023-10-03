@@ -1,8 +1,21 @@
-import { useNavigation } from '@react-navigation/native'
+import { StyleSheet, View } from 'react-native'
+import { MapHeader } from './components/map-header'
 import MapView from 'react-native-maps'
 
 export const Map = () => {
-	const navigation = useNavigation()
-
-	return <MapView style={{ flex: 1 }} onPress={() => navigation.navigate('/home' as never)} />
+	return (
+		<View style={styles.container}>
+			<MapHeader />
+			<MapView showsUserLocation style={styles.map} />
+		</View>
+	)
 }
+
+const styles = StyleSheet.create({
+	container: {
+		flex: 1
+	},
+	map: {
+		flex: 1
+	}
+})
