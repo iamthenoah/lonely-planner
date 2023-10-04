@@ -1,0 +1,14 @@
+{
+	"build": {
+		"production": {}
+	},
+	"submit": {
+		"production": {
+			"ios": {
+				"appleId": "greffnoah@gmail.com",
+				"appleTeamId": "R9XJ622U85",
+				"ascAppId": "6468453763"
+			}
+		}
+	}
+}
