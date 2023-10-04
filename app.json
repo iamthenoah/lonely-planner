@@ -14,7 +14,7 @@
 		"assetBundlePatterns": ["**/*"],
 		"ios": {
 			"supportsTablet": true,
-			"bundleIdentifier": "com.inoah.lonelyplanner"
+			"bundleIdentifier": "nl.hackerstore.lonelyplanner23"
 		},
 		"android": {
 			"adaptiveIcon": {
