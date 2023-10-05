@@ -22,7 +22,8 @@ const styles = StyleSheet.create({
 	shadow: {
 		position: 'absolute',
 		bottom: 0,
-		width: '90%',
+		width: '100%',
+		transform: 'scale(.9)',
 		height: 10,
 		borderRadius: 20,
 		alignSelf: 'center',
