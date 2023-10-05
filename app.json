@@ -30,6 +30,14 @@
 				"projectId": "187c6a2e-0c9a-41aa-9993-56e6b7a976c7"
 			}
 		},
-		"owner": "inoah"
+		"owner": "inoah",
+		"plugins": [
+			[
+				"expo-location",
+				{
+					"locationAlwaysAndWhenInUsePermission": "Allow $(PRODUCT_NAME) to use your location?"
+				}
+			]
+		]
 	}
 }

@@ -2,7 +2,6 @@ import { StyleSheet, TouchableOpacity, View } from 'react-native'
 import { Title } from '../../../components/title'
 import { Comment } from '../../../components/comment'
 import { Result } from '../../../types/poi'
-import { Widget } from '../../../components/widget'
 
 export type SearchResultProps = {
 	result: Result
