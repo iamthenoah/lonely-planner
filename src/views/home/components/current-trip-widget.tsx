@@ -11,7 +11,7 @@ export type ProgressProps = {
 
 export type MapWidgetProps = PropsWithChildren & ProgressProps
 
-export const MapWidget = ({ ...props }: MapWidgetProps) => {
+export const CurrentTripWidget = ({ ...props }: MapWidgetProps) => {
 	const navigation = useNavigation()
 
 	return (
