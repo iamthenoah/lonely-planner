@@ -3,10 +3,10 @@ import { StyleSheet, View } from 'react-native'
 import { MapHeader } from './components/map-header'
 import { PoiWidget } from './components/poi-widget'
 import MapView, { LatLng, MapPressEvent, Marker, Region } from 'react-native-maps'
-import { Result } from '../../types/poi'
+import { Result } from '../../../types/poi'
 import * as Location from 'expo-location'
 
-export const Map = () => {
+export const CreateTripMap = () => {
 	const [poi, setPoi] = useState<Result | null>(null)
 	const [marker, setMarker] = useState<LatLng | null>(null)
 	const [region, setRegion] = useState<Region | undefined>()

@@ -1,14 +1,14 @@
 import { useState } from 'react'
 import { ScrollView, StyleSheet, View } from 'react-native'
 import { PoiSearchResult } from '../../map/components/poi-result'
-import { SearchBar } from '../../../components/search-bar'
-import { Result } from '../../../types/poi'
-import { Info } from '../../../components/info'
-import { Widget } from '../../../components/widget'
+import { SearchBar } from '../../../../components/search-bar'
+import { Result } from '../../../../types/poi'
+import { Info } from '../../../../components/info'
+import { Widget } from '../../../../components/widget'
 import axios from 'axios'
 
 export type LocationFormProps = {
-	poi?: Result
+	poi?: Result | null
 	onLocation: (result: Result | null) => void
 }
 

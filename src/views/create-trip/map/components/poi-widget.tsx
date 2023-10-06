@@ -1,10 +1,10 @@
 import { SafeAreaView } from 'react-native-safe-area-context'
 import { StyleSheet, View } from 'react-native'
-import { Title } from '../../../components/title'
-import { Result } from '../../../types/poi'
-import { Button } from '../../../components/button'
-import { Widget } from '../../../components/widget'
-import { Comment } from '../../../components/comment'
+import { Title } from '../../../../components/title'
+import { Result } from '../../../../types/poi'
+import { Button } from '../../../../components/button'
+import { Widget } from '../../../../components/widget'
+import { Comment } from '../../../../components/comment'
 
 export type PoiWidgetProps = {
 	poi: Result

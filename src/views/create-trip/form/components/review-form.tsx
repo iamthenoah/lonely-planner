@@ -1,8 +1,8 @@
 import { StyleSheet, View } from 'react-native'
-import { Result } from '../../../types/poi'
+import { Result } from '../../../../types/poi'
 import { Dates } from './date-form'
-import { Info } from '../../../components/info'
-import { Widget } from '../../../components/widget'
+import { Info } from '../../../../components/info'
+import { Widget } from '../../../../components/widget'
 import format from 'humanize-duration'
 
 export type ReviewFormProps = {

@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react'
 import DateTimePicker, { DateTimePickerAndroid } from '@react-native-community/datetimepicker'
 import { Platform, StyleSheet, View } from 'react-native'
-import { Button } from '../../../components/button'
-import { Comment } from '../../../components/comment'
+import { Button } from '../../../../components/button'
+import { Comment } from '../../../../components/comment'
 import format from 'humanize-duration'
-import { Subtitle } from '../../../components/subtitle'
+import { Subtitle } from '../../../../components/subtitle'
 
 export type Dates = {
 	start: Date

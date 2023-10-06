@@ -1,14 +1,14 @@
 import { useState } from 'react'
 import { useNavigation } from '@react-navigation/native'
-import { Button } from '../../components/button'
+import { Button } from '../../../components/button'
 import { LocationForm } from './components/location-form'
 import { DateForm, Dates } from './components/date-form'
 import { ReviewForm } from './components/review-form'
 import { StyleSheet, View } from 'react-native'
-import { Title } from '../../components/title'
-import { Link } from '../../components/link'
-import { Result } from '../../types/poi'
-import { Subtitle } from '../../components/subtitle'
+import { Title } from '../../../components/title'
+import { Link } from '../../../components/link'
+import { Result } from '../../../types/poi'
+import { Subtitle } from '../../../components/subtitle'
 
 const buttons = [
 	['Next', 'cancel'],
@@ -18,10 +18,10 @@ const buttons = [
 
 const titles = ['Where would you like to go?', 'When and for how long?', 'Review trip information']
 
-export const CreateTrip = () => {
+export const CreateTripForm = () => {
 	const navigation = useNavigation()
 	const [form, setForm] = useState(0)
-	const [location, setLocation] = useState<Result | undefined>()
+	const [location, setLocation] = useState<Result | null>()
 	const [dates, setDates] = useState<Dates | null>(null)
 
 	const nextForm = () => {

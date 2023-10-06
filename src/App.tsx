@@ -2,9 +2,9 @@ import { useEffect } from 'react'
 import { NavigationContainer } from '@react-navigation/native'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
 import * as Location from 'expo-location'
-import { CreateTrip } from './views/create-trip'
 import { Home } from './views/home'
-import { Map } from './views/map'
+import { CreateTripForm } from './views/create-trip/form'
+import { CreateTripMap } from './views/create-trip/map'
 
 const { Screen, Navigator } = createNativeStackNavigator()
 
@@ -19,8 +19,8 @@ export default () => {
 		<NavigationContainer>
 			<Navigator initialRouteName="/home">
 				<Screen name="/home" component={Home} options={options} />
-				<Screen name="/map" component={Map} options={options} />
-				<Screen name="/trip/create" component={CreateTrip} options={options} />
+				<Screen name="/trip/create/form" component={CreateTripForm} options={options} />
+				<Screen name="/trip/create/map" component={CreateTripMap} options={options} />
 			</Navigator>
 		</NavigationContainer>
 	)
