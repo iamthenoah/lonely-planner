@@ -34,7 +34,7 @@ const trips = [
 
 export const TripsSection = () => {
 	return (
-		<Section name="Trips" action={<Link text="view all" onClick={console.log} />}>
+		<Section name="Trips" action={<Link text="view all" onPress={console.log} />}>
 			<ScrollView horizontal>
 				<CreateTripWidget />
 				{trips.map(trip => (

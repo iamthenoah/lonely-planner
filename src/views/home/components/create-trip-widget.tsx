@@ -4,7 +4,7 @@ import { Link } from '../../../components/link'
 
 export const CreateTripWidget = () => {
 	return (
-		<Widget style={styles.container} onClick={console.log}>
+		<Widget style={styles.container} onPress={console.log}>
 			<Link text="create" />
 		</Widget>
 	)

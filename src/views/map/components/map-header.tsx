@@ -2,8 +2,10 @@ import { useEffect, useState } from 'react'
 import { Content } from '../../../components/layout/content'
 import { Title } from '../../../components/title'
 import { SearchBar } from '../../../components/search-bar'
+import { Header } from '../../../components/layout/header'
 import { Result } from '../../../types/poi'
 import { PoiSearchResult } from './poi-result'
+import { IconButton } from '../../../components/icon-button'
 import * as Location from 'expo-location'
 import axios from 'axios'
 
@@ -40,10 +42,10 @@ export const MapHeader = ({ onPoi }: MapHeaderProps) => {
 
 	return (
 		<Content scrollEnabled={false}>
-			<Title text="Day 2" />
+			<Header left={<IconButton icon="cross" onPress={console.log} />} center={<Title text="Day 2" />} />
 			<SearchBar placeholder="Search Location" onSubmit={onSearchPoi} />
 			{results.map(result => (
-				<PoiSearchResult key={Math.random()} result={result} onClick={() => onPoiSelected(result)} />
+				<PoiSearchResult key={Math.random()} result={result} onPress={() => onPoiSelected(result)} />
 			))}
 		</Content>
 	)

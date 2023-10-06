@@ -18,7 +18,7 @@ export const PoiWidget = ({ poi }: PoiWidgetProps) => {
 					<Title text={poi.poi.name} />
 					<Comment text={poi.address.freeformAddress} />
 				</View>
-				<Button text="Add Location" onClick={console.log} />
+				<Button text="Add Location" onPress={console.log} />
 			</Widget>
 		</SafeAreaView>
 	)

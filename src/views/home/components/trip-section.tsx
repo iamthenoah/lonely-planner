@@ -4,7 +4,7 @@ import { Link } from '../../../components/link'
 
 export const CurrentTripSection = () => {
 	return (
-		<Section name="Current Trip" action={<Link text="view trip" onClick={console.log} />}>
+		<Section name="Current Trip" action={<Link text="view trip" onPress={console.log} />}>
 			<CurrentTripWidget title="Day 2" />
 		</Section>
 	)

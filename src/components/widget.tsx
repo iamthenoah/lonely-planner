@@ -6,10 +6,10 @@ export type WidgetProps = PropsWithChildren & {
 	footer?: ReactNode
 	shadow?: boolean
 	style?: ViewStyle
-	onClick?: () => void
+	onPress?: () => void
 }
 
-export const Widget = ({ children, footer, shadow, style, onClick }: WidgetProps) => {
+export const Widget = ({ children, footer, shadow, style, onPress }: WidgetProps) => {
 	let content = (
 		<View style={{ ...styles.container, ...style }}>
 			{children}
@@ -20,8 +20,8 @@ export const Widget = ({ children, footer, shadow, style, onClick }: WidgetProps
 	if (shadow) {
 		content = <Shadow>{content}</Shadow>
 	}
-	if (onClick) {
-		content = <TouchableOpacity onPress={onClick}>{content}</TouchableOpacity>
+	if (onPress) {
+		content = <TouchableOpacity onPress={onPress}>{content}</TouchableOpacity>
 	}
 	return content
 }

@@ -3,12 +3,12 @@ import { Shadow } from './shadow'
 
 export type ButtonProps = {
 	text: string
-	onClick: () => void
+	onPress: () => void
 	color?: string
 	shadow?: boolean
 }
 
-export const Button = ({ text, onClick, color = '#0057D9', shadow }: ButtonProps) => {
+export const Button = ({ text, onPress, color = '#0057D9', shadow }: ButtonProps) => {
 	let content = (
 		<View style={{ ...styles.container, backgroundColor: color }}>
 			<Text style={styles.text}>{text}</Text>
@@ -18,7 +18,7 @@ export const Button = ({ text, onClick, color = '#0057D9', shadow }: ButtonProps
 	if (shadow) {
 		content = <Shadow>{content}</Shadow>
 	}
-	return <TouchableOpacity onPress={onClick}>{content}</TouchableOpacity>
+	return <TouchableOpacity onPress={onPress}>{content}</TouchableOpacity>
 }
 
 const styles = StyleSheet.create({

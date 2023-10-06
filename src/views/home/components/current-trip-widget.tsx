@@ -15,7 +15,7 @@ export const CurrentTripWidget = ({ ...props }: MapWidgetProps) => {
 	const navigation = useNavigation()
 
 	return (
-		<Widget footer={<Footer {...props} />} shadow onClick={() => navigation.navigate('/map' as never)}>
+		<Widget footer={<Footer {...props} />} shadow onPress={() => navigation.navigate('/map' as never)}>
 			<MapView
 				style={styles.map}
 				showsUserLocation

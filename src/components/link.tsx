@@ -2,12 +2,12 @@ import { StyleSheet, Text, TouchableOpacity } from 'react-native'
 
 export type LinkProps = {
 	text: string
-	onClick?: () => void
+	onPress?: () => void
 }
 
-export const Link = ({ text, onClick }: LinkProps) => {
+export const Link = ({ text, onPress }: LinkProps) => {
 	const content = <Text style={styles.container}>{text}</Text>
-	return onClick ? <TouchableOpacity onPress={onClick}>{content}</TouchableOpacity> : content
+	return onPress ? <TouchableOpacity onPress={onPress}>{content}</TouchableOpacity> : content
 }
 
 const styles = StyleSheet.create({

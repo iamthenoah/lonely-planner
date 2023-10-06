@@ -11,7 +11,7 @@ export type TripWidgetProps = PropsWithChildren & {
 
 export const TripWidget = ({ location, date, image }: TripWidgetProps) => {
 	return (
-		<Widget onClick={console.log} style={{ marginLeft: 10 }}>
+		<Widget onPress={console.log} style={{ marginLeft: 10 }}>
 			<ImageBackground source={{ uri: image }}>
 				<LinearGradient style={styles.container} colors={['rgba(0,0,0,0)', 'rgba(0,0,0,.5)']}>
 					<Text style={styles.location}>{location}</Text>
