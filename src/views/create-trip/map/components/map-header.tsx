@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
-import { Content } from '../../../../components/layout/content'
+import { View } from 'react-native'
+import { useNavigation } from '@react-navigation/native'
 import { Title } from '../../../../components/title'
 import { SearchBar } from '../../../../components/search-bar'
 import { Header } from '../../../../components/layout/header'
@@ -10,10 +11,11 @@ import * as Location from 'expo-location'
 import axios from 'axios'
 
 export type MapHeaderProps = {
-	onPoi: (result: Result) => void
+	onPoi: (result: Result | null) => void
 }
 
 export const MapHeader = ({ onPoi }: MapHeaderProps) => {
+	const navigation = useNavigation()
 	const [location, setLocation] = useState<Location.LocationObject | null>(null)
 	const [results, setResults] = useState<Result[]>([])
 
@@ -22,6 +24,7 @@ export const MapHeader = ({ onPoi }: MapHeaderProps) => {
 	}, [])
 
 	const onSearchPoi = async (value: string) => {
+		onPoi(null)
 		let url = 'https://api.tomtom.com/search/2/poiSearch/' + value + '.json?key=xbut0FprHUpkK7BOoLxLzPYg6mDGOWyA'
 
 		if (location) {
@@ -41,14 +44,13 @@ export const MapHeader = ({ onPoi }: MapHeaderProps) => {
 	}
 
 	return (
-		<Content scrollEnabled={false}>
-			<Header left={<IconButton icon="close" onPress={console.log} />}>
-				<Title text="Day 2" />
+		<View>
+			<Header left={<IconButton icon="close" onPress={navigation.goBack} />} center={<Title text="Day 2" />}>
+				<SearchBar placeholder="Search Location" onSubmit={onSearchPoi} />
 			</Header>
-			<SearchBar placeholder="Search Location" onSubmit={onSearchPoi} />
 			{results.map(result => (
 				<PoiSearchResult key={Math.random()} result={result} onPress={onPoiSelected} />
 			))}
-		</Content>
+		</View>
 	)
 }

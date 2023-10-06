@@ -55,7 +55,8 @@ const styles = StyleSheet.create({
 		width: '100%',
 		paddingHorizontal: 25,
 		display: 'flex',
-		justifyContent: 'space-around'
+		justifyContent: 'space-around',
+		gap: 20
 	},
 	location: {
 		paddingHorizontal: 20,

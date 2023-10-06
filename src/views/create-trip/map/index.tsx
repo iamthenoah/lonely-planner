@@ -21,13 +21,16 @@ export const CreateTripMap = () => {
 		setRegion({ ...latlon, longitudeDelta: delta, latitudeDelta: delta })
 	}
 
-	const onPoi = (result: Result) => {
-		const longitude = result.position.lon
-		const latitude = result.position.lat
-		const latlon = { longitude, latitude }
-		setViewport(latlon, 0.00005)
-		setMarker(latlon)
+	const onPoi = (result: Result | null) => {
 		setPoi(result)
+
+		if (result) {
+			const longitude = result.position.lon
+			const latitude = result.position.lat
+			const latlon = { longitude, latitude }
+			setViewport(latlon, 0.00005)
+			setMarker(latlon)
+		}
 	}
 
 	const onPress = (event: MapPressEvent) => {

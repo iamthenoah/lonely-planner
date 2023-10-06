@@ -21,6 +21,8 @@ export const PoiSearchResult = ({ result, onPress }: SearchResultProps) => {
 
 const styles = StyleSheet.create({
 	container: {
-		paddingVertical: 10
+		backgroundColor: 'white',
+		paddingVertical: 10,
+		paddingHorizontal: 25
 	}
 })
