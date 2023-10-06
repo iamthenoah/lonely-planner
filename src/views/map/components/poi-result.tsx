@@ -5,12 +5,12 @@ import { Result } from '../../../types/poi'
 
 export type SearchResultProps = {
 	result: Result
-	onClick: (result: string) => void
+	onClick: (result: Result) => void
 }
 
-export const PoiSearchResult = ({ result }: SearchResultProps) => {
+export const PoiSearchResult = ({ result, onClick }: SearchResultProps) => {
 	return (
-		<TouchableOpacity onPress={console.log}>
+		<TouchableOpacity onPress={() => onClick(result)}>
 			<View style={styles.container}>
 				<Title text={result.poi.name} />
 				<Comment text={result.address.freeformAddress} />

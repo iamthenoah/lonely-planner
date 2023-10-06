@@ -1,30 +1,51 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Content } from '../../../components/layout/content'
 import { Title } from '../../../components/title'
 import { SearchBar } from '../../../components/search-bar'
 import { Result } from '../../../types/poi'
 import { PoiSearchResult } from './poi-result'
+import * as Location from 'expo-location'
 import axios from 'axios'
 
-export const MapHeader = () => {
+export type MapHeaderProps = {
+	onPoi: (result: Result) => void
+}
+
+export const MapHeader = ({ onPoi }: MapHeaderProps) => {
+	const [location, setLocation] = useState<Location.LocationObject | null>(null)
 	const [results, setResults] = useState<Result[]>([])
 
-	const searchPoi = async (value: string) => {
-		const url = 'https://api.tomtom.com/search/2/poiSearch/'
+	useEffect(() => {
+		Location.getCurrentPositionAsync().then(setLocation)
+	}, [])
+
+	const onSearchPoi = async (value: string) => {
+		let url = 'https://api.tomtom.com/search/2/poiSearch/'
+		url += value + '.json?key=xbut0FprHUpkK7BOoLxLzPYg6mDGOWyA'
+
+		if (location) {
+			const { longitude, latitude } = location.coords
+			url += '&lon=' + longitude + '&lat=' + latitude
+		}
 
 		axios
-			.get(url + value + '.json?key=xbut0FprHUpkK7BOoLxLzPYg6mDGOWyA')
+			.get(url)
 			.then(res => res.data.results)
 			.catch(() => [])
 			.then(setResults)
 	}
 
+	const onPoiSelected = (result: Result) => {
+		onPoi(result)
+		setResults([])
+	}
+
 	return (
 		<Content scrollEnabled={false}>
 			<Title text="Day 2" />
-			<SearchBar placeholder="Search Location" onSubmit={searchPoi} />
+			<SearchBar placeholder="Search Location" onSubmit={onSearchPoi} />
 			{results.map(result => (
-				<PoiSearchResult key={Math.random()} result={result} onClick={console.log} />
+				<PoiSearchResult key={Math.random()} result={result} onClick={() => onPoiSelected(result)} />
 			))}
 		</Content>
 	)
