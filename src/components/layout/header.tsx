@@ -1,17 +1,16 @@
-import { ReactNode } from 'react'
+import { PropsWithChildren, ReactNode } from 'react'
 import { StyleSheet, View } from 'react-native'
 
-export type HeaderProps = {
+export type HeaderProps = PropsWithChildren & {
 	left?: ReactNode
-	center?: ReactNode
 	right?: ReactNode
 }
 
-export const Header = ({ left, center, right }: HeaderProps) => {
+export const Header = ({ left, children, right }: HeaderProps) => {
 	return (
 		<View style={styles.container}>
 			<View style={styles.left}>{left && left}</View>
-			<View style={styles.center}>{center && center}</View>
+			<View style={styles.center}>{children}</View>
 			<View style={styles.right}>{right && right}</View>
 		</View>
 	)

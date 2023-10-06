@@ -4,15 +4,23 @@ import { Shadow } from './shadow'
 export type ButtonProps = {
 	text: string
 	onPress: () => void
-	color?: string
+	foreground?: string
+	background?: string
 	shadow?: boolean
 	disabled?: boolean
 }
 
-export const Button = ({ text, onPress, color = '#0057D9', shadow, disabled }: ButtonProps) => {
+export const Button = ({
+	text,
+	onPress,
+	background = '#0057D9',
+	foreground = 'white',
+	shadow,
+	disabled
+}: ButtonProps) => {
 	let content = (
-		<View style={{ ...styles.container, backgroundColor: color }}>
-			<Text style={styles.text}>{text}</Text>
+		<View style={{ ...styles.container, backgroundColor: background }}>
+			<Text style={{ ...styles.text, color: foreground }}>{text}</Text>
 		</View>
 	)
 
@@ -32,7 +40,6 @@ const styles = StyleSheet.create({
 	},
 	text: {
 		padding: 15,
-		color: 'white',
 		fontSize: 16,
 		fontWeight: 'bold',
 		textAlign: 'center'

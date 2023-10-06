@@ -1,5 +1,5 @@
 import { StyleSheet, TouchableOpacity } from 'react-native'
-import { Entypo } from '@expo/vector-icons'
+import { Ionicons } from '@expo/vector-icons'
 
 export type IconButtonProps = {
 	icon: string
@@ -9,7 +9,7 @@ export type IconButtonProps = {
 export const IconButton = ({ icon, onPress }: IconButtonProps) => {
 	return (
 		<TouchableOpacity style={styles.container} onPress={onPress}>
-			<Entypo size={20} color="#0057D9" name={icon as any} />
+			<Ionicons size={20} color="#0057D9" name={icon as any} />
 		</TouchableOpacity>
 	)
 }
