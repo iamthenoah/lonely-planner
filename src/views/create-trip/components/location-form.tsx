@@ -9,13 +9,14 @@ import axios from 'axios'
 
 export type LocationFormProps = {
 	poi?: Result
-	onLocation: (result: Result) => void
+	onLocation: (result: Result | null) => void
 }
 
 export const LocationForm = ({ poi, onLocation }: LocationFormProps) => {
 	const [results, setResults] = useState<Result[]>([])
 
 	const onSearchLocation = (text: string) => {
+		onLocation(null)
 		const url = 'https://api.tomtom.com/search/2/poiSearch/' + text + '.json?key=xbut0FprHUpkK7BOoLxLzPYg6mDGOWyA'
 
 		axios
