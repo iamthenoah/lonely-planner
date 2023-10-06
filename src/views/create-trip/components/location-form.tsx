@@ -4,6 +4,7 @@ import { PoiSearchResult } from '../../map/components/poi-result'
 import { SearchBar } from '../../../components/search-bar'
 import { Result } from '../../../types/poi'
 import { Info } from '../../../components/info'
+import { Widget } from '../../../components/widget'
 import axios from 'axios'
 
 export type LocationFormProps = {
@@ -39,7 +40,11 @@ export const LocationForm = ({ poi, onLocation }: LocationFormProps) => {
 					))}
 				</ScrollView>
 			)}
-			{poi && <Info text={poi.poi.name} comment={poi.address.freeformAddress} />}
+			{poi && (
+				<Widget style={styles.location}>
+					<Info text={poi.poi.name} comment={poi.address.freeformAddress} />
+				</Widget>
+			)}
 		</View>
 	)
 }
@@ -50,6 +55,10 @@ const styles = StyleSheet.create({
 		paddingHorizontal: 25,
 		display: 'flex',
 		justifyContent: 'space-around'
+	},
+	location: {
+		paddingHorizontal: 20,
+		paddingVertical: 10
 	},
 	results: {
 		height: '70%'
