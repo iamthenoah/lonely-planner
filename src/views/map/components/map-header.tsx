@@ -20,12 +20,10 @@ export const MapHeader = ({ onPoi }: MapHeaderProps) => {
 	}, [])
 
 	const onSearchPoi = async (value: string) => {
-		let url = 'https://api.tomtom.com/search/2/poiSearch/'
-		url += value + '.json?key=xbut0FprHUpkK7BOoLxLzPYg6mDGOWyA'
+		let url = 'https://api.tomtom.com/search/2/poiSearch/' + value + '.json?key=xbut0FprHUpkK7BOoLxLzPYg6mDGOWyA'
 
 		if (location) {
-			const { longitude, latitude } = location.coords
-			url += '&lon=' + longitude + '&lat=' + latitude
+			url += '&lon=' + location.coords.longitude + '&lat=' + location.coords.latitude
 		}
 
 		axios
