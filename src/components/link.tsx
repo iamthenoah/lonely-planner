@@ -14,6 +14,7 @@ const styles = StyleSheet.create({
 	container: {
 		fontSize: 14,
 		fontWeight: 'bold',
-		color: '#0057D9'
+		color: '#0057D9',
+		alignSelf: 'center'
 	}
 })

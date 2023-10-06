@@ -7,7 +7,6 @@ export type SearchBarProps = Omit<TextInputProps, 'onSubmitEditing' | 'returnKey
 export const SearchBar = ({ placeholder, onSubmit, ...props }: SearchBarProps) => {
 	return (
 		<TextInput
-			autoFocus
 			style={styles.container}
 			returnKeyType="search"
 			placeholder={placeholder}
@@ -19,7 +18,6 @@ export const SearchBar = ({ placeholder, onSubmit, ...props }: SearchBarProps) =
 
 const styles = StyleSheet.create({
 	container: {
-		flex: 1,
 		backgroundColor: '#F5F5F5',
 		borderRadius: 15,
 		padding: 15,

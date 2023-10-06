@@ -6,9 +6,10 @@ export type ButtonProps = {
 	onPress: () => void
 	color?: string
 	shadow?: boolean
+	disabled?: boolean
 }
 
-export const Button = ({ text, onPress, color = '#0057D9', shadow }: ButtonProps) => {
+export const Button = ({ text, onPress, color = '#0057D9', shadow, disabled }: ButtonProps) => {
 	let content = (
 		<View style={{ ...styles.container, backgroundColor: color }}>
 			<Text style={styles.text}>{text}</Text>
@@ -18,7 +19,11 @@ export const Button = ({ text, onPress, color = '#0057D9', shadow }: ButtonProps
 	if (shadow) {
 		content = <Shadow>{content}</Shadow>
 	}
-	return <TouchableOpacity onPress={onPress}>{content}</TouchableOpacity>
+	return (
+		<TouchableOpacity disabled={disabled} onPress={onPress} style={{ opacity: disabled ? 0.5 : 1 }}>
+			{content}
+		</TouchableOpacity>
+	)
 }
 
 const styles = StyleSheet.create({

@@ -45,7 +45,7 @@ export const MapHeader = ({ onPoi }: MapHeaderProps) => {
 			<Header left={<IconButton icon="cross" onPress={console.log} />} center={<Title text="Day 2" />} />
 			<SearchBar placeholder="Search Location" onSubmit={onSearchPoi} />
 			{results.map(result => (
-				<PoiSearchResult key={Math.random()} result={result} onPress={() => onPoiSelected(result)} />
+				<PoiSearchResult key={Math.random()} result={result} onPress={onPoiSelected} />
 			))}
 		</Content>
 	)
