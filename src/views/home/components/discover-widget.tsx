@@ -41,6 +41,7 @@ const styles = StyleSheet.create({
 	},
 	footer: {
 		paddingHorizontal: 15,
-		paddingVertical: 10
+		paddingVertical: 10,
+		alignItems: 'flex-start'
 	}
 })

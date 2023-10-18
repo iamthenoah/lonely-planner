@@ -28,7 +28,7 @@ export const CreateTripForm = () => {
 		setForm(Math.max(0, Math.min(form + 1, 2)))
 
 		if (form == 2) {
-			navigation.navigate('/trip/create/map' as never)
+			navigation.navigate('/trip/create/calendar' as never)
 		}
 	}
 
