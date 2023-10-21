@@ -2,13 +2,15 @@ import { useState } from 'react'
 import { useNavigation } from '@react-navigation/native'
 import { Button } from '../../../components/button'
 import { LocationForm } from './components/location-form'
-import { DateForm, Dates } from './components/date-form'
+import { DateForm } from './components/date-form'
 import { ReviewForm } from './components/review-form'
 import { StyleSheet, View } from 'react-native'
 import { Title } from '../../../components/title'
 import { Link } from '../../../components/link'
 import { Result } from '../../../types/poi'
 import { Subtitle } from '../../../components/subtitle'
+import { TripDates } from '../../../types/trip'
+import { addTrip } from '../../../storage'
 
 const buttons = [
 	['Next', 'cancel'],
@@ -19,16 +21,33 @@ const buttons = [
 const titles = ['Where would you like to go?', 'When and for how long?', 'Review trip information']
 
 export const CreateTripForm = () => {
-	const navigation = useNavigation()
+	const navigation = useNavigation<any>()
 	const [form, setForm] = useState(0)
 	const [location, setLocation] = useState<Result | null>()
-	const [dates, setDates] = useState<Dates | null>(null)
+	const [dates, setDates] = useState<TripDates | null>(null)
 
 	const nextForm = () => {
 		setForm(Math.max(0, Math.min(form + 1, 2)))
 
-		if (form == 2) {
-			navigation.navigate('/trip/create/calendar' as never)
+		if (form == 2 && dates && location) {
+			const id = Math.random().toString()
+
+			addTrip({
+				id,
+				dates,
+				days: Array.from(
+					{ length: Math.floor((dates.end.getTime() - dates.start.getTime()) / (24 * 60 * 60 * 1_000)) },
+					() => ({ pois: [] })
+				),
+				location: {
+					name: location.address.freeformAddress,
+					coordinate: {
+						latitude: location.position.lat,
+						longitude: location.position.lon
+					}
+				}
+			})
+			navigation.navigate('/trip/create/calendar', { id })
 		}
 	}
 

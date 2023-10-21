@@ -1,3 +1,4 @@
+import { useNavigation } from '@react-navigation/native'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import { StyleSheet, View } from 'react-native'
 import { Title } from '../../../../components/title'
@@ -5,12 +6,34 @@ import { Result } from '../../../../types/poi'
 import { Button } from '../../../../components/button'
 import { Widget } from '../../../../components/widget'
 import { Comment } from '../../../../components/comment'
+import { getTrip, setTrip } from '../../../../storage'
 
 export type PoiWidgetProps = {
+	id: string
+	day: number
 	poi: Result
 }
 
-export const PoiWidget = ({ poi }: PoiWidgetProps) => {
+export const PoiWidget = ({ id, day, poi }: PoiWidgetProps) => {
+	const navigation = useNavigation<any>()
+
+	const onPress = async () => {
+		const trip = await getTrip(id)
+
+		console.log(trip)
+
+		trip?.days[day].pois.push({
+			name: poi.address.freeformAddress,
+			coordinate: {
+				latitude: poi.position.lat,
+				longitude: poi.position.lon
+			}
+		})
+
+		setTrip(id, trip!)
+		navigation.navigate('/trip/create/calendar', { id, day })
+	}
+
 	return (
 		<SafeAreaView style={styles.container}>
 			<Widget shadow style={styles.content}>
@@ -18,7 +41,7 @@ export const PoiWidget = ({ poi }: PoiWidgetProps) => {
 					<Title text={poi.poi.name} />
 					<Comment text={poi.address.freeformAddress} />
 				</View>
-				<Button text="Add Location" onPress={console.log} />
+				<Button text="Add Location" onPress={onPress} />
 			</Widget>
 		</SafeAreaView>
 	)

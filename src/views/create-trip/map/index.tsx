@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { RouteProp, useRoute } from '@react-navigation/native'
 import { StyleSheet, View } from 'react-native'
 import { MapHeader } from './components/map-header'
 import { PoiWidget } from './components/poi-widget'
@@ -6,7 +7,13 @@ import MapView, { LatLng, MapPressEvent, Marker, Region } from 'react-native-map
 import { Result } from '../../../types/poi'
 import * as Location from 'expo-location'
 
+export type CreateTripMapParams = RouteProp<{
+	params: { id: string; day: number }
+}>
+
 export const CreateTripMap = () => {
+	const route = useRoute<CreateTripMapParams>()
+
 	const [poi, setPoi] = useState<Result | null>(null)
 	const [marker, setMarker] = useState<LatLng | null>(null)
 	const [region, setRegion] = useState<Region | undefined>()
@@ -45,7 +52,7 @@ export const CreateTripMap = () => {
 			<MapView showsUserLocation style={styles.map} region={region} initialRegion={region} onPress={onPress}>
 				{marker && <Marker coordinate={marker} />}
 			</MapView>
-			{poi && <PoiWidget poi={poi} />}
+			{poi && <PoiWidget id={route.params.id} day={route.params.day} poi={poi} />}
 		</View>
 	)
 }

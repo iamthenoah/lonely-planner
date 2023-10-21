@@ -1,12 +1,21 @@
 import { StyleSheet, View } from 'react-native'
-import { Result } from '../../../../types/poi'
+import { Title } from '../../../../components/title'
+import { TripPoi } from '../../../../types/trip'
 
 export type PoiWidgetProps = {
-	poi: Result
+	poi: TripPoi
 }
 
 export const PoiWidget = ({ poi }: PoiWidgetProps) => {
-	return <View></View>
+	return (
+		<View style={styles.container}>
+			<Title text={poi.name} />
+		</View>
+	)
 }
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+	container: {
+		padding: 10
+	}
+})

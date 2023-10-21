@@ -1,13 +1,13 @@
 import { StyleSheet, View } from 'react-native'
 import { Result } from '../../../../types/poi'
-import { Dates } from './date-form'
 import { Info } from '../../../../components/info'
 import { Widget } from '../../../../components/widget'
+import { TripDates } from '../../../../types/trip'
 import format from 'humanize-duration'
 
 export type ReviewFormProps = {
 	location: Result
-	dates: Dates
+	dates: TripDates
 }
 
 export const ReviewForm = ({ location, dates }: ReviewFormProps) => {
@@ -19,7 +19,7 @@ export const ReviewForm = ({ location, dates }: ReviewFormProps) => {
 				<Info comment="End date" text={dates.end.toDateString()} />
 				<Info
 					comment="Duration"
-					text={format(dates.end.getTime() - dates.start.getTime(), { units: ['y', 'mo', 'w', 'd', 'h'], round: true })}
+					text={format(dates.end.getTime() - dates.start.getTime(), { units: ['d'], round: true })}
 				/>
 			</Widget>
 		</View>

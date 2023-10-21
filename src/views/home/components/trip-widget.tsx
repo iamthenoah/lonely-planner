@@ -2,20 +2,19 @@ import { PropsWithChildren } from 'react'
 import { ImageBackground, StyleSheet, Text } from 'react-native'
 import { LinearGradient } from 'expo-linear-gradient'
 import { Widget } from '../../../components/widget'
+import { Trip } from '../../../types/trip'
 
 export type TripWidgetProps = PropsWithChildren & {
-	location: string
-	date: string
-	image: string
+	trip: Trip
 }
 
-export const TripWidget = ({ location, date, image }: TripWidgetProps) => {
+export const TripWidget = ({ trip }: TripWidgetProps) => {
 	return (
 		<Widget onPress={console.log} style={{ marginLeft: 10 }}>
-			<ImageBackground source={{ uri: image }}>
+			<ImageBackground source={{ uri: 'image' }}>
 				<LinearGradient style={styles.container} colors={['rgba(0,0,0,0)', 'rgba(0,0,0,.5)']}>
-					<Text style={styles.location}>{location}</Text>
-					<Text style={styles.date}>{date}</Text>
+					<Text style={styles.location}>{trip.location.name}</Text>
+					<Text style={styles.date}>{trip.dates.start.toString()}</Text>
 				</LinearGradient>
 			</ImageBackground>
 		</Widget>

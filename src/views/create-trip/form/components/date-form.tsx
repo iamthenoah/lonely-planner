@@ -3,18 +3,14 @@ import DateTimePicker, { DateTimePickerAndroid } from '@react-native-community/d
 import { Platform, StyleSheet, View } from 'react-native'
 import { Button } from '../../../../components/button'
 import { Comment } from '../../../../components/comment'
-import format from 'humanize-duration'
 import { Subtitle } from '../../../../components/subtitle'
-
-export type Dates = {
-	start: Date
-	end: Date
-}
+import { TripDates } from '../../../../types/trip'
+import format from 'humanize-duration'
 
 export type DateFormProps = {
 	start?: Date
 	end?: Date
-	onDate: (dates: Dates | null) => void
+	onDate: (dates: TripDates | null) => void
 }
 
 export const DateForm = ({ start: startInit = new Date(), end: endInit = new Date(), onDate }: DateFormProps) => {
@@ -29,7 +25,7 @@ export const DateForm = ({ start: startInit = new Date(), end: endInit = new Dat
 
 	const getTimeText = () => {
 		if (start && end) {
-			return 'Duration: ' + format(end.getTime() - start.getTime(), { units: ['y', 'mo', 'w', 'd', 'h'], round: true })
+			return 'Duration: ' + format(end.getTime() - start.getTime(), { units: ['d'], round: true })
 		}
 		return 'Select dates'
 	}
