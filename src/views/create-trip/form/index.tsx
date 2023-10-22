@@ -1,16 +1,16 @@
 import { useState } from 'react'
 import { useNavigation } from '@react-navigation/native'
 import { Button } from '../../../components/button'
-import { LocationForm } from './components/location-form'
+import { PlaceForm } from './components/place-form'
 import { DateForm } from './components/date-form'
 import { ReviewForm } from './components/review-form'
 import { StyleSheet, View } from 'react-native'
 import { Title } from '../../../components/title'
 import { Link } from '../../../components/link'
-import { Result } from '../../../types/poi'
 import { Subtitle } from '../../../components/subtitle'
-import { TripDates } from '../../../types/trip'
+import { TripDate } from '../../../types/trip'
 import { addTrip } from '../../../storage'
+import { PlaceInfo } from '../../../types/api'
 
 const buttons = [
 	['Next', 'cancel'],
@@ -23,30 +23,18 @@ const titles = ['Where would you like to go?', 'When and for how long?', 'Review
 export const CreateTripForm = () => {
 	const navigation = useNavigation<any>()
 	const [form, setForm] = useState(0)
-	const [location, setLocation] = useState<Result | null>()
-	const [dates, setDates] = useState<TripDates | null>(null)
+	const [place, setPlace] = useState<PlaceInfo | null>()
+	const [dates, setDates] = useState<TripDate | null>(null)
 
 	const nextForm = () => {
 		setForm(Math.max(0, Math.min(form + 1, 2)))
 
-		if (form == 2 && dates && location) {
+		if (form == 2 && dates && place) {
 			const id = Math.random().toString()
+			const length = Math.floor((dates.end.getTime() - dates.start.getTime()) / (24 * 60 * 60 * 1_000))
+			const days = Array.from({ length }, () => ({ places: [] }))
+			addTrip({ id, dates, place, days })
 
-			addTrip({
-				id,
-				dates,
-				days: Array.from(
-					{ length: Math.floor((dates.end.getTime() - dates.start.getTime()) / (24 * 60 * 60 * 1_000)) },
-					() => ({ pois: [] })
-				),
-				location: {
-					name: location.address.freeformAddress,
-					coordinate: {
-						latitude: location.position.lat,
-						longitude: location.position.lon
-					}
-				}
-			})
 			navigation.navigate('/trip/create/calendar', { id })
 		}
 	}
@@ -66,16 +54,16 @@ export const CreateTripForm = () => {
 				<Subtitle text={'step ' + (form + 1) + ' of 3'} />
 			</View>
 			<View style={styles.form}>
-				{form === 0 && <LocationForm poi={location} onLocation={setLocation} />}
+				{form === 0 && <PlaceForm place={place} onPlace={setPlace} />}
 				{form === 1 && <DateForm start={dates?.start} end={dates?.end} onDate={setDates} />}
-				{form === 2 && <ReviewForm location={location!} dates={dates!} />}
+				{form === 2 && <ReviewForm place={place!} dates={dates!} />}
 			</View>
 			<View style={styles.actions}>
 				<Button
 					shadow
 					text={buttons[form][0]}
 					onPress={nextForm}
-					disabled={form === 0 ? !location : form === 1 ? !dates : false}
+					disabled={form === 0 ? !place : form === 1 ? !dates : false}
 				/>
 				<Link text={buttons[form][1]} onPress={previousForm} />
 			</View>

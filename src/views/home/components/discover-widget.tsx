@@ -26,7 +26,7 @@ const Footer = ({ name, location }: DiscoverFooterProps) => {
 	return (
 		<View style={styles.footer}>
 			<Title text={name} />
-			<Link text={location} onPress={console.log} />
+			<Link text={location} />
 		</View>
 	)
 }

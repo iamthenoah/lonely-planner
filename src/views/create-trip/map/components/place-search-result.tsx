@@ -1,19 +1,19 @@
 import { StyleSheet, TouchableOpacity, View } from 'react-native'
 import { Title } from '../../../../components/title'
 import { Comment } from '../../../../components/comment'
-import { Result } from '../../../../types/poi'
+import { Place } from '../../../../types/api'
 
 export type SearchResultProps = {
-	result: Result
-	onPress: (result: Result) => void
+	place: Place
+	onPress: (place: Place) => void
 }
 
-export const PoiSearchResult = ({ result, onPress }: SearchResultProps) => {
+export const PlaceSearchResult = ({ place, onPress }: SearchResultProps) => {
 	return (
-		<TouchableOpacity onPress={() => onPress(result)}>
+		<TouchableOpacity onPress={() => onPress(place)}>
 			<View style={styles.container}>
-				<Title text={result.poi.name} />
-				<Comment text={result.address.freeformAddress} />
+				<Title text={place.structured_formatting.main_text} />
+				<Comment text={place.structured_formatting.secondary_text} />
 			</View>
 		</TouchableOpacity>
 	)

@@ -1,20 +1,20 @@
 import { StyleSheet, View } from 'react-native'
-import { Result } from '../../../../types/poi'
 import { Info } from '../../../../components/info'
 import { Widget } from '../../../../components/widget'
-import { TripDates } from '../../../../types/trip'
+import { TripDate } from '../../../../types/trip'
+import { PlaceInfo } from '../../../../types/api'
 import format from 'humanize-duration'
 
 export type ReviewFormProps = {
-	location: Result
-	dates: TripDates
+	place: PlaceInfo
+	dates: TripDate
 }
 
-export const ReviewForm = ({ location, dates }: ReviewFormProps) => {
+export const ReviewForm = ({ place, dates }: ReviewFormProps) => {
 	return (
 		<View style={styles.container}>
 			<Widget style={styles.content}>
-				<Info comment="Location" text={location.poi.name} />
+				<Info comment="Location" text={place.name} />
 				<Info comment="Start date" text={dates.start.toDateString()} />
 				<Info comment="End date" text={dates.end.toDateString()} />
 				<Info

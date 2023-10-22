@@ -1,15 +1,15 @@
 import { StyleSheet, View } from 'react-native'
 import { Title } from '../../../../components/title'
-import { TripPoi } from '../../../../types/trip'
+import { PlaceInfo } from '../../../../types/api'
 
-export type PoiWidgetProps = {
-	poi: TripPoi
+export type PlaceWidgetProps = {
+	place: PlaceInfo
 }
 
-export const PoiWidget = ({ poi }: PoiWidgetProps) => {
+export const PlaceWidget = ({ place }: PlaceWidgetProps) => {
 	return (
 		<View style={styles.container}>
-			<Title text={poi.name} />
+			<Title text={place.name} />
 		</View>
 	)
 }

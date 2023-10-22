@@ -4,13 +4,13 @@ import { Platform, StyleSheet, View } from 'react-native'
 import { Button } from '../../../../components/button'
 import { Comment } from '../../../../components/comment'
 import { Subtitle } from '../../../../components/subtitle'
-import { TripDates } from '../../../../types/trip'
+import { TripDate } from '../../../../types/trip'
 import format from 'humanize-duration'
 
 export type DateFormProps = {
 	start?: Date
 	end?: Date
-	onDate: (dates: TripDates | null) => void
+	onDate: (dates: TripDate | null) => void
 }
 
 export const DateForm = ({ start: startInit = new Date(), end: endInit = new Date(), onDate }: DateFormProps) => {

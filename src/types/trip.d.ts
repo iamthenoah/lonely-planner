@@ -1,27 +1,18 @@
 import { LatLng } from 'react-native-maps'
+import { PlaceInfo } from './api'
 
 export type Trip = {
 	id: string
-	location: TripLocation
-	dates: TripDates
+	place: PlaceInfo
+	dates: TripDate
 	days: TripDay[]
 }
 
 export type TripDay = {
-	pois: TripPoi[]
+	places: PlaceInfo[]
 }
 
-export type TripLocation = {
-	name: string
-	coordinate: LatLng
-}
-
-export type TripDates = {
+export type TripDate = {
 	start: Date
 	end: Date
-}
-
-export type TripPoi = {
-	name: string
-	coordinate: LatLng
 }

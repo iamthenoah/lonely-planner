@@ -16,6 +16,11 @@ export const addTrip = async (trip: Trip) => {
 	await AsyncStorage.setItem('trips', JSON.stringify([trip, ...trips]))
 }
 
+export const removeTrip = async (id: string) => {
+	const trips = await getTrips()
+	await AsyncStorage.setItem('trips', JSON.stringify(trips.filter(trip => trip.id === id)))
+}
+
 export const setTrip = async (id: string, trip: Trip) => {
 	const trips = (await getTrips()).map(t => (t.id === id ? trip : t))
 	await AsyncStorage.setItem('trips', JSON.stringify(trips))

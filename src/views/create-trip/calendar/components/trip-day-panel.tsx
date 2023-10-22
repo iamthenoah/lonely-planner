@@ -1,7 +1,7 @@
 import { ScrollView, StyleSheet } from 'react-native'
-import { AddPoiButton } from './add-poi-button'
+import { AddPlaceButton } from './add-place-button'
 import { TripDay } from '../../../../types/trip'
-import { PoiWidget } from './poi-widget'
+import { PlaceWidget } from './place-widget'
 
 export type TripDayProps = {
 	id: string
@@ -12,10 +12,10 @@ export type TripDayProps = {
 export const TripDayPanel = ({ id, day, editable }: TripDayProps) => {
 	return (
 		<ScrollView style={styles.container}>
-			{day.pois.map(poi => (
-				<PoiWidget key={Math.random()} poi={poi} />
+			{day.places.map(place => (
+				<PlaceWidget key={Math.random()} place={place} />
 			))}
-			{editable && <AddPoiButton id={id} day={day.number} />}
+			{editable && <AddPlaceButton id={id} day={day.number} />}
 		</ScrollView>
 	)
 }

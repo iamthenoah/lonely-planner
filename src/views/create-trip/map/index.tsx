@@ -2,10 +2,11 @@ import { useEffect, useState } from 'react'
 import { RouteProp, useRoute } from '@react-navigation/native'
 import { StyleSheet, View } from 'react-native'
 import { MapHeader } from './components/map-header'
-import { PoiWidget } from './components/poi-widget'
+import { PlaceWidget } from './components/place-widget'
 import MapView, { LatLng, MapPressEvent, Marker, Region } from 'react-native-maps'
-import { Result } from '../../../types/poi'
+import { PlaceInfo } from '../../../types/api'
 import * as Location from 'expo-location'
+import { getNearestPlace } from '../../../apis/google'
 
 export type CreateTripMapParams = RouteProp<{
 	params: { id: string; day: number }
@@ -14,7 +15,7 @@ export type CreateTripMapParams = RouteProp<{
 export const CreateTripMap = () => {
 	const route = useRoute<CreateTripMapParams>()
 
-	const [poi, setPoi] = useState<Result | null>(null)
+	const [place, setPlace] = useState<PlaceInfo | null>(null)
 	const [marker, setMarker] = useState<LatLng | null>(null)
 	const [region, setRegion] = useState<Region | undefined>()
 
@@ -28,31 +29,32 @@ export const CreateTripMap = () => {
 		setRegion({ ...latlon, longitudeDelta: delta, latitudeDelta: delta })
 	}
 
-	const onPoi = (result: Result | null) => {
-		setPoi(result)
+	const onPlace = (place: PlaceInfo | null) => {
+		setPlace(place)
 
-		if (result) {
-			const longitude = result.position.lon
-			const latitude = result.position.lat
+		if (place) {
+			const longitude = place.geometry.location.lng
+			const latitude = place.geometry.location.lat
 			const latlon = { longitude, latitude }
-			setViewport(latlon, 0.00005)
+
+			setViewport(latlon, 0.005)
 			setMarker(latlon)
 		}
 	}
 
-	const onPress = (event: MapPressEvent) => {
+	const onPress = async (event: MapPressEvent) => {
 		const latlon = event.nativeEvent.coordinate
-		setViewport(latlon, 0.005)
-		setMarker(latlon)
+		const places = await getNearestPlace(latlon.latitude, latlon.longitude)
+		onPlace(places[0])
 	}
 
 	return (
 		<View style={styles.container}>
-			<MapHeader onPoi={onPoi} />
+			<MapHeader onPlace={onPlace} />
 			<MapView showsUserLocation style={styles.map} region={region} initialRegion={region} onPress={onPress}>
 				{marker && <Marker coordinate={marker} />}
 			</MapView>
-			{poi && <PoiWidget id={route.params.id} day={route.params.day} poi={poi} />}
+			{place && <PlaceWidget id={route.params.id} day={route.params.day} place={place} />}
 		</View>
 	)
 }

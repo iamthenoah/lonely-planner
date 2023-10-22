@@ -19,18 +19,18 @@ export const CreateTripCalendar = () => {
 
 	useEffect(() => {
 		getTrip(route.params.id).then(setTrip)
-	})
+	}, [])
 
 	const appendDay = () => {
-		trip?.days.push({ pois: [] })
+		trip?.days.push({ places: [] })
 		setTrip(trip)
 	}
 
 	return (
 		<View>
-			<CalendarHeader />
+			<CalendarHeader id={trip?.id} />
 			<DaysTab editable days={trip?.days.length || 1} onDayChange={setDay} onDayAdd={appendDay} />
-			<TripDayPanel editable id={route.params.id} day={{ ...(trip?.days[day] || { pois: [] }), number: day }} />
+			<TripDayPanel editable id={route.params.id} day={{ ...(trip?.days[day] || { places: [] }), number: day }} />
 		</View>
 	)
 }

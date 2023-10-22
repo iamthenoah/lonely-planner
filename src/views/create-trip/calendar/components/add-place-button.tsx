@@ -2,12 +2,12 @@ import { StyleSheet, Text, TouchableOpacity } from 'react-native'
 import { useNavigation } from '@react-navigation/native'
 import { Ionicons } from '@expo/vector-icons'
 
-export type AddPoiButtonProps = {
+export type AddPlaceButtonProps = {
 	id: string
 	day: number
 }
 
-export const AddPoiButton = ({ id, day }: AddPoiButtonProps) => {
+export const AddPlaceButton = ({ id, day }: AddPlaceButtonProps) => {
 	const navigation = useNavigation<any>()
 
 	return (
