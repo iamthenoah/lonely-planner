@@ -5,11 +5,12 @@ export type HeaderProps = PropsWithChildren & {
 	left?: ReactNode
 	center?: ReactNode
 	right?: ReactNode
+	seamless?: boolean
 }
 
-export const Header = ({ left, center, right, children }: HeaderProps) => {
+export const Header = ({ left, center, right, seamless, children }: HeaderProps) => {
 	return (
-		<SafeAreaView style={styles.container}>
+		<SafeAreaView style={{ ...styles.container, borderColor: seamless ? 'white' : '#EDEEEF' }}>
 			<View style={styles.content}>
 				<View style={styles.left}>{left && left}</View>
 				<View style={styles.center}>{center && center}</View>
@@ -23,7 +24,6 @@ export const Header = ({ left, center, right, children }: HeaderProps) => {
 const styles = StyleSheet.create({
 	container: {
 		borderBottomWidth: 2,
-		borderColor: '#EDEEEF',
 		backgroundColor: 'white'
 	},
 	content: {

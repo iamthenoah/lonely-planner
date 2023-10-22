@@ -8,6 +8,7 @@ export type ButtonProps = {
 	background?: string
 	shadow?: boolean
 	disabled?: boolean
+	border?: boolean
 }
 
 export const Button = ({
@@ -16,10 +17,11 @@ export const Button = ({
 	background = '#0057D9',
 	foreground = 'white',
 	shadow,
-	disabled
+	disabled,
+	border
 }: ButtonProps) => {
 	let content = (
-		<View style={{ ...styles.container, backgroundColor: background }}>
+		<View style={{ ...styles.container, backgroundColor: background, borderColor: border ? '#EDEEEF' : background }}>
 			<Text style={{ ...styles.text, color: foreground }}>{text}</Text>
 		</View>
 	)
@@ -36,7 +38,8 @@ export const Button = ({
 
 const styles = StyleSheet.create({
 	container: {
-		borderRadius: 15
+		borderRadius: 15,
+		borderWidth: 2
 	},
 	text: {
 		padding: 15,

@@ -11,6 +11,8 @@ import { Subtitle } from '../../../components/subtitle'
 import { TripDate } from '../../../types/trip'
 import { PlaceInfo } from '../../../types/api'
 import { useTrips } from '../../../contexts/trip-context'
+import { Header } from '../../../components/layout/header'
+import { IconButton } from '../../../components/icon-button'
 
 const buttons = [
 	['Next', 'cancel'],
@@ -45,6 +47,7 @@ export const CreateTripForm = () => {
 
 	return (
 		<View style={styles.container}>
+			<Header seamless right={<IconButton icon="close" onPress={() => navigation.navigate('/home')} />} />
 			<View style={styles.title}>
 				<Title text={titles[form]} />
 				<Subtitle text={'step ' + (form + 1) + ' of 3'} />
