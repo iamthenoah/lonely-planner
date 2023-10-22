@@ -25,7 +25,7 @@ export const DaysTab = ({ days, editable, onDayChange, onDayAdd }: DaysTabProps)
 	return (
 		<View style={styles.container}>
 			<ScrollView horizontal style={styles.content}>
-				{Array(days)
+				{Array(days + 1)
 					.fill(0)
 					.map((_, day) => (
 						<Button
