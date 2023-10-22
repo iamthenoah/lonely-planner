@@ -1,12 +1,11 @@
 import { useNavigation } from '@react-navigation/native'
 import { SafeAreaView } from 'react-native-safe-area-context'
-import { StyleSheet, View } from 'react-native'
-import { Title } from '../../../../components/title'
+import { StyleSheet } from 'react-native'
 import { PlaceInfo } from '../../../../types/api'
 import { Button } from '../../../../components/button'
 import { Widget } from '../../../../components/widget'
-import { Comment } from '../../../../components/comment'
 import { useTrips } from '../../../../contexts/trip-context'
+import { PlaceButton } from '../../../../components/place-button'
 
 export type PlaceWidgetProps = {
 	id: string
@@ -26,10 +25,7 @@ export const PlaceWidget = ({ id, day, place }: PlaceWidgetProps) => {
 	return (
 		<SafeAreaView style={styles.container}>
 			<Widget shadow style={styles.content}>
-				<View style={styles.text}>
-					<Title text={place.name} />
-					<Comment text={place.name} />
-				</View>
+				<PlaceButton place={place} />
 				<Button text="Add Location" onPress={onPress} />
 			</Widget>
 		</SafeAreaView>
@@ -44,11 +40,7 @@ const styles = StyleSheet.create({
 		bottom: 0
 	},
 	content: {
-		padding: 20
-	},
-	text: {
-		justifyContent: 'center',
-		alignItems: 'center',
-		marginBottom: 20
+		padding: 20,
+		gap: 15
 	}
 })

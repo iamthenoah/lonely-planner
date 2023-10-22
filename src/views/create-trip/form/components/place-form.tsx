@@ -1,11 +1,11 @@
 import { useState } from 'react'
-import { Image, ScrollView, StyleSheet, View } from 'react-native'
+import { ScrollView, StyleSheet, View } from 'react-native'
 import { PlaceSearchResult } from '../../map/components/place-search-result'
 import { SearchBar } from '../../../../components/search-bar'
 import { Place, PlaceInfo } from '../../../../types/api'
-import { Info } from '../../../../components/info'
 import { Widget } from '../../../../components/widget'
-import { getImage, getPlaceInfo, getPlaces } from '../../../../apis/google'
+import { getPlaceInfo, getPlaces } from '../../../../apis/google'
+import { PlaceButton } from '../../../../components/place-button'
 
 export type PlaceFormProps = {
 	place?: PlaceInfo | null
@@ -37,15 +37,7 @@ export const PlaceForm = ({ place, onPlace }: PlaceFormProps) => {
 			)}
 			{place && (
 				<Widget style={styles.place}>
-					{place.photos && <Image style={styles.image} source={{ uri: getImage(place.photos[0].photo_reference) }} />}
-					<Info
-						text={place.name}
-						comment={
-							place.formatted_address.length > 30
-								? place.formatted_address.substring(0, 30) + '...'
-								: place.formatted_address
-						}
-					/>
+					<PlaceButton place={place} />
 				</Widget>
 			)}
 		</View>
@@ -64,16 +56,6 @@ const styles = StyleSheet.create({
 		height: '70%'
 	},
 	place: {
-		paddingHorizontal: 15,
-		paddingVertical: 10,
-		display: 'flex',
-		flexDirection: 'row',
-		alignItems: 'center',
-		gap: 15
-	},
-	image: {
-		borderRadius: 10,
-		width: 50,
-		height: 50
+		padding: 20
 	}
 })
