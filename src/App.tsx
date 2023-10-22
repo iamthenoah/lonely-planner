@@ -5,7 +5,7 @@ import * as Location from 'expo-location'
 import { Home } from './views/home'
 import { CreateTripForm } from './views/create-trip/form'
 import { CreateTripMap } from './views/create-trip/map'
-import { CreateTripCalendar } from './views/create-trip/calendar'
+import { CreateTripJournal } from './views/create-trip/journal'
 import { TripProvider } from './contexts/trip-context'
 
 const { Screen, Navigator } = createNativeStackNavigator()
@@ -24,7 +24,7 @@ export default () => {
 					<Screen name="/home" component={Home} options={options} />
 					<Screen name="/trip/create/form" component={CreateTripForm} options={options} />
 					<Screen name="/trip/create/map" component={CreateTripMap} options={options} />
-					<Screen name="/trip/create/calendar" component={CreateTripCalendar} options={options} />
+					<Screen name="/trip/create/journal" component={CreateTripJournal} options={options} />
 				</Navigator>
 			</NavigationContainer>
 		</TripProvider>

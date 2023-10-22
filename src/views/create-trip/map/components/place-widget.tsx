@@ -20,7 +20,7 @@ export const PlaceWidget = ({ id, day, place }: PlaceWidgetProps) => {
 
 	const onPress = async () => {
 		trips.update(id, trip => trip.days[day].places.push(place))
-		navigation.navigate('/trip/create/calendar', { id, day })
+		navigation.navigate('/trip/create/journal', { id, day })
 	}
 
 	return (

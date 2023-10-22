@@ -4,11 +4,11 @@ import { Header } from '../../../../components/layout/header'
 import { Title } from '../../../../components/title'
 import { useTrips } from '../../../../contexts/trip-context'
 
-export type CalendarHeaderProps = {
+export type JournalHeaderProps = {
 	id: string
 }
 
-export const CalendarHeader = ({ id }: CalendarHeaderProps) => {
+export const JournalHeader = ({ id }: JournalHeaderProps) => {
 	const trips = useTrips()
 	const navigation = useNavigation<any>()
 
@@ -19,8 +19,8 @@ export const CalendarHeader = ({ id }: CalendarHeaderProps) => {
 	return (
 		<Header
 			left={<IconButton icon="chevron-back" onPress={() => navigation.navigate('/home')} />}
-			center={<Title text="Calendar" />}
-			right={<IconButton icon="trash" onPress={onPress} />}
+			center={<Title text="Journal" />}
+			right={<IconButton icon="trash" color="red" onPress={onPress} />}
 		/>
 	)
 }

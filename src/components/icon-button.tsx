@@ -3,13 +3,14 @@ import { Ionicons } from '@expo/vector-icons'
 
 export type IconButtonProps = {
 	icon: string
+	color?: string
 	onPress: () => void
 }
 
-export const IconButton = ({ icon, onPress }: IconButtonProps) => {
+export const IconButton = ({ icon, color = '#0057D9', onPress }: IconButtonProps) => {
 	return (
 		<TouchableOpacity style={styles.container} onPress={onPress}>
-			<Ionicons size={20} color="#0057D9" name={icon as any} />
+			<Ionicons size={20} color={color} name={icon as any} />
 		</TouchableOpacity>
 	)
 }

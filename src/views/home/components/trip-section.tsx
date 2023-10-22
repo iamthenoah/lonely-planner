@@ -14,7 +14,7 @@ export const CurrentTripSection = ({ trip }: CurrentTripSectionProps) => {
 	return (
 		<Section
 			name="Current Trip"
-			action={<Link text="view trip" onPress={() => navigation.navigate('/trip/create/calendar', { id: trip.id })} />}
+			action={<Link text="view trip" onPress={() => navigation.navigate('/trip/create/journal', { id: trip.id })} />}
 		>
 			<CurrentTripWidget title="Day 2" />
 		</Section>
