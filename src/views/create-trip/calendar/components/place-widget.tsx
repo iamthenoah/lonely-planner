@@ -11,7 +11,7 @@ export type PlaceWidgetProps = {
 export const PlaceWidget = ({ place }: PlaceWidgetProps) => {
 	return (
 		<View style={styles.container}>
-			<Image style={styles.image} source={{ uri: getImage(place.photos[0].photo_reference) }} />
+			{place.photos && <Image style={styles.image} source={{ uri: getImage(place.photos[0].photo_reference) }} />}
 			<View>
 				<Title text={place.name} />
 				<Comment
