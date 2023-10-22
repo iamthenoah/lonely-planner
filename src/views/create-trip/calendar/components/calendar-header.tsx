@@ -13,12 +13,12 @@ export const CalendarHeader = ({ id }: CalendarHeaderProps) => {
 	const navigation = useNavigation<any>()
 
 	const onPress = () => {
-		trips.delete(id).then(() => navigation.navigate('/home'))
+		trips.remove(id).then(() => navigation.navigate('/home'))
 	}
 
 	return (
 		<Header
-			left={<IconButton icon="chevron-back" onPress={onPress} />}
+			left={<IconButton icon="chevron-back" onPress={() => navigation.navigate('/home')} />}
 			center={<Title text="Calendar" />}
 			right={<IconButton icon="trash" onPress={onPress} />}
 		/>

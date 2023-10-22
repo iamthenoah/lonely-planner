@@ -1,6 +1,5 @@
 import {
 	ApiResponse,
-	Coordinates,
 	NearbyApiResponse,
 	NearestPlace,
 	Place,
@@ -12,10 +11,14 @@ import axios from 'axios'
 
 const API_KEY = 'AIzaSyDMXzu4w0VjSBILghLqzBBF8BBB_-EatU8'
 
-export const getPlaces = async (input: string): Promise<Place[]> => {
-	return makeRequest<PlacesApiResponse>('/autocomplete/json?types=(cities)&input=' + input).then(
-		data => data.predictions
-	)
+export const getPlaces = async (input: string, types?: string[]): Promise<Place[]> => {
+	// https://developers.google.com/maps/documentation/places/web-service/supported_types#table1
+	let params = `/autocomplete/json?input=${input}`
+
+	if (types && types.length < 5) {
+		params += '&types=' + types.join('|')
+	}
+	return makeRequest<PlacesApiResponse>(params).then(data => data.predictions)
 }
 
 export const getPlaceInfo = async (placeId: string): Promise<PlaceInfo> => {
@@ -33,6 +36,7 @@ export const getImage = (referenceId: string): string => {
 }
 
 const makeRequest = async <T>(params: string): Promise<ApiResponse<T>> => {
+	console.log(getUrl(params))
 	return axios.get<ApiResponse<T>>(getUrl(params)).then(res => res.data)
 }
 

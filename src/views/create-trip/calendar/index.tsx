@@ -13,22 +13,24 @@ export type CreateTripCalendarParams = RouteProp<{
 export const CreateTripCalendar = () => {
 	const trips = useTrips()
 	const route = useRoute<CreateTripCalendarParams>()
-
 	const [day, setDay] = useState(route.params.day || 0)
 
+	const id = route.params.id
+	const trip = trips.get(id)
+
 	const appendDay = () => {
-		trips.update(route.params.id, trip => trip.days.push({ places: [] }))
+		trips.update(id, trip => trip.days.push({ places: [] }))
 	}
 
-	const getTrip = () => {
-		return trips.getTrip(route.params.id)!
+	if (!trip) {
+		return <View />
 	}
 
 	return (
 		<View>
-			<CalendarHeader id={getTrip().id} />
-			<DaysTab editable days={getTrip().days.length || 1} onDayChange={setDay} onDayAdd={appendDay} />
-			<TripDayPanel editable id={route.params.id} day={{ ...getTrip().days[day], index: day }} />
+			<CalendarHeader id={id} />
+			<DaysTab editable days={trip.days.length} onDayChange={setDay} onDayAdd={appendDay} />
+			<TripDayPanel editable id={id} day={{ ...trip.days[day], index: day }} />
 		</View>
 	)
 }

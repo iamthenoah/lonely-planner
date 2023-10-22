@@ -18,13 +18,17 @@ export const TripProvider = ({ children }: PropsWithChildren) => {
 	const [trips, setTrips] = useState<Trip[]>([])
 
 	useEffect(() => {
-		const loadTrips = async () => {
-			const storage = await AsyncStorage.getItem('trips')
-			storage && setTrips(JSON.parse(storage))
-		}
-
 		loadTrips()
 	}, [])
+
+	const loadTrips = async () => {
+		const data = await AsyncStorage.getItem('trips')
+		setTrips(data ? JSON.parse(data) : [])
+	}
+
+	const reloadTrips = async (trips: Trip[]) => {
+		AsyncStorage.setItem('trips', JSON.stringify(trips)).then(loadTrips)
+	}
 
 	const get = (id: string): Trip | null => {
 		return trips.find(trip => trip.id === id) || null
@@ -38,17 +42,15 @@ export const TripProvider = ({ children }: PropsWithChildren) => {
 		const id = Math.random().toString()
 		const length = Math.floor((dates.end.getTime() - dates.start.getTime()) / (24 * 60 * 60 * 1_000))
 		const days = Array.from({ length }, () => ({ places: [] }))
-
 		const trip = { id, place, dates, days }
-		setTrips(prevTrips => [trip, ...prevTrips])
-		await AsyncStorage.setItem('trips', JSON.stringify([trip, ...trips]))
+
+		await reloadTrips([...trips, trip])
 
 		return trip
 	}
 
 	const remove = async (id: string) => {
-		setTrips(prevTrips => prevTrips.filter(trip => trip.id !== id))
-		await AsyncStorage.setItem('trips', JSON.stringify(trips.filter(trip => trip.id !== id)))
+		await reloadTrips(trips.filter(trip => trip.id !== id))
 	}
 
 	const update = async (id: string, callback: (updated: Trip) => void) => {
@@ -56,8 +58,7 @@ export const TripProvider = ({ children }: PropsWithChildren) => {
 
 		if (updated) {
 			callback(updated)
-			setTrips(prevTrips => prevTrips.map(trip => (trip.id === id ? updated : trip)))
-			await AsyncStorage.setItem('trips', JSON.stringify(trips.map(trip => (trip.id === id ? updated : trip))))
+			await reloadTrips(trips.map(trip => (trip.id === id ? updated : trip)))
 		}
 	}
 

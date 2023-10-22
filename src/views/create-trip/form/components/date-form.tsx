@@ -25,7 +25,11 @@ export const DateForm = ({ start: startInit = new Date(), end: endInit = new Dat
 
 	const getTimeText = () => {
 		if (start && end) {
-			return 'Duration: ' + format(end.getTime() - start.getTime(), { units: ['d'], round: true })
+			const days = format(end.getTime() - start.getTime(), { units: ['d'], round: true })
+
+			if (days != '0 days') {
+				return 'Duration: ' + days
+			}
 		}
 		return 'Select dates'
 	}

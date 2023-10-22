@@ -16,7 +16,7 @@ export const PlaceForm = ({ place, onPlace }: PlaceFormProps) => {
 	const [places, setPlaces] = useState<Place[]>([])
 
 	const onSearchPlace = (input: string) => {
-		getPlaces(input).then(setPlaces)
+		getPlaces(input, ['cities']).then(setPlaces)
 		onPlace(null)
 	}
 
