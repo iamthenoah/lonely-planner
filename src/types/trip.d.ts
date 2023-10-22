@@ -1,4 +1,3 @@
-import { LatLng } from 'react-native-maps'
 import { PlaceInfo } from './api'
 
 export type Trip = {

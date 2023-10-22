@@ -5,7 +5,6 @@ import { Widget } from '../../../components/widget'
 import { Trip } from '../../../types/trip'
 import { getImage } from '../../../apis/google'
 import { useNavigation } from '@react-navigation/native'
-import format from 'humanize-duration'
 
 export type TripWidgetProps = PropsWithChildren & {
 	trip: Trip
@@ -19,7 +18,7 @@ export const TripWidget = ({ trip }: TripWidgetProps) => {
 			<ImageBackground source={{ uri: getImage(trip.place.photos[0].photo_reference) }}>
 				<LinearGradient style={styles.container} colors={['rgba(0,0,0,0)', 'rgba(0,0,0,.5)']}>
 					<Text style={styles.location}>{trip.place.name}</Text>
-					<Text style={styles.date}>{trip.dates.start.toString()}</Text>
+					<Text style={styles.date}>{formatDate(new Date(trip.dates.start))}</Text>
 				</LinearGradient>
 			</ImageBackground>
 		</Widget>
@@ -45,3 +44,11 @@ const styles = StyleSheet.create({
 		color: 'white'
 	}
 })
+
+const formatDate = (date: Date) => {
+	const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+	const month = months[date.getMonth()]
+	const day = date.getDate()
+	const year = date.getFullYear()
+	return `${month} ${day}, ${year}`
+}

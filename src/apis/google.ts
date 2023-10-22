@@ -32,11 +32,10 @@ export const getNearestPlace = async (lat: number, lon: number): Promise<Nearest
 }
 
 export const getImage = (referenceId: string): string => {
-	return getUrl('/photo?photo_reference=' + referenceId)
+	return getUrl('/photo?maxwidth=400&photo_reference=' + referenceId)
 }
 
 const makeRequest = async <T>(params: string): Promise<ApiResponse<T>> => {
-	console.log(getUrl(params))
 	return axios.get<ApiResponse<T>>(getUrl(params)).then(res => res.data)
 }
 
