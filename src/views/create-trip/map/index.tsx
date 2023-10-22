@@ -4,9 +4,9 @@ import { StyleSheet, View } from 'react-native'
 import { MapHeader } from './components/map-header'
 import { PlaceWidget } from './components/place-widget'
 import MapView, { LatLng, MapPressEvent, Marker, Region } from 'react-native-maps'
+import { getNearestPlace, getPlaceInfo } from '../../../apis/google'
 import { PlaceInfo } from '../../../types/api'
 import * as Location from 'expo-location'
-import { getNearestPlace } from '../../../apis/google'
 
 export type CreateTripMapParams = RouteProp<{
 	params: { id: string; day: number }
@@ -45,7 +45,8 @@ export const CreateTripMap = () => {
 	const onPress = async (event: MapPressEvent) => {
 		const latlon = event.nativeEvent.coordinate
 		const places = await getNearestPlace(latlon.latitude, latlon.longitude)
-		onPlace(places[0])
+		const place = await getPlaceInfo(places[0].place_id)
+		onPlace(place)
 	}
 
 	return (

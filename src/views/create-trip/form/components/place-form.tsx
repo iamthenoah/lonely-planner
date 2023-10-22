@@ -16,7 +16,7 @@ export const PlaceForm = ({ place, onPlace }: PlaceFormProps) => {
 	const [places, setPlaces] = useState<Place[]>([])
 
 	const onSearchPlace = (input: string) => {
-		getPlaces(input, ['cities']).then(setPlaces)
+		getPlaces(input, ['(cities)']).then(setPlaces)
 		onPlace(null)
 	}
 
@@ -37,7 +37,7 @@ export const PlaceForm = ({ place, onPlace }: PlaceFormProps) => {
 			)}
 			{place && (
 				<Widget style={styles.location}>
-					<Info text={place.name} comment={place.name} />
+					<Info text={place.name} comment={place.formatted_address} />
 				</Widget>
 			)}
 		</View>

@@ -14,7 +14,13 @@ export const PlaceWidget = ({ place }: PlaceWidgetProps) => {
 			<Image style={styles.image} source={{ uri: getImage(place.photos[0].photo_reference) }} />
 			<View>
 				<Title text={place.name} />
-				<Comment text={place.vicinity.substring(0, 30) + '...'} />
+				<Comment
+					text={
+						place.formatted_address.length > 30
+							? place.formatted_address.substring(0, 30) + '...'
+							: place.formatted_address
+					}
+				/>
 			</View>
 		</View>
 	)

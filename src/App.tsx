@@ -10,7 +10,7 @@ import { TripProvider } from './contexts/trip-context'
 
 const { Screen, Navigator } = createNativeStackNavigator()
 
-const options = { headerShown: false }
+const options = { headerShown: false, gestureEnabled: false }
 
 export default () => {
 	useEffect(() => {

@@ -70,12 +70,12 @@ export type Photo = {
 }
 
 export type PlaceInfo = {
-	// address_components: AddressComponent[]
-	// adr_address: string
-	// formatted_address: string
-	// url: string
-	// utc_offset: number
-	// website: string
+	address_components: AddressComponent[]
+	adr_address: string
+	formatted_address: string
+	url: string
+	utc_offset: number
+	website: string
 	geometry: Geometry
 	icon: string
 	icon_background_color: string
