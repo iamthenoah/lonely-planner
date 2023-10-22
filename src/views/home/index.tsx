@@ -2,20 +2,15 @@ import { Content } from '../../components/layout/content'
 import { CurrentTripSection } from './components/trip-section'
 import { TripsSection } from './components/trips-section'
 import { DiscoverSection } from './components/discover-section'
-import { useEffect, useState } from 'react'
-import { Trip } from '../../types/trip'
-import { getTrips } from '../../storage'
+import { useTrips } from '../../contexts/trip-context'
 
 export const Home = () => {
-	const [trip, setTrip] = useState<Trip | null>()
-
-	useEffect(() => {
-		getTrips().then(trips => trips.length > 0 && setTrip(trips[0]))
-	}, [])
+	const trips = useTrips()
+	const ongoing = trips.getOngoing()
 
 	return (
 		<Content scrollEnabled>
-			{trip && <CurrentTripSection trip={trip} />}
+			{ongoing && <CurrentTripSection trip={ongoing} />}
 			<TripsSection />
 			<DiscoverSection />
 		</Content>

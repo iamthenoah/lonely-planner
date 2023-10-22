@@ -5,6 +5,7 @@ import { Widget } from '../../../components/widget'
 import { Trip } from '../../../types/trip'
 import { getImage } from '../../../apis/google'
 import { useNavigation } from '@react-navigation/native'
+import format from 'humanize-duration'
 
 export type TripWidgetProps = PropsWithChildren & {
 	trip: Trip

@@ -6,7 +6,7 @@ import { PlaceInfo } from '../../../../types/api'
 import { Button } from '../../../../components/button'
 import { Widget } from '../../../../components/widget'
 import { Comment } from '../../../../components/comment'
-import { getTrip, setTrip } from '../../../../storage'
+import { useTrips } from '../../../../contexts/trip-context'
 
 export type PlaceWidgetProps = {
 	id: string
@@ -15,13 +15,11 @@ export type PlaceWidgetProps = {
 }
 
 export const PlaceWidget = ({ id, day, place }: PlaceWidgetProps) => {
+	const trips = useTrips()
 	const navigation = useNavigation<any>()
 
 	const onPress = async () => {
-		const trip = await getTrip(id)
-		trip?.days[day].places.push(place)
-		setTrip(id, trip!)
-
+		trips.update(id, trip => trip.days[day].places.push(place))
 		navigation.navigate('/trip/create/calendar', { id, day })
 	}
 

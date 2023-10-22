@@ -9,8 +9,8 @@ import { Title } from '../../../components/title'
 import { Link } from '../../../components/link'
 import { Subtitle } from '../../../components/subtitle'
 import { TripDate } from '../../../types/trip'
-import { addTrip } from '../../../storage'
 import { PlaceInfo } from '../../../types/api'
+import { useTrips } from '../../../contexts/trip-context'
 
 const buttons = [
 	['Next', 'cancel'],
@@ -21,6 +21,7 @@ const buttons = [
 const titles = ['Where would you like to go?', 'When and for how long?', 'Review trip information']
 
 export const CreateTripForm = () => {
+	const trips = useTrips()
 	const navigation = useNavigation<any>()
 	const [form, setForm] = useState(0)
 	const [place, setPlace] = useState<PlaceInfo | null>()
@@ -30,12 +31,7 @@ export const CreateTripForm = () => {
 		setForm(Math.max(0, Math.min(form + 1, 2)))
 
 		if (form == 2 && dates && place) {
-			const id = Math.random().toString()
-			const length = Math.floor((dates.end.getTime() - dates.start.getTime()) / (24 * 60 * 60 * 1_000))
-			const days = Array.from({ length }, () => ({ places: [] }))
-			addTrip({ id, dates, place, days })
-
-			navigation.navigate('/trip/create/calendar', { id })
+			trips.create(place, dates).then(({ id }) => navigation.navigate('/trip/create/calendar', { id }))
 		}
 	}
 
@@ -43,7 +39,7 @@ export const CreateTripForm = () => {
 		setForm(Math.max(0, Math.min(form - 1, 2)))
 
 		if (form == 0) {
-			navigation.navigate('/home' as never)
+			navigation.navigate('/home')
 		}
 	}
 

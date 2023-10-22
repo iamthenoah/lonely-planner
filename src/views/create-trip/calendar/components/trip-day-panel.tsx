@@ -5,17 +5,17 @@ import { PlaceWidget } from './place-widget'
 
 export type TripDayProps = {
 	id: string
-	day: TripDay & { number: number }
+	day: TripDay & { index: number }
 	editable?: boolean
 }
 
 export const TripDayPanel = ({ id, day, editable }: TripDayProps) => {
 	return (
 		<ScrollView style={styles.container}>
-			{day.places.map(place => (
+			{day.places?.map(place => (
 				<PlaceWidget key={Math.random()} place={place} />
 			))}
-			{editable && <AddPlaceButton id={id} day={day.number} />}
+			{editable && <AddPlaceButton id={id} day={day.index} />}
 		</ScrollView>
 	)
 }

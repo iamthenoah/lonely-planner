@@ -2,17 +2,18 @@ import { useNavigation } from '@react-navigation/native'
 import { IconButton } from '../../../../components/icon-button'
 import { Header } from '../../../../components/layout/header'
 import { Title } from '../../../../components/title'
-import { removeTrip } from '../../../../storage'
+import { useTrips } from '../../../../contexts/trip-context'
 
 export type CalendarHeaderProps = {
-	id?: string
+	id: string
 }
 
 export const CalendarHeader = ({ id }: CalendarHeaderProps) => {
-	const navigation = useNavigation()
+	const trips = useTrips()
+	const navigation = useNavigation<any>()
 
 	const onPress = () => {
-		id && removeTrip(id).then(() => navigation.goBack())
+		trips.delete(id).then(() => navigation.navigate('/home'))
 	}
 
 	return (
