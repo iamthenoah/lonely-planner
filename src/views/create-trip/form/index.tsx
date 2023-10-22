@@ -83,7 +83,7 @@ const styles = StyleSheet.create({
 		gap: 25
 	},
 	form: {
-		flex: 2,
+		flex: 3,
 		alignItems: 'center',
 		justifyContent: 'center'
 	},
