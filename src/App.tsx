@@ -8,10 +8,12 @@ import { CreateTripMap } from './views/create-trip/map'
 import { CreateTripJournal } from './views/create-trip/journal'
 import { TripProvider } from './contexts/trip-context'
 import { Discover } from './views/discover'
+import { Place } from './views/place'
 
 const { Screen, Navigator } = createNativeStackNavigator()
 
 const options = { headerShown: false, gestureEnabled: false }
+const modal: any = { ...options, presentation: 'modal', gestureEnabled: true }
 
 export default () => {
 	useEffect(() => {
@@ -26,11 +28,8 @@ export default () => {
 					<Screen name="/trip/create/form" component={CreateTripForm} options={options} />
 					<Screen name="/trip/create/map" component={CreateTripMap} options={options} />
 					<Screen name="/trip/create/journal" component={CreateTripJournal} options={options} />
-					<Screen
-						name="/trip/discover"
-						component={Discover}
-						options={{ ...options, presentation: 'modal', gestureEnabled: true }}
-					/>
+					<Screen name="/trip/discover" component={Discover} options={modal} />
+					<Screen name="/place" component={Place} options={modal} />
 				</Navigator>
 			</NavigationContainer>
 		</TripProvider>

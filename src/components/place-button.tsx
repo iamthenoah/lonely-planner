@@ -1,3 +1,4 @@
+import { useNavigation } from '@react-navigation/native'
 import { Image, StyleSheet, TouchableOpacity, View } from 'react-native'
 import { PlaceInfo } from '../types/api'
 import { getImage } from '../apis/google'
@@ -13,8 +14,10 @@ export type PlaceButtonProps = {
 }
 
 export const PlaceButton = ({ place }: PlaceButtonProps) => {
+	const navigation = useNavigation<any>()
+
 	const onPress = () => {
-		console.log(place.place_id)
+		navigation.navigate('/place', { place: place })
 	}
 
 	return (
