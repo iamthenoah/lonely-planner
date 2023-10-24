@@ -24,7 +24,7 @@ export const TripDates = ({ onDate }: TripDatesProps) => {
 	return (
 		<View style={styles.container}>
 			<DateInput title="Start date" date={start} onDate={setStart} />
-			<DateInput title="End date" date={end} onDate={setEnd} />
+			<DateInput title="End date" date={end} onDate={setEnd} minimum={new Date(begin)} />
 		</View>
 	)
 }

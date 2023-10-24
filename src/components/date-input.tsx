@@ -10,7 +10,7 @@ export type DateInputProps = {
 	onDate: (date: Date) => void
 }
 
-export const DateInput = ({ title, date = new Date(), minimum = date, onDate }: DateInputProps) => {
+export const DateInput = ({ title, date = new Date(), minimum = new Date(), onDate }: DateInputProps) => {
 	if (Platform.OS === 'android') {
 		return <Button text={title} onPress={() => DateTimePickerAndroid.open({ value: date })} />
 	}

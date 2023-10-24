@@ -9,7 +9,7 @@ import { Button } from '../../components/button'
 import { Info } from '../../components/info'
 import { Header } from '../../components/layout/header'
 import { IconButton } from '../../components/icon-button'
-import { TripDates } from '../../components/trip-dates'
+import { DateInput } from '../../components/date-input'
 
 const discover = require('../../assets/trips.json') as Trip[]
 
@@ -22,16 +22,14 @@ export const Discover = () => {
 	const route = useRoute<DiscoverParams>()
 	const navigation = useNavigation<any>()
 	const [day, setDay] = useState(0)
-	const [dates, setDates] = useState<TripDate>()
+	const [start, setStart] = useState<Date>(new Date())
 
 	const trip = discover.find(trip => trip.id === route.params.id)!
 
 	const onPress = async () => {
-		if (dates) {
-			const { id } = await trips.duplicate(dates, trip)
-			navigation.goBack()
-			navigation.navigate('/trip/create/journal', { id })
-		}
+		const { id } = await trips.duplicate(start, trip)
+		navigation.goBack()
+		navigation.navigate('/trip/create/journal', { id })
 	}
 
 	if (!trip) {
@@ -47,7 +45,7 @@ export const Discover = () => {
 			<DaysTab days={trip.days.length} onDayChange={setDay} onDayAdd={() => {}} />
 			<TripDayPanel id={null as any} day={{ ...trip.days[day], index: day }} />
 			<View style={styles.plan}>
-				<TripDates onDate={setDates} />
+				<DateInput title="Start date" date={start} onDate={setStart} />
 				<Button text="Plan" onPress={onPress} />
 			</View>
 		</View>
