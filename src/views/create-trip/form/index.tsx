@@ -25,15 +25,16 @@ const titles = ['Where would you like to go?', 'When and for how long?', 'Review
 export const CreateTripForm = () => {
 	const trips = useTrips()
 	const navigation = useNavigation<any>()
+
 	const [form, setForm] = useState(0)
 	const [place, setPlace] = useState<PlaceInfo | null>()
-	const [dates, setDates] = useState<TripDate | null>(null)
+	const [date, setDate] = useState<TripDate>()
 
 	const nextForm = () => {
 		setForm(Math.max(0, Math.min(form + 1, 2)))
 
-		if (form == 2 && dates && place) {
-			trips.create(place, dates).then(({ id }) => navigation.navigate('/trip/create/journal', { id }))
+		if (form == 2 && date && place) {
+			trips.create(place, date).then(({ id }) => navigation.navigate('/trip/create/journal', { id }))
 		}
 	}
 
@@ -54,15 +55,15 @@ export const CreateTripForm = () => {
 			</View>
 			<View style={styles.form}>
 				{form === 0 && <PlaceForm place={place} onPlace={setPlace} />}
-				{form === 1 && <DateForm start={dates?.start} end={dates?.end} onDate={setDates} />}
-				{form === 2 && <ReviewForm place={place!} dates={dates!} />}
+				{form === 1 && <DateForm date={date} onDate={setDate} />}
+				{form === 2 && <ReviewForm place={place!} dates={date!} />}
 			</View>
 			<View style={styles.actions}>
 				<Button
 					shadow
 					text={buttons[form][0]}
 					onPress={nextForm}
-					disabled={form === 0 ? !place : form === 1 ? !dates : false}
+					disabled={form === 0 ? !place : form === 1 ? !date : false}
 				/>
 				<Link text={buttons[form][1]} onPress={previousForm} />
 			</View>

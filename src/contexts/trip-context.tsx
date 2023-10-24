@@ -10,7 +10,7 @@ const TripContext = createContext<{
 	create: (place: PlaceInfo, dates: TripDate) => Promise<Trip>
 	remove: (id: string) => Promise<void>
 	update: (id: string, callback: (trip: Trip) => void) => Promise<void>
-	duplicate: (trip: Trip) => Promise<Trip>
+	duplicate: (dates: TripDate, trip: Trip) => Promise<Trip>
 }>(null as any)
 
 export const useTrips = () => useContext(TripContext)
@@ -63,8 +63,9 @@ export const TripProvider = ({ children }: PropsWithChildren) => {
 		}
 	}
 
-	const duplicate = async (trip: Trip) => {
+	const duplicate = async (dates: TripDate, trip: Trip) => {
 		trip.id = Math.random().toString()
+		trip.dates = dates
 		await reloadTrips([...trips, trip])
 		return trip
 	}
