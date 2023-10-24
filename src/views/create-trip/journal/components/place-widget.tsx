@@ -9,9 +9,10 @@ export type PlaceWidgetProps = {
 	day: number
 	index: number
 	place: PlaceInfo
+	editable?: boolean
 }
 
-export const PlaceWidget = ({ id, day, index, place }: PlaceWidgetProps) => {
+export const PlaceWidget = ({ id, day, index, place, editable }: PlaceWidgetProps) => {
 	const trips = useTrips()
 
 	const onRemove = () => {
@@ -23,7 +24,7 @@ export const PlaceWidget = ({ id, day, index, place }: PlaceWidgetProps) => {
 	return (
 		<View style={styles.container}>
 			<PlaceButton place={place} />
-			<IconButton icon="close" color="red" seamless onPress={onRemove} />
+			{editable && <IconButton icon="close" color="red" seamless onPress={onRemove} />}
 		</View>
 	)
 }

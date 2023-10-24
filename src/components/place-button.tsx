@@ -4,6 +4,10 @@ import { getImage } from '../apis/google'
 import { Title } from './title'
 import { Comment } from './comment'
 
+const truncate = (text: string, size: number) => {
+	return text.length > size ? text.substring(0, size) + '...' : text
+}
+
 export type PlaceButtonProps = {
 	place: PlaceInfo
 }
@@ -17,14 +21,8 @@ export const PlaceButton = ({ place }: PlaceButtonProps) => {
 		<TouchableOpacity onPress={onPress} style={styles.container}>
 			{place.photos && <Image style={styles.image} source={{ uri: getImage(place.photos[0].photo_reference) }} />}
 			<View>
-				<Title text={place.name} />
-				<Comment
-					text={
-						place.formatted_address.length > 30
-							? place.formatted_address.substring(0, 30) + '...'
-							: place.formatted_address
-					}
-				/>
+				<Title text={truncate(place.name, 17)} />
+				<Comment text={truncate(place.formatted_address, 30)} />
 			</View>
 		</TouchableOpacity>
 	)

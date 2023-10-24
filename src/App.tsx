@@ -7,6 +7,7 @@ import { CreateTripForm } from './views/create-trip/form'
 import { CreateTripMap } from './views/create-trip/map'
 import { CreateTripJournal } from './views/create-trip/journal'
 import { TripProvider } from './contexts/trip-context'
+import { Discover } from './views/discover'
 
 const { Screen, Navigator } = createNativeStackNavigator()
 
@@ -25,6 +26,11 @@ export default () => {
 					<Screen name="/trip/create/form" component={CreateTripForm} options={options} />
 					<Screen name="/trip/create/map" component={CreateTripMap} options={options} />
 					<Screen name="/trip/create/journal" component={CreateTripJournal} options={options} />
+					<Screen
+						name="/trip/discover"
+						component={Discover}
+						options={{ ...options, presentation: 'modal', gestureEnabled: true }}
+					/>
 				</Navigator>
 			</NavigationContainer>
 		</TripProvider>

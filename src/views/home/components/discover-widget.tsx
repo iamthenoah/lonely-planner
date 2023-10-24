@@ -2,32 +2,37 @@ import { Image, StyleSheet, View } from 'react-native'
 import { Widget } from '../../../components/widget'
 import { Title } from '../../../components/title'
 import { Link } from '../../../components/link'
+import { Trip } from '../../../types/trip'
+import { getImage } from '../../../apis/google'
+import { PlaceInfo } from '../../../types/api'
+import { useNavigation } from '@react-navigation/native'
 
-export type DiscoverFooterProps = {
-	name: string
-	location: string
+export type DiscoverWidgetProps = {
+	trip: Trip
 }
 
-export type DiscoverProps = DiscoverFooterProps & {
-	image: string
-}
+export const DiscoverWidget = ({ trip }: DiscoverWidgetProps) => {
+	const navigation = useNavigation<any>()
 
-export const DiscoverWidget = ({ image, ...props }: DiscoverProps) => {
+	const onPress = () => {
+		navigation.navigate('/trip/discover', { id: trip.id })
+	}
+
 	return (
 		<View style={styles.container}>
-			<Widget footer={<Footer {...props} />}>
-				<Image style={styles.image} source={{ uri: image }} />
+			<Widget onPress={onPress} footer={<Footer place={trip.place} />}>
+				<Image style={styles.image} source={{ uri: getImage(trip.place.photos[0].photo_reference) }} />
 			</Widget>
 		</View>
 	)
 }
 
-const Footer = ({ name, location }: DiscoverFooterProps) => {
+const Footer = ({ place }: { place: PlaceInfo }) => {
 	return (
 		<View style={styles.footer}>
-			<Title text={name} />
+			<Title text={place.name} />
 			<View>
-				<Link text={location} />
+				<Link text={place.formatted_address} />
 			</View>
 		</View>
 	)
