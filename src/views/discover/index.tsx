@@ -4,7 +4,7 @@ import { DaysTab } from '../create-trip/journal/components/days-tab'
 import { TripDayPanel } from '../create-trip/journal/components/trip-day-panel'
 import { RouteProp, useNavigation, useRoute } from '@react-navigation/native'
 import { useTrips } from '../../contexts/trip-context'
-import { Trip, TripDate } from '../../types/trip'
+import { Trip } from '../../types/trip'
 import { Button } from '../../components/button'
 import { Info } from '../../components/info'
 import { Header } from '../../components/layout/header'
@@ -42,8 +42,8 @@ export const Discover = () => {
 				left={<Info text={trip.place.name} comment="Trip to" />}
 				right={<IconButton icon="close" onPress={() => navigation.goBack()} />}
 			/>
-			<DaysTab days={trip.days.length} onDayChange={setDay} onDayAdd={() => {}} />
-			<TripDayPanel id={null as any} day={{ ...trip.days[day], index: day }} />
+			<DaysTab days={trip.days.length} onDayChange={setDay} onDayAdded={() => {}} />
+			<TripDayPanel id={null as any} day={{ ...trip.days[day], index: day }} onDayRemoved={() => {}} />
 			<View style={styles.plan}>
 				<DateInput title="Start date" date={start} onDate={setStart} />
 				<Button text="Plan" onPress={onPress} />

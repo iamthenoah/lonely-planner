@@ -7,10 +7,10 @@ export type DaysTabProps = {
 	days: number
 	editable?: boolean
 	onDayChange: (day: number) => void
-	onDayAdd: (day: number) => void
+	onDayAdded: (day: number) => void
 }
 
-export const DaysTab = ({ days, editable, onDayChange, onDayAdd }: DaysTabProps) => {
+export const DaysTab = ({ days, editable, onDayChange, onDayAdded }: DaysTabProps) => {
 	const [tab, setTab] = useState(0)
 
 	const onPress = (day: number) => {
@@ -19,7 +19,7 @@ export const DaysTab = ({ days, editable, onDayChange, onDayAdd }: DaysTabProps)
 	}
 
 	const onAdd = () => {
-		onDayAdd(days + 1)
+		onDayAdded(days + 1)
 	}
 
 	return (

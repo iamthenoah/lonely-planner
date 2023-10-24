@@ -1,30 +1,23 @@
 import { StyleSheet, Text, TouchableOpacity } from 'react-native'
-import { useNavigation } from '@react-navigation/native'
 import { Ionicons } from '@expo/vector-icons'
 import { useTrips } from '../../../../contexts/trip-context'
 
 export type RemoveDayButtonProps = {
 	id: string
 	day: number
+	onDayRemoved: () => void
 }
 
-export const RemoveDayButton = ({ id, day }: RemoveDayButtonProps) => {
-	const navigation = useNavigation<any>()
+export const RemoveDayButton = ({ id, day, onDayRemoved }: RemoveDayButtonProps) => {
 	const trips = useTrips()
 
 	const onPress = () => {
-		trips.update(id, async trip => {
-			trip.days.splice(day, 1)
-			return trip
-		})
-
-		const trip = trips.get(id)
-
-		if (trip && trip.days.length === 0) {
-			trips.remove(id).then(() => navigation.navigate('/home'))
-		} else {
-			navigation.navigate('/trip/create/journal', { id })
-		}
+		trips
+			.update(id, trip => {
+				trip.days.splice(day, 1)
+				return trip
+			})
+			.then(onDayRemoved)
 	}
 
 	return (

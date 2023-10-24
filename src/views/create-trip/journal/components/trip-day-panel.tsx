@@ -8,16 +8,17 @@ export type TripDayProps = {
 	id: string
 	day: TripDay & { index: number }
 	editable?: boolean
+	onDayRemoved: () => void
 }
 
-export const TripDayPanel = ({ id, day, editable }: TripDayProps) => {
+export const TripDayPanel = ({ id, day, editable, onDayRemoved }: TripDayProps) => {
 	return (
 		<ScrollView style={styles.container}>
 			{day.places?.map((place, index) => (
 				<PlaceWidget editable={editable} key={Math.random()} place={place} id={id} day={day.index} index={index} />
 			))}
 			{editable && <AddPlaceButton id={id} day={day.index} />}
-			{editable && <RemoveDayButton id={id} day={day.index} />}
+			{editable && <RemoveDayButton id={id} day={day.index} onDayRemoved={onDayRemoved} />}
 		</ScrollView>
 	)
 }
