@@ -2,7 +2,6 @@ import { ScrollView } from 'react-native'
 import { Section } from '../../../components/layout/section'
 import { CreateTripWidget } from './create-trip-widget'
 import { TripWidget } from './trip-widget'
-import { Link } from '../../../components/link'
 import { useTrips } from '../../../contexts/trip-context'
 
 export const TripsSection = () => {
