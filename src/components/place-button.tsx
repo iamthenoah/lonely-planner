@@ -17,7 +17,7 @@ export const PlaceButton = ({ place }: PlaceButtonProps) => {
 	const navigation = useNavigation<any>()
 
 	const onPress = () => {
-		navigation.navigate('/place', { place: place })
+		// navigation.navigate('/place', { place: place })
 	}
 
 	return (
