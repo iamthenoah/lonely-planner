@@ -2,7 +2,7 @@
 	"expo": {
 		"name": "lonely-planner",
 		"slug": "lonely-planner",
-		"version": "1.0.2",
+		"version": "1.0.3",
 		"orientation": "portrait",
 		"icon": "./assets/icon.png",
 		"userInterfaceStyle": "light",
@@ -20,7 +20,8 @@
 			"adaptiveIcon": {
 				"foregroundImage": "./assets/adaptive-icon.png",
 				"backgroundColor": "#ffffff"
-			}
+			},
+			"package": "nl.hackerstore.lonelyplanner23"
 		},
 		"web": {
 			"favicon": "./assets/favicon.png"
