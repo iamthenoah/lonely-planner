@@ -30,7 +30,9 @@ export const PlaceWidget = ({ id, day, index, place, editable }: PlaceWidgetProp
 				{editable &&
 					place.photos
 						.splice(1) // remove first image
-						.map(photo => <Image style={styles.image} source={{ uri: getImage(photo.photo_reference) }} />)}
+						.map(photo => (
+							<Image key={Math.random()} style={styles.image} source={{ uri: getImage(photo.photo_reference) }} />
+						))}
 			</ScrollView>
 		</View>
 	)
