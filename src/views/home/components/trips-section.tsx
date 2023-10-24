@@ -9,7 +9,7 @@ export const TripsSection = () => {
 	const trips = useTrips()
 
 	return (
-		<Section name="Trips" action={<Link text="view all" onPress={console.log} />}>
+		<Section name="Trips" /* action={<Link text="view all" onPress={console.log} />} */>
 			<ScrollView horizontal>
 				<CreateTripWidget />
 				{trips.trips.map(trip => (
