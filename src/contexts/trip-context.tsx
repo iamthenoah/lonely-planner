@@ -40,8 +40,8 @@ export const TripProvider = ({ children }: PropsWithChildren) => {
 
 	const create = async (place: PlaceInfo, dates: TripDate) => {
 		const id = Math.random().toString()
-		const length = Math.floor((dates.end.getTime() - dates.start.getTime()) / (24 * 60 * 60 * 1_000))
-		const days = Array.from({ length }, () => ({ places: [] }))
+		const count = Math.ceil((dates.end.getTime() - dates.start.getTime()) / (24 * 60 * 60 * 1_000))
+		const days = Array(count).fill({ places: [] })
 		const trip = { id, place, dates, days }
 
 		await reloadTrips([...trips, trip])

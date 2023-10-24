@@ -12,7 +12,7 @@ export type TripDayProps = {
 export const TripDayPanel = ({ id, day, editable }: TripDayProps) => {
 	return (
 		<ScrollView style={styles.container}>
-			{day.places?.map((place, index) => (
+			{day.places.map((place, index) => (
 				<PlaceWidget key={Math.random()} place={place} id={id} day={day.index} index={index} />
 			))}
 			{editable && <AddPlaceButton id={id} day={day.index} />}
