@@ -10,7 +10,7 @@ import { Info } from '../../components/info'
 import { Header } from '../../components/layout/header'
 import { IconButton } from '../../components/icon-button'
 
-const discover = require('../../trips.json') as Trip[]
+const discover = require('../../assets/trips.json') as Trip[]
 
 export type DiscoverParams = RouteProp<{
 	params: { id: string }

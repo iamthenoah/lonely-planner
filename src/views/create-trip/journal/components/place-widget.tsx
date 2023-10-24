@@ -16,9 +16,7 @@ export const PlaceWidget = ({ id, day, index, place, editable }: PlaceWidgetProp
 	const trips = useTrips()
 
 	const onRemove = () => {
-		trips.update(id, trip => {
-			trip.days[day].places = trip.days[day].places.filter((_, i) => i !== index)
-		})
+		trips.update(id, trip => (trip.days[day].places = trip.days[day].places.filter((_, i) => i !== index)))
 	}
 
 	return (
