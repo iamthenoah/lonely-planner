@@ -1,5 +1,6 @@
 import { ScrollView, StyleSheet } from 'react-native'
 import { AddPlaceButton } from './add-place-button'
+import { RemoveDayButton } from './remove-day-button'
 import { TripDay } from '../../../../types/trip'
 import { PlaceWidget } from './place-widget'
 
@@ -12,10 +13,11 @@ export type TripDayProps = {
 export const TripDayPanel = ({ id, day, editable }: TripDayProps) => {
 	return (
 		<ScrollView style={styles.container}>
-			{day.places.map((place, index) => (
+			{day.places?.map((place, index) => (
 				<PlaceWidget editable={editable} key={Math.random()} place={place} id={id} day={day.index} index={index} />
 			))}
 			{editable && <AddPlaceButton id={id} day={day.index} />}
+			{editable && <RemoveDayButton id={id} day={day.index} />}
 		</ScrollView>
 	)
 }

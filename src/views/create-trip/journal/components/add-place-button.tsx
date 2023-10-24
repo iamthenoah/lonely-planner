@@ -20,11 +20,10 @@ export const AddPlaceButton = ({ id, day }: AddPlaceButtonProps) => {
 
 const styles = StyleSheet.create({
 	container: {
-		width: '100%',
-		height: '100%',
 		display: 'flex',
 		flexDirection: 'row',
-		margin: 20,
+		marginHorizontal: 20,
+		marginVertical: 10,
 		gap: 20
 	},
 	text: {

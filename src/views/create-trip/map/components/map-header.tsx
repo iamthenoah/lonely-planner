@@ -35,7 +35,10 @@ export const MapHeader = ({ onPlace }: MapHeaderProps) => {
 
 	return (
 		<View>
-			<Header left={<IconButton icon="close" onPress={navigation.goBack} />} center={<Title text="Select Location" />}>
+			<Header
+				left={<IconButton icon="chevron-back" onPress={navigation.goBack} />}
+				center={<Title text="Select Location" />}
+			>
 				<SearchBar placeholder="Search Location" onSubmit={onSearchPlaces} />
 			</Header>
 			{places.map(place => (
