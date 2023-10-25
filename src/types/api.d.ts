@@ -81,7 +81,7 @@ export type PlaceInfo = {
 	icon_background_color: string
 	icon_mask_base_uri: string
 	name: string
-	photos: Photo[]
+	photos?: Photo[]
 	place_id: string
 	reference: string
 	scope: string
@@ -95,7 +95,7 @@ export type NearestPlace = {
 	icon_background_color: string
 	icon_mask_base_uri: string
 	name: string
-	photos: Photo[]
+	photos?: Photo[]
 	place_id: string
 	reference: string
 	scope: string

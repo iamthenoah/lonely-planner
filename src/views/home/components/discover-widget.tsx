@@ -21,7 +21,9 @@ export const DiscoverWidget = ({ trip }: DiscoverWidgetProps) => {
 	return (
 		<View style={styles.container}>
 			<Widget onPress={onPress} footer={<Footer place={trip.place} />}>
-				<Image style={styles.image} source={{ uri: getImage(trip.place.photos[0].photo_reference) }} />
+				{trip.place.photos && (
+					<Image style={styles.image} source={{ uri: getImage(trip.place.photos[0].photo_reference) }} />
+				)}
 			</Widget>
 		</View>
 	)
