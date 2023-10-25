@@ -1,12 +1,13 @@
 import { useEffect, useState } from 'react'
 import { RouteProp, useRoute } from '@react-navigation/native'
-import { StyleSheet, View } from 'react-native'
+import { StyleSheet } from 'react-native'
 import { MapHeader } from './components/map-header'
 import { PlaceWidget } from './components/place-widget'
 import MapView, { LatLng, MapPressEvent, Marker, Region } from 'react-native-maps'
 import { getNearestPlace, getPlaceInfo } from '../../../apis/google'
 import { PlaceInfo } from '../../../types/api'
 import * as Location from 'expo-location'
+import { SafeAreaView } from 'react-native-safe-area-context'
 
 export type CreateTripMapParams = RouteProp<{
 	params: { id: string; day: number }
@@ -50,13 +51,13 @@ export const CreateTripMap = () => {
 	}
 
 	return (
-		<View style={styles.container}>
+		<SafeAreaView style={styles.container}>
 			<MapHeader onPlace={onPlace} />
 			<MapView showsUserLocation style={styles.map} region={region} initialRegion={region} onPress={onPress}>
 				{marker && <Marker coordinate={marker} />}
 			</MapView>
 			{place && <PlaceWidget id={route.params.id} day={route.params.day} place={place} />}
-		</View>
+		</SafeAreaView>
 	)
 }
 

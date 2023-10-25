@@ -10,6 +10,7 @@ import { Info } from '../../components/info'
 import { Header } from '../../components/layout/header'
 import { IconButton } from '../../components/icon-button'
 import { DateInput } from '../../components/date-input'
+import { SafeAreaView } from 'react-native-safe-area-context'
 
 const discover = require('../../assets/trips.json') as Trip[]
 
@@ -37,7 +38,7 @@ export const Discover = () => {
 	}
 
 	return (
-		<View>
+		<SafeAreaView>
 			<Header
 				left={<Info text={trip.place.name} comment="Trip to" />}
 				right={<IconButton icon="close" onPress={() => navigation.goBack()} />}
@@ -48,7 +49,7 @@ export const Discover = () => {
 				<DateInput title="Start date" date={start} onDate={setStart} />
 				<Button text="Plan" onPress={onPress} />
 			</View>
-		</View>
+		</SafeAreaView>
 	)
 }
 

@@ -36,7 +36,7 @@
 			[
 				"expo-location",
 				{
-					"locationAlwaysAndWhenInUsePermission": "Allow $(PRODUCT_NAME) to use your location?"
+					"locationAlwaysAndWhenInUsePermission": "Allow $(PRODUCT_NAME) to use your location? $(PRODUCT_NAME) does not collect this data and solely uses it to show your location on a map."
 				}
 			]
 		]

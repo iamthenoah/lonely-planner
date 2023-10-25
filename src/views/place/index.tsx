@@ -1,7 +1,7 @@
 import { RouteProp, useRoute } from '@react-navigation/native'
-import { View } from 'react-native'
 import { Comment } from '../../components/comment'
 import { PlaceInfo } from '../../types/api'
+import { SafeAreaView } from 'react-native-safe-area-context'
 
 export type PlaceParams = RouteProp<{
 	params: { place: PlaceInfo }
@@ -12,8 +12,8 @@ export const Place = () => {
 	const place = route.params.place
 
 	return (
-		<View>
+		<SafeAreaView>
 			<Comment text={JSON.stringify(place, null, 2)} />
-		</View>
+		</SafeAreaView>
 	)
 }

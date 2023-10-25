@@ -13,6 +13,7 @@ import { PlaceInfo } from '../../../types/api'
 import { useTrips } from '../../../contexts/trip-context'
 import { Header } from '../../../components/layout/header'
 import { IconButton } from '../../../components/icon-button'
+import { SafeAreaView } from 'react-native-safe-area-context'
 
 const buttons = [
 	['Next', 'cancel'],
@@ -47,7 +48,7 @@ export const CreateTripForm = () => {
 	}
 
 	return (
-		<View style={styles.container}>
+		<SafeAreaView style={styles.container}>
 			<Header seamless right={<IconButton icon="close" onPress={() => navigation.navigate('/home')} />} />
 			<View style={styles.title}>
 				<Title text={titles[form]} />
@@ -67,7 +68,7 @@ export const CreateTripForm = () => {
 				/>
 				<Link text={buttons[form][1]} onPress={previousForm} />
 			</View>
-		</View>
+		</SafeAreaView>
 	)
 }
 
