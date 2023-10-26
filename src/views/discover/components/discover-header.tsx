@@ -1,7 +1,7 @@
 import { useNavigation } from '@react-navigation/native'
-import { Header } from 'react-native/Libraries/NewAppScreen'
 import { Info } from '../../../components/info'
 import { IconButton } from '../../../components/icon-button'
+import { Header } from '../../../components/layout/header'
 
 export type DiscoverHeaderProps = {
 	place: string

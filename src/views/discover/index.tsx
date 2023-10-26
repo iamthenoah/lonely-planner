@@ -4,7 +4,6 @@ import { DaysTab } from '../create-trip/journal/components/days-tab'
 import { TripDayPanel } from '../create-trip/journal/components/trip-day-panel'
 import { RouteProp, useRoute } from '@react-navigation/native'
 import { Trip } from '../../types/trip'
-import { SafeAreaView } from 'react-native-safe-area-context'
 import { DiscoverHeader } from './components/discover-header'
 import { DiscoverFooter } from './components/discover-footer'
 
@@ -25,11 +24,11 @@ export const Discover = () => {
 	}
 
 	return (
-		<SafeAreaView>
+		<View>
 			<DiscoverHeader place={trip.place.name} />
 			<DaysTab days={trip.days.length} onDayChange={setDay} onDayAdded={() => {}} />
 			<TripDayPanel id={null as any} day={{ ...trip.days[day], index: day }} onDayRemoved={() => {}} />
 			<DiscoverFooter trip={trip} />
-		</SafeAreaView>
+		</View>
 	)
 }
