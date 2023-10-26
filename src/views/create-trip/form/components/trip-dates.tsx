@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { StyleSheet, View } from 'react-native'
+import { Platform, StyleSheet, View } from 'react-native'
 import { TripDate } from '../../../../types/trip'
 import { DateInput } from '../../../../components/date-input'
 
@@ -32,8 +32,9 @@ export const TripDates = ({ onDate }: TripDatesProps) => {
 const styles = StyleSheet.create({
 	container: {
 		display: 'flex',
-		flexDirection: 'row',
+		flexDirection: Platform.OS === 'android' ? 'column' : 'row',
 		justifyContent: 'space-around',
-		alignItems: 'center'
+		alignItems: 'center',
+		gap: 30
 	}
 })

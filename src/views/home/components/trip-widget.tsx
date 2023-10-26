@@ -5,6 +5,7 @@ import { Widget } from '../../../components/widget'
 import { Trip } from '../../../types/trip'
 import { getImage } from '../../../apis/google'
 import { useNavigation } from '@react-navigation/native'
+import { formatDate } from '../../../components/date-input'
 
 export type TripWidgetProps = PropsWithChildren & {
 	trip: Trip
@@ -44,11 +45,3 @@ const styles = StyleSheet.create({
 		color: 'white'
 	}
 })
-
-const formatDate = (date: Date) => {
-	const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
-	const month = months[date.getMonth()]
-	const day = date.getDate()
-	const year = date.getFullYear()
-	return `${month} ${day}, ${year}`
-}

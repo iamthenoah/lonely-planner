@@ -1,7 +1,7 @@
 import DateTimePicker, { DateTimePickerAndroid } from '@react-native-community/datetimepicker'
 import { Platform, StyleSheet, View } from 'react-native'
-import { Button } from './button'
 import { Comment } from './comment'
+import { Link } from './link'
 
 export type DateInputProps = {
 	title: string
@@ -11,9 +11,14 @@ export type DateInputProps = {
 }
 
 export const DateInput = ({ title, date = new Date(), minimum = new Date(), onDate }: DateInputProps) => {
-	if (Platform.OS === 'android') {
-		return <Button text={title} onPress={() => DateTimePickerAndroid.open({ value: date })} />
+	const onPress = () => {
+		DateTimePickerAndroid.open({ value: date, minimumDate: minimum, onChange: (_, date) => onDate(date!) })
 	}
+
+	if (Platform.OS === 'android') {
+		return <Link text={title + ': ' + formatDate(date)} onPress={onPress} />
+	}
+
 	return (
 		<View style={styles.date}>
 			<Comment text={title} />
@@ -31,3 +36,11 @@ const styles = StyleSheet.create({
 		marginRight: 10 // TODO - review
 	}
 })
+
+export const formatDate = (date: Date) => {
+	const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+	const month = months[date.getMonth()]
+	const day = date.getDate()
+	const year = date.getFullYear()
+	return `${month} ${day}, ${year}`
+}
