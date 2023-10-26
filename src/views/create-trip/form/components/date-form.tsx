@@ -1,7 +1,7 @@
 import { StyleSheet, View } from 'react-native'
 import { Subtitle } from '../../../../components/subtitle'
 import { TripDate } from '../../../../types/trip'
-import { TripDates } from '../../../../components/trip-dates'
+import { TripDates } from './trip-dates'
 import format from 'humanize-duration'
 
 export type DateFormProps = {

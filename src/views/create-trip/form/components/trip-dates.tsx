@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { StyleSheet, View } from 'react-native'
-import { TripDate } from '../types/trip'
-import { DateInput } from './date-input'
+import { TripDate } from '../../../../types/trip'
+import { DateInput } from '../../../../components/date-input'
 
 export type TripDatesProps = {
 	onDate: (dates: TripDate) => void
