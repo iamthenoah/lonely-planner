@@ -26,13 +26,15 @@ export const PlaceWidget = ({ id, day, index, place, editable }: PlaceWidgetProp
 				<PlaceButton place={place} />
 				{editable && <IconButton icon="close" color="red" seamless onPress={onRemove} />}
 			</View>
-			<ScrollView style={styles.photos} horizontal>
-				{editable &&
-					Array.from(place.photos || [])
-						.splice(1) // remove first image
-						.map(photo => (
-							<Image key={Math.random()} style={styles.image} source={{ uri: getImage(photo.photo_reference) }} />
-						))}
+			<ScrollView horizontal showsHorizontalScrollIndicator={false}>
+				<View style={styles.photos}>
+					{editable &&
+						Array.from(place.photos || [])
+							.splice(1) // remove first image
+							.map(photo => (
+								<Image key={Math.random()} style={styles.image} source={{ uri: getImage(photo.photo_reference) }} />
+							))}
+				</View>
 			</ScrollView>
 		</View>
 	)
@@ -40,12 +42,12 @@ export const PlaceWidget = ({ id, day, index, place, editable }: PlaceWidgetProp
 
 const styles = StyleSheet.create({
 	container: {
-		marginVertical: 10,
-		marginLeft: 25,
-		gap: 15
+		gap: 15,
+		marginBottom: 25
 	},
 	button: {
 		marginRight: 15,
+		marginLeft: 25,
 		display: 'flex',
 		alignItems: 'center',
 		flexDirection: 'row',
@@ -53,10 +55,11 @@ const styles = StyleSheet.create({
 	},
 	photos: {
 		display: 'flex',
-		flexDirection: 'row'
+		flexDirection: 'row',
+		marginHorizontal: 15
 	},
 	image: {
-		marginRight: 10,
+		marginHorizontal: 10,
 		borderRadius: 10,
 		width: 100,
 		height: 100

@@ -3,6 +3,7 @@ import { AddPlaceButton } from './add-place-button'
 import { RemoveDayButton } from './remove-day-button'
 import { TripDay } from '../../../../types/trip'
 import { PlaceWidget } from './place-widget'
+import { Content } from '../../../../components/layout/content'
 
 export type TripDayProps = {
 	id: string

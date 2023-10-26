@@ -13,7 +13,8 @@ import { PlaceInfo } from '../../../types/api'
 import { useTrips } from '../../../contexts/trip-context'
 import { Header } from '../../../components/layout/header'
 import { IconButton } from '../../../components/icon-button'
-import { SafeAreaView } from 'react-native-safe-area-context'
+import { Container } from '../../../components/layout/container'
+import { Content } from '../../../components/layout/content'
 
 const buttons = [
 	['Next', 'cancel'],
@@ -48,9 +49,9 @@ export const CreateTripForm = () => {
 	}
 
 	return (
-		<SafeAreaView style={styles.container}>
+		<Container>
 			<Header seamless right={<IconButton icon="close" onPress={() => navigation.navigate('/home')} />} />
-			<View style={styles.title}>
+			<View style={styles.steps}>
 				<Title text={titles[form]} />
 				<Subtitle text={'step ' + (form + 1) + ' of 3'} />
 			</View>
@@ -68,17 +69,12 @@ export const CreateTripForm = () => {
 				/>
 				<Link text={buttons[form][1]} onPress={previousForm} />
 			</View>
-		</SafeAreaView>
+		</Container>
 	)
 }
 
 const styles = StyleSheet.create({
-	container: {
-		flex: 1,
-		backgroundColor: 'white',
-		display: 'flex'
-	},
-	title: {
+	steps: {
 		flex: 1,
 		alignItems: 'center',
 		justifyContent: 'flex-end',
@@ -87,12 +83,13 @@ const styles = StyleSheet.create({
 	form: {
 		flex: 3,
 		alignItems: 'center',
-		justifyContent: 'center'
+		justifyContent: 'center',
+		marginVertical: 25
 	},
 	actions: {
 		flex: 1,
-		justifyContent: 'flex-start',
 		paddingHorizontal: 25,
+		justifyContent: 'flex-start',
 		gap: 15
 	}
 })

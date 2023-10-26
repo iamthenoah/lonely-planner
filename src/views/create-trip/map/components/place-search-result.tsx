@@ -21,8 +21,6 @@ export const PlaceSearchResult = ({ place, onPress }: SearchResultProps) => {
 
 const styles = StyleSheet.create({
 	container: {
-		backgroundColor: 'white',
-		paddingVertical: 10,
-		paddingHorizontal: 25
+		paddingVertical: 10
 	}
 })

@@ -6,6 +6,7 @@ import { RouteProp, useRoute } from '@react-navigation/native'
 import { Trip } from '../../types/trip'
 import { DiscoverHeader } from './components/discover-header'
 import { DiscoverFooter } from './components/discover-footer'
+import { Modal } from '../../components/layout/modal'
 
 const discover = require('../../assets/trips.json') as Trip[]
 
@@ -24,11 +25,11 @@ export const Discover = () => {
 	}
 
 	return (
-		<View>
+		<Modal>
 			<DiscoverHeader place={trip.place.name} />
 			<DaysTab days={trip.days.length} onDayChange={setDay} onDayAdded={() => {}} />
 			<TripDayPanel id={null as any} day={{ ...trip.days[day], index: day }} onDayRemoved={() => {}} />
 			<DiscoverFooter trip={trip} />
-		</View>
+		</Modal>
 	)
 }

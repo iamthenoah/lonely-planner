@@ -7,7 +7,7 @@ import MapView, { LatLng, MapPressEvent, Marker, Region } from 'react-native-map
 import { getNearestPlace, getPlaceInfo } from '../../../apis/google'
 import { PlaceInfo } from '../../../types/api'
 import * as Location from 'expo-location'
-import { SafeAreaView } from 'react-native-safe-area-context'
+import { Container } from '../../../components/layout/container'
 
 export type CreateTripMapParams = RouteProp<{
 	params: { id: string; day: number }
@@ -51,13 +51,13 @@ export const CreateTripMap = () => {
 	}
 
 	return (
-		<SafeAreaView style={styles.container}>
+		<Container>
 			<MapHeader onPlace={onPlace} />
 			<MapView showsUserLocation style={styles.map} region={region} initialRegion={region} onPress={onPress}>
 				{marker && <Marker coordinate={marker} />}
 			</MapView>
 			{place && <PlaceWidget id={route.params.id} day={route.params.day} place={place} />}
-		</SafeAreaView>
+		</Container>
 	)
 }
 

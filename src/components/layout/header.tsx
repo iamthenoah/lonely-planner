@@ -1,5 +1,6 @@
 import { PropsWithChildren, ReactNode } from 'react'
-import { SafeAreaView, StyleSheet, View } from 'react-native'
+import { StyleSheet, View } from 'react-native'
+import { Content } from './content'
 
 export type HeaderProps = PropsWithChildren & {
 	left?: ReactNode
@@ -10,14 +11,16 @@ export type HeaderProps = PropsWithChildren & {
 
 export const Header = ({ left, center, right, seamless, children }: HeaderProps) => {
 	return (
-		<SafeAreaView style={{ ...styles.container, borderColor: seamless ? 'white' : '#EDEEEF' }}>
-			<View style={styles.content}>
-				<View style={styles.left}>{left && left}</View>
-				<View style={styles.center}>{center && center}</View>
-				<View style={styles.right}>{right && right}</View>
-			</View>
-			{children && <View style={styles.children}>{children}</View>}
-		</SafeAreaView>
+		<View style={{ ...styles.container, borderColor: seamless ? 'white' : '#EDEEEF' }}>
+			<Content>
+				<View style={styles.content}>
+					<View style={styles.left}>{left && left}</View>
+					<View style={styles.center}>{center && center}</View>
+					<View style={styles.right}>{right && right}</View>
+				</View>
+				{children && <View style={styles.children}>{children}</View>}
+			</Content>
+		</View>
 	)
 }
 
@@ -29,8 +32,7 @@ const styles = StyleSheet.create({
 	content: {
 		alignItems: 'center',
 		flexDirection: 'row',
-		marginVertical: 15,
-		paddingHorizontal: 25
+		marginVertical: 15
 	},
 	left: {
 		flex: 1
@@ -43,7 +45,6 @@ const styles = StyleSheet.create({
 		alignItems: 'flex-end'
 	},
 	children: {
-		paddingHorizontal: 25,
 		marginBottom: 15
 	}
 })

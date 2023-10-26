@@ -6,7 +6,7 @@ import { DaysTab } from './components/days-tab'
 import { TripDayPanel } from './components/trip-day-panel'
 import { useTrips } from '../../../contexts/trip-context'
 import { useNavigation } from '@react-navigation/native'
-import { SafeAreaView } from 'react-native-safe-area-context'
+import { Container } from '../../../components/layout/container'
 
 export type CreateTripJournalParams = RouteProp<{
 	params: { id: string; day?: number }
@@ -39,10 +39,10 @@ export const CreateTripJournal = () => {
 	}
 
 	return (
-		<SafeAreaView>
+		<Container>
 			<JournalHeader id={id} />
 			<DaysTab editable days={trip.days.length} onDayChange={setDay} onDayAdded={appendDay} />
 			<TripDayPanel editable id={id} day={{ ...trip.days[day], index: day }} onDayRemoved={removeDay} />
-		</SafeAreaView>
+		</Container>
 	)
 }

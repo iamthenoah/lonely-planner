@@ -6,6 +6,7 @@ import { Place, PlaceInfo } from '../../../../types/api'
 import { Widget } from '../../../../components/widget'
 import { getPlaceInfo, getPlaces } from '../../../../apis/google'
 import { PlaceButton } from '../../../../components/place-button'
+import { Content } from '../../../../components/layout/content'
 
 export type PlaceFormProps = {
 	place?: PlaceInfo | null
@@ -46,14 +47,13 @@ export const PlaceForm = ({ place, onPlace }: PlaceFormProps) => {
 
 const styles = StyleSheet.create({
 	container: {
-		width: '100%',
-		paddingHorizontal: 25,
 		display: 'flex',
 		justifyContent: 'space-around',
-		gap: 20
+		gap: 20,
+		width: '80%'
 	},
 	places: {
-		height: '70%'
+		width: '100%'
 	},
 	place: {
 		padding: 20
