@@ -56,10 +56,10 @@ const styles = StyleSheet.create({
 	photos: {
 		display: 'flex',
 		flexDirection: 'row',
-		marginHorizontal: 15
+		marginHorizontal: 20
 	},
 	image: {
-		marginHorizontal: 10,
+		marginHorizontal: 5,
 		borderRadius: 10,
 		width: 100,
 		height: 100

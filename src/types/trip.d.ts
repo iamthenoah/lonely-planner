@@ -12,6 +12,6 @@ export type TripDay = {
 }
 
 export type TripDate = {
-	start: Date
-	end: Date
+	start: string
+	end: string
 }

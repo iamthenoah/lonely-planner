@@ -28,7 +28,8 @@ export const TripProvider = ({ children }: PropsWithChildren) => {
 	}
 
 	const reloadTrips = async (trips: Trip[]) => {
-		AsyncStorage.setItem('trips', JSON.stringify(trips)).then(loadTrips)
+		await AsyncStorage.setItem('trips', JSON.stringify(trips))
+		loadTrips()
 	}
 
 	const get = (id: string): Trip | null => {
@@ -41,12 +42,10 @@ export const TripProvider = ({ children }: PropsWithChildren) => {
 
 	const create = async (place: PlaceInfo, dates: TripDate) => {
 		const id = Math.random().toString()
-		const count = Math.ceil((dates.end.getTime() - dates.start.getTime()) / (24 * 60 * 60 * 1_000))
+		const count = Math.ceil((new Date(dates.end).getTime() - new Date(dates.start).getTime()) / (24 * 60 * 60 * 1_000))
 		const days = Array(count).fill({ places: [] })
 		const trip = { id, place, dates, days }
-
 		await reloadTrips([...trips, trip])
-
 		return trip
 	}
 
@@ -66,7 +65,7 @@ export const TripProvider = ({ children }: PropsWithChildren) => {
 	const duplicate = async (start: Date, trip: Trip) => {
 		const end = new Date(start)
 		end.setDate(end.getDate() + trip.days.length)
-		trip.dates = { start, end }
+		trip.dates = { start: start.toString(), end: end.toString() }
 		trip.id = Math.random().toString()
 		await reloadTrips([...trips, trip])
 		return trip

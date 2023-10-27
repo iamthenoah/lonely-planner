@@ -15,11 +15,11 @@ export const ReviewForm = ({ place, dates }: ReviewFormProps) => {
 		<View style={styles.container}>
 			<Widget style={styles.content}>
 				<Info comment="Location" text={place.name} />
-				<Info comment="Start date" text={dates.start.toDateString()} />
-				<Info comment="End date" text={dates.end.toDateString()} />
+				<Info comment="Start date" text={new Date(dates.start).toDateString()} />
+				<Info comment="End date" text={new Date(dates.end).toDateString()} />
 				<Info
 					comment="Duration"
-					text={format(dates.end.getTime() - dates.start.getTime(), { units: ['d'], round: true })}
+					text={format(new Date(dates.end).getTime() - new Date(dates.start).getTime(), { units: ['d'], round: true })}
 				/>
 			</Widget>
 		</View>
