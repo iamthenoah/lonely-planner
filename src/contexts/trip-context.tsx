@@ -7,7 +7,6 @@ const TripContext = createContext<{
 	trips: Trip[]
 	get: (id: string) => Trip | null
 	getOngoing: () => Trip | null
-	getUnavailableDates: () => Date[]
 	create: (place: PlaceInfo, dates: TripDate) => Promise<Trip>
 	remove: (id: string) => Promise<void>
 	update: (id: string, callback: (trip: Trip) => void) => Promise<void>
@@ -51,22 +50,6 @@ export const TripProvider = ({ children }: PropsWithChildren) => {
 		return null
 	}
 
-	const getUnavailableDates = () => {
-		const dates: Date[] = []
-
-		for (const trip of trips) {
-			const start = new Date(trip.dates.start)
-			const end = new Date(trip.dates.end)
-			let current = new Date(start)
-
-			while (current <= end) {
-				dates.push(new Date(current))
-				current.setDate(current.getDate() + 1)
-			}
-		}
-		return dates
-	}
-
 	const create = async (place: PlaceInfo, dates: TripDate) => {
 		const id = Math.random().toString()
 		const count = Math.ceil((new Date(dates.end).getTime() - new Date(dates.start).getTime()) / (24 * 60 * 60 * 1_000))
@@ -99,7 +82,7 @@ export const TripProvider = ({ children }: PropsWithChildren) => {
 	}
 
 	return (
-		<TripContext.Provider value={{ trips, get, getOngoing, getUnavailableDates, create, remove, update, duplicate }}>
+		<TripContext.Provider value={{ trips, get, getOngoing, create, remove, update, duplicate }}>
 			{children}
 		</TripContext.Provider>
 	)
