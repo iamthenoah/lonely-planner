@@ -7,12 +7,15 @@ export type DateInputProps = {
 	title: string
 	date?: Date
 	minimum?: Date
+	hours?: boolean
 	onDate: (date: Date) => void
 }
 
-export const DateInput = ({ title, date = new Date(), minimum = new Date(), onDate }: DateInputProps) => {
+export const DateInput = ({ title, hours, date = new Date(), minimum = new Date(), onDate }: DateInputProps) => {
+	const mode = hours ? 'time' : 'date'
+
 	const onPress = () => {
-		DateTimePickerAndroid.open({ value: date, minimumDate: minimum, onChange: (_, date) => onDate(date!) })
+		DateTimePickerAndroid.open({ mode, value: date, minimumDate: minimum, onChange: (_, date) => onDate(date!) })
 	}
 
 	if (Platform.OS === 'android') {
@@ -22,7 +25,7 @@ export const DateInput = ({ title, date = new Date(), minimum = new Date(), onDa
 	return (
 		<View style={styles.date}>
 			<Comment text={title} />
-			<DateTimePicker value={date} minimumDate={minimum} onChange={(_, date) => onDate(date!)} />
+			<DateTimePicker mode={mode} value={date} minimumDate={minimum} onChange={(_, date) => onDate(date!)} />
 		</View>
 	)
 }
