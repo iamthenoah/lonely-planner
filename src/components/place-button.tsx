@@ -11,10 +11,15 @@ const truncate = (text: string, size: number) => {
 
 export type PlaceButtonProps = {
 	place: PlaceInfo
+	time?: Date
 }
 
-export const PlaceButton = ({ place }: PlaceButtonProps) => {
+export const PlaceButton = ({ place, time }: PlaceButtonProps) => {
 	const navigation = useNavigation<any>()
+
+	const text = time
+		? 'At ' + time.toLocaleString('en-US', { hour: 'numeric', hour12: true })
+		: truncate(place.formatted_address, 30)
 
 	const onPress = () => {
 		// navigation.navigate('/place', { place: place })
@@ -25,7 +30,7 @@ export const PlaceButton = ({ place }: PlaceButtonProps) => {
 			{place.photos && <Image style={styles.image} source={{ uri: getImage(place.photos[0].photo_reference) }} />}
 			<View>
 				<Title text={truncate(place.name, 17)} />
-				<Comment text={truncate(place.formatted_address, 30)} />
+				<Comment text={text} />
 			</View>
 		</TouchableOpacity>
 	)

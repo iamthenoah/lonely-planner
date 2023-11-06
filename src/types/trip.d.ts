@@ -8,7 +8,12 @@ export type Trip = {
 }
 
 export type TripDay = {
-	places: PlaceInfo[]
+	places: TripPlace[]
+}
+
+export type TripPlace = {
+	time: string
+	info: PlaceInfo
 }
 
 export type TripDate = {

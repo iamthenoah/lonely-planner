@@ -8,13 +8,16 @@ import { getNearestPlace, getPlaceInfo } from '../../../apis/google'
 import { PlaceInfo } from '../../../types/api'
 import * as Location from 'expo-location'
 import { Container } from '../../../components/layout/container'
+import { useTrips } from '../../../contexts/trip-context'
 
 export type CreateTripMapParams = RouteProp<{
-	params: { id: string; day: number }
+	params: { id: string; day: number; count: number }
 }>
 
 export const CreateTripMap = () => {
-	const route = useRoute<CreateTripMapParams>()
+	const { id, day, count } = useRoute<CreateTripMapParams>().params
+	const trips = useTrips()
+	const previous = trips.get(id)?.days[day].places[count - 1]
 
 	const [place, setPlace] = useState<PlaceInfo | null>(null)
 	const [marker, setMarker] = useState<LatLng | null>(null)
@@ -56,7 +59,7 @@ export const CreateTripMap = () => {
 			<MapView showsUserLocation style={styles.map} region={region} initialRegion={region} onPress={onPress}>
 				{marker && <Marker coordinate={marker} />}
 			</MapView>
-			{place && <PlaceWidget id={route.params.id} day={route.params.day} place={place} />}
+			{place && <PlaceWidget id={id} day={day} place={place} previous={previous} />}
 		</Container>
 	)
 }

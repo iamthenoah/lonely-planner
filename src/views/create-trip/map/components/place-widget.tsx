@@ -6,26 +6,40 @@ import { Button } from '../../../../components/button'
 import { Widget } from '../../../../components/widget'
 import { useTrips } from '../../../../contexts/trip-context'
 import { PlaceButton } from '../../../../components/place-button'
+import { TripPlace } from '../../../../types/trip'
 
 export type PlaceWidgetProps = {
 	id: string
 	day: number
 	place: PlaceInfo
+	previous?: TripPlace
 }
 
-export const PlaceWidget = ({ id, day, place }: PlaceWidgetProps) => {
+export const PlaceWidget = ({ id, day, place, previous }: PlaceWidgetProps) => {
 	const trips = useTrips()
 	const navigation = useNavigation<any>()
 
+	const getTime = () => {
+		if (previous?.time) {
+			const next = new Date(previous?.time)
+			next.setHours(next.getHours() + 1)
+			return next
+		}
+		const current = new Date()
+		current.setHours(8)
+		return current
+	}
+
 	const onPress = async () => {
-		trips.update(id, trip => trip.days[day].places.push(place))
+		const data = { info: place, time: getTime().toString() }
+		trips.update(id, trip => trip.days[day].places.push(data))
 		navigation.navigate('/trip/create/journal', { id, day })
 	}
 
 	return (
 		<SafeAreaView style={styles.container}>
 			<Widget shadow style={styles.content}>
-				<PlaceButton place={place} />
+				<PlaceButton place={place} time={getTime()} />
 				<Button text="Add Location" onPress={onPress} />
 			</Widget>
 		</SafeAreaView>

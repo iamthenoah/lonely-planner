@@ -6,7 +6,6 @@ import { Place, PlaceInfo } from '../../../../types/api'
 import { Widget } from '../../../../components/widget'
 import { getPlaceInfo, getPlaces } from '../../../../apis/google'
 import { PlaceButton } from '../../../../components/place-button'
-import { Content } from '../../../../components/layout/content'
 
 export type PlaceFormProps = {
 	place?: PlaceInfo | null

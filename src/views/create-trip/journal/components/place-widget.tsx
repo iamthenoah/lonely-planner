@@ -1,15 +1,15 @@
 import { Image, ScrollView, StyleSheet, View } from 'react-native'
-import { PlaceInfo } from '../../../../types/api'
 import { IconButton } from '../../../../components/icon-button'
 import { useTrips } from '../../../../contexts/trip-context'
 import { PlaceButton } from '../../../../components/place-button'
 import { getImage } from '../../../../apis/google'
+import { TripPlace } from '../../../../types/trip'
 
 export type PlaceWidgetProps = {
 	id: string
 	day: number
 	index: number
-	place: PlaceInfo
+	place: TripPlace
 	editable?: boolean
 }
 
@@ -23,13 +23,13 @@ export const PlaceWidget = ({ id, day, index, place, editable }: PlaceWidgetProp
 	return (
 		<View style={styles.container}>
 			<View style={styles.button}>
-				<PlaceButton place={place} />
+				<PlaceButton place={place.info} time={new Date(place.time)} />
 				{editable && <IconButton icon="close" color="red" seamless onPress={onRemove} />}
 			</View>
 			<ScrollView horizontal showsHorizontalScrollIndicator={false}>
 				<View style={styles.photos}>
 					{editable &&
-						Array.from(place.photos || [])
+						Array.from(place.info.photos || [])
 							.splice(1) // remove first image
 							.map(photo => (
 								<Image key={Math.random()} style={styles.image} source={{ uri: getImage(photo.photo_reference) }} />
