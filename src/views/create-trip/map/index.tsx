@@ -56,7 +56,14 @@ export const CreateTripMap = () => {
 	return (
 		<Container>
 			<MapHeader onPlace={onPlace} />
-			<MapView showsUserLocation style={styles.map} region={region} initialRegion={region} onPress={onPress}>
+			<MapView
+				moveOnMarkerPress
+				showsUserLocation
+				style={styles.map}
+				region={region}
+				initialRegion={region}
+				onPress={onPress}
+			>
 				{marker && <Marker coordinate={marker} />}
 			</MapView>
 			{place && <PlaceWidget id={id} day={day} place={place} previous={previous} />}

@@ -5,7 +5,7 @@ import { getImage } from '../apis/google'
 import { Title } from './title'
 import { Comment } from './comment'
 
-const truncate = (text: string, size: number) => {
+export const truncate = (text: string, size: number) => {
 	return text.length > size ? text.substring(0, size) + '...' : text
 }
 
@@ -22,7 +22,7 @@ export const PlaceButton = ({ place, time }: PlaceButtonProps) => {
 		: truncate(place.formatted_address, 30)
 
 	const onPress = () => {
-		// navigation.navigate('/place', { place: place })
+		navigation.navigate('/place', { place, time: time?.toString() })
 	}
 
 	return (

@@ -4,7 +4,7 @@ import { Comment } from './comment'
 import { Link } from './link'
 
 export type DateInputProps = {
-	title: string
+	title?: string
 	date?: Date
 	minimum?: Date
 	hours?: boolean
@@ -24,7 +24,7 @@ export const DateInput = ({ title, hours, date = new Date(), minimum = new Date(
 
 	return (
 		<View style={styles.date}>
-			<Comment text={title} />
+			{title && <Comment text={title} />}
 			<DateTimePicker mode={mode} value={date} minimumDate={minimum} onChange={(_, date) => onDate(date!)} />
 		</View>
 	)
@@ -41,9 +41,5 @@ const styles = StyleSheet.create({
 })
 
 export const formatDate = (date: Date) => {
-	const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
-	const month = months[date.getMonth()]
-	const day = date.getDate()
-	const year = date.getFullYear()
-	return `${month} ${day}, ${year}`
+	return date.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' })
 }
