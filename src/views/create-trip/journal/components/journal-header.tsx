@@ -18,7 +18,7 @@ export const JournalHeader = ({ id }: JournalHeaderProps) => {
 
 	return (
 		<Header
-			left={<IconButton icon="chevron-back" onPress={() => navigation.navigate('/home')} />}
+			left={<IconButton icon="chevron-back" onPress={navigation.goBack} />}
 			center={<Title text="Journal" />}
 			right={<IconButton icon="trash" color="red" onPress={onPress} />}
 		/>

@@ -9,6 +9,7 @@ import { CreateTripJournal } from './views/create-trip/journal'
 import { TripProvider } from './contexts/trip-context'
 import { Discover } from './views/discover'
 import { Place } from './views/place'
+import { TripMap } from './views/map'
 
 const { Screen, Navigator } = createNativeStackNavigator()
 
@@ -30,6 +31,7 @@ export default () => {
 					<Screen name="/trip/create/journal" component={CreateTripJournal} options={options} />
 					<Screen name="/trip/discover" component={Discover} options={modal} />
 					<Screen name="/place" component={Place} options={modal} />
+					<Screen name="/map" component={TripMap} options={options} />
 				</Navigator>
 			</NavigationContainer>
 		</TripProvider>

@@ -43,7 +43,7 @@ export const CurrentTripSection = ({ trip }: CurrentTripSectionProps) => {
 	return (
 		<Content>
 			<Section name="Current Trip" action={<Link text="view day" onPress={onPress} />}>
-				<CurrentTripWidget title={'Day ' + getCurrentTripDay(trip)} place={getNextPlace(trip)} />
+				<CurrentTripWidget trip={trip} place={getNextPlace(trip)} day={getCurrentTripDay(trip)} />
 			</Section>
 		</Content>
 	)
