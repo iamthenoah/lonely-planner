@@ -1,1 +1,2749 @@
-[]
+[
+	{
+		"id": "0.8262586627543951",
+		"place": {
+			"address_components": [
+				{ "long_name": "Paris", "short_name": "Paris", "types": ["locality", "political"] },
+				{ "long_name": "Paris", "short_name": "Paris", "types": ["administrative_area_level_2", "political"] },
+				{ "long_name": "Île-de-France", "short_name": "IDF", "types": ["administrative_area_level_1", "political"] },
+				{ "long_name": "France", "short_name": "FR", "types": ["country", "political"] }
+			],
+			"adr_address": "<span class=\"locality\">Paris</span>, <span class=\"country-name\">France</span>",
+			"formatted_address": "Paris, France",
+			"geometry": {
+				"location": { "lat": 48.856614, "lng": 2.3522219 },
+				"viewport": {
+					"northeast": { "lat": 48.90214747577797, "lng": 2.469850925555473 },
+					"southwest": { "lat": 48.81556220872687, "lng": 2.224219054341255 }
+				}
+			},
+			"icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/geocode-71.png",
+			"icon_background_color": "#7B9EB0",
+			"icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+			"name": "Paris",
+			"photos": [
+				{
+					"height": 2992,
+					"html_attributions": [
+						"<a href=\"https://maps.google.com/maps/contrib/104556133035649836911\">Andrea Sangalli</a>"
+					],
+					"photo_reference": "AcJnMuEEEWTvnKg3jXMjleHs3Fjop8dlxE4OSSkUqWcHNj5PJSf6vUCoDZtYfwUkk-n0pEKrSQZwzzcnU8X9Dg1e-jKEBdvsH7js64SkqWEAh04npllNAQ_QJCEZnnGT7TsXta3gg22dDWu7iV9YUDPWbIKRtGdAB9pnDFGDCRAdcg7JbGLO",
+					"width": 2992
+				},
+				{
+					"height": 784,
+					"html_attributions": [
+						"<a href=\"https://maps.google.com/maps/contrib/105956371132084536354\">Haron swat</a>"
+					],
+					"photo_reference": "AcJnMuHBSsWSZljEGgzuTlo_QKvZf4JJBU7CTXYwt9SzPr3X5vIzgMLGC4h7BCyzn3-HHS8UYP9F5ArZDsrzPaS_8un-_WxAadoxjf1GUb2hlt5M8Q6YXXApaiO_MZ2iUoMHA3JY2lnwIMhiVU4GW4NoPtxl8dNGEVQQULf-iqKlMKHilfFF",
+					"width": 719
+				},
+				{
+					"height": 2112,
+					"html_attributions": [
+						"<a href=\"https://maps.google.com/maps/contrib/102938466735646365189\">Edward Liu</a>"
+					],
+					"photo_reference": "AcJnMuEymsYi6cbkC87ovaX2nesHd4hF2j6j6SRc7DP1974Tl_FSkBwjY_55qAujvuPJphixh3b7PRbjm8JtxhirFn-tvnT4m5-31qYwyItwGDf6z3VTz-YRgr5rhVE26adMnZAnLp05EN1zUGS_0LQtsMe218DLum2vOBILmeYGDn0Q5s31",
+					"width": 2816
+				},
+				{
+					"height": 3712,
+					"html_attributions": ["<a href=\"https://maps.google.com/maps/contrib/116584297857970605315\">Simo</a>"],
+					"photo_reference": "AcJnMuFWA5EYOK0j3OIp76DlIv2gVOnW8G_Bd3I-CMHtagQQKy0dIojgC7FDQ_Ae8QuNNgesnqqm4DlJAw-6THN_OTT4Iiyh3hy17v0WT3b9v40K2FmHG4DNc_ChvWFTm2YxAUIr-LaBvFir0liGXlunMB29QUnGe3oSgBTtDzXfeaoHROc9",
+					"width": 5568
+				},
+				{
+					"height": 667,
+					"html_attributions": [
+						"<a href=\"https://maps.google.com/maps/contrib/103779787326158857863\">Md Ziaul Islam</a>"
+					],
+					"photo_reference": "AcJnMuGL51ls1IGF8YkxoTDZfspjyj888ITXxykbV14Smha9tTJW2XklRsp2CM3dxHYg3z5jThaWippo6r2FQ6xvKNX0jmw_wU1DKnrjdUiaTv5kF5Q9N1P9DaKyP2hDINvCDecSlzJqdnqaOSbakLxmzjIa4CFlQTp3-TLtn10Kvc3hblYz",
+					"width": 1000
+				},
+				{
+					"height": 600,
+					"html_attributions": [
+						"<a href=\"https://maps.google.com/maps/contrib/105621355246618599705\">Carmen Pérez Sánchez</a>"
+					],
+					"photo_reference": "AcJnMuFHpV7T6RlHm2LOkuHCuuyxDe44jJF596lJmjml1qc2MSJOqzfOYiMsjGnpx_nTHZXj2dT_WYIjx6cEicEcRW1v8lpqFJDXHLBlyAN-fu7mJHZNi1aL86MKv0xFfAxhfNwJDtudQwq8bbPa59o4JKBiWDY48MAuZdKtIDMexMn1bWnb",
+					"width": 394
+				},
+				{
+					"height": 1350,
+					"html_attributions": [
+						"<a href=\"https://maps.google.com/maps/contrib/104110084506366550317\">Vincent Galand</a>"
+					],
+					"photo_reference": "AcJnMuFQr9T0B-fxjFcNxfLUQLcXzcU8E_y_DyfMbQDoaSggKP_qV_4oYlMYvvWiDkt8m4whtxDJJFfr2JHPotnSrUeUKsT3ceAjUe3Hbame_eCXjxBK-_z7mngucZdFm0sXB7FF1YgxHEa_v2ryp4miLXP2OIXsDXAOcwhQv2At7WMnPpe0",
+					"width": 1080
+				},
+				{
+					"height": 2970,
+					"html_attributions": [
+						"<a href=\"https://maps.google.com/maps/contrib/102888276412420232045\">luis vidilla</a>"
+					],
+					"photo_reference": "AcJnMuGFZiH1zng2yeMv--AS4ZLGuW-g3tBv_hC6pSHjfqags-W77k9aLE6DSAPQirI5m8zn2LquH9A6Q2CkPqfjB8ctGOCcSSnj8LsdHffPRooQAdWcM8Ol9FzFbGKFgSKXIVJ06fK5dVIaTKXbwF_7EB3s50hp7xw3nFe7YGnxhDFo9VAe",
+					"width": 4752
+				},
+				{
+					"height": 901,
+					"html_attributions": [
+						"<a href=\"https://maps.google.com/maps/contrib/109098734808182486035\">Ulrich Degblo</a>"
+					],
+					"photo_reference": "AcJnMuEQ4QkvnWWfN6nDNeuDUJJbPN0XqhVPkT41NL22gfvCCKtz5MInm84CvOxwMlNXg6zSqoPXRkMud0ZmW7Tg5A61Y-UBfRLgd-hgRFVkrYxwnddsWa-I0JK_c87wq-vAEwLYhlmmisFsBJf-C80s0fhFXxLVMkr0JIbXU4Pkl_JB1ktw",
+					"width": 901
+				},
+				{
+					"height": 1100,
+					"html_attributions": [
+						"<a href=\"https://maps.google.com/maps/contrib/113482343908983147932\">Randolfo Santos</a>"
+					],
+					"photo_reference": "AcJnMuFwJDU7PX8iNN5jtWWthZe4OubkAJ3G2VYFyXvQihmLZDw_9et0F7V9k1B-VjTdeN2M9jgIFsOoNqcc1cTHFVnoZgN7opkp7IyrY_x-rBeKvehre9nAQDrINh8Nngw1ZeKiw8ci8RIZHnh6cgoh-OEg9bxqhq9P_axVsg0vc6gsZKSD",
+					"width": 600
+				}
+			],
+			"place_id": "ChIJD7fiBh9u5kcRYJSMaMOCCwQ",
+			"reference": "ChIJD7fiBh9u5kcRYJSMaMOCCwQ",
+			"types": ["locality", "political"],
+			"url": "https://maps.google.com/?q=Paris,+France&ftid=0x47e66e1f06e2b70f:0x40b82c3688c9460",
+			"utc_offset": 60,
+			"vicinity": "Paris",
+			"website": "http://www.paris.fr/"
+		},
+		"dates": { "start": "2023-11-07T11:50:37.805Z", "end": "2023-11-10T11:50:00.000Z" },
+		"days": [
+			{
+				"places": [
+					{
+						"info": {
+							"address_components": [
+								{ "long_name": "5", "short_name": "5", "types": ["street_number"] },
+								{ "long_name": "Avenue Anatole France", "short_name": "Av. Anatole France", "types": ["route"] },
+								{ "long_name": "Paris", "short_name": "Paris", "types": ["locality", "political"] },
+								{
+									"long_name": "Département de Paris",
+									"short_name": "Département de Paris",
+									"types": ["administrative_area_level_2", "political"]
+								},
+								{
+									"long_name": "Île-de-France",
+									"short_name": "IDF",
+									"types": ["administrative_area_level_1", "political"]
+								},
+								{ "long_name": "France", "short_name": "FR", "types": ["country", "political"] },
+								{ "long_name": "75007", "short_name": "75007", "types": ["postal_code"] }
+							],
+							"adr_address": "Champ de Mars, <span class=\"street-address\">5 Av. Anatole France</span>, <span class=\"postal-code\">75007</span> <span class=\"locality\">Paris</span>, <span class=\"country-name\">France</span>",
+							"business_status": "OPERATIONAL",
+							"current_opening_hours": {
+								"open_now": true,
+								"periods": [
+									{
+										"close": { "date": "2023-11-12", "day": 0, "time": "2245" },
+										"open": { "date": "2023-11-12", "day": 0, "time": "0930" }
+									},
+									{
+										"close": { "date": "2023-11-13", "day": 1, "time": "2245" },
+										"open": { "date": "2023-11-13", "day": 1, "time": "0930" }
+									},
+									{
+										"close": { "date": "2023-11-07", "day": 2, "time": "2245" },
+										"open": { "date": "2023-11-07", "day": 2, "time": "0930" }
+									},
+									{
+										"close": { "date": "2023-11-08", "day": 3, "time": "2245" },
+										"open": { "date": "2023-11-08", "day": 3, "time": "0930" }
+									},
+									{
+										"close": { "date": "2023-11-09", "day": 4, "time": "2245" },
+										"open": { "date": "2023-11-09", "day": 4, "time": "0930" }
+									},
+									{
+										"close": { "date": "2023-11-10", "day": 5, "time": "2245" },
+										"open": { "date": "2023-11-10", "day": 5, "time": "0930" }
+									},
+									{
+										"close": { "date": "2023-11-11", "day": 6, "time": "2245" },
+										"open": { "date": "2023-11-11", "day": 6, "time": "0930" }
+									}
+								],
+								"weekday_text": [
+									"Monday: 9:30 am – 10:45 pm",
+									"Tuesday: 9:30 am – 10:45 pm",
+									"Wednesday: 9:30 am – 10:45 pm",
+									"Thursday: 9:30 am – 10:45 pm",
+									"Friday: 9:30 am – 10:45 pm",
+									"Saturday: 9:30 am – 10:45 pm",
+									"Sunday: 9:30 am – 10:45 pm"
+								]
+							},
+							"editorial_summary": {
+								"language": "en",
+								"overview": "Gustave Eiffel's iconic, wrought-iron 1889 tower, with steps and elevators to observation decks."
+							},
+							"formatted_address": "Champ de Mars, 5 Av. Anatole France, 75007 Paris, France",
+							"geometry": {
+								"location": { "lat": 48.85837009999999, "lng": 2.2944813 },
+								"viewport": {
+									"northeast": { "lat": 48.8597461302915, "lng": 2.29610765 },
+									"southwest": { "lat": 48.85704816970851, "lng": 2.29251745 }
+								}
+							},
+							"icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+							"icon_background_color": "#13B5C7",
+							"icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+							"name": "Eiffel Tower",
+							"opening_hours": {
+								"open_now": true,
+								"periods": [
+									{ "close": { "day": 0, "time": "2245" }, "open": { "day": 0, "time": "0930" } },
+									{ "close": { "day": 1, "time": "2245" }, "open": { "day": 1, "time": "0930" } },
+									{ "close": { "day": 2, "time": "2245" }, "open": { "day": 2, "time": "0930" } },
+									{ "close": { "day": 3, "time": "2245" }, "open": { "day": 3, "time": "0930" } },
+									{ "close": { "day": 4, "time": "2245" }, "open": { "day": 4, "time": "0930" } },
+									{ "close": { "day": 5, "time": "2245" }, "open": { "day": 5, "time": "0930" } },
+									{ "close": { "day": 6, "time": "2245" }, "open": { "day": 6, "time": "0930" } }
+								],
+								"weekday_text": [
+									"Monday: 9:30 am – 10:45 pm",
+									"Tuesday: 9:30 am – 10:45 pm",
+									"Wednesday: 9:30 am – 10:45 pm",
+									"Thursday: 9:30 am – 10:45 pm",
+									"Friday: 9:30 am – 10:45 pm",
+									"Saturday: 9:30 am – 10:45 pm",
+									"Sunday: 9:30 am – 10:45 pm"
+								]
+							},
+							"photos": [
+								{
+									"height": 660,
+									"html_attributions": [
+										"<a href=\"https://maps.google.com/maps/contrib/100968979814345776530\">1PLUS VIETNAM</a>"
+									],
+									"photo_reference": "AcJnMuE2oj-kH-8TYhjKrhXpsClXYhukf_fkKOUF8id978fJxOBQGak-3-eVSO1h9PoKDwkRUAP1utSwotN21Kc-38Ktddr5pYqT__zqjq_UuEqz9-kClF8y3Y9-RJeVTUdFkXiRTv6AT9rvHO343ye0KtmBKMmp3j0wODUTwfl1hFUXhz1h",
+									"width": 1000
+								},
+								{
+									"height": 460,
+									"html_attributions": [
+										"<a href=\"https://maps.google.com/maps/contrib/109305060476199048372\">ELIZABETH ALEXANDRA MARY</a>"
+									],
+									"photo_reference": "AcJnMuEdOuP2xYrtSMhQ-346w3XKYuhcKs-6IF-nyyPSsfUYnC9Az8OC2L1Xp-dmxI2Hc_7InsEbt0BtBlKBKx-_yWHqCSeaf5j0I2PVrGKCRWake4EiaS-TebMLCg90HcOSacZ_dXTgPlCWr6CC0pSnB_GT3HbzqtB39dEec1MXNVSMRkqu",
+									"width": 720
+								},
+								{
+									"height": 9000,
+									"html_attributions": [
+										"<a href=\"https://maps.google.com/maps/contrib/111122274267414579459\">Nicholai Corbie</a>"
+									],
+									"photo_reference": "AcJnMuGM7b0bdXe4VCJ5TX4C97zuI9eVMzlK8uhwqlhbDZmTK2KR5jeYw-ezasw3p_yvJyAqioy5NopYTyekJPuWWh8AxFqXzsYhTxkWtA-DnHHYvWDpoa6POB4jllXBt6yrkoVP1DbzOmrfh-Sl-Vqznn5LSsIquMkW8tsTAeNeuDjW-k-6",
+									"width": 12000
+								},
+								{
+									"height": 9000,
+									"html_attributions": [
+										"<a href=\"https://maps.google.com/maps/contrib/117161873060951299799\">Paulina Stuła</a>"
+									],
+									"photo_reference": "AcJnMuE0r98K770xl6-ETIWN3peZgsIzZ5AY4Nic9hQ4RiPXEuRZPsISL4Gtce_e5uuLGUx9TuFYWDmEQy9O0qOvNKv84jY8KrHDP1UG4TJBh37ZtpNuQzMtuQxOTD76plLlf4L13zY9MLCkigEplktZ_OVf6HWKHgAXmPaUimqQq8mJGrKZ",
+									"width": 12000
+								},
+								{
+									"height": 2268,
+									"html_attributions": [
+										"<a href=\"https://maps.google.com/maps/contrib/101760247291040695816\">Hagen Metzler</a>"
+									],
+									"photo_reference": "AcJnMuE8eIpqfw-lOi9BpX-JcF9bOLKwr57V_d0eqbQUmG2M0h6qjZQ5TOaMVFeupZV7RilpmUBmhTC4FY_wxSXQFzSaPtkJmUBohcuGJcfX146gXzmJa0L1eYFeWCpmHkZDFu4TvCGEESp_VnlVAbc_eE1anCeAbgqZTlVzt821HeE651BT",
+									"width": 4032
+								},
+								{
+									"height": 677,
+									"html_attributions": [
+										"<a href=\"https://maps.google.com/maps/contrib/117964149372291269089\">Ibrahim Alhussein</a>"
+									],
+									"photo_reference": "AcJnMuGLva4cikTeiTcMKMJzbHTsGYV2gGGT2EqZcMHjchhR6A-hsEtnUrzJfOwgsVjtFzTDoT0Q38JJW3m3bK2dJ5h90EwAcD6sxLhjdGBxBVX_f0AwAOw_yQbXx4O2RPut-CIkhYhExSoaj9aBcjql2NIjtNA6yH4KDqOJWG7L8LuvCk4M",
+									"width": 1080
+								},
+								{
+									"height": 9000,
+									"html_attributions": [
+										"<a href=\"https://maps.google.com/maps/contrib/111122274267414579459\">Nicholai Corbie</a>"
+									],
+									"photo_reference": "AcJnMuGAM-wTgQ3DMwMSPQRPwwLeY1rxgJBATISz86KQaI87sEz4oJwz13a-ce-ytwGN5T6w7Kl5HlTqnLQi2pAvnwLi5GMcloAh-DabmAQz-kEajF7eDM_HT9uSaJ0cfwjIMOJUoktaAQQ5EiDerDFVKKbnQOkyQ7ZhHvKumSR4hrb84dAZ",
+									"width": 12000
+								},
+								{
+									"height": 4000,
+									"html_attributions": [
+										"<a href=\"https://maps.google.com/maps/contrib/115485660678768601234\">Fred Booker</a>"
+									],
+									"photo_reference": "AcJnMuHaqO1prHEWkbOczrpheybD_8DCBW4e_9scNMj2vnxjCz3TcOC4SsPj2KlIKlsh0onhB8z4TLiMoi1Df3At6FeAiVRV_cQ5-Zhb0TxCE_0U5b7d6RueOAobaB0fjyhHUIzYeP7VLgJtng1g3MJSn-KGYYwFGb0HsU9SHTOfaUnlMezd",
+									"width": 6000
+								},
+								{
+									"height": 1148,
+									"html_attributions": [
+										"<a href=\"https://maps.google.com/maps/contrib/105834777428170884607\">Md ziaul Haque</a>"
+									],
+									"photo_reference": "AcJnMuF65fV3SG7kQZJ0xro23TdY_IDOgwxsWV8mxIdejPX6mYazZ4m1elGmkKiPgiJCaD6MzzX1OqdwMhwhax6-mU4aDqcEjU3nrSMaAn57sUMY-VxspJAaGpQ156vcGldapTNGJ8DVjl9PTyaIvD1O4Pjf40TH0MHBS0Dn4P-ViI4CGQw3",
+									"width": 720
+								},
+								{
+									"height": 3024,
+									"html_attributions": [
+										"<a href=\"https://maps.google.com/maps/contrib/108926006030043113119\">Orazio Gentile</a>"
+									],
+									"photo_reference": "AcJnMuGBTU-pf5SLPw2GxD9iMfkk5pWhwiNlWkriHrkdVLTFMc51wOgjXfM684nt9EHyeysKwPyjdz95QML193Bb4lz34pg-nPoNK36nwX72zMoMpe0pliXKfCady0WVWIKojmFvlceItB8WmbqOF2recU_eqM24v-liRVAc2aFEBRym8PFS",
+									"width": 4032
+								}
+							],
+							"place_id": "ChIJLU7jZClu5kcR4PcOOO6p3I0",
+							"plus_code": { "compound_code": "V75V+8Q Paris, France", "global_code": "8FW4V75V+8Q" },
+							"rating": 4.6,
+							"reference": "ChIJLU7jZClu5kcR4PcOOO6p3I0",
+							"reviews": [
+								{
+									"author_name": "Tara Miller",
+									"author_url": "https://www.google.com/maps/contrib/103670141536290604599/reviews",
+									"language": "en",
+									"original_language": "en",
+									"profile_photo_url": "https://lh3.googleusercontent.com/a-/ALV-UjWB2N9ybHixXuIDCz3voQK3YWWPN14oGmVqk9dpAGZ1aUY=s128-c0x00000000-cc-rp-mo-ba6",
+									"rating": 5,
+									"relative_time_description": "in the last week",
+									"text": "A must-see in the city of Paris. I have seen from multiple locations throughout. It is gorgeous and stunning to see both day and night. We also took a river boat tour up close to the Eiffel Tower and would recommend it. We went up to the first look out, but didn't go any further.",
+									"time": 1699118603,
+									"translated": false
+								},
+								{
+									"author_name": "Juice",
+									"author_url": "https://www.google.com/maps/contrib/110820634380809137535/reviews",
+									"language": "en",
+									"original_language": "en",
+									"profile_photo_url": "https://lh3.googleusercontent.com/a-/ALV-UjUrSHMn_siKo8vjPSH4FMiCYgsNE_tJpcp8M0k9beQMndM=s128-c0x00000000-cc-rp-mo-ba6",
+									"rating": 5,
+									"relative_time_description": "4 weeks ago",
+									"text": "Visiting the Eiffel Tower was an absolute highlight of our trip, and it left us in awe of its beauty and the breathtaking views it offered. We decided to ascend to the second floor, and the experience was nothing short of magnificent. As we reached that elevation, we were greeted with a panoramic view of Paris that truly took our breath away. It's amazing how different a city can look from such a lofty vantage point. The sweeping vistas of iconic landmarks, the winding Seine River, and the sprawling cityscape were a sight to behold.\n\nOf course, no visit to a world-famous attraction is complete without a bit of waiting, and we queued up for about an hour before we could step foot inside the tower. While the wait was a tad long, it was entirely worth it for the unforgettable experience that awaited us at the top. Plus, it gave us a chance to soak in the anticipation and excitement of the other visitors around us.\n\nIn the end, our visit to the Eiffel Tower was an absolute triumph. The memories of those astonishing views will stay with us forever, and the hour-long wait was a small price to pay for such an iconic and mesmerizing experience. If you're ever in Paris, don't miss the opportunity to ascend this legendary landmark. It's a memory you'll cherish for a lifetime.",
+									"time": 1696878297,
+									"translated": false
+								},
+								{
+									"author_name": "Di Harris",
+									"author_url": "https://www.google.com/maps/contrib/113061062275947156569/reviews",
+									"language": "en",
+									"original_language": "en",
+									"profile_photo_url": "https://lh3.googleusercontent.com/a-/ALV-UjXQODie4VTUFR9vWMDsyCwhEexXkcd1asG4DGLqgB7o7w=s128-c0x00000000-cc-rp-mo-ba3",
+									"rating": 5,
+									"relative_time_description": "a week ago",
+									"text": "We loved our visit to the Eiffel Tower, we weren’t able to book a ticket for what we wanted in advance so walked there early to join the queue to buy tickets on the day. The queue wasn’t too bad, under 30 minutes.\n\nWe chose to climb the stairs to the second floor and take the lift to the summit, then we caught the lift all the way back down. There are a lot of stairs (nearly 700) but there are regular landings to take a short break and admire the views. The views from each level are wonderful and we were lucky to get a clear blue sky.\n\nIt’s a Paris must do, but one we enjoyed rather than feeling like a box ticking to say we had visited. All of use would go back.",
+									"time": 1698445250,
+									"translated": false
+								},
+								{
+									"author_name": "Donna Kim",
+									"author_url": "https://www.google.com/maps/contrib/100636671117991850907/reviews",
+									"language": "en",
+									"original_language": "en",
+									"profile_photo_url": "https://lh3.googleusercontent.com/a-/ALV-UjWgkpG5vKTon_DH243A0eB4O9nV0kSblM6jTQt72aWs11qy=s128-c0x00000000-cc-rp-mo-ba5",
+									"rating": 5,
+									"relative_time_description": "a month ago",
+									"text": "The Eiffel Tower, what more can I say? It's absolutely amazing and beautiful. You should definitely go there at sunset and at night. Bringing a bottle of wine to enjoy while gazing at the sunset is a great way to experience some romance. You'll find many couples and families there, and sometimes people playing musical instruments or singing in the vicinity, creating a very romantic atmosphere. You can see the iconic symbol of Paris.",
+									"time": 1695452008,
+									"translated": false
+								},
+								{
+									"author_name": "Laurence Bragard",
+									"author_url": "https://www.google.com/maps/contrib/109214144344799437556/reviews",
+									"language": "en",
+									"original_language": "en",
+									"profile_photo_url": "https://lh3.googleusercontent.com/a-/ALV-UjWa5O2K_3mY7V5xYpqdQLQJ-QRCfx6nv5Tj8ZZJiRBmxCts=s128-c0x00000000-cc-rp-mo-ba5",
+									"rating": 5,
+									"relative_time_description": "a week ago",
+									"text": "This truly is the jewel of Paris! The most wonderful piece of architecture. When it is night time it looks even more stunning with flashing lights on the hour. We went up to the first floor and the views even from here across Paris are beautiful. A must visit!",
+									"time": 1698360169,
+									"translated": false
+								}
+							],
+							"types": ["tourist_attraction", "point_of_interest", "establishment"],
+							"url": "https://maps.google.com/?cid=10222232094831998944",
+							"user_ratings_total": 379092,
+							"utc_offset": 60,
+							"vicinity": "Champ de Mars, 5 Avenue Anatole France, Paris",
+							"website": "https://www.toureiffel.paris/",
+							"wheelchair_accessible_entrance": true
+						},
+						"time": "Tue Nov 07 2023 08:00:00 GMT+0100"
+					}
+				]
+			},
+			{
+				"places": [
+					{
+						"info": {
+							"address_components": [
+								{
+									"long_name": "Champs-Élysées",
+									"short_name": "Champs-Élysées",
+									"types": ["neighborhood", "political"]
+								},
+								{ "long_name": "Paris", "short_name": "Paris", "types": ["locality", "political"] },
+								{ "long_name": "Paris", "short_name": "Paris", "types": ["administrative_area_level_2", "political"] },
+								{
+									"long_name": "Île-de-France",
+									"short_name": "IDF",
+									"types": ["administrative_area_level_1", "political"]
+								},
+								{ "long_name": "France", "short_name": "FR", "types": ["country", "political"] }
+							],
+							"adr_address": "Champs-Élysées, <span class=\"locality\">Paris</span>, <span class=\"country-name\">France</span>",
+							"formatted_address": "Champs-Élysées, Paris, France",
+							"geometry": {
+								"location": { "lat": 48.8662294, "lng": 2.3077957 },
+								"viewport": {
+									"northeast": { "lat": 48.87380505499337, "lng": 2.322055926182514 },
+									"southwest": { "lat": 48.86281106234244, "lng": 2.29549693219737 }
+								}
+							},
+							"icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/geocode-71.png",
+							"icon_background_color": "#7B9EB0",
+							"icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+							"name": "Champs-Élysées",
+							"photos": [
+								{
+									"height": 3265,
+									"html_attributions": [
+										"<a href=\"https://maps.google.com/maps/contrib/114071720517216422028\">Andrey Myshkin</a>"
+									],
+									"photo_reference": "AcJnMuHV6L8RhzPpfIsuROIkmBne7mv8nPyZj3goOXDOsizCc3J2L0nx4kXOGAh5k26b5n131TrCSTBRfX9mK5zPlZDrVjvY2blgJ-USr0kSmws_fp3-1CrxM3HeM76DUzvQ8e5Xr-tXxK0BnlCmCBAno7CBIfbjDqd06vuZkO3AVMWGzxZN",
+									"width": 4901
+								},
+								{
+									"height": 2322,
+									"html_attributions": [
+										"<a href=\"https://maps.google.com/maps/contrib/104034558676098731931\">Katja Drnovsek</a>"
+									],
+									"photo_reference": "AcJnMuFjw9YbZXgWP3VbuEOtbwGanMr3gjVnYJzLT2DSrPVgfNtomM5XB5m2hFHN5pRF16KHT_wthBAQt4hgc7ehFIfDTOLUVxkuGERF4NX62E-0QKPmpXa-ZjNqFXCWKj_9Xqs4uDbq-rZmp7wobhzcXm71bCIGpiYa3BP02WTWtvraNKOP",
+									"width": 4128
+								},
+								{
+									"height": 2214,
+									"html_attributions": [
+										"<a href=\"https://maps.google.com/maps/contrib/100201960762355239004\">Paul Kang</a>"
+									],
+									"photo_reference": "AcJnMuHDtLs-xk0u7K9nI8vdvG5EOg27n2RBK9835LHtKFVBNjGtfMoHEpeUelC1pM6LJTAEoSSbWreoIBXUGeafQmvV7AZF4ts-TvXj9eqAHWYF7X2N-L0tu3h4tiwshfv6jGUp0nPR3ln4Jq0MUv0Ortm5Q81kBIt-uR2K94eBFmRC6iJ2",
+									"width": 3936
+								},
+								{
+									"height": 800,
+									"html_attributions": [
+										"<a href=\"https://maps.google.com/maps/contrib/118050433839195382454\">Francisco Alcántara Torres (Paco)</a>"
+									],
+									"photo_reference": "AcJnMuFVoKaLOAfWeBWPPYNHEtGZ5zsrQeBzGCtfXfBH393mHbQal1JZkyFQbzHcyD7lrkpmg6Qz5XNAfE94K3YtTs0s3_lCilA0NZGeHj1rgtezhOtQiv9ouIx53qEZLFx3iVQGIFZvnoIkS0tSrahQmBCl9DL89-2xyl8rUEeKXb6H8QFF",
+									"width": 1200
+								},
+								{
+									"height": 4032,
+									"html_attributions": [
+										"<a href=\"https://maps.google.com/maps/contrib/109101728737580847067\">LE CLOAREC Patrice</a>"
+									],
+									"photo_reference": "AcJnMuGcO59wSA-DGn8Mfj7Q_hSV28ssbNJrnQ05vHJ0DKmAlEmhOmjGjYtIuoLxBVJMY0n8Iyae2r3CkvnFx47I8sTj8NzM4bWbb0gxSKT9eQXpK8JA8h_BR5vWHCofYGSmHGkLeUDYT7AcEtKaj8fpLLkP5gi0TAfiOst0TGQnC0iJ6Vp8",
+									"width": 3024
+								},
+								{
+									"height": 1346,
+									"html_attributions": [
+										"<a href=\"https://maps.google.com/maps/contrib/105523383678580920977\">TMGCJ57</a>"
+									],
+									"photo_reference": "AcJnMuH9-KTYowr2lXmq6ZcikJnRhs2wfxVV11SMc0iBdclrWfojLDeCoa5bgBj3kxjDWfg20qSIV-JITCvxV7a_gAzCzbsouryvQ_UjRTXMws_idlwcHLAp1RVJLFHZNJD6xswe-z9uf_MIdvp7SZbeUN_mHQhDn2YBaOVdiLyyAAqmQRna",
+									"width": 1080
+								},
+								{
+									"height": 3000,
+									"html_attributions": [
+										"<a href=\"https://maps.google.com/maps/contrib/100201960762355239004\">Paul Kang</a>"
+									],
+									"photo_reference": "AcJnMuFzLTrBEfR3Ml1Zn5Xbjq94zZlMNhDjDQ3GXudhR7Q8D4n9VHjhiBwEY8MdMIxK62j4fAcbCMi--N_Alnru1UHMKyiQgKR3REiI83HEA7wE6lpBhu--z6CuHBaMx8altlU8LFfwRRnNR55xN5lWkmU_Dj7UiogruAY2eUDhnmyeAehD",
+									"width": 4000
+								},
+								{
+									"height": 1439,
+									"html_attributions": [
+										"<a href=\"https://maps.google.com/maps/contrib/115455114095176588980\">Guido Douven</a>"
+									],
+									"photo_reference": "AcJnMuHV8Wz2c_F-P8X_YzHgupT5oTU3Qs1qCUyEuARtITSATVRBixwr-XnnmK7z3_-PDBLcTIV6wT1B5WRyih-Rjy-N-cWHw0Bikk3iPw9LodA8Z-MapjgIg-qngHuSur4oDLv62kkxYqkKuz_oQKcGA7r6Bufky4NKIaOLP2LQzePAJi7Z",
+									"width": 1170
+								},
+								{
+									"height": 3024,
+									"html_attributions": [
+										"<a href=\"https://maps.google.com/maps/contrib/104595769235117236345\">Martin Vorel</a>"
+									],
+									"photo_reference": "AcJnMuEE-jbxF0RarAajgG7LCm_sCT4TsvoRlGQ7Wbe3WMedbAMJooMUknRFKIENidbcNYm_TD0bYNiZQM8I9oODHVrjQhJUg6nUz6paJk-6GLiyC2PWIPyw1-WLYf0cEEAXc-lIoCQxrnYEBmUgDvZkmOIylteL7fsIkbN7WcbdTeUFz43A",
+									"width": 4032
+								},
+								{
+									"height": 3024,
+									"html_attributions": [
+										"<a href=\"https://maps.google.com/maps/contrib/107089896515861662697\">MoMoⵣDZ</a>"
+									],
+									"photo_reference": "AcJnMuGtUoM9NK8q-Jn0dGvXb9_RFT-W1cpT7sfNkqUpAjzXSv4DQu2J8xA1muPBKWHgrFOMmkCHhPtDT7NIvK3dUpfJ2oc9IITZG2zKhqluwlH_ZCGbZ67dVBhg2sslnoBeYx1kh00RwlNPwKlIdaakbyqnjFsjQ2-3aivNv0b6Ww9gPhUz",
+									"width": 4032
+								}
+							],
+							"place_id": "ChIJMXZjGMVv5kcRmVlGwtKSa3w",
+							"reference": "ChIJMXZjGMVv5kcRmVlGwtKSa3w",
+							"types": ["neighborhood", "political"],
+							"url": "https://maps.google.com/?q=Champs-%C3%89lys%C3%A9es,+Paris,+France&ftid=0x47e66fc518637631:0x7c6b92d2c2465999",
+							"utc_offset": 60,
+							"vicinity": "Paris"
+						},
+						"time": "Wed Nov 08 2023 08:00:00 GMT+0100"
+					}
+				]
+			},
+			{
+				"places": [
+					{
+						"info": {
+							"address_components": [
+								{ "long_name": "Place Charles de Gaulle", "short_name": "Pl. Charles de Gaulle", "types": ["route"] },
+								{ "long_name": "Paris", "short_name": "Paris", "types": ["locality", "political"] },
+								{
+									"long_name": "Département de Paris",
+									"short_name": "Département de Paris",
+									"types": ["administrative_area_level_2", "political"]
+								},
+								{
+									"long_name": "Île-de-France",
+									"short_name": "IDF",
+									"types": ["administrative_area_level_1", "political"]
+								},
+								{ "long_name": "France", "short_name": "FR", "types": ["country", "political"] },
+								{ "long_name": "75008", "short_name": "75008", "types": ["postal_code"] }
+							],
+							"adr_address": "<span class=\"street-address\">Pl. Charles de Gaulle</span>, <span class=\"postal-code\">75008</span> <span class=\"locality\">Paris</span>, <span class=\"country-name\">France</span>",
+							"business_status": "OPERATIONAL",
+							"current_opening_hours": {
+								"open_now": true,
+								"periods": [
+									{
+										"close": { "date": "2023-11-12", "day": 0, "time": "2215" },
+										"open": { "date": "2023-11-12", "day": 0, "time": "1000" }
+									},
+									{
+										"close": { "date": "2023-11-13", "day": 1, "time": "2215" },
+										"open": { "date": "2023-11-13", "day": 1, "time": "1000" }
+									},
+									{
+										"close": { "date": "2023-11-07", "day": 2, "time": "2215" },
+										"open": { "date": "2023-11-07", "day": 2, "time": "1000" }
+									},
+									{
+										"close": { "date": "2023-11-08", "day": 3, "time": "2215" },
+										"open": { "date": "2023-11-08", "day": 3, "time": "1000" }
+									},
+									{
+										"close": { "date": "2023-11-09", "day": 4, "time": "2215" },
+										"open": { "date": "2023-11-09", "day": 4, "time": "1000" }
+									},
+									{
+										"close": { "date": "2023-11-10", "day": 5, "time": "2215" },
+										"open": { "date": "2023-11-10", "day": 5, "time": "1000" }
+									}
+								],
+								"special_days": [{ "date": "2023-11-11", "exceptional_hours": true }],
+								"weekday_text": [
+									"Monday: 10:00 am – 10:15 pm",
+									"Tuesday: 10:00 am – 10:15 pm",
+									"Wednesday: 10:00 am – 10:15 pm",
+									"Thursday: 10:00 am – 10:15 pm",
+									"Friday: 10:00 am – 10:15 pm",
+									"Saturday: Closed",
+									"Sunday: 10:00 am – 10:15 pm"
+								]
+							},
+							"editorial_summary": {
+								"language": "en",
+								"overview": "Iconic triumphal arch built to commemorate Napoleon's victories, with an observation deck."
+							},
+							"formatted_address": "Pl. Charles de Gaulle, 75008 Paris, France",
+							"formatted_phone_number": "01 55 37 73 77",
+							"geometry": {
+								"location": { "lat": 48.8737917, "lng": 2.295027499999999 },
+								"viewport": {
+									"northeast": { "lat": 48.8752623802915, "lng": 2.296428030291501 },
+									"southwest": { "lat": 48.8725644197085, "lng": 2.293730069708498 }
+								}
+							},
+							"icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/museum-71.png",
+							"icon_background_color": "#7B9EB0",
+							"icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/monument_pinlet",
+							"international_phone_number": "+33 1 55 37 73 77",
+							"name": "Arc de Triomphe",
+							"opening_hours": {
+								"open_now": true,
+								"periods": [
+									{ "close": { "day": 0, "time": "2215" }, "open": { "day": 0, "time": "1000" } },
+									{ "close": { "day": 1, "time": "2215" }, "open": { "day": 1, "time": "1000" } },
+									{ "close": { "day": 2, "time": "2215" }, "open": { "day": 2, "time": "1000" } },
+									{ "close": { "day": 3, "time": "2215" }, "open": { "day": 3, "time": "1000" } },
+									{ "close": { "day": 4, "time": "2215" }, "open": { "day": 4, "time": "1000" } },
+									{ "close": { "day": 5, "time": "2215" }, "open": { "day": 5, "time": "1000" } },
+									{ "close": { "day": 6, "time": "2215" }, "open": { "day": 6, "time": "1000" } }
+								],
+								"weekday_text": [
+									"Monday: 10:00 am – 10:15 pm",
+									"Tuesday: 10:00 am – 10:15 pm",
+									"Wednesday: 10:00 am – 10:15 pm",
+									"Thursday: 10:00 am – 10:15 pm",
+									"Friday: 10:00 am – 10:15 pm",
+									"Saturday: 10:00 am – 10:15 pm",
+									"Sunday: 10:00 am – 10:15 pm"
+								]
+							},
+							"photos": [
+								{
+									"height": 12000,
+									"html_attributions": [
+										"<a href=\"https://maps.google.com/maps/contrib/101615753229019665453\">Mubinur Rahman</a>"
+									],
+									"photo_reference": "AcJnMuHB_iaWQWKmFUbdkTYC4BCAult2xub-G5FfvgKlKrXIoXjkexCuDHZ9m5PIfl2lOG3UILLZmse6c-4nyegyJdNSMmAdOtHj_maUiQNhq4SV0SvywrmN_aa-qwbV4qptKetS7Xzc4bblQxOuBhDHHWzitvz1L4b8twHoT8hpUxG9MAIW",
+									"width": 9000
+								},
+								{
+									"height": 2976,
+									"html_attributions": [
+										"<a href=\"https://maps.google.com/maps/contrib/115720482708213700559\">Sebastien Cheret</a>"
+									],
+									"photo_reference": "AcJnMuFdFzlKD_2ODjJXV5YCPyhhKxk7zTbu7S8W7O8ZVj9altO8QuYSA-swlbj-oQzfImJoiDxnMQr7qoqLvkVm6t-uNvQ9SiUcjpB5ZEaYS3OtXb0xulqpgITL75TUxcPC1UIeSjK2WEzUSme-3CeilEBVtCzdalvDaoUSB5JZVZFclOty",
+									"width": 3968
+								},
+								{
+									"height": 12000,
+									"html_attributions": [
+										"<a href=\"https://maps.google.com/maps/contrib/105023446988104526199\">Ricardo Becerra</a>"
+									],
+									"photo_reference": "AcJnMuHdAtVh6bh3BoOUPwNvM9f9bC-Dj5JEau9G5nTOCIvIqRhuLQfFHBrdaVEvscqJgWxaDYTJhMR4HJc5_lPHTG4ptTDh1Pb3_s2mX83ynnxPBRXiE4bZ1MYakZWF31xUnCZF0LXjzCxAypAFSVIkYr0X8D02zzATLX95oYwkF8JKWMtk",
+									"width": 9000
+								},
+								{
+									"height": 4016,
+									"html_attributions": [
+										"<a href=\"https://maps.google.com/maps/contrib/115920026061429434669\">Gufetto Urbex</a>"
+									],
+									"photo_reference": "AcJnMuFQz2esRv_i79M3jdt6Tpb1OPnK33UXvFT32YfRkXCtnSMhExo6-koxLC9kCQ1FUyl4EqSyVeRGn55j4l5iuMly4l2oI_deLDgJLyU4Ey3F3FHd6VXdzDNXMk7GORDpO1rozirmDWQUXZVqlKCx1BCTb5NDPuvSMS2NOJ1ImXOBNcTP",
+									"width": 6016
+								},
+								{
+									"height": 3024,
+									"html_attributions": [
+										"<a href=\"https://maps.google.com/maps/contrib/104487518597757610424\">Pablo Rodrigo Arroyo Hernandez</a>"
+									],
+									"photo_reference": "AcJnMuGayp-zcJtBINC9As8uG8hYWehzXodGQLR_-th9J88SeyYvBNyX4Ksa1funfuHfEQ0_PbtOBBZuY6YtPYK0xI5VD_UXJ-l3EPlkZ95PoCPPsU_GFC5YutvZ9gck3Zww_3NDIgVEinC4A9GZS3a5VupeG5lK-gVk-uVIfvEgA21ECb1f",
+									"width": 4032
+								},
+								{
+									"height": 8000,
+									"html_attributions": [
+										"<a href=\"https://maps.google.com/maps/contrib/102826561363009303083\">PvvS CZ</a>"
+									],
+									"photo_reference": "AcJnMuG4OoFYq9CAPobS7M4JFGe1BVBzArD3-YfaJK0KYvv4GKMUr5uXXfrWs7oi4h7ezAHlqrcvhYjwJf1Ke-vox-3ZLjoYV1cpiIekBFPnoRZSQgtML2NtInrpjjtcbEWThHPZxlEH2TehctQT76X3d-XVteJYZv0dSujju3uXG9EBUJAt",
+									"width": 6000
+								},
+								{
+									"height": 2268,
+									"html_attributions": [
+										"<a href=\"https://maps.google.com/maps/contrib/115749395701262930858\">Nashenas Nash</a>"
+									],
+									"photo_reference": "AcJnMuGE5euKQFvv5aiZb-pg3b2mTphZS_iB6xLNK9hglfm8brOTJIWVuH6YbViXlTAuXP-TJy6uZedNUmKW9m2GnoE8RExp5GZ-VLjjuMVQpcx5FWW4PUtBpmPGEi29X63LPoib8TL8xKF0Xmj1Lf4nkEjokOkuEnp9hpIJvJnaoqXN8hS1",
+									"width": 4032
+								},
+								{
+									"height": 3072,
+									"html_attributions": [
+										"<a href=\"https://maps.google.com/maps/contrib/117785809189545925673\">Stas Goldberg</a>"
+									],
+									"photo_reference": "AcJnMuEUrfk2apmCQbfIDsdnPMc9fYn9Zv5OZQYFW2b0JPWJQb00TxhMdrWAtKwQsS7h6B6Hw_VMB2TbaYDTt5HIh9XNmhEQl1-mL3U9L7_UpRR0PF5ncP45jZIyQ8BU8pjTIL04qDRi-T8qBktWUk-pA3VR5jtYdDuuyajMz4SzlJ7GTirv",
+									"width": 4096
+								},
+								{
+									"height": 4032,
+									"html_attributions": [
+										"<a href=\"https://maps.google.com/maps/contrib/106733027437480269885\">speeed 2006</a>"
+									],
+									"photo_reference": "AcJnMuEJXgqiikY-5ZVEkm0P40aUrsbcTQJadapojPD-xzMDGGS5ZSmyQk6R-Y9894pkAYGWtcGmpIv36PAKj-j0VG0AjdezKKqoYR53JfGFck2LOUOFDq7Lyo_bGoptsJrbGv0fVf95i1XP2GgM6DDKQPwHFa6qlOfHYV5us1A_mS3HyT01",
+									"width": 3024
+								},
+								{
+									"height": 9000,
+									"html_attributions": [
+										"<a href=\"https://maps.google.com/maps/contrib/118130500844344796900\">Hugo Balas</a>"
+									],
+									"photo_reference": "AcJnMuGyfmimbkV96CFS6waicu7pP_OloENBS8FyW1-8DS4rN1uSdp9_81209g8ezqJv3bh6geRyFeJhNOW-JbSdCXbPHuS2KoCnVnik_Wg89yb9hh2u2J5pbTrGQaH95jIjChkVrEKkErtCDyJi3NabC7VittGaWkslr9V8soRod_MsgYpg",
+									"width": 12000
+								}
+							],
+							"place_id": "ChIJjx37cOxv5kcRPWQuEW5ntdk",
+							"plus_code": { "compound_code": "V7FW+G2 Paris, France", "global_code": "8FW4V7FW+G2" },
+							"rating": 4.7,
+							"reference": "ChIJjx37cOxv5kcRPWQuEW5ntdk",
+							"reviews": [
+								{
+									"author_name": "John Slipe",
+									"author_url": "https://www.google.com/maps/contrib/115985117847243920722/reviews",
+									"language": "en",
+									"original_language": "en",
+									"profile_photo_url": "https://lh3.googleusercontent.com/a-/ALV-UjV1KKxV-WrNl-uJjhcTT75Sj-qj71IkW2C-9uFiuPUoHvys=s128-c0x00000000-cc-rp-mo-ba4",
+									"rating": 5,
+									"relative_time_description": "a year ago",
+									"text": "Really cool experience, you can really spend a bit of time here reading all of the displays and material they have.  The views from the top were breathtaking and it is a don't miss spot.  It was well worth the extra ticket, it was only a few bucks more and it let us skip a line which was helpful since we were trying to zoom all around Paris in one day.",
+									"time": 1647563730,
+									"translated": false
+								},
+								{
+									"author_name": "Lena Roberts",
+									"author_url": "https://www.google.com/maps/contrib/106422148160785344102/reviews",
+									"language": "en",
+									"original_language": "en",
+									"profile_photo_url": "https://lh3.googleusercontent.com/a-/ALV-UjUaCRrO75TtrrFGIF7SfQvnMOE-Xn7H9D7gWhS9d_K5LrI=s128-c0x00000000-cc-rp-mo",
+									"rating": 4,
+									"relative_time_description": "in the last week",
+									"text": "You can’t get there by crossing the street and the underground tunnel was difficult to locate (no signage whatsoever), but once I got there it was magnificent! I didn’t stand in line to go up to the top - too many stairs! - and I don’t regret it. The details on every inch of the monument are incredibly beautiful and I spent over an hour just taking it all in.",
+									"time": 1698947223,
+									"translated": false
+								},
+								{
+									"author_name": "S. White",
+									"author_url": "https://www.google.com/maps/contrib/101736384706130550631/reviews",
+									"language": "en",
+									"original_language": "en",
+									"profile_photo_url": "https://lh3.googleusercontent.com/a/ACg8ocLlSfGZxQCjbOhA1zbuX7VVCBCBCV51xvsVyREPLQ82MJE=s128-c0x00000000-cc-rp-mo-ba4",
+									"rating": 5,
+									"relative_time_description": "in the last week",
+									"text": "Remarkable monument. Everyone knows this place that has any common knowledge of France.  What I was surprised to find out was that you could go inside and there is a small museum and gift shop inside... after you climb almost 300 stairs... so be prepared. There is an elevator if you are not able to climb. It's got a great view of the city from the top, and if you're going to go see it,  go ahead and spend the few extra dollars out takes to go inside and upstairs. You won't regret it.",
+									"time": 1698965196,
+									"translated": false
+								},
+								{
+									"author_name": "Rafaella G",
+									"author_url": "https://www.google.com/maps/contrib/114303876544651948723/reviews",
+									"language": "en",
+									"original_language": "en",
+									"profile_photo_url": "https://lh3.googleusercontent.com/a-/ALV-UjVzISHvTDHjypMMB-HpII2k-YPkapoH1BCTqggjnzvbgs5z=s128-c0x00000000-cc-rp-mo-ba5",
+									"rating": 3,
+									"relative_time_description": "a week ago",
+									"text": "It's a very impressive and historical monument.\nI didn't get a ticket, but i have noticed that you get in from an underground entrance because the monument is in the middle of a big roundabout.\nAlthough i wasn't close to the arc i was able to take some great pictures, and to see the details that they were scalped to symbolize the people and important moments from the French revolution.",
+									"time": 1698659709,
+									"translated": false
+								},
+								{
+									"author_name": "Benny CHAN",
+									"author_url": "https://www.google.com/maps/contrib/118356459093653491817/reviews",
+									"language": "en",
+									"original_language": "en",
+									"profile_photo_url": "https://lh3.googleusercontent.com/a-/ALV-UjWlF5KYeXZXeeVXOWEtge9A6A6ozFDe4jDxp9wvLWyQLoU=s128-c0x00000000-cc-rp-mo-ba5",
+									"rating": 5,
+									"relative_time_description": "in the last week",
+									"text": "It's epic, historical and imposing. When we stand there you find out you're standing at the centre of roads radiating towards different areas of Paris. When you walk close, underneath it you see architectural and artistic beauty. It is always worth a visit however many times you've been Paris.",
+									"time": 1698893079,
+									"translated": false
+								}
+							],
+							"types": ["tourist_attraction", "museum", "point_of_interest", "establishment"],
+							"url": "https://maps.google.com/?cid=15687558599447307325",
+							"user_ratings_total": 230215,
+							"utc_offset": 60,
+							"vicinity": "Place Charles de Gaulle, Paris",
+							"website": "https://www.paris-arc-de-triomphe.fr/",
+							"wheelchair_accessible_entrance": true
+						},
+						"time": "Thu Nov 09 2023 08:00:00 GMT+0100"
+					}
+				]
+			}
+		]
+	},
+	{
+		"id": "0.4118838951550172",
+		"place": {
+			"address_components": [
+				{ "long_name": "Shanghai", "short_name": "Shanghai", "types": ["locality", "political"] },
+				{ "long_name": "Shanghai", "short_name": "Shanghai", "types": ["administrative_area_level_1", "political"] },
+				{ "long_name": "China", "short_name": "CN", "types": ["country", "political"] }
+			],
+			"adr_address": "Shanghai, <span class=\"country-name\">China</span>",
+			"formatted_address": "Shanghai, China",
+			"geometry": {
+				"location": { "lat": 31.230416, "lng": 121.473701 },
+				"viewport": {
+					"northeast": { "lat": 31.6688967, "lng": 122.1137989 },
+					"southwest": { "lat": 30.7798012, "lng": 120.8397067 }
+				}
+			},
+			"icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/geocode-71.png",
+			"icon_background_color": "#7B9EB0",
+			"icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+			"name": "Shanghai",
+			"photos": [
+				{
+					"height": 497,
+					"html_attributions": ["<a href=\"https://maps.google.com/maps/contrib/111343274879396330864\">gamal ali</a>"],
+					"photo_reference": "AcJnMuFmIS08ONHqescPYqL1ZtSlognvbXZR3ltZA-G16qYcIxfi4LNWXweBqhbSL1zLrm4xBx8wuEpQq7JlAg4QKMr7WcOKbtoMr6pg4pOteodw68ogquYqJ8JpZO92EYLlAbbePSxG7GnGqFmeitFj_abbF4r_V7kRAJNHnFPstMrbwC-F",
+					"width": 1080
+				},
+				{
+					"height": 720,
+					"html_attributions": ["<a href=\"https://maps.google.com/maps/contrib/100883167759512477071\">라임</a>"],
+					"photo_reference": "AcJnMuHXuNGeq2WN5vcd2rf2305DQcnW4lugs1dzWdmS4a_eRAra5R67C5FH7MYR9YqIV2HXkLg4whCMq2G-4S8Nid_8xrQlG8C18fNFOHUlLKsgFHoNhJno2p4JARVV_gF6kKOHQ242mxTBZJSfLTmMJJA4FFY5tYdQMGguW6I3V6JuV_xQ",
+					"width": 960
+				},
+				{
+					"height": 4896,
+					"html_attributions": ["<a href=\"https://maps.google.com/maps/contrib/115299360683864083477\">A B.</a>"],
+					"photo_reference": "AcJnMuHtSfqsGkf4g1Vb-qbqMMxc45jG_VxCr31o9B-1GsATKqbjm0nU-THMXPLjpduQghcmIt2MBuF3iavrPgXGjV1h1TkNq9vtrHt-3ncO-fXySGVYKabeqimuyvc4x5f0fW5dN5uZEBEuJkitkMr0TvOAXsusqpJojZCAp6HA2NLsn-yB",
+					"width": 3264
+				},
+				{
+					"height": 3456,
+					"html_attributions": ["<a href=\"https://maps.google.com/maps/contrib/113858871296877222790\">小忠忠</a>"],
+					"photo_reference": "AcJnMuEUiTW7yyFctn6HlJoP_AblBu6-0HEynpmmlWMldSVSOVkejCiBFj7BkMI1_CNujE9eOTLvbvDOcOjVDnoW-EjzSYBkvnMBjXBvqaogVkjShmIAt627Ws15pLqBK8pn2qKdHHR3YOBi-oPCFM8aHSFLnURQr22FZQWFYGwgV-Ob3dpC",
+					"width": 2304
+				},
+				{
+					"height": 528,
+					"html_attributions": [
+						"<a href=\"https://maps.google.com/maps/contrib/114227774606573286354\">Francesco Pascale</a>"
+					],
+					"photo_reference": "AcJnMuEN49FAtZb_vQICkbtbhYwLhkJx18bnuGFEQLz8O2ku_EVSdgojRsFhc98mfSA1ltZRFwyffTBEo_mybnabJYBuPq4Wz0tffhXREGX0dN4-7tINhWjL55_AccV2fwoDSSaxFSOJr8wTCkOmg8P_mSLlpcRkRwmKfK1FrbE_RKDh25fL",
+					"width": 719
+				},
+				{
+					"height": 682,
+					"html_attributions": [
+						"<a href=\"https://maps.google.com/maps/contrib/115650215843117179410\">Shivam Mishra</a>"
+					],
+					"photo_reference": "AcJnMuHVOKFffQ4XXwqT-qnXRLTJI4qgvxjKvY2v9tM3HCm2tPNx6b57PYEAbXEg6_Xx_PMg0xUAqbMHtrPKgNGlob9Jg2UIv7jSplWxHE3uiLQOi2vRgHWqSiJKorwul2GeU34Ckd03gDFw6SPqxGBz4-39aqhi3PbDXGScgYM3uJZzNcLq",
+					"width": 1023
+				},
+				{
+					"height": 3648,
+					"html_attributions": [
+						"<a href=\"https://maps.google.com/maps/contrib/111183043288153705127\">Dieter Quitt</a>"
+					],
+					"photo_reference": "AcJnMuHEiZzgbCeTKeU0jZelnPhTpTW2isRpTJf9HlFw5P2zi7ZSjz0PD_hwMvfV0KE8ZT9ZSW-aimn7eVG1fBjDkj-fL_n3jL0RkJZJnFBryt06X13CmoZi7IKUVerI5rbEy77hmi3Iq--NIwD2hZomF9-hmqK3MhFAc2DNth-QETT2IGVs",
+					"width": 2736
+				},
+				{
+					"height": 720,
+					"html_attributions": [
+						"<a href=\"https://maps.google.com/maps/contrib/108421937044022026614\">Danilo de Andrade</a>"
+					],
+					"photo_reference": "AcJnMuGDW3zxOrKcBKBjuz4izF4-mb6Djp7a1vMZlQGBCnkq1ATW2AKvTbide_MyquqOSnxUbO_hL9hZeUOLd1FMrEu3OvKpe627e5VX4Jsi4bSfAir-ayQD9RvhcUs4fW8VrPNOC3x4_jkscCfhV3PsZpSE5S9Gr5gweQ0S8Caah-a3L8sh",
+					"width": 960
+				},
+				{
+					"height": 1536,
+					"html_attributions": ["<a href=\"https://maps.google.com/maps/contrib/115027288387975928704\">Alan Chen</a>"],
+					"photo_reference": "AcJnMuFYZ09n-64uecUv_8RYFYCL96zJNqilpOvFmNBfuleYriQMG14HVOnDITqlOeLvsmRnZW1k1-4LTxcMkcYFax4VpwHUsU32tDMkA8uJJwT5_veG2F98dGQ2zLV5FrK-OeLPdPYzEgT5cC-Lr-R_bKGfsS1lfyR9y-iewIqU9QfZ7pRz",
+					"width": 2048
+				},
+				{
+					"height": 422,
+					"html_attributions": [
+						"<a href=\"https://maps.google.com/maps/contrib/111795667901170954602\">Diego Suárez Magallanes</a>"
+					],
+					"photo_reference": "AcJnMuFeh4ChpdkI4trgZWPI-kdSBjYgvb6mTcuNWtkq_sCshKMv0NlQiRIX4crMWvOUNWCTfRn2r69gzLGPxV5RtN0RRgSqgkAu0hDkqv686Mq4rYy9CdNbbmROSi3zdvSnLokfaLLKTVqGW9NHpsQrDMV_7fyeihdV_U0Zg_-hilW4MJ50",
+					"width": 990
+				}
+			],
+			"place_id": "ChIJMzz1sUBwsjURoWTDI5QSlQI",
+			"reference": "ChIJMzz1sUBwsjURoWTDI5QSlQI",
+			"types": ["locality", "political"],
+			"url": "https://maps.google.com/?q=Shanghai,+China&ftid=0x35b27040b1f53c33:0x295129423c364a1",
+			"utc_offset": 480,
+			"vicinity": "Shanghai"
+		},
+		"dates": { "start": "2023-11-07T11:56:01.663Z", "end": "2023-11-09T11:56:00.000Z" },
+		"days": [
+			{
+				"places": [
+					{
+						"info": {
+							"address_components": [
+								{ "long_name": "1", "short_name": "1", "types": ["street_number"] },
+								{ "long_name": "Shi Ji Da Dao", "short_name": "Shi Ji Da Dao", "types": ["route"] },
+								{ "long_name": "Lujiazui", "short_name": "Lujiazui", "types": ["neighborhood", "political"] },
+								{
+									"long_name": "Pu Dong Xin Qu",
+									"short_name": "Pu Dong Xin Qu",
+									"types": ["sublocality_level_1", "sublocality", "political"]
+								},
+								{
+									"long_name": "Shang Hai Shi",
+									"short_name": "Shang Hai Shi",
+									"types": ["administrative_area_level_1", "political"]
+								},
+								{ "long_name": "China", "short_name": "CN", "types": ["country", "political"] },
+								{ "long_name": "200120", "short_name": "200120", "types": ["postal_code"] }
+							],
+							"adr_address": "<span class=\"street-address\">1 Shi Ji Da Dao</span>, <span class=\"extended-address\">Lujiazui</span>, <span class=\"locality\">Pu Dong Xin Qu</span>, <span class=\"region\">Shang Hai Shi</span>, <span class=\"country-name\">China</span>, <span class=\"postal-code\">200120</span>",
+							"business_status": "OPERATIONAL",
+							"editorial_summary": {
+								"language": "en",
+								"overview": "Futuristic TV tower (468-meters tall) offering city vistas, a history museum & revolving restaurant."
+							},
+							"formatted_address": "1 Shi Ji Da Dao, Lujiazui, Pu Dong Xin Qu, Shang Hai Shi, China, 200120",
+							"formatted_phone_number": "021 5879 1888",
+							"geometry": {
+								"location": { "lat": 31.2396889, "lng": 121.4997553 },
+								"viewport": {
+									"northeast": { "lat": 31.2410378802915, "lng": 121.5011042802915 },
+									"southwest": { "lat": 31.2383399197085, "lng": 121.4984063197085 }
+								}
+							},
+							"icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+							"icon_background_color": "#13B5C7",
+							"icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+							"international_phone_number": "+86 21 5879 1888",
+							"name": "Oriental Pearl TV Tower",
+							"photos": [
+								{
+									"height": 11714,
+									"html_attributions": [
+										"<a href=\"https://maps.google.com/maps/contrib/113137092278051078138\">Paweł Jeśko</a>"
+									],
+									"photo_reference": "AcJnMuGDxRplxJsXXIIwUkwMGZAISdpojRf3qBX0WkWfQM82fSzJ_LJGG_Tt85gwzxzavNuIvsjstj0VcT0qb5CoiV1Ft8yr4lXns77hX37oFvWHiW4m9TjsmLPDlbY2bYZ5uSmXw1Xzl50F95lIpHRjEQujtc3MkFXzY9JeiZaI_HMVVH7d",
+									"width": 8786
+								},
+								{
+									"height": 3024,
+									"html_attributions": [
+										"<a href=\"https://maps.google.com/maps/contrib/101065063016650327034\">草莓馅包子</a>"
+									],
+									"photo_reference": "AcJnMuH5cq_4kPcivZFIVDxckXat6xc8x7k9DKCQr_sNSatHdwqsRKsWmAm8mmGpNv_LtXy_9FlTxAEGHravpLedRpgf77F0vNF8-h67KCo0PVwQQkGe-UoF6AIf67uLGMF0EO9d4HOwI0OlJMwXJdUYyxX0s5IUqdEDmGvhOIZCmArSanWS",
+									"width": 4032
+								},
+								{
+									"height": 1080,
+									"html_attributions": [
+										"<a href=\"https://maps.google.com/maps/contrib/105556442843097975961\">henry pan</a>"
+									],
+									"photo_reference": "AcJnMuG6lx2uOHNRjwbEKQPaDzS4v6PlTJr1YyuHMfAom9FrUoac96xTGpbkro5QP87orcm1Cr2RfqknxcV7K6r2nzpxaeEk0lAlqMTmN4oTiD6oR1YDOvDXeVHlmNO74PaO93MpmND3F8rzP2Hgkq6d3KOT690lMzClav8Tk9P8NIuRzjSb",
+									"width": 1925
+								},
+								{
+									"height": 2268,
+									"html_attributions": [
+										"<a href=\"https://maps.google.com/maps/contrib/100197421193815065899\">Adam Fouts</a>"
+									],
+									"photo_reference": "AcJnMuGicmee2UGo-PJpUcbYCDShxJwMWYaoRf3XNn5ZmtpAzqq0Q5n-uWG7aaEagEHGEyFIjacucS2fVA6aV_YLaOBRGXYtRyL5GJzA04bp95Ubl32LQRwZiac9cfRr1g1JMW9k2sM-4vjrjv44WxvJPy_FGKRIDa3vE98mafhSZHMqkw6K",
+									"width": 4032
+								},
+								{
+									"height": 4032,
+									"html_attributions": [
+										"<a href=\"https://maps.google.com/maps/contrib/106197495554967738536\">Markus Zeller</a>"
+									],
+									"photo_reference": "AcJnMuFKbIYcDe0lLjzdQ8ek0i6116rQxHSWpVkGGkYw-gVpMcUMlWj4afQEphSVUz78qV38SwqKmppQeCIti3o38lCRys0wtikCoan0uACUBbMkYlTHl--KuWkTA_AILVNy6xhPPnN1qHbROLZzLgFB7WkSUJ-8huZtl3xHwrL2qlEpalXN",
+									"width": 2269
+								},
+								{
+									"height": 4032,
+									"html_attributions": [
+										"<a href=\"https://maps.google.com/maps/contrib/107995289480314809390\">little athena</a>"
+									],
+									"photo_reference": "AcJnMuF3cQO3XRz3vb5DEW1CnWNaUPiqnctnNN6oRqLCULcrHWRfjTnGWhw1bpmE6Spqt8hoREbSFV89KeKE9Xt72_VDoZVt8Yh0fLMoTdwLwKd24yzloeHYJ8_xsr6R9tX49PjvFqGBhf7Jr-wyOxNmC4Mq7_xHPmcnJwKJCWQwsopOEjnP",
+									"width": 3024
+								},
+								{
+									"height": 2016,
+									"html_attributions": [
+										"<a href=\"https://maps.google.com/maps/contrib/117688372123731731114\">Gustaaf de Jong</a>"
+									],
+									"photo_reference": "AcJnMuFfjkXzUpQr8PAfQX0CnjghYtFtU5eRB9Y232HzHlUQriKEOaFHARKG_nVNt0CTjqg-mJ5EFiz6cU8jc01GC06nAy0t2YvNN_7Ln8Ax8xo84iYriefg9qhoP_6IDmg8JGIevCf_Mr3EQwbdSDR55HobpTNutYQ7HlO2khLoO6rFEz8m",
+									"width": 1512
+								},
+								{
+									"height": 2268,
+									"html_attributions": [
+										"<a href=\"https://maps.google.com/maps/contrib/105500595204664057691\">Issam Khoury</a>"
+									],
+									"photo_reference": "AcJnMuGn5vCAXFv4Kv78On0MIn5CkOA89YlnJY4DYEsUa7wL5rD9LOCOt8YyWtopIAOg7DIu3_PxYCKIax4QXvR8bUKu1KXlPX3cZyWMQ7XY9uhdfJlfV5q7cuyiS3hWxBJ9CJs5IerHIvwRk7dYktQfCOaFu-qnP9xma_FhZRDj91IUFG43",
+									"width": 4032
+								},
+								{
+									"height": 3456,
+									"html_attributions": [
+										"<a href=\"https://maps.google.com/maps/contrib/114860223429916697545\">Waldemar Kołba</a>"
+									],
+									"photo_reference": "AcJnMuHDqwa1mK1cHIw1uEczWjj3Hv5Th_icv_yCG2MtDWTV3I_epGrV0QdfhUnlyxUSFdyNEKHoMzR08OMzv1USqtgyKHFc5jnajLSEzglcgwz7KsTQbXjCTp0fmzqrMGTi-nKWhAgYsF3e52fR_Eo7K_M2E9j_p3hfGK7LLiiihfnLqOko",
+									"width": 5184
+								},
+								{
+									"height": 616,
+									"html_attributions": [
+										"<a href=\"https://maps.google.com/maps/contrib/117240613737737993167\">Ibrahim Falqi</a>"
+									],
+									"photo_reference": "AcJnMuF5-nuO4P_MkU8ApZ7YKdsugvLuDFzhLiU03aYUM7cDicGh18A_h7Sz3M2elRudiopipuaK0JklVx82_yvguatgcUsKzdsBvdwnOZE3Hf00nW-4Tg_2l40lAe20Q5UkqUpwg_CEpahJcLynWLamApOtgDznXg2ASOpOZHx2By-if2p8",
+									"width": 828
+								}
+							],
+							"place_id": "ChIJ29SwJftwsjURZYXg4jufPhY",
+							"plus_code": { "compound_code": "6FQX+VW Pudong, Shanghai, China", "global_code": "8Q336FQX+VW" },
+							"rating": 4.5,
+							"reference": "ChIJ29SwJftwsjURZYXg4jufPhY",
+							"reviews": [
+								{
+									"author_name": "Jason L",
+									"author_url": "https://www.google.com/maps/contrib/115539270527201653830/reviews",
+									"language": "en",
+									"original_language": "en",
+									"profile_photo_url": "https://lh3.googleusercontent.com/a/ACg8ocIwyU_GxslI8qPXpL5CLlj4eRIvvs3MWJAs4raEQwPOLA=s128-c0x00000000-cc-rp-mo-ba5",
+									"rating": 3,
+									"relative_time_description": "3 months ago",
+									"text": "The Oriental Pearl TV Tower in Shanghai offers breathtaking views, but my visit during the weekend was less than ideal. The crowd was overwhelming, and I endured a nearly 3-hour wait in the queue. Once I finally reached the observatory, my mood was dampened, and I only spent a quick 15 minutes taking in the view before heading down. I strongly recommend planning your visit during off-peak hours to fully enjoy this iconic attraction without the frustration of overcrowding.",
+									"time": 1690901742,
+									"translated": false
+								},
+								{
+									"author_name": "Adam Fouts",
+									"author_url": "https://www.google.com/maps/contrib/100197421193815065899/reviews",
+									"language": "en",
+									"original_language": "en",
+									"profile_photo_url": "https://lh3.googleusercontent.com/a-/ALV-UjXr3eypetxDEN7mfErusM3_wVAAovv2-z7cwEHqX8s4LQ=s128-c0x00000000-cc-rp-mo",
+									"rating": 3,
+									"relative_time_description": "a month ago",
+									"text": "Nothing too special here. Glass floor, old Shanghai museum, good view. Skip going to the highest level with the space exhibit and tiny viewing windows. Get there early.",
+									"time": 1696398916,
+									"translated": false
+								},
+								{
+									"author_name": "A V (globetrotter)",
+									"author_url": "https://www.google.com/maps/contrib/100217182305350818094/reviews",
+									"language": "en",
+									"original_language": "en",
+									"profile_photo_url": "https://lh3.googleusercontent.com/a/ACg8ocKbMA5Q7l-4IticjGRC-_u9bC90eWW1pkU4TqDWaQ8u=s128-c0x00000000-cc-rp-mo-ba6",
+									"rating": 5,
+									"relative_time_description": "in the last week",
+									"text": "Of the 3 well known modern business towers of Shanghai, i.e. Jin Mao, Oriental Pearl and Shanghai, the Oriental Pearl is the most noticeable from the mega-city’s skyline on the other side of the Huangpu River from the Bund.\n\nIt is certainly the prettiest architecturally 😎.\n\nIt’s mainly a TV and communication tower in the heart of modern Shanghai.",
+									"time": 1699005724,
+									"translated": false
+								},
+								{
+									"author_name": "Ho Ngoc Tin",
+									"author_url": "https://www.google.com/maps/contrib/115256457323209882376/reviews",
+									"language": "en",
+									"original_language": "en",
+									"profile_photo_url": "https://lh3.googleusercontent.com/a-/ALV-UjWk14X-UcKx77VvO-_V_TQpOGVlpxME1Q8lMgB6mZaWbsTJ=s128-c0x00000000-cc-rp-mo-ba7",
+									"rating": 5,
+									"relative_time_description": "4 months ago",
+									"text": "If you look to Shanghai from this tower, it's just normal view city at night, but look from the other side to this. It generous! Busy street at night, don't have a chance to go to the top!",
+									"time": 1687133956,
+									"translated": false
+								},
+								{
+									"author_name": "Jaemoon Park",
+									"author_url": "https://www.google.com/maps/contrib/108871058952206596378/reviews",
+									"language": "en",
+									"original_language": "en",
+									"profile_photo_url": "https://lh3.googleusercontent.com/a-/ALV-UjUUCTF-E0NvaX4befS06KVErkXEan7CHv6drl-0iQ7n7m7l=s128-c0x00000000-cc-rp-mo-ba8",
+									"rating": 5,
+									"relative_time_description": "a month ago",
+									"text": "A little bit expensive entrance fee, but worthy to visit this observatory. Able to get cheaper tickets if you book earlier.",
+									"time": 1694292171,
+									"translated": false
+								}
+							],
+							"types": ["tourist_attraction", "point_of_interest", "establishment"],
+							"url": "https://maps.google.com/?cid=1602893596948727141",
+							"user_ratings_total": 5804,
+							"utc_offset": 480,
+							"vicinity": "1 Shi Ji Da Dao, Pu Dong Xin Qu",
+							"website": "http://www.orientalpearltower.com/",
+							"wheelchair_accessible_entrance": true
+						},
+						"time": "Tue Nov 07 2023 08:00:00 GMT+0100"
+					}
+				]
+			},
+			{
+				"places": [
+					{
+						"info": {
+							"address_components": [
+								{ "long_name": "2000", "short_name": "2000", "types": ["street_number"] },
+								{ "long_name": "Shi Ji Da Dao", "short_name": "Shi Ji Da Dao", "types": ["route"] },
+								{
+									"long_name": "Pu Dong Xin Qu",
+									"short_name": "Pu Dong Xin Qu",
+									"types": ["sublocality_level_1", "sublocality", "political"]
+								},
+								{
+									"long_name": "Shang Hai Shi",
+									"short_name": "Shang Hai Shi",
+									"types": ["administrative_area_level_1", "political"]
+								},
+								{ "long_name": "China", "short_name": "CN", "types": ["country", "political"] },
+								{ "long_name": "201204", "short_name": "201204", "types": ["postal_code"] }
+							],
+							"adr_address": "<span class=\"street-address\">2000 Shi Ji Da Dao</span>, <span class=\"locality\">Pu Dong Xin Qu</span>, <span class=\"region\">Shang Hai Shi</span>, <span class=\"country-name\">China</span>, <span class=\"postal-code\">201204</span>",
+							"business_status": "OPERATIONAL",
+							"editorial_summary": {
+								"language": "en",
+								"overview": "Modern museum focusing on technology, with educational programs, multimedia exhibits & theaters."
+							},
+							"formatted_address": "2000 Shi Ji Da Dao, Pu Dong Xin Qu, Shang Hai Shi, China, 201204",
+							"formatted_phone_number": "021 6854 2000",
+							"geometry": {
+								"location": { "lat": 31.21797, "lng": 121.541078 },
+								"viewport": {
+									"northeast": { "lat": 31.21926943029149, "lng": 121.5423321802915 },
+									"southwest": { "lat": 31.2165714697085, "lng": 121.5396342197085 }
+								}
+							},
+							"icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/museum-71.png",
+							"icon_background_color": "#13B5C7",
+							"icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/museum_pinlet",
+							"international_phone_number": "+86 21 6854 2000",
+							"name": "Shanghai Science and Technology Museum",
+							"photos": [
+								{
+									"height": 2252,
+									"html_attributions": [
+										"<a href=\"https://maps.google.com/maps/contrib/112051607973750187647\">Johnson Lam</a>"
+									],
+									"photo_reference": "AcJnMuFGbhGITszmzThQSo7iv4ZCyMojws2rJzS_wRGzaZnf9cajYFw4TAC61y093QQIG4RSrXK_LyL86-x_dsJzlK0uHgx1brXsCVog3gnfh0PQkfCjm_H8SRtkdn1TybQCtLp6eSvHqQMbpKGJ1PZQfQop_mP1yIHphwgrKRVODfrwdYwt",
+									"width": 4000
+								},
+								{
+									"height": 3072,
+									"html_attributions": [
+										"<a href=\"https://maps.google.com/maps/contrib/101229386400360156303\">Taoan Ma</a>"
+									],
+									"photo_reference": "AcJnMuHFJU8DMrLxsaHd3yppGmjhXD8jzgpXqN0I9d4yZS6LM6RysyWUIQal5f5jYnyV1fXUbaUw8g9I6fPmZqQbJ6z1vqTWjiNl1lFtbR9MWD952BjxQJTa_Aa3RODFKpZSwjI9xocjI86d_E3R1DsRrQp-58w147yJyUWneeP_WJxB68k",
+									"width": 4096
+								},
+								{
+									"height": 2160,
+									"html_attributions": [
+										"<a href=\"https://maps.google.com/maps/contrib/110952459315359072074\">Simon Andas</a>"
+									],
+									"photo_reference": "AcJnMuHz96drSVZMaKtLoZR7LeM2_q5BE51kldQM1QY1uT94u9iv9KcXwqGmYv2y0Un-BtKphQljjcUmPaIeQ1wnCdqkVJ-7GTJqKALXIr-b4o4l9w8UvcC6Ge6UeOnGuMjijqd3LUUfZvCjy-APtmxC0Km9DP_djlxCJqHaNHa8LoZOoo3F",
+									"width": 3840
+								},
+								{
+									"height": 2752,
+									"html_attributions": [
+										"<a href=\"https://maps.google.com/maps/contrib/107860893351839130974\">Amit Sharma</a>"
+									],
+									"photo_reference": "AcJnMuELr6FZL-3GVgZNYRolcKMQgDKeSRZsFMk61rgsG459f2or37C4UnsENmaJe1oBvbqikJlCkXO3CB69pgAsl8QVnX6Yjrg7sicwH6oLQXi_gjSvSuQkk4rfoPLWKNXbbZI90l5iUjOoEOqFrIedO14YldrouROz4g9B8ffBOY_HluEe",
+									"width": 4896
+								},
+								{
+									"height": 5584,
+									"html_attributions": [
+										"<a href=\"https://maps.google.com/maps/contrib/112473913497036348860\">Preeyakorn Palm</a>"
+									],
+									"photo_reference": "AcJnMuFPKAjS-hgDF4n8I-wIKNfEao_nnqRP1Of2mIEpQnJOV5iSDxNvE731CyH6hd5-AEeFTgg_XD92ihTG_wfLRKuP77ZCFZm7Jok63G-vLf4GDntMN8uyOGlrf6LyxmbMGobLGrxwGa1xNm_U6ESOfezm72VEzG0rP_wXyYy_-qEal3I0",
+									"width": 8368
+								},
+								{
+									"height": 1356,
+									"html_attributions": [
+										"<a href=\"https://maps.google.com/maps/contrib/117921549254731198215\">S G</a>"
+									],
+									"photo_reference": "AcJnMuF9F19EzI9LqsIK0F4UhdHysSQkMA2b6NfhlWteQXo52ktBGjg4FT55Vqz5Sx19k1oUgXKZTfcP6dAu6IMpSDHnTHXjM6Nwo7ao4k1uZ5KKK7P6jzvu1OPVxAiihRE2l0hIejvpotWBf3g-qXaJP-5ED-6yb3BeP5TT0AXyTspkd9nt",
+									"width": 2048
+								},
+								{
+									"height": 2268,
+									"html_attributions": [
+										"<a href=\"https://maps.google.com/maps/contrib/114413303918794744220\">HB Teh</a>"
+									],
+									"photo_reference": "AcJnMuFJ3U-7Uzega_LPDRVWC9cw26Obvvk182a0-nZh2zYpYGNysJh63PnFo-zfIJw2Phkw9ldUocytPCqvY8flMc0YWfEtGPXpxbg3O_RiwGkonXeoS7kGxYI9y55A3oXyljL0ezfN-rKmE7UwbFZo8ZtjXlmRf8O7ev-Ibk_f_mb0CEzi",
+									"width": 4032
+								},
+								{
+									"height": 1696,
+									"html_attributions": [
+										"<a href=\"https://maps.google.com/maps/contrib/117688280261165973650\">Alireza Akhlaghi</a>"
+									],
+									"photo_reference": "AcJnMuFbErpU3I8XBlxkns4AUuGcCfR3Bm4hmxXlvs_vfVdQXmZGQDhJqhahGUfc1ZHcgqQBrRqd7nod8bcy1T61Njas2HBITVvYq3sH4uEVUY_Oh2dHmcLgRKncSsE4QjVvyZUWkFq1Z-AVFeszq-bZYQZ4AJN42PL_08g56U8qO4AJVNmL",
+									"width": 2576
+								},
+								{
+									"height": 3024,
+									"html_attributions": [
+										"<a href=\"https://maps.google.com/maps/contrib/104170438132733016148\">Acme Nair</a>"
+									],
+									"photo_reference": "AcJnMuFAqncHyPnlZsK1kRwVeCg888zLHp5-POpY2D-CMcXMJX59EOfZjnEYR6X5OLIb8b1Oo_yznPuQWJJRCzxuKPub7Azk6fzQzUK2Fk8ZLB8ANN5vLjsg0xEYFfyWL25w1vR3RAmda_YtShnsI3wAKd59zdmFEKUWHDQ0u9Va_-Ocrkxf",
+									"width": 4032
+								},
+								{
+									"height": 1536,
+									"html_attributions": [
+										"<a href=\"https://maps.google.com/maps/contrib/117921549254731198215\">S G</a>"
+									],
+									"photo_reference": "AcJnMuEscgwzTIC9DSdib525iOYzS_i94d6exghJh5MfgcsO0HC28t0911VN777TjBI8SvxTakeTui3bMygq8zAHy6MTxd3MONYjUOITwo-5f3QFl8q53czhnZ4R8ZbAOt0Wg2J7l-wSyoYM4WHa2W4mIwG7vTA3Kk9V2bHzTYRAvp6duh7V",
+									"width": 2048
+								}
+							],
+							"place_id": "ChIJAbtWITN3sjURgaPgumjFhWs",
+							"plus_code": { "compound_code": "6G9R+5C Pudong, Shanghai, China", "global_code": "8Q336G9R+5C" },
+							"rating": 4.2,
+							"reference": "ChIJAbtWITN3sjURgaPgumjFhWs",
+							"reviews": [
+								{
+									"author_name": "Jitendra Kolte",
+									"author_url": "https://www.google.com/maps/contrib/113483633786386236177/reviews",
+									"language": "en",
+									"original_language": "en",
+									"profile_photo_url": "https://lh3.googleusercontent.com/a-/ALV-UjUzS_MZWJrHk3T1vGKqR1S0Vzw9YxGxxm2Nue42Jt3AMA=s128-c0x00000000-cc-rp-mo-ba2",
+									"rating": 3,
+									"relative_time_description": "2 weeks ago",
+									"text": "This museum is closed permanently almost before covid and its not yet opened. I visited on 22nd Oct 2023. But it was closed. Some construction work in going on. Please call them before you plan to go.\n\nHowever you can visit this area, enjoy garden scenery, shopping underneath metro station. Use your negotiation skills.",
+									"time": 1698102124,
+									"translated": false
+								},
+								{
+									"author_name": "Corri Zerebeski",
+									"author_url": "https://www.google.com/maps/contrib/102012850541265754748/reviews",
+									"language": "en",
+									"original_language": "en",
+									"profile_photo_url": "https://lh3.googleusercontent.com/a-/ALV-UjXa2ZCu_rxfUvfgFGlVhxIQJWihC8ISXlbSc30Xm2h3-EU=s128-c0x00000000-cc-rp-mo-ba4",
+									"rating": 5,
+									"relative_time_description": "a week ago",
+									"text": "there is a great shopping market downstairs that provides everything from jewellery to scarves- make sure you bargain though as tourist prices start high!",
+									"time": 1698421153,
+									"translated": false
+								},
+								{
+									"author_name": "Ab Serrano",
+									"author_url": "https://www.google.com/maps/contrib/100776749584509206635/reviews",
+									"language": "en",
+									"original_language": "en",
+									"profile_photo_url": "https://lh3.googleusercontent.com/a-/ALV-UjWBYRZCirdBWqXwCn8FlNnwJIwTreXkiLB-OjWrxYgty-0=s128-c0x00000000-cc-rp-mo-ba4",
+									"rating": 5,
+									"relative_time_description": "3 years ago",
+									"text": "This place is absolutely great. Definitely a landmark to visit on a school field trip. It is very educational and provides many resources for those that want to learn about science and technology. So many convenient things as well. Not to mention the portable charging stations all around. Come and check it out. It will not disappoint.",
+									"time": 1577680775,
+									"translated": false
+								},
+								{
+									"author_name": "Todd Aitkins",
+									"author_url": "https://www.google.com/maps/contrib/102727476840865595802/reviews",
+									"language": "en",
+									"original_language": "en",
+									"profile_photo_url": "https://lh3.googleusercontent.com/a-/ALV-UjXI0w7_bWn_De8Bpn9JyQugThFAMDjo1yBvi_CaY9wMe-s=s128-c0x00000000-cc-rp-mo",
+									"rating": 5,
+									"relative_time_description": "a month ago",
+									"text": "Shopping is all underground adjacent to the subway station entrance. Be prepared for locals trying to steer you towards particular shops and be very very pushy. Some deals are to be had but be prepared to negotiate.",
+									"time": 1694614598,
+									"translated": false
+								},
+								{
+									"author_name": "Johnny Young",
+									"author_url": "https://www.google.com/maps/contrib/104248451891184850622/reviews",
+									"language": "en",
+									"original_language": "en",
+									"profile_photo_url": "https://lh3.googleusercontent.com/a-/ALV-UjXc177Vj4ePYCPo5NHmlRUYGHypyLIOqcWcs2SCr9RX_wnT=s128-c0x00000000-cc-rp-mo-ba6",
+									"rating": 5,
+									"relative_time_description": "5 years ago",
+									"text": "If you like the technology and scientist, this place is good for you. Better come to this place with your children coz it was fun with them. They can learn scientist on this place. The most museum i like was the zoology section. I like the animal zone from around the world and the tropical forest.",
+									"time": 1534927819,
+									"translated": false
+								}
+							],
+							"types": ["tourist_attraction", "museum", "point_of_interest", "establishment"],
+							"url": "https://maps.google.com/?cid=7747815787563361153",
+							"user_ratings_total": 1566,
+							"utc_offset": 480,
+							"vicinity": "2000 Shi Ji Da Dao, Pu Dong Xin Qu",
+							"wheelchair_accessible_entrance": true
+						},
+						"time": "Wed Nov 08 2023 08:00:00 GMT+0100"
+					}
+				]
+			}
+		]
+	},
+	{
+		"id": "0.9810930167829278",
+		"place": {
+			"address_components": [
+				{ "long_name": "Seoul", "short_name": "Seoul", "types": ["locality", "political"] },
+				{ "long_name": "Seoul", "short_name": "Seoul", "types": ["administrative_area_level_1", "political"] },
+				{ "long_name": "South Korea", "short_name": "KR", "types": ["country", "political"] }
+			],
+			"adr_address": "<span class=\"region\">Seoul</span>, <span class=\"country-name\">South Korea</span>",
+			"formatted_address": "Seoul, South Korea",
+			"geometry": {
+				"location": { "lat": 37.5518911, "lng": 126.9917937 },
+				"viewport": {
+					"northeast": { "lat": 37.7014549458459, "lng": 127.18379492437 },
+					"southwest": { "lat": 37.42829725537645, "lng": 126.7644837308701 }
+				}
+			},
+			"icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/geocode-71.png",
+			"icon_background_color": "#7B9EB0",
+			"icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+			"name": "Seoul",
+			"photos": [
+				{
+					"height": 673,
+					"html_attributions": [
+						"<a href=\"https://maps.google.com/maps/contrib/107754986161171172029\">kim tata ARMY BTS kim taehung</a>"
+					],
+					"photo_reference": "AcJnMuG5iR8VFuXCWrZ7IUf_9ykQY6MOqHmFAc3cKyIYakHUCgCTfK0kz-nZD_RnUfexiVOOJkAqhouwRTYIiAhWXYQFvYvQIviFbs9L2uaqoxbyf4Ca-IrspWpHRbiVui4PyRn4ZVXivCxnRZiQt8dz3cX7kzipc4IuGiO8GnMf8AtU6c_s",
+					"width": 540
+				},
+				{
+					"height": 806,
+					"html_attributions": ["<a href=\"https://maps.google.com/maps/contrib/100879797538326253766\">자료실</a>"],
+					"photo_reference": "AcJnMuEw_o7nnbDpWl8jDFut_WDR65HDOU4v5gw1jxmOgMH_OKTBICiaBW3rpaIyK8E0Qpfk2PSMcRzthIZCUfLbOM2gnpR3MODXLK8mElE26405g6XIBczrwocamNyVOxZYYyYq1gMA6jmw4EXQWUNFoHxffnqdMTF34ku2e6Hc8A1OM3x4",
+					"width": 1063
+				},
+				{
+					"height": 4032,
+					"html_attributions": ["<a href=\"https://maps.google.com/maps/contrib/107477225901716771343\">M A</a>"],
+					"photo_reference": "AcJnMuF3Gl0J5RzZggd2Of110qYvr_PIo0IpWENzH6LUJn-BRZHG1eXbfnLYGYHJb3mGbndXgMp2YNF4Fux2o70MbtSp2tAN1w0sVmtszUFmDGjzRRGZB8qMe1nJ3ZbS5IZezE52FNJs4Bksqm5R5maEXLbLhaL8wSo8sgpFQwKzmsvUoBtj",
+					"width": 3024
+				},
+				{
+					"height": 4032,
+					"html_attributions": [
+						"<a href=\"https://maps.google.com/maps/contrib/100911462576154484707\">Architects iSM</a>"
+					],
+					"photo_reference": "AcJnMuEeEOpEfpJu49dxcd1kbcMPZ-VQchcPznWNVo5zgsN0lH0a-ik-x8apN8FQY40je5iN22H18pKuIBm-imRh1dACDGvyv0ZCBY5l72EmoMkFdIsYJNoizHrC4cT53wwDTy0c9dPH7Q2G7IXEAII0rgUn0TmKRu0gwLoFUAiVlWpu2e3M",
+					"width": 3024
+				},
+				{
+					"height": 404,
+					"html_attributions": [
+						"<a href=\"https://maps.google.com/maps/contrib/102368861646663354810\">MCR Official</a>"
+					],
+					"photo_reference": "AcJnMuEVii_vx06JRknKvTLpajYApaarGEVYWAQ45nYBqMPpyHT1W6VV1DsY3G6WGdZ6nMQEgkBrDsjG1dU29RElk-IXeDrpNvVnOtm9Ig9qR6OEZdMeAwEVLGGk93gdMIo0NPQPgD7kU1RRZulpXGDp7CjYx72PSFQyZiSHPIMDrFJFEod7",
+					"width": 720
+				},
+				{
+					"height": 3120,
+					"html_attributions": ["<a href=\"https://maps.google.com/maps/contrib/100893114059166138727\">Mec Sympa</a>"],
+					"photo_reference": "AcJnMuHjZD3EURoCwqhWdZl2feMspwRDwEDtarz9BodGh5z6ZpqpeEI9-M55TdbxFXBR4qv4C6xCquEVpXCC7k2y-yx4s433ExY-r0AZKFG_X1kqrxkg_aZ5sFR4a1VPMrHHl5_a3Xb-YHJPNIbcCiv12hYTMv4Fsn7JQpkNJWpJWLC9RrfY",
+					"width": 4160
+				},
+				{
+					"height": 2971,
+					"html_attributions": ["<a href=\"https://maps.google.com/maps/contrib/116312862761080646709\">洪泳仁</a>"],
+					"photo_reference": "AcJnMuE7nW-pp6vc2tn5WQuyxpDd0vPIAdYoYwQFH5mgmGFyoxoWLuQm6LRNFrAuFdnapkBF5YTSWvJ6jYHU2eTsc5fV7kNOQDQAmtNF2GGxIUaDBd7UN1YLgScq5c8Y-fWM8o1YnAml2QVsTEEe_1JmklHwWlp6A4BoxV2KfprG3y8UeDaV",
+					"width": 3961
+				},
+				{
+					"height": 747,
+					"html_attributions": ["<a href=\"https://maps.google.com/maps/contrib/104647917976693132174\">조영호</a>"],
+					"photo_reference": "AcJnMuFEA-xl7zcq54aCRY09Qujpc7jp1e6uXMiX5fAvCGnx9dj6JosYiqOnq2FGeXF52cnhl6DF6ZfrNLIc7glrUHPATxwzSl4iMHnpGb_P2mUC7zoW-w5UKsXJh3li0PQiKN3YvxZCejKVjm92iQdug0V91KCRV4DXqtyuTvguVK82n8Ou",
+					"width": 1600
+				},
+				{
+					"height": 2368,
+					"html_attributions": [
+						"<a href=\"https://maps.google.com/maps/contrib/118132327060068539166\">Handry Sutandi</a>"
+					],
+					"photo_reference": "AcJnMuH-v2_SPO4dfRIBFA6wH-UaCNZsFMDWE3TnpiYdkudBcpQIfzF5RLsAZbgvKw51GKkZURYzs42lnYS3P3DgdF-Zgv7IotPgiD2hn6U-rRqGC4Cx2nfuFH7rfOU2f3cKTE9t8ARm7tj2PyfrBSp_Zaf6BTMufqtxa8G0RdLmwXcv4Sio",
+					"width": 5120
+				},
+				{
+					"height": 4608,
+					"html_attributions": [
+						"<a href=\"https://maps.google.com/maps/contrib/106201791840853848013\">Karthik MH</a>"
+					],
+					"photo_reference": "AcJnMuH6GLuDp4WXV7aggYjj2Ve_giyv0wNL3WCCmRB1-ZaAEf1mGDvkEQgWb4-qTYUc-QT9zcaAcbJzpaDCo60LZU1EUpyJibwAOE9E7w7Q8Sy80AcXxyRIvfkt1FJhFLLNWobzswoJZ5Ht5OLn7maJhQbfg6RZt2cCmMGAI2s7MZf2MfOK",
+					"width": 3456
+				}
+			],
+			"place_id": "ChIJzWXFYYuifDUR64Pq5LTtioU",
+			"reference": "ChIJzWXFYYuifDUR64Pq5LTtioU",
+			"types": ["locality", "political"],
+			"url": "https://maps.google.com/?q=Seoul,+South+Korea&ftid=0x357ca28b61c565cd:0x858aedb4e4ea83eb",
+			"utc_offset": 540,
+			"vicinity": "Seoul"
+		},
+		"dates": { "start": "2023-11-07T11:59:09.966Z", "end": "2023-11-09T11:59:00.000Z" },
+		"days": [
+			{
+				"places": [
+					{
+						"info": {
+							"address_components": [
+								{
+									"long_name": "Itaewon-dong",
+									"short_name": "Itaewon-dong",
+									"types": ["sublocality_level_2", "sublocality", "political"]
+								},
+								{
+									"long_name": "Yongsan-gu",
+									"short_name": "Yongsan-gu",
+									"types": ["sublocality_level_1", "sublocality", "political"]
+								},
+								{ "long_name": "Seoul", "short_name": "Seoul", "types": ["administrative_area_level_1", "political"] },
+								{ "long_name": "South Korea", "short_name": "KR", "types": ["country", "political"] }
+							],
+							"adr_address": "<span class=\"street-address\">Itaewon-dong</span>, <span class=\"locality\">Yongsan-gu</span>, <span class=\"region\">Seoul</span>, <span class=\"country-name\">South Korea</span>",
+							"formatted_address": "Itaewon-dong, Yongsan-gu, Seoul, South Korea",
+							"geometry": {
+								"location": { "lat": 37.5385051, "lng": 126.9925224 },
+								"viewport": {
+									"northeast": { "lat": 37.54885385705226, "lng": 126.9978867614226 },
+									"southwest": { "lat": 37.52884448753665, "lng": 126.9866361107813 }
+								}
+							},
+							"icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/geocode-71.png",
+							"icon_background_color": "#7B9EB0",
+							"icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+							"name": "Itaewon-dong",
+							"photos": [
+								{
+									"height": 1066,
+									"html_attributions": [
+										"<a href=\"https://maps.google.com/maps/contrib/100879797538326253766\">자료실</a>"
+									],
+									"photo_reference": "AcJnMuFpQNqhP39FrmgiFFtoiWt_F75vOb06YXlP9oG7Yl05N9fCoNfwKDTRGvcUBJBCNmBdyJyjX5gWrWj5rgXreYyq184HJ0Fh_3RFm7KrsjPy25INvk_7Re6J951HeAQxWSPfBF8xcnLQSGTH6xmeCetsIgmFANHlazh6bZNW1PVLucDj",
+									"width": 1440
+								},
+								{
+									"height": 1069,
+									"html_attributions": [
+										"<a href=\"https://maps.google.com/maps/contrib/100879797538326253766\">자료실</a>"
+									],
+									"photo_reference": "AcJnMuEHF9IWfP9felczWzP8-uhxRQ8Xg4UlkKlaZYJOOwFaiBAJhqsq6ESYneKb4l1ucCEJ7wnCpZiCfnCKS5zb5eT3hbTBn7RYBmx3MVBHYe_cffran5_AIIdTzScjBvg0vyJnfLUNIgpLlD0vPgoCoB5KX8CLqzOIy7yJlrsRVXC2WZ63",
+									"width": 1440
+								},
+								{
+									"height": 1065,
+									"html_attributions": [
+										"<a href=\"https://maps.google.com/maps/contrib/100879797538326253766\">자료실</a>"
+									],
+									"photo_reference": "AcJnMuHW5c3VVIiFvFERlIgU8nWjTfJU7Y7QTRIRWTJvoUdrktYccV9WKCn75nIRnPy3bWWjYma5PkMtobYS6JFgPWLQQYAo7PvIPbZWAMBRObvXPfSawYx-qikQch1yPoG5-TSlYkHWYWWTBAF4ZGPnzm06znmP2DlxYG_oBZk8njfJ3FFP",
+									"width": 1440
+								},
+								{
+									"height": 1312,
+									"html_attributions": [
+										"<a href=\"https://maps.google.com/maps/contrib/103957193856037744647\">Mike Lanier</a>"
+									],
+									"photo_reference": "AcJnMuG3b1yUZyopKf3S7DF7o2naVghW4F_jyiPekGaKDn3vbu26vBfJBP9CehXXgxua1YM_ATOufJxzMEg0ZyfoIyt1A3bSf91qjeqHMKPy3ReGcxqPeUvZVoumY_3rMfVR-F7cZbWkjEE5vhIa5zcshfPsTu0qdD6r5w0FNRCjBYOYL4Oo",
+									"width": 2000
+								},
+								{
+									"height": 1063,
+									"html_attributions": [
+										"<a href=\"https://maps.google.com/maps/contrib/100879797538326253766\">자료실</a>"
+									],
+									"photo_reference": "AcJnMuGm7JiBGhh3rBkICz4EvBfP6W57J3IzEATCp0TjV133T--uq_0BhHGc5mm-1dg0xgKf5d-iUgjRMKmc6seQlB1S6ke0BP5aicyWpqVcdZ-KgV35DYj1vxLx_QC3wcKY2U0zwy_i3us84qfDJF_b7Aa45waD-MIpVS6BKn_szyRpXVqo",
+									"width": 1440
+								},
+								{
+									"height": 3000,
+									"html_attributions": [
+										"<a href=\"https://maps.google.com/maps/contrib/116794297431678234068\">아삭</a>"
+									],
+									"photo_reference": "AcJnMuEZVtV4LhYXhYbuu2BzB7bywj7mdEVx12M2TIqurCLlOsHGY6pBpHoiIw-0UCEOKiUP2ds6kZupscBgDIGG7c9wlO9R15oo4VosrTIxVI002BST_MdJXGzjnZKBVEJzzZorxII4_GcLwuyMmtjeh8RjeMTwqjQzujbcI6MhegYg92pr",
+									"width": 4000
+								},
+								{
+									"height": 6000,
+									"html_attributions": [
+										"<a href=\"https://maps.google.com/maps/contrib/104700163307509092721\">Nuhyil</a>"
+									],
+									"photo_reference": "AcJnMuGFVjx9gYlLZh3_50-xqbNmH8a6VydjA4UEBajY5XdE_5eM6tJFdvxJAzBEdciiI6OWzl5PXYlWgBar64Z4s3hmjmLABEc8BMFV1akeEi9Gn6X9Drq5yi-EjY5I1WPgWn_FeprPBqa1BBvsmm9b6sknKedeTsWGYorANmN6C5BMam9B",
+									"width": 4000
+								},
+								{
+									"height": 4032,
+									"html_attributions": [
+										"<a href=\"https://maps.google.com/maps/contrib/109061097550724671642\">이학철</a>"
+									],
+									"photo_reference": "AcJnMuG2DbaYEjsgawC6mvEev12hS7F8__TxE5wrQA81w6PGzjXZlaY56zD4wvmdLibF5Bck4HPmPXv0wuDPg6kSSFJp9Nw2hWkb0aJAQfIF8v0fg4yL8Tg_S5bXo9UebzpHzLMaFFPrDu0kGA1c4IdP_sTyhfS4bbehK_6_ZoreTO323ueY",
+									"width": 3024
+								},
+								{
+									"height": 4032,
+									"html_attributions": [
+										"<a href=\"https://maps.google.com/maps/contrib/104101775534296068772\">라천호</a>"
+									],
+									"photo_reference": "AcJnMuHJs2_uotPlJyi7agS8GKCtfVqqQh__5dmSZZthQFUAkK2JxqXMgYnDTq180zn93YDT7io2HIErDfRG1eSDsQepcZU4m0umLQpxn7Vj2ozL2XQMGFPDk8C4IBLaZxFUJWGB6XKt086UxYwlR-gZ-gvNvgVfEAlm-jkkJYcAK8vSr19S",
+									"width": 2268
+								},
+								{
+									"height": 1836,
+									"html_attributions": [
+										"<a href=\"https://maps.google.com/maps/contrib/109158112917539908314\">Belal Almomani</a>"
+									],
+									"photo_reference": "AcJnMuEFoV5qCsD0iQLBvb6MbmD-9DPw2uOHwocXUbPTV5iqbPCkAcAUqjFOqHhR_8T5r6zRDDM-ewQVcOZfu0Ww1yiyTTbq6UZ0Ozgl8dmZSdcD7id_B9VQ1OF4EXB7uU8ODrMd3Kp5bpojSslOOFY6yVuTh5y7-O6T7WN8HoADWgE3uabw",
+									"width": 2448
+								}
+							],
+							"place_id": "ChIJj74QBUyifDURA5G7KLd90Bo",
+							"reference": "ChIJj74QBUyifDURA5G7KLd90Bo",
+							"types": ["sublocality_level_2", "sublocality", "political"],
+							"url": "https://maps.google.com/?q=Itaewon-dong,+Yongsan-gu,+Seoul,+South+Korea&ftid=0x357ca24c0510be8f:0x1ad07db728bb9103",
+							"utc_offset": 540,
+							"vicinity": "Itaewon-dong"
+						},
+						"time": "Tue Nov 07 2023 08:00:00 GMT+0100"
+					}
+				]
+			},
+			{
+				"places": [
+					{
+						"info": {
+							"address_components": [
+								{ "long_name": "105", "short_name": "105", "types": ["premise"] },
+								{
+									"long_name": "Namsangongwon-gil",
+									"short_name": "Namsangongwon-gil",
+									"types": ["sublocality_level_4", "sublocality", "political"]
+								},
+								{
+									"long_name": "Yongsan-gu",
+									"short_name": "Yongsan-gu",
+									"types": ["sublocality_level_1", "sublocality", "political"]
+								},
+								{ "long_name": "Seoul", "short_name": "Seoul", "types": ["administrative_area_level_1", "political"] },
+								{ "long_name": "South Korea", "short_name": "KR", "types": ["country", "political"] }
+							],
+							"adr_address": "<span class=\"street-address\">105 Namsangongwon-gil</span>, <span class=\"locality\">Yongsan-gu</span>, <span class=\"region\">Seoul</span>, <span class=\"country-name\">South Korea</span>",
+							"business_status": "OPERATIONAL",
+							"current_opening_hours": {
+								"open_now": true,
+								"periods": [
+									{
+										"close": { "date": "2023-11-12", "day": 0, "time": "2300" },
+										"open": { "date": "2023-11-12", "day": 0, "time": "1000" }
+									},
+									{
+										"close": { "date": "2023-11-13", "day": 1, "time": "2300" },
+										"open": { "date": "2023-11-13", "day": 1, "time": "1000" }
+									},
+									{
+										"close": { "date": "2023-11-07", "day": 2, "time": "2300" },
+										"open": { "date": "2023-11-07", "day": 2, "time": "1000" }
+									},
+									{
+										"close": { "date": "2023-11-08", "day": 3, "time": "2300" },
+										"open": { "date": "2023-11-08", "day": 3, "time": "1000" }
+									},
+									{
+										"close": { "date": "2023-11-09", "day": 4, "time": "2300" },
+										"open": { "date": "2023-11-09", "day": 4, "time": "1000" }
+									},
+									{
+										"close": { "date": "2023-11-10", "day": 5, "time": "2300" },
+										"open": { "date": "2023-11-10", "day": 5, "time": "1000" }
+									},
+									{
+										"close": { "date": "2023-11-12", "day": 0, "time": "0000" },
+										"open": { "date": "2023-11-11", "day": 6, "time": "1000" }
+									}
+								],
+								"weekday_text": [
+									"Monday: 10:00 am – 11:00 pm",
+									"Tuesday: 10:00 am – 11:00 pm",
+									"Wednesday: 10:00 am – 11:00 pm",
+									"Thursday: 10:00 am – 11:00 pm",
+									"Friday: 10:00 am – 11:00 pm",
+									"Saturday: 10:00 am – 12:00 am",
+									"Sunday: 10:00 am – 11:00 pm"
+								]
+							},
+							"editorial_summary": {
+								"language": "en",
+								"overview": "Opened in 1980, this iconic tower offers panoramic views of the city & a revolving restaurant."
+							},
+							"formatted_address": "105 Namsangongwon-gil, Yongsan-gu, Seoul, South Korea",
+							"formatted_phone_number": "02-3455-9277",
+							"geometry": {
+								"location": { "lat": 37.5511694, "lng": 126.9882266 },
+								"viewport": {
+									"northeast": { "lat": 37.5525183802915, "lng": 126.9895755802915 },
+									"southwest": { "lat": 37.5498204197085, "lng": 126.9868776197085 }
+								}
+							},
+							"icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+							"icon_background_color": "#13B5C7",
+							"icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+							"international_phone_number": "+82 2-3455-9277",
+							"name": "N Seoul Tower",
+							"opening_hours": {
+								"open_now": true,
+								"periods": [
+									{ "close": { "day": 0, "time": "2300" }, "open": { "day": 0, "time": "1000" } },
+									{ "close": { "day": 1, "time": "2300" }, "open": { "day": 1, "time": "1000" } },
+									{ "close": { "day": 2, "time": "2300" }, "open": { "day": 2, "time": "1000" } },
+									{ "close": { "day": 3, "time": "2300" }, "open": { "day": 3, "time": "1000" } },
+									{ "close": { "day": 4, "time": "2300" }, "open": { "day": 4, "time": "1000" } },
+									{ "close": { "day": 5, "time": "2300" }, "open": { "day": 5, "time": "1000" } },
+									{ "close": { "day": 0, "time": "0000" }, "open": { "day": 6, "time": "1000" } }
+								],
+								"weekday_text": [
+									"Monday: 10:00 am – 11:00 pm",
+									"Tuesday: 10:00 am – 11:00 pm",
+									"Wednesday: 10:00 am – 11:00 pm",
+									"Thursday: 10:00 am – 11:00 pm",
+									"Friday: 10:00 am – 11:00 pm",
+									"Saturday: 10:00 am – 12:00 am",
+									"Sunday: 10:00 am – 11:00 pm"
+								]
+							},
+							"photos": [
+								{
+									"height": 12000,
+									"html_attributions": [
+										"<a href=\"https://maps.google.com/maps/contrib/106150861913447158872\">あじょしちょなー</a>"
+									],
+									"photo_reference": "AcJnMuG5KTN1653LXoZxOpe8v8qEIwiPazEpMuAugDY7F-CG5iAu-WtYA88NztUSKBzVnhd3knrNZW4As3_11vyB4FessbYXrsy55Lju_zhPVbbLb-YhN3sVk21TVjjt34TaP8MsNvLTWrmrsGDZ3Kaa7MxFQGP_FLbIFnMy0b47uCy3rGcr",
+									"width": 9000
+								},
+								{
+									"height": 3468,
+									"html_attributions": [
+										"<a href=\"https://maps.google.com/maps/contrib/110127268771686556325\">Leo Lee</a>"
+									],
+									"photo_reference": "AcJnMuEUyZI0bmeOWD9IWNTBW1dUIhnj8jLHJWAwnJZHriAWfAkm0ub_FPuenMpE--FEkJMjrf7lX7Qb74UUnzO62Kba663iL2JhKuM6LBcshebbcJRGTnQ5zmzxS1Sru0gLIrzc9C6pOLrxxGVBJdLC6YdpdLeHa9z1TuHQINKEbqMX37OA",
+									"width": 4624
+								},
+								{
+									"height": 3024,
+									"html_attributions": [
+										"<a href=\"https://maps.google.com/maps/contrib/109368461193477139790\">마리안느</a>"
+									],
+									"photo_reference": "AcJnMuFeR03-GNPuCLROUdJRzJ2xDe8VP1Emo0yA-DAK6sjJwdyh-0z8E0ZO-cE4T57GahKJZoHsybxPjJfTxkXJzRkmIwRjWX4vzRAAkrqGtia8cGpY0g7UqtcZjiAvD6rXCzl8rtosVB6EeqhhjBFPyIB_cA4t1p-s_KIxzZXBre8ndOO8",
+									"width": 4032
+								},
+								{
+									"height": 3000,
+									"html_attributions": [
+										"<a href=\"https://maps.google.com/maps/contrib/114147368894084486045\">Shaun Pierce</a>"
+									],
+									"photo_reference": "AcJnMuEXzqGVFfVNOR8UkLiNjlchGGE5Gx7osrADK93OBmf471eRzytO4h5d--9ITj0apNxJH-Bp8oq0tx88FLaZN8aHpIrsC2bNG1Cdr8U1PI3tgVGSyyqoePnCUSw8kJYRTldM0c9jp1JkAYS5VLqhvhN2iuAHbSoxYRydivjDRgv3hiEq",
+									"width": 4000
+								},
+								{
+									"height": 3072,
+									"html_attributions": [
+										"<a href=\"https://maps.google.com/maps/contrib/112116836320899756098\">Milton Roth</a>"
+									],
+									"photo_reference": "AcJnMuFi6nFx7YcG71nXTo77dCUvl5J4O4gRvh5tgdcKGREQgYfbao5Sb1-KgooFeLk8mJDmqStXb7Fk7GUlkGkpAD0mHL3QdZIMs1Ds86pNwE9Ovg4p-scgk25yiFDOln8SVsS4eJ7lgrO06H9noAqTwOXBuehqRCU0ORHHIOZbEFhItukC",
+									"width": 4096
+								},
+								{
+									"height": 4160,
+									"html_attributions": [
+										"<a href=\"https://maps.google.com/maps/contrib/110984571528212956039\">Ricky Chuang</a>"
+									],
+									"photo_reference": "AcJnMuHY4U_vBeLEwlItPLuoaMmbOVa8iisHWCiwNUpNNth1b67-uICcdw5hZGbBjW27lKapzjggo2XIqFCc1xST2gPtfFBuDTR__Ja8cjn941Sp0evTRnUzIovVE3qE77BWwg5IAZ1umV1Ws1MlllhPKwSZcpymHkHZ0DaqVSmjg3jsfqYH",
+									"width": 6240
+								},
+								{
+									"height": 12000,
+									"html_attributions": [
+										"<a href=\"https://maps.google.com/maps/contrib/111610945080899941199\">jaeyong kim</a>"
+									],
+									"photo_reference": "AcJnMuG_7Sb80WuhRAYuRLN9MMrkQTGOfXTGYwBUIJQYPVnBbnzO93uskgKeORKsWj8BUlD3jTrF5cBFWNtjUmR9RmU5dXhH7rbJkAvKmCPyVakKJScoV8ek7BvA21xrowlzqfCYDEhTjL52_ivAn0nkJmoreLCVmOkPQjS-h4S9s809fze6",
+									"width": 9000
+								},
+								{
+									"height": 2268,
+									"html_attributions": [
+										"<a href=\"https://maps.google.com/maps/contrib/109422236221558110623\">김대식</a>"
+									],
+									"photo_reference": "AcJnMuHpNDk19cDunidPZ-QYZ3523pfx8NzgirGngssmtxa0IL77mXxrpq86l1ZRADJsa_Bt9YmbuLwF5vGIiGDijUC6-rWocGUogZggKB_91xPPlDeClaRbhalVfUIhXuFx7KVUe8RoFWfcdAOq1f_HBpdn8xP9pOgXVjIACGbI-VeGGimS",
+									"width": 4032
+								},
+								{
+									"height": 3000,
+									"html_attributions": [
+										"<a href=\"https://maps.google.com/maps/contrib/102633431762282035825\">Yanuar Milad</a>"
+									],
+									"photo_reference": "AcJnMuF0N9pZRVz3xWT5lk6bE4tD2PFtrCIXxDokAq6gkjjBP-erJkQu5jSYvM2bxkhgZzVEh9qa4K87v6hg23rNT8Yfo3_vsP_4JPUx5qkpVoptv81yyUjt9U2SpExKWi2KebE2L6ftSb3lC_6FGhsulB9L11UG-yPAz7fumXZLJXSooMdF",
+									"width": 4000
+								},
+								{
+									"height": 4000,
+									"html_attributions": [
+										"<a href=\"https://maps.google.com/maps/contrib/104779171094082784908\">benedict chan</a>"
+									],
+									"photo_reference": "AcJnMuGdvLRT2AKFdFkhRFAUk_uCkPLOvgC1XRlDgTRG9iF1q_8_dRVgCGM8atI_e8ruHqZGYP9eP-LH-UkgnMd4aFXRdWMz3MlvkcZDtqVpkGElirqaV8mgGKdY0LBmoekXKy3H5-mIam27hVt8ufdjWZPPa29vIAVrFqrJXUZvsHZ2aY9D",
+									"width": 3000
+								}
+							],
+							"place_id": "ChIJqWqOqFeifDURpYJ5LnxX-Fw",
+							"plus_code": { "compound_code": "HX2Q+F7 Seoul, South Korea", "global_code": "8Q98HX2Q+F7" },
+							"rating": 4.5,
+							"reference": "ChIJqWqOqFeifDURpYJ5LnxX-Fw",
+							"reviews": [
+								{
+									"author_name": "Thúy Nguyễn",
+									"author_url": "https://www.google.com/maps/contrib/104839442954895163202/reviews",
+									"language": "en",
+									"original_language": "en",
+									"profile_photo_url": "https://lh3.googleusercontent.com/a-/ALV-UjU4wnjcZvOJFufGSx6lMY2Mh9yqC1yxhY0PPsV7E0fNoA8Z=s128-c0x00000000-cc-rp-mo-ba5",
+									"rating": 5,
+									"relative_time_description": "a week ago",
+									"text": "This is such an amazing place, especially in Spring time (end of March)\nThere is a free bus going up to the top of the mountain, the view along the way is maleficent that words cannot describe.\nYou can choose to walk down instead of bus to enjoy the fresh air here.\nAll you need is a good camera to capture those wonderful scenes\nThere is no need to go to the top of the tower because it is not free and the view is just the same.",
+									"time": 1698497740,
+									"translated": false
+								},
+								{
+									"author_name": "Wagner Moura",
+									"author_url": "https://www.google.com/maps/contrib/105675636605243891884/reviews",
+									"language": "en",
+									"original_language": "en",
+									"profile_photo_url": "https://lh3.googleusercontent.com/a/ACg8ocKa9v6XCs3bccQPst5tui-H-mpIGsnEk7t8Wp-Kwxjo=s128-c0x00000000-cc-rp-mo",
+									"rating": 5,
+									"relative_time_description": "in the last week",
+									"text": "Wonderful experience. Gives more than a glimpse over Seoul grandeur as a metropolis. The surrounding forest and park are simply beautiful and pleasant. Reserve some extra time for Cable car waiting line and try to get there by sunset. I always do that when visiting observatories around the World like Sky Tree is Tokyo or Gardens by the bay in Singapore. In Seoul, you will never forget the experience. The geography of the city spread between mountains and water is harmonious and cope well with the urban landscape. Don't miss it.",
+									"time": 1699105118,
+									"translated": false
+								},
+								{
+									"author_name": "Myla Fernandez",
+									"author_url": "https://www.google.com/maps/contrib/111704220361264069804/reviews",
+									"language": "en",
+									"original_language": "en",
+									"profile_photo_url": "https://lh3.googleusercontent.com/a-/ALV-UjXIHDagSoWBl1sIVCqlFGslNXsOINONE-02l5_SV1bVbon6=s128-c0x00000000-cc-rp-mo-ba4",
+									"rating": 5,
+									"relative_time_description": "in the last week",
+									"text": "This place is a lovely view of Seoul! Spring is a nice time to visit here as they have a lot of cherry blossom themed souvenirs and locks. We enjoyed the tradition of hanging your personal lock at the top of the tower. They sell locks there if you forget to bring one beforehand. Our favourite thing to do here though was the photo booths they have just outside. They have large scale print out pictures that are a great souvenir too.",
+									"time": 1698901255,
+									"translated": false
+								},
+								{
+									"author_name": "Amanda H",
+									"author_url": "https://www.google.com/maps/contrib/105928122350881962944/reviews",
+									"language": "en",
+									"original_language": "en",
+									"profile_photo_url": "https://lh3.googleusercontent.com/a-/ALV-UjXfrttME0o4p4SbD8wirAu4-J49YqlsDvBRRnm5TJHbOkdk=s128-c0x00000000-cc-rp-mo-ba5",
+									"rating": 3,
+									"relative_time_description": "a week ago",
+									"text": "Pretty view but soooo busy and took super long to get into the cable car. It was very hot in the waiting area, which was rough after the uphill walk to get there. They pack a ton of people into each car, so if you're in the middle, you can't see any of the views on the way up. Once you finally get to the top, the view is pretty nice but you have to pay for additional tickets if you want to go up to the actual tower. I assume some school was on a field trip because there were kids absolutely everywhere. Cute gift shop though if you're into souvenirs.",
+									"time": 1698222321,
+									"translated": false
+								},
+								{
+									"author_name": "Riaz Ali",
+									"author_url": "https://www.google.com/maps/contrib/115497454206689069264/reviews",
+									"language": "en",
+									"original_language": "en",
+									"profile_photo_url": "https://lh3.googleusercontent.com/a-/ALV-UjVWzNCGfLQwfPId_VdxAvHOrJAZYvRODXRVNf6Fqh0zw4Mr=s128-c0x00000000-cc-rp-mo-ba3",
+									"rating": 5,
+									"relative_time_description": "a week ago",
+									"text": "The tower gives you a beautiful view of Seoul! I was also presently surprised at how much there was to do after the gondola ride up! Burgers, 7-11, souvenirs, it was quite bustling up there. We placed our love lock amongst the thousands of others. A beautiful evening spent up there.",
+									"time": 1698646671,
+									"translated": false
+								}
+							],
+							"types": ["tourist_attraction", "point_of_interest", "establishment"],
+							"url": "https://maps.google.com/?cid=6699200636580889253",
+							"user_ratings_total": 55663,
+							"utc_offset": 540,
+							"vicinity": "105 Namsangongwon-gil, Yongsan-gu",
+							"website": "http://www.nseoultower.co.kr/",
+							"wheelchair_accessible_entrance": true
+						},
+						"time": "Wed Nov 08 2023 08:00:00 GMT+0100"
+					}
+				]
+			}
+		]
+	},
+	{
+		"id": "0.6413343026314962",
+		"place": {
+			"address_components": [
+				{ "long_name": "Rome", "short_name": "Rome", "types": ["locality", "political"] },
+				{ "long_name": "Rome", "short_name": "Rome", "types": ["administrative_area_level_3", "political"] },
+				{
+					"long_name": "Metropolitan City of Rome Capital",
+					"short_name": "RM",
+					"types": ["administrative_area_level_2", "political"]
+				},
+				{ "long_name": "Lazio", "short_name": "Lazio", "types": ["administrative_area_level_1", "political"] },
+				{ "long_name": "Italy", "short_name": "IT", "types": ["country", "political"] }
+			],
+			"adr_address": "<span class=\"locality\">Rome</span>, <span class=\"region\">Metropolitan City of Rome Capital</span>, <span class=\"country-name\">Italy</span>",
+			"formatted_address": "Rome, Metropolitan City of Rome Capital, Italy",
+			"geometry": {
+				"location": { "lat": 41.9027835, "lng": 12.4963655 },
+				"viewport": {
+					"northeast": { "lat": 42.05054624539585, "lng": 12.73028878823088 },
+					"southwest": { "lat": 41.76959604595655, "lng": 12.34170704408109 }
+				}
+			},
+			"icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/geocode-71.png",
+			"icon_background_color": "#7B9EB0",
+			"icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+			"name": "Rome",
+			"photos": [
+				{
+					"height": 1536,
+					"html_attributions": [
+						"<a href=\"https://maps.google.com/maps/contrib/115231549331021169860\">Francisco Gallego</a>"
+					],
+					"photo_reference": "AcJnMuFPdA-6FHPCjTgOvVDVPeskF7TbMDRK8loW2wKAZq25Mz5al9C-D2I9nhUl7msBNjzCor01HOCDfl2lv3sWHb0pBKB4m3LqrcDWZTFVjtsu7ds-FFLmC-4wSKBGXb9t2WSqjMOCBbr52W3bBoQW0LMcRvLUHMJwkkI4HVSPB8IOUdBo",
+					"width": 2048
+				},
+				{
+					"height": 3000,
+					"html_attributions": [
+						"<a href=\"https://maps.google.com/maps/contrib/103800078255144250254\">Giovanna Petruzzellis</a>"
+					],
+					"photo_reference": "AcJnMuENpzhKYgpM4nycZ4cRRkAtjRTieqBr27v2TLeGnAAONC2pUvXVkxcTaty5G3nRAV930UJlQ4nUi1im7X6kqtOgDWOC0_bxFV6q9sI7FtszCljOvjbGgiujJCt05Jr5Vi284OYixAfeX7AvZCq9OuBtcENVVbkI8vefKgVhQxdluont",
+					"width": 4000
+				},
+				{
+					"height": 4624,
+					"html_attributions": [
+						"<a href=\"https://maps.google.com/maps/contrib/100972198880877396077\">Günter Kellermann</a>"
+					],
+					"photo_reference": "AcJnMuFNPhEif0Z_5PxsY4EPSAWiEQW2zaoG8s3uPiAYNOVtVDhHrt0sPjRl7q7kBGc0UGIUp9et6OcaAbW1b40MAntbufCUQO7iVuUq0fjILEGvStuKmG9ForzDAGhpWV_Ozkr-z29HhENwY8MPRlgc3AT_9wgVxMEyaMP_f6vrI4xYdBAV",
+					"width": 2604
+				},
+				{
+					"height": 1172,
+					"html_attributions": [
+						"<a href=\"https://maps.google.com/maps/contrib/106192411682400086401\">Claudio Menazza</a>"
+					],
+					"photo_reference": "AcJnMuEXSRsUa9rIKg0a891DcaTF9myTRhiFDrFq41hWInL_Ot42rI2od_yYI1XaC96oTdschqkGQGF17z8DS-9hRWloVqgBjW2575GluZJA3AdM9usF_gxNXe8mZ0s4x6SzBFbgRCCYiqlfqxEO6us7Q_IlGxoGDLpQl4wasu3ffw34MMiF",
+					"width": 1760
+				},
+				{
+					"height": 451,
+					"html_attributions": [
+						"<a href=\"https://maps.google.com/maps/contrib/100369918471198974704\">viraj kumar</a>"
+					],
+					"photo_reference": "AcJnMuGg_HOvJEMvO8UUfi9YGT0Uvqa1jSQyESFmmHo34Tryl-c-qnEvPuTFnRtvOrw2Zx5BsUsu5eF2yQFFVkmUjxE718HaTdHV2KfSP3eIptOMRTLyEEiQVSOKrGi2bvnYDNSfWy0_yM-kAJYlCczOVTfgD9fSueGXB9j9B_fxZqGeAik",
+					"width": 679
+				},
+				{
+					"height": 2240,
+					"html_attributions": [
+						"<a href=\"https://maps.google.com/maps/contrib/100606586420303808152\">GIANCARLO GENTILE</a>"
+					],
+					"photo_reference": "AcJnMuEKU6jAxL9yoCxa5hKsR-up_0tfKES4WsHkA6WTp9cOe4UL-z8k8qbP6x4XRBPOsSovOT0ezeObe-1xMV18HBzZBZ3LMI8SjkxO9-l3H5oDqSfkv3QfL2FuBhYnk_P5FYgUaDOX3sJbNY2ClG2e8B2Q7pABTuXIZeGuks-v3h9pCldT",
+					"width": 9728
+				},
+				{
+					"height": 2322,
+					"html_attributions": [
+						"<a href=\"https://maps.google.com/maps/contrib/104311723379499448607\">Federico Oliva Meyer</a>"
+					],
+					"photo_reference": "AcJnMuGjll-7JZ9ViwFa5B_HGCe5AYorbBEp1KGGNJH0t32vj3tYT_lJQf_C19DKvs3qB0VK71pLEV7aIUTSDwwAarypHzGyvDbN0jaEcf4Zb1z54dDTKNVfVHU7DYWO3V1hSFq4bsKH5nCF2ehKSTLEbL4teo3ECW4hsbBPcA7iOybL-5tG",
+					"width": 4128
+				},
+				{
+					"height": 2336,
+					"html_attributions": [
+						"<a href=\"https://maps.google.com/maps/contrib/106967273724666789391\">Damian Biskupski</a>"
+					],
+					"photo_reference": "AcJnMuHKu0R-uErdU89s9tGMz05PcmW0qSMmlBn6LC97h-ZUEgMQ3VMgxNgqQGBryvBsmob2Ib-coYNTwft3ExRtffLzdEIt8W3VbHi-TQ2CE6vA2spXHdNxODVugdJ15FisFiToGSa0LgeA6ycwQ0bUkaIBrn5TW6PDiJOdUPsRKgHCVrin",
+					"width": 4160
+				},
+				{
+					"height": 1056,
+					"html_attributions": [
+						"<a href=\"https://maps.google.com/maps/contrib/118374239741492097900\">Ferhat Safran</a>"
+					],
+					"photo_reference": "AcJnMuF0PmJIoGF3tPq2TNLepggJn3cz7odAujRZZKUz-F5qI1g39e02hv2hl8W8kltEaCDi-4KqSdPy1RKV-OAHp-P56i6D0SFkgnycu_kplLG9Q9ZiKS_ZkLHU6R7cw91w81crgC_2lxd11I9eBmZi4dWr0u62xOzoGvJavWDwnE-W8Ew8",
+					"width": 1080
+				},
+				{
+					"height": 3024,
+					"html_attributions": [
+						"<a href=\"https://maps.google.com/maps/contrib/117266157076041644577\">Germaine De Brouwer</a>"
+					],
+					"photo_reference": "AcJnMuHqTA2iktyqCDP1cl4dZPBgRrXtUF6wMMyZlKEgZ8RFOFgnw9879PTdpdDB8Nzay1WehzO-lXmGftoLD-9cD8uZEp9QX_ExrqA8JUJrj1pkCgj7qXVwHcuyLGcmTjgfPNPtsBbkjin2gQM4zhF7t3PVXq38SIa2jGQlghhBcgCgpGci",
+					"width": 4032
+				}
+			],
+			"place_id": "ChIJu46S-ZZhLxMROG5lkwZ3D7k",
+			"reference": "ChIJu46S-ZZhLxMROG5lkwZ3D7k",
+			"types": ["locality", "political"],
+			"url": "https://maps.google.com/?q=Rome,+Metropolitan+City+of+Rome+Capital,+Italy&ftid=0x132f6196f9928ebb:0xb90f770693656e38",
+			"utc_offset": 60,
+			"vicinity": "Rome",
+			"website": "http://www.comune.roma.it/"
+		},
+		"dates": { "start": "2023-11-07T12:00:25.328Z", "end": "2023-11-10T12:00:00.000Z" },
+		"days": [
+			{
+				"places": [
+					{
+						"info": {
+							"address_components": [
+								{ "long_name": "1", "short_name": "1", "types": ["street_number"] },
+								{ "long_name": "Piazza del Colosseo", "short_name": "Piazza del Colosseo", "types": ["route"] },
+								{ "long_name": "Roma", "short_name": "Roma", "types": ["locality", "political"] },
+								{ "long_name": "Roma", "short_name": "Roma", "types": ["administrative_area_level_3", "political"] },
+								{
+									"long_name": "Città metropolitana di Roma Capitale",
+									"short_name": "RM",
+									"types": ["administrative_area_level_2", "political"]
+								},
+								{ "long_name": "Lazio", "short_name": "Lazio", "types": ["administrative_area_level_1", "political"] },
+								{ "long_name": "Italy", "short_name": "IT", "types": ["country", "political"] },
+								{ "long_name": "00184", "short_name": "00184", "types": ["postal_code"] }
+							],
+							"adr_address": "<span class=\"street-address\">Piazza del Colosseo, 1</span>, <span class=\"postal-code\">00184</span> <span class=\"locality\">Roma</span> <span class=\"region\">RM</span>, <span class=\"country-name\">Italy</span>",
+							"business_status": "OPERATIONAL",
+							"current_opening_hours": {
+								"open_now": true,
+								"periods": [
+									{
+										"close": { "date": "2023-11-12", "day": 0, "time": "1630" },
+										"open": { "date": "2023-11-12", "day": 0, "time": "0900" }
+									},
+									{
+										"close": { "date": "2023-11-13", "day": 1, "time": "1630" },
+										"open": { "date": "2023-11-13", "day": 1, "time": "0900" }
+									},
+									{
+										"close": { "date": "2023-11-07", "day": 2, "time": "1630" },
+										"open": { "date": "2023-11-07", "day": 2, "time": "0900" }
+									},
+									{
+										"close": { "date": "2023-11-08", "day": 3, "time": "1630" },
+										"open": { "date": "2023-11-08", "day": 3, "time": "0830" }
+									},
+									{
+										"close": { "date": "2023-11-09", "day": 4, "time": "1630" },
+										"open": { "date": "2023-11-09", "day": 4, "time": "0830" }
+									},
+									{
+										"close": { "date": "2023-11-10", "day": 5, "time": "1630" },
+										"open": { "date": "2023-11-10", "day": 5, "time": "0830" }
+									},
+									{
+										"close": { "date": "2023-11-11", "day": 6, "time": "1630" },
+										"open": { "date": "2023-11-11", "day": 6, "time": "0830" }
+									}
+								],
+								"weekday_text": [
+									"Monday: 9:00 am – 4:30 pm",
+									"Tuesday: 9:00 am – 4:30 pm",
+									"Wednesday: 8:30 am – 4:30 pm",
+									"Thursday: 8:30 am – 4:30 pm",
+									"Friday: 8:30 am – 4:30 pm",
+									"Saturday: 8:30 am – 4:30 pm",
+									"Sunday: 9:00 am – 4:30 pm"
+								]
+							},
+							"editorial_summary": {
+								"language": "en",
+								"overview": "Monumental 3-tiered Roman amphitheater once used for gladiatorial games, with guided tour option."
+							},
+							"formatted_address": "Piazza del Colosseo, 1, 00184 Roma RM, Italy",
+							"formatted_phone_number": "06 3996 7700",
+							"geometry": {
+								"location": { "lat": 41.8902102, "lng": 12.4922309 },
+								"viewport": {
+									"northeast": { "lat": 41.89147139999999, "lng": 12.49511675 },
+									"southwest": { "lat": 41.8875602, "lng": 12.48862095 }
+								}
+							},
+							"icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+							"icon_background_color": "#13B5C7",
+							"icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+							"international_phone_number": "+39 06 3996 7700",
+							"name": "Colosseum",
+							"opening_hours": {
+								"open_now": true,
+								"periods": [
+									{ "close": { "day": 0, "time": "1630" }, "open": { "day": 0, "time": "0900" } },
+									{ "close": { "day": 1, "time": "1630" }, "open": { "day": 1, "time": "0900" } },
+									{ "close": { "day": 2, "time": "1630" }, "open": { "day": 2, "time": "0900" } },
+									{ "close": { "day": 3, "time": "1630" }, "open": { "day": 3, "time": "0830" } },
+									{ "close": { "day": 4, "time": "1630" }, "open": { "day": 4, "time": "0830" } },
+									{ "close": { "day": 5, "time": "1630" }, "open": { "day": 5, "time": "0830" } },
+									{ "close": { "day": 6, "time": "1630" }, "open": { "day": 6, "time": "0830" } }
+								],
+								"weekday_text": [
+									"Monday: 9:00 am – 4:30 pm",
+									"Tuesday: 9:00 am – 4:30 pm",
+									"Wednesday: 8:30 am – 4:30 pm",
+									"Thursday: 8:30 am – 4:30 pm",
+									"Friday: 8:30 am – 4:30 pm",
+									"Saturday: 8:30 am – 4:30 pm",
+									"Sunday: 9:00 am – 4:30 pm"
+								]
+							},
+							"photos": [
+								{
+									"height": 9000,
+									"html_attributions": [
+										"<a href=\"https://maps.google.com/maps/contrib/115090282294345639898\">Stefan</a>"
+									],
+									"photo_reference": "AcJnMuFvswJuxuOWndZozur4SDRgeKuU7L24DWFsYmlFOc53KmZvXQruAG8f7EvZUyU4YQNHJ5f5Uv5b21TM4tUmPIz7fbyuY25OZVamUbwGkppeE4Tw7KPfjMkgtwlrnE67sU4pPYj1RrRiUqVJCDc_8FmHBUtBKqMGcMu1jem-uyUV9UYE",
+									"width": 12000
+								},
+								{
+									"height": 487,
+									"html_attributions": [
+										"<a href=\"https://maps.google.com/maps/contrib/113635210697094997541\">Heshan Gamit</a>"
+									],
+									"photo_reference": "AcJnMuEqVqkqzLAum4l0i1aNaErSkuL_GyTP3MMSY57iwMuY5Mls5o2ygwYKz-lO3dNqCyESVoaNnc9Fqp_Q0a2LXYwwkH5QAXbPPdk-frBHLZlDQzofb1Lly2cALgsPii1OyqZO52XXhtsT7rnviejaiYRfX3mYhmbOoqCeeKyjonmRgoiR",
+									"width": 730
+								},
+								{
+									"height": 9000,
+									"html_attributions": [
+										"<a href=\"https://maps.google.com/maps/contrib/118214478004548871284\">Suzanne Nam</a>"
+									],
+									"photo_reference": "AcJnMuGGOuOSMiC3_dZf6tGswdRTpm5PBWH3Veo9DVh-xlzPfEY97LIwrwM0te9Kc_DA2jL67-0Ta5lgU2K4XF_lJz9tA5cIUjM_mdCEtHQyJcMRi0WlXYQ-bjQzUMqoZD-uWYA0qs7HsA7_z0RoFuHyxclPbt393N1Nbwriv1FcD7iDqOE",
+									"width": 12000
+								},
+								{
+									"height": 576,
+									"html_attributions": [
+										"<a href=\"https://maps.google.com/maps/contrib/105114628728311983624\">Paulo Oliveira</a>"
+									],
+									"photo_reference": "AcJnMuFMkzF6GejtqWlPyvtEtiZ6b0Dt4e7hL1rbuIKjCn9osCDhXeL3m_PomELD8NQDeYbl8qgDTDTgWfX5sj1HZmopuuHbeAvBcT1xTJDeiprqcruSRYMo4T5HNuzvK8DZdn4fCxJCPh9jBR4aKt_l4j03_RQbESk6cT1I8w7jXttVuCyL",
+									"width": 768
+								},
+								{
+									"height": 2252,
+									"html_attributions": [
+										"<a href=\"https://maps.google.com/maps/contrib/113535931482888871946\">Paweł Ukraiński</a>"
+									],
+									"photo_reference": "AcJnMuHUGOKDzyjyhPteimzAnJnd5MlCekiExcxp4qacCLNJhSxnVFJlxWb4ofYkTA2izJOdJ7fAhNt-LISrgiqIr0oyAPTvpPZXMcrU2gV4jbQeu8AUf-CflJjDjQ0y7XRF05T3zzHj7BZhutZQgAyYTPFpGfXpf7Wui-JeHziS11kXzYRv",
+									"width": 4000
+								},
+								{
+									"height": 811,
+									"html_attributions": [
+										"<a href=\"https://maps.google.com/maps/contrib/116448474303235824440\">Bartholomäus Inkognito</a>"
+									],
+									"photo_reference": "AcJnMuEvRy_lDOhaMRY-KJT3N93DepSQQhsnMfYzK2yKsR7nCnZhNs0odIfHvuKffAtnWp-fgwJu4uLKlyNadUGX4bMz-PxMgbJBS7tziO_edSuLSIyJ2zgDgDB6LgfmM2D7i6jWsOKYz4DPXz-3plHKYUqGI2BZqc-ZL2R6lviioVZ9aJmX",
+									"width": 1440
+								},
+								{
+									"height": 2976,
+									"html_attributions": [
+										"<a href=\"https://maps.google.com/maps/contrib/113492438493567565813\">Tomek Maksimowicz</a>"
+									],
+									"photo_reference": "AcJnMuEUNE5strh9Y0YlBjqgTVUhMPJXeVD3FkMLNXbgEfPYTAPZt4T2q-fLJcIpKjkCZMVXPD6ubc5gIuG7V_InoCRlIMCKHJd7Vej8_RgUsH6Ya8pOfd0qs1b0yZQdWwM7lY6hxpqxd6EQMDxZDWG1o2_-NixIKz5v2IJyAi7qePE_CtWZ",
+									"width": 3968
+								},
+								{
+									"height": 3024,
+									"html_attributions": [
+										"<a href=\"https://maps.google.com/maps/contrib/110535802627215615856\">Balint Regius</a>"
+									],
+									"photo_reference": "AcJnMuEfwgbfmOI1n49qlOxmp0RhRgbtvD5YHx-G3gBZ70DtKkSbs0HmJ406sDp3fsxGHRWl5kHzMnJVFQRCxKRHTtFYdZO5doZMirQoETsak1lxAITL8swoG5N0iRSU86DG4NPOfT92UftGh8RHw5XFExg3_7i7uVtSo2zol5X2HwRP6UKH",
+									"width": 4032
+								},
+								{
+									"height": 4032,
+									"html_attributions": [
+										"<a href=\"https://maps.google.com/maps/contrib/117223098495866973205\">Yessika Zambrano</a>"
+									],
+									"photo_reference": "AcJnMuGv_-E6-XO47badKLLHWPje4PqIzUR54pBuYScqaXJ_jxaodvleOIMRxxSDJnltD4vp5oFjecAaWcVq_Zq5y6IF-_a1i5nPlHqqxFazHfoPoiL0IdwvigNiyh2bMMattLFVDHIoj1DSgsrOk2dxMebnesvXlmDzzJnGQkJVaxYqx3BC",
+									"width": 3024
+								},
+								{
+									"height": 3024,
+									"html_attributions": [
+										"<a href=\"https://maps.google.com/maps/contrib/115219207661598597552\">Denis Nikus</a>"
+									],
+									"photo_reference": "AcJnMuEjoQMyiY5hlvRIf6SUDyX8XnjA7EIb4Y_tdj2S1aSqwPIwTIqNbXWFzMoC_A_TE738LaC4tfvNexnaUsjDkBhFvPROelSrXVCIgPw5Zlr5VOFCjwarMJ5tl1rRszbO6HSF1UOHPB5rI6_cwb92GMd5yXjEMZv63Oc-Xzuf1xCb_o8N",
+									"width": 4032
+								}
+							],
+							"place_id": "ChIJrRMgU7ZhLxMRxAOFkC7I8Sg",
+							"plus_code": {
+								"compound_code": "VFRR+3V Rome, Metropolitan City of Rome Capital, Italy",
+								"global_code": "8FHJVFRR+3V"
+							},
+							"rating": 4.7,
+							"reference": "ChIJrRMgU7ZhLxMRxAOFkC7I8Sg",
+							"reviews": [
+								{
+									"author_name": "Sarah Sharma",
+									"author_url": "https://www.google.com/maps/contrib/102419526351299456570/reviews",
+									"language": "en",
+									"original_language": "en",
+									"profile_photo_url": "https://lh3.googleusercontent.com/a-/ALV-UjWfOGH2eq6qTad5BHLqZ9O5LAgoyRkZz3aCY4Ny3-aNug=s128-c0x00000000-cc-rp-mo-ba3",
+									"rating": 5,
+									"relative_time_description": "a month ago",
+									"text": "Absolutely mesmerizing.. a part of history comes alive at this place.\n\nVisiting the Colosseum, was actually living , seeing and experiencing the texts books and history attached to it. Thus so far, I had only read and heard about this iconic structure , however seeing it with my eyes was something entirely different and awe- inspiring.\n\nWe had a guide as we had to scrounge for last minute tickets, and I have to admit, the guide we had was a professor in architectural history, retelling the history as it unfolded with immense knowledge, precision and passion. His expertise rendered the entire experience even more valuable and interesting than it already was..:) and were we not glad!!!\n\nThe place is very very busy with hordes of crowd, nevertheless very well- managed. The beauty of the structure is that even on an extremely hot August afternoon( we entered the Colosseum at 2 pm) the place is very well ventilated. Such was the mastery in the creation and construction of this building.\n\nMost of all, we visited both during the day and night . At night, the building looks stunning and worth a visit..an absolute must when in Roma.\n\nI definitely would like to add that Roma is not , not , not , not unsafe. They have their special force in service everywhere, protecting , guiding and taking care for the citizenry and tourists. It’s a wonderful place to visit and once in a life time experiences",
+									"time": 1694982951,
+									"translated": false
+								},
+								{
+									"author_name": "Ramit Gupta",
+									"author_url": "https://www.google.com/maps/contrib/109651032264985990833/reviews",
+									"language": "en",
+									"original_language": "en",
+									"profile_photo_url": "https://lh3.googleusercontent.com/a/ACg8ocJnSYKFaJi1AGCr9oiDAN5BUxrRKmVocRkeCaiQjUA8=s128-c0x00000000-cc-rp-mo-ba6",
+									"rating": 5,
+									"relative_time_description": "2 weeks ago",
+									"text": "Awesome. Lots of free parking around the area at night and its little hard to find parking in the morning but you will find it. Lots of spots to take really nice breathtaking pictures of Colosseum. I posted morning/night pictures with easy access to all the spots even with the baby stroller.",
+									"time": 1698061765,
+									"translated": false
+								},
+								{
+									"author_name": "Patrick McKenna",
+									"author_url": "https://www.google.com/maps/contrib/106536235548514443739/reviews",
+									"language": "en",
+									"original_language": "en",
+									"profile_photo_url": "https://lh3.googleusercontent.com/a-/ALV-UjWCD0ReDCsrtKkF_cgNEIdQf8Z3ds_wgn9JPEdyBS9auA=s128-c0x00000000-cc-rp-mo-ba5",
+									"rating": 5,
+									"relative_time_description": "2 weeks ago",
+									"text": "Buy your tickets in advance and go as early as possible to avoid long queue lines. I would suggest paying the money for a semi private or private tour and include all the options. The tour can last 3-4 hours or longer depending on the options you choose. 100% worth doing and would do it all over again. You learn so much. Just be aware it is very crowded and the queues can be hours long. Hence going as early as possible with a guide.",
+									"time": 1698081250,
+									"translated": false
+								},
+								{
+									"author_name": "i2Profit",
+									"author_url": "https://www.google.com/maps/contrib/116243636554100645589/reviews",
+									"language": "en",
+									"original_language": "en",
+									"profile_photo_url": "https://lh3.googleusercontent.com/a/ACg8ocKEjbYmnFb7hMY8pqEUY6H9rzn91LhaXjVVV5toA2AM=s128-c0x00000000-cc-rp-mo-ba6",
+									"rating": 5,
+									"relative_time_description": "2 months ago",
+									"text": "Buy your tickets in advance! Better yet, book a guided tour.\nThere is so much history here it is worth the extra cost to have a tour guide explain to you all the detailed history of this amazing landmark.\n\nBest to visit in the late evening when it is cooler. Also best to visit in the evening for photographs with the sunset casting shadows on all the many archways.\n\nA destination not to be missed when in Rome.\nEasily accessible from the Metro station located steps from the entrance.",
+									"time": 1692053928,
+									"translated": false
+								},
+								{
+									"author_name": "andrew coxill",
+									"author_url": "https://www.google.com/maps/contrib/103167726088962456351/reviews",
+									"language": "en",
+									"original_language": "en",
+									"profile_photo_url": "https://lh3.googleusercontent.com/a-/ALV-UjWtEei-rBtlMq_TYnnD9zzV9fLqDCaHnCMPnLh_sfJmaMOk=s128-c0x00000000-cc-rp-mo-ba6",
+									"rating": 5,
+									"relative_time_description": "2 months ago",
+									"text": "Worth a visit at night time and day time! Buy your tickets in advance using the skip the line option to save waiting. Incredible amount to see on the way around once inside. It’s absolutely amazing! The toilet facilities were not great for ladies or gents, sure this is down to the shear volume of people using them though. Lots more to see in the surrounding area.",
+									"time": 1691664226,
+									"translated": false
+								}
+							],
+							"types": ["tourist_attraction", "point_of_interest", "establishment"],
+							"url": "https://maps.google.com/?cid=2950359333223072708",
+							"user_ratings_total": 375040,
+							"utc_offset": 60,
+							"vicinity": "Piazza del Colosseo, 1, Roma",
+							"website": "https://colosseo.it/",
+							"wheelchair_accessible_entrance": true
+						},
+						"time": "Tue Nov 07 2023 08:00:00 GMT+0100"
+					}
+				]
+			},
+			{
+				"places": [
+					{
+						"info": {
+							"address_components": [
+								{ "long_name": "Vatican City", "short_name": "VA", "types": ["country", "political"] },
+								{ "long_name": "Vatican City", "short_name": "Vatican City", "types": ["locality", "political"] },
+								{ "long_name": "00120", "short_name": "00120", "types": ["postal_code"] }
+							],
+							"adr_address": "<span class=\"postal-code\">00120</span>, <span class=\"country-name\">Vatican City</span>",
+							"editorial_summary": {
+								"language": "en",
+								"overview": "Catholic city-state & home of the Pope, known for Sistine Chapel frescoes & St. Peter’s Basilica."
+							},
+							"formatted_address": "00120, Vatican City",
+							"geometry": {
+								"location": { "lat": 41.902916, "lng": 12.453389 },
+								"viewport": {
+									"northeast": { "lat": 41.90744309480176, "lng": 12.45839376524267 },
+									"southwest": { "lat": 41.90018962474432, "lng": 12.44572861589971 }
+								}
+							},
+							"icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/geocode-71.png",
+							"icon_background_color": "#7B9EB0",
+							"icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+							"name": "Vatican City",
+							"photos": [
+								{
+									"height": 1504,
+									"html_attributions": [
+										"<a href=\"https://maps.google.com/maps/contrib/116227211979927667914\">Luiz Dias</a>"
+									],
+									"photo_reference": "AcJnMuHp074NNRXKhkRThclnCYvcyXehEfjBH0N5HW2C4elnUE5wYJ7zbZa94GK2WVbJGxGuEWxGVnERXN0RrqJEHnmiYnT0H9odBPcVtuq-G58PHszox7dePoxthefGl56uqDAP5PaNj-dAS7unImdtDu8Idmw_6KLURskWShFobKXnY-z9",
+									"width": 3264
+								},
+								{
+									"height": 2828,
+									"html_attributions": [
+										"<a href=\"https://maps.google.com/maps/contrib/108345854932564483434\">Andreia Crivelaro</a>"
+									],
+									"photo_reference": "AcJnMuEWG6Uw8KZTq5VoPp8KxbDeBPM__-Q3K10O2xaDiqTIBj_4zGelbq4PUe-VtF5si--qH8FqvrtWxrVM-Q9Rj4rXe-09Pcn3PnLBdFpBt_Z1P-7qNl9qQ1ybrpFbCyE_S_Dep5GblPyw-tNQpTSOeJBXG9E2hE7DtgU79A1CD7dP0Fhf",
+									"width": 3072
+								},
+								{
+									"height": 1800,
+									"html_attributions": [
+										"<a href=\"https://maps.google.com/maps/contrib/101321764474141234821\">ricardo fernández del Blanco</a>"
+									],
+									"photo_reference": "AcJnMuHb6C6swNZabiQcBjeMa4d_XVF-lTPr-RvMwU1bi_PQKLU-kxjI-ljon12XEaOF9EMbgY_W7wiLGJjzKS6VoPSmryrNGb6vC8BUDX3aTbKa1Olx02u9gesSIS7YVuByJImxyzuuqre3O5WWvtcJk7mzS3DenRHvU473ykbZv64IwxKP",
+									"width": 2963
+								},
+								{
+									"height": 2604,
+									"html_attributions": [
+										"<a href=\"https://maps.google.com/maps/contrib/104573741202277408237\">Denis Dolinšek</a>"
+									],
+									"photo_reference": "AcJnMuEQor72h99AwSF1dAuMB2jNygt07EsfjCY6vpfIqeqgZHKl3_iKoZTu1S6iKDfiG0fb8gzTYhDsdiNPwf2QuyBTHyhBKkHuTVJMVyFLKVraE_kPWIV9DaDeby-MpOqbQPrOmy-FzFmj_ttvPFEvH2AVWsiLrpWBCewCZG1yznD8rsG8",
+									"width": 4624
+								},
+								{
+									"height": 1800,
+									"html_attributions": [
+										"<a href=\"https://maps.google.com/maps/contrib/100565294817950327550\">kevin conde</a>"
+									],
+									"photo_reference": "AcJnMuEL16GJd01ElNFcMOln9C__fWOO7dZRYmoT3GxnfOLKJ1thZPw-fIX58ORrs-iFHwV5YMtfDt1jhWzwWnz3fbPY2ueZdN8e3BzbhwAKlqPQ1kvijlB52xL9OK0cXgLMQahEIJgWiA9LUZD4crks9CMPtQYx5vf9mKf64v2oZTA4O-Oo",
+									"width": 4000
+								},
+								{
+									"height": 2252,
+									"html_attributions": [
+										"<a href=\"https://maps.google.com/maps/contrib/112046595227110099292\">chris thorne</a>"
+									],
+									"photo_reference": "AcJnMuH4-xxnNhWzjm7zOJIa8xq-dqFQK5B_xAMs_AKRGY7ozJePMmaLhN3CzvJfjWqScjH0GSylVPT5F0e1_035lJRwXbcmSbrX2-DwfL6tir7t_2ijz1MvY2AJIpChK9Vq2g73PtdA7V6jt71Zomf2ch96sgQGwGqzpJ1qYPpX4LC6IAg5",
+									"width": 4000
+								},
+								{
+									"height": 4032,
+									"html_attributions": [
+										"<a href=\"https://maps.google.com/maps/contrib/116588059741980528521\">Kris Lh</a>"
+									],
+									"photo_reference": "AcJnMuF3tWB2ZZTZThAPQ_20TM1OffIc_HyUhuZAiNOADCDduj5jnCPn99xy6FSc4zIMH70fpZGupYSWmY_lseng63_0Avz1GfQ0ozEwyJR1iPsUJjEPGEIy40BtOTFk6V_TV_nf_vWhAWthRw3G4qAP2sACtcxvLa5j21HQqQbakEvkR4l_",
+									"width": 2268
+								},
+								{
+									"height": 2252,
+									"html_attributions": [
+										"<a href=\"https://maps.google.com/maps/contrib/112046595227110099292\">chris thorne</a>"
+									],
+									"photo_reference": "AcJnMuGoo9JJc4yK9B9Ie4c0wJtOoGd05yvqZltS5JZWa3ovgr0v9sHC1zpnOy9XZOvwZ7arfwfngdsNjcopT-0GG6Oi1fccGKMi-Fm9OpduBsMF7NSjVqOYzegOmTonQLi0Qz0ZxEJMLQSgKSyKb8OaJLHHBpaUaWWxsetIybX5GrNBKoru",
+									"width": 4000
+								},
+								{
+									"height": 1800,
+									"html_attributions": [
+										"<a href=\"https://maps.google.com/maps/contrib/105453225970290235575\">Waldbed</a>"
+									],
+									"photo_reference": "AcJnMuEYgP9YYjk6yiIoi-ePMHxaQIroKwuBA7CL4R7sRCSVHNFjGH9Xh15HuP-TEWmMJV3S1Hs_94omGuWvR3IxBvJlaS6HC8cQ0I0NlBt_kiX4mAuFUi8RR1uEFGo2uwbwrSq2f4BWp9Luueqr9RSdWMUFRt9OLQUXiHGVxykVDaYzxwCC",
+									"width": 4000
+								},
+								{
+									"height": 1800,
+									"html_attributions": [
+										"<a href=\"https://maps.google.com/maps/contrib/112539504664944273097\">José María Muñoz Gómez</a>"
+									],
+									"photo_reference": "AcJnMuHxlfT1JgCVsg6ynFdiLioBxvkvasJzMZXsRc3dfyUntkuU4rcGtv_I1_voyOk0u1ZZDtT24e0ldx_npS1CnT8bLJVvUPZkncVszVp5SV0GTkUW2lSnmKDFBL7tXaEX1lxYHbGVLm1UpKTC_fgiJVgk8qfWRnKvKPJ6ImVCmwAtrVI_",
+									"width": 4000
+								}
+							],
+							"place_id": "ChIJPS3UVwqJJRMRsH46sppPCQA",
+							"reference": "ChIJPS3UVwqJJRMRsH46sppPCQA",
+							"types": ["country", "political"],
+							"url": "https://maps.google.com/?q=00120,+Vatican+City&ftid=0x1325890a57d42d3d:0x94f9ab23a7eb0",
+							"utc_offset": 60,
+							"vicinity": "Vatican City",
+							"website": "http://www.vatican.va/phome_en.htm"
+						},
+						"time": "Wed Nov 08 2023 08:00:00 GMT+0100"
+					},
+					{
+						"info": {
+							"address_components": [
+								{ "long_name": "Piazza Navona", "short_name": "Piazza Navona", "types": ["route"] },
+								{ "long_name": "Roma", "short_name": "Roma", "types": ["locality", "political"] },
+								{ "long_name": "Roma", "short_name": "Roma", "types": ["administrative_area_level_3", "political"] },
+								{
+									"long_name": "Città metropolitana di Roma Capitale",
+									"short_name": "RM",
+									"types": ["administrative_area_level_2", "political"]
+								},
+								{ "long_name": "Lazio", "short_name": "Lazio", "types": ["administrative_area_level_1", "political"] },
+								{ "long_name": "Italy", "short_name": "IT", "types": ["country", "political"] },
+								{ "long_name": "00186", "short_name": "00186", "types": ["postal_code"] }
+							],
+							"adr_address": "<span class=\"street-address\">Piazza Navona</span>, <span class=\"postal-code\">00186</span> <span class=\"locality\">Roma</span> <span class=\"region\">RM</span>, <span class=\"country-name\">Italy</span>",
+							"business_status": "OPERATIONAL",
+							"current_opening_hours": {
+								"open_now": true,
+								"periods": [
+									{
+										"close": { "date": "2023-11-13", "day": 1, "time": "2359", "truncated": true },
+										"open": { "date": "2023-11-07", "day": 2, "time": "0000", "truncated": true }
+									}
+								],
+								"weekday_text": [
+									"Monday: Open 24 hours",
+									"Tuesday: Open 24 hours",
+									"Wednesday: Open 24 hours",
+									"Thursday: Open 24 hours",
+									"Friday: Open 24 hours",
+									"Saturday: Open 24 hours",
+									"Sunday: Open 24 hours"
+								]
+							},
+							"editorial_summary": {
+								"language": "en",
+								"overview": "Elegant square dating from the 1st century A.D., with a baroque fountain, street artists & bars."
+							},
+							"formatted_address": "Piazza Navona, 00186 Roma RM, Italy",
+							"geometry": {
+								"location": { "lat": 41.8991633, "lng": 12.4730742 },
+								"viewport": {
+									"northeast": { "lat": 41.90178655, "lng": 12.4746868 },
+									"southwest": { "lat": 41.89645714999998, "lng": 12.471428 }
+								}
+							},
+							"icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+							"icon_background_color": "#7B9EB0",
+							"icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+							"name": "Piazza Navona",
+							"opening_hours": {
+								"open_now": true,
+								"periods": [{ "open": { "day": 0, "time": "0000" } }],
+								"weekday_text": [
+									"Monday: Open 24 hours",
+									"Tuesday: Open 24 hours",
+									"Wednesday: Open 24 hours",
+									"Thursday: Open 24 hours",
+									"Friday: Open 24 hours",
+									"Saturday: Open 24 hours",
+									"Sunday: Open 24 hours"
+								]
+							},
+							"photos": [
+								{
+									"height": 9000,
+									"html_attributions": [
+										"<a href=\"https://maps.google.com/maps/contrib/105508850066007378892\">Rinomato rinomato</a>"
+									],
+									"photo_reference": "AcJnMuF2c2-zc9gggIIvlWbG6R7wFYtQavzzlngmOTAat-LP221m39bqjwraVyXUIjKC_QVIvYv4jYeQVPqlDxKV5wCsZUvS95bNaRe-m6qlYWUhs9hN6z1Qm_NCZtkJIzBJC8N842f7knGoGbLGtJa9UGWXdQQDkcfwE_zmKYYJX6ZTvpef",
+									"width": 12000
+								},
+								{
+									"height": 3710,
+									"html_attributions": [
+										"<a href=\"https://maps.google.com/maps/contrib/102888276412420232045\">luis vidilla</a>"
+									],
+									"photo_reference": "AcJnMuE_oAehVckWvXU7b7nFB7QMoQB6zOwknKGYreE40BgA3-IJ2tbK8XAPzQCJWKZwcQITbpn14bL5M5p67qxSt8WpuBRvXqH-B74ULyOT_V3plWawZ8k49CFrpOtHIZhNzasN4WEEpBp6jjmUOTuu50nAUkiY8Es0pkkwvsVtI9qJhyP-",
+									"width": 5945
+								},
+								{
+									"height": 9024,
+									"html_attributions": [
+										"<a href=\"https://maps.google.com/maps/contrib/100733295171443825596\">il mio gatto MOUSE</a>"
+									],
+									"photo_reference": "AcJnMuG5TWP2zkjj1gnZ-FlXy1-Bo0WB8ZEI5A9N4lZBzFdDhzoDYwS2hrVLESNATPyn25M677n6pztXaKQoY9oZI_O241Nnui5vcmZJ534jdD3MLJ7Oyemx0kcertw8jHISoUazEGmSm5Jtk8S9lqHhb7M5ISYxkQmGH13BLB6-rSu96qry",
+									"width": 12032
+								},
+								{
+									"height": 2736,
+									"html_attributions": [
+										"<a href=\"https://maps.google.com/maps/contrib/102440900461191282148\">Owen Daly</a>"
+									],
+									"photo_reference": "AcJnMuFqI6sB4_HXSH0jHkiZLOHYc5RMG7Knk5CPyzbSlrIGffbzZTW_AK2ODczrJr0_KoSPMH_htlqjFOT7cliYHmY005uyPl4OhxgzysnSnYNjXvmwCtcExfm-uWaCDV-qh9JNKDSEJF1pA35X18xH4A_EbDxAAyaRaML1VWF33wGk0y4K",
+									"width": 3648
+								},
+								{
+									"height": 6936,
+									"html_attributions": [
+										"<a href=\"https://maps.google.com/maps/contrib/115060531235267168120\">Alessio Dossena</a>"
+									],
+									"photo_reference": "AcJnMuHdgiIEqkY4_m1gLlfv7rGfeO2RN0HlWo5A5C0_srcl8uGfXw3s_IzwWjR_rxBj9keT71xNmDg7nW-1368f7W7qjayvdv0S5KLQ_a3lHsnSWuJaRmpG4DjfzDmo8CoCqHZtItJIz7RmDIcCigMwWjuS_uLdOujj6RGD0F2mF6KU84P4",
+									"width": 9248
+								},
+								{
+									"height": 717,
+									"html_attributions": [
+										"<a href=\"https://maps.google.com/maps/contrib/115600048998635372123\">Parmenion</a>"
+									],
+									"photo_reference": "AcJnMuEgqylbF5OQBzOVERl8e0iAnadgeoPCdfvVy4SbniRC2bEJsEDFONc7R_Zm1rst3oWuBTpjsqkZi6mMA6L4Mm_QP3sHd0yKF7mpFZIDq75ISV0pSvoj7y1xuGM_kj7LCwj7cigoFocL4c0Ho1iCX3jDqmAo6t60RvaG3zOAxbnvEz2P",
+									"width": 1024
+								},
+								{
+									"height": 5504,
+									"html_attributions": [
+										"<a href=\"https://maps.google.com/maps/contrib/102741684075702395738\">Massimiliano Fiorucci</a>"
+									],
+									"photo_reference": "AcJnMuGlrAD_L-y2Y5wQgnErLANtvesRc8xUXAizSxI3wUHw62XfYb55Mk9ZkMQbqOvJ0_sB5iZbdJ6vMyKv4rxPFY5o9xkdMuovrVNI9Och-boTMuNj21hjEQ7UanbMdULWL0lqn4Bxye9Tm_44R_Ob1l0-J7k56hcKPCMm3nhQAkvmvlpE",
+									"width": 8256
+								},
+								{
+									"height": 4032,
+									"html_attributions": [
+										"<a href=\"https://maps.google.com/maps/contrib/102234471961661730346\">Edoardo Miotto</a>"
+									],
+									"photo_reference": "AcJnMuHHV61WltoIJaTc9358GobsRpqwy-dUq-HDG1xkHPQtJ7MbcEBmMqWMiSY8zWUc0i7owZY3Fu7LK0Qx2u6ppBfkhT33D98kfL8S_tgiEf9Abx94DDpll9KcYpK8v8gcY7mXWqtOu3Ifnp0DmdxPXruBmABgRMh28Qb7TgyQQy_NDDvU",
+									"width": 3024
+								},
+								{
+									"height": 3752,
+									"html_attributions": [
+										"<a href=\"https://maps.google.com/maps/contrib/102888276412420232045\">luis vidilla</a>"
+									],
+									"photo_reference": "AcJnMuFfQ66qoIbEWMj8oE-1er1cQBMVPrX43ddhTkRg3kPVbAaubBDThA-sngNV_HDRcLV1wuy_PcVpZrakj7Oo18oY4UxhLJFBAc8hvz6aIxdm9RUzNBrIrJw4gP14U6jfHxUujAx2Znm_HkDoXHzNOMdhnyGZDqArFfBh2mn83qIGFGlT",
+									"width": 6000
+								},
+								{
+									"height": 2252,
+									"html_attributions": [
+										"<a href=\"https://maps.google.com/maps/contrib/105180817021665225773\">Pilwoon Kang</a>"
+									],
+									"photo_reference": "AcJnMuGtSkuPFV6Z5SLh6-RTywJEVYujQRGMRQFMqHzM2IOE0NvMpQaHOjSgExNQnpXnTT9UxxA9CQ4s2FTIeMxu15jxDfpDqv2BkFGgrY96lkvUQpRp_8aToyYyKGTF2Zo6qeOB_MGEyO-J4mNOik0MUyAhcr4d2xZMx8IX9iCTPvuONqco",
+									"width": 4000
+								}
+							],
+							"place_id": "ChIJPRydwYNgLxMRSjOCLlYkV6M",
+							"plus_code": {
+								"compound_code": "VFXF+M6 Rome, Metropolitan City of Rome Capital, Italy",
+								"global_code": "8FHJVFXF+M6"
+							},
+							"rating": 4.7,
+							"reference": "ChIJPRydwYNgLxMRSjOCLlYkV6M",
+							"reviews": [
+								{
+									"author_name": "Desmond Yu",
+									"author_url": "https://www.google.com/maps/contrib/117459513371066762683/reviews",
+									"language": "en",
+									"original_language": "en",
+									"profile_photo_url": "https://lh3.googleusercontent.com/a-/ALV-UjUcMGVLdAP4J7e0vP5qMYW2I9JUYkuXCRsTwybG4Oi4TgSF=s128-c0x00000000-cc-rp-mo-ba7",
+									"rating": 5,
+									"relative_time_description": "a month ago",
+									"text": "A wonderful place to be. Restaurant, souvenir shop and all kind of artistic people gathering around an architecture surrounding square. The place is open to all free, for strolling, shopping , eating or taking photos, you won't be disappointed. It is a place for enjoyment and memories.",
+									"time": 1695480583,
+									"translated": false
+								},
+								{
+									"author_name": "Armand Abasllari",
+									"author_url": "https://www.google.com/maps/contrib/108648866833941834368/reviews",
+									"language": "en",
+									"original_language": "en",
+									"profile_photo_url": "https://lh3.googleusercontent.com/a-/ALV-UjXA32wQjOMrl9B0rwMZP9jgSbAu-jW00G3liOfMTKL66iM=s128-c0x00000000-cc-rp-mo-ba4",
+									"rating": 5,
+									"relative_time_description": "4 weeks ago",
+									"text": "Piazza Navona is a Roman delight! The bustling square boasts elegant fountains, charming cafes, and street artists. It's a hub of energy and culture. Surrounded by Baroque architecture, it's a picturesque spot for a leisurely stroll. Don't miss the lively ambiance and historic charm of this must-see destination!",
+									"time": 1696789850,
+									"translated": false
+								},
+								{
+									"author_name": "Kenneth Lipper",
+									"author_url": "https://www.google.com/maps/contrib/117657411783341291897/reviews",
+									"language": "en",
+									"original_language": "en",
+									"profile_photo_url": "https://lh3.googleusercontent.com/a/ACg8ocJS6AkDHADd5NO3A0AGR3nAPWdUp0fK86bQFxAtgUfN=s128-c0x00000000-cc-rp-mo",
+									"rating": 5,
+									"relative_time_description": "a week ago",
+									"text": "My favorite square in the world. 100% quality sculptured fountains, surrounded by great Italian architecture. And the cafes on the Plaza, and in the adjacent blocks, are welcoming and fun. Piazza Navona, Trevi Fountain and the Borghese Gallery make Rome sing. And for the weekend visit Tuscany.",
+									"time": 1698263839,
+									"translated": false
+								},
+								{
+									"author_name": "Zenaida C",
+									"author_url": "https://www.google.com/maps/contrib/111817943379295821181/reviews",
+									"language": "en",
+									"original_language": "en",
+									"profile_photo_url": "https://lh3.googleusercontent.com/a-/ALV-UjXG2EjPpCR5h-J6UDakSKv4gcBXiKOGpRD5uxvEFv0rCSY=s128-c0x00000000-cc-rp-mo",
+									"rating": 4,
+									"relative_time_description": "3 months ago",
+									"text": "Beautiful place in Rome. Was just wandering around the town and made it to this piazza. The fountains have such detailed statues with a lot of meaning behind it. There are benches to sit if you want to just admire the art. Not too busy during the day. Recommend giving it a look.",
+									"time": 1691509236,
+									"translated": false
+								},
+								{
+									"author_name": "Khushi Bhatia",
+									"author_url": "https://www.google.com/maps/contrib/117059812942231442312/reviews",
+									"language": "en",
+									"original_language": "en",
+									"profile_photo_url": "https://lh3.googleusercontent.com/a-/ALV-UjXXXKtgCfvqX4lfz04L7HqW7t0iObYlIqVj5RhHMgkQSXE9=s128-c0x00000000-cc-rp-mo-ba3",
+									"rating": 5,
+									"relative_time_description": "2 months ago",
+									"text": "Piazza Navona is pure magic. The moment I stepped onto the cobblestones, I was captivated by the stunning fountain and the lively atmosphere. Sitting at a cafe, sipping espresso, and watching artists at work felt like stepping back in time. The square's charm is irresistible, making it one of my favorite spots in Rome.",
+									"time": 1692582253,
+									"translated": false
+								}
+							],
+							"types": ["tourist_attraction", "point_of_interest", "establishment"],
+							"url": "https://maps.google.com/?cid=11769916103722152778",
+							"user_ratings_total": 177778,
+							"utc_offset": 60,
+							"vicinity": "Piazza Navona, Roma",
+							"website": "https://www.turismoroma.it/it/node/1516"
+						},
+						"time": "Wed Nov 08 2023 10:00:00 GMT+0100"
+					}
+				]
+			},
+			{
+				"places": [
+					{
+						"info": {
+							"address_components": [
+								{ "long_name": "Piazza della Rotonda", "short_name": "Piazza della Rotonda", "types": ["route"] },
+								{ "long_name": "Roma", "short_name": "Roma", "types": ["locality", "political"] },
+								{ "long_name": "Roma", "short_name": "Roma", "types": ["administrative_area_level_3", "political"] },
+								{
+									"long_name": "Città metropolitana di Roma Capitale",
+									"short_name": "RM",
+									"types": ["administrative_area_level_2", "political"]
+								},
+								{ "long_name": "Lazio", "short_name": "Lazio", "types": ["administrative_area_level_1", "political"] },
+								{ "long_name": "Italy", "short_name": "IT", "types": ["country", "political"] },
+								{ "long_name": "00186", "short_name": "00186", "types": ["postal_code"] }
+							],
+							"adr_address": "<span class=\"street-address\">Piazza della Rotonda</span>, <span class=\"postal-code\">00186</span> <span class=\"locality\">Roma</span> <span class=\"region\">RM</span>, <span class=\"country-name\">Italy</span>",
+							"business_status": "OPERATIONAL",
+							"current_opening_hours": {
+								"open_now": true,
+								"periods": [
+									{
+										"close": { "date": "2023-11-12", "day": 0, "time": "1830" },
+										"open": { "date": "2023-11-12", "day": 0, "time": "0900" }
+									},
+									{
+										"close": { "date": "2023-11-13", "day": 1, "time": "1830" },
+										"open": { "date": "2023-11-13", "day": 1, "time": "0900" }
+									},
+									{
+										"close": { "date": "2023-11-07", "day": 2, "time": "1830" },
+										"open": { "date": "2023-11-07", "day": 2, "time": "0900" }
+									},
+									{
+										"close": { "date": "2023-11-08", "day": 3, "time": "1830" },
+										"open": { "date": "2023-11-08", "day": 3, "time": "0900" }
+									},
+									{
+										"close": { "date": "2023-11-09", "day": 4, "time": "1830" },
+										"open": { "date": "2023-11-09", "day": 4, "time": "0900" }
+									},
+									{
+										"close": { "date": "2023-11-10", "day": 5, "time": "1830" },
+										"open": { "date": "2023-11-10", "day": 5, "time": "0900" }
+									},
+									{
+										"close": { "date": "2023-11-11", "day": 6, "time": "1830" },
+										"open": { "date": "2023-11-11", "day": 6, "time": "0900" }
+									}
+								],
+								"weekday_text": [
+									"Monday: 9:00 am – 6:30 pm",
+									"Tuesday: 9:00 am – 6:30 pm",
+									"Wednesday: 9:00 am – 6:30 pm",
+									"Thursday: 9:00 am – 6:30 pm",
+									"Friday: 9:00 am – 6:30 pm",
+									"Saturday: 9:00 am – 6:30 pm",
+									"Sunday: 9:00 am – 6:30 pm"
+								]
+							},
+							"editorial_summary": {
+								"language": "en",
+								"overview": "Iconic temple built circa 118 to 125 A.D. with a dome & Renaissance tombs, including Raphael's."
+							},
+							"formatted_address": "Piazza della Rotonda, 00186 Roma RM, Italy",
+							"formatted_phone_number": "06 6830 0230",
+							"geometry": {
+								"location": { "lat": 41.8986108, "lng": 12.4768729 },
+								"viewport": {
+									"northeast": { "lat": 41.90011223029151, "lng": 12.4781736802915 },
+									"southwest": { "lat": 41.89741426970851, "lng": 12.4754757197085 }
+								}
+							},
+							"icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+							"icon_background_color": "#13B5C7",
+							"icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+							"international_phone_number": "+39 06 6830 0230",
+							"name": "Pantheon",
+							"opening_hours": {
+								"open_now": true,
+								"periods": [
+									{ "close": { "day": 0, "time": "1830" }, "open": { "day": 0, "time": "0900" } },
+									{ "close": { "day": 1, "time": "1830" }, "open": { "day": 1, "time": "0900" } },
+									{ "close": { "day": 2, "time": "1830" }, "open": { "day": 2, "time": "0900" } },
+									{ "close": { "day": 3, "time": "1830" }, "open": { "day": 3, "time": "0900" } },
+									{ "close": { "day": 4, "time": "1830" }, "open": { "day": 4, "time": "0900" } },
+									{ "close": { "day": 5, "time": "1830" }, "open": { "day": 5, "time": "0900" } },
+									{ "close": { "day": 6, "time": "1830" }, "open": { "day": 6, "time": "0900" } }
+								],
+								"weekday_text": [
+									"Monday: 9:00 am – 6:30 pm",
+									"Tuesday: 9:00 am – 6:30 pm",
+									"Wednesday: 9:00 am – 6:30 pm",
+									"Thursday: 9:00 am – 6:30 pm",
+									"Friday: 9:00 am – 6:30 pm",
+									"Saturday: 9:00 am – 6:30 pm",
+									"Sunday: 9:00 am – 6:30 pm"
+								]
+							},
+							"photos": [
+								{
+									"height": 700,
+									"html_attributions": [
+										"<a href=\"https://maps.google.com/maps/contrib/114858402738038040071\">Alex Paler</a>"
+									],
+									"photo_reference": "AcJnMuGsqdxv-HL5h4v7K0bQTzgjOE2RDMO8VDkv_8QwTVmV0QvDyElvHv_b10qxeAqGR4Q8q1MxHoV3SdZGIWXpiBT305Ibq_LEHYPa8Z7WUn__66wF6MR6TmPQcjnt0BIr5-a7z6UEY_w0EuyKtwGZ5EkzkzIWIC7sDZO6xI5wP8_1ROLy",
+									"width": 1050
+								},
+								{
+									"height": 2519,
+									"html_attributions": [
+										"<a href=\"https://maps.google.com/maps/contrib/111071073642134917954\">Grégory Breels</a>"
+									],
+									"photo_reference": "AcJnMuH9dmu0kkdWxXtHfF4HmiR3AChZeZLMF_ihthPHTd0EcfWOnpywkwdP_AvHC35EICIE0EV1jiqDQ4x88DEEIM4mxDwBo4rT1vW5tUx7tHrYCf4uZ1jjakzN_oWSp0xAw5ct_PJlVo6nUgCOE6WTL0FM4nL8WDNC1CShGA8Hny_rLFoD",
+									"width": 4085
+								},
+								{
+									"height": 9248,
+									"html_attributions": [
+										"<a href=\"https://maps.google.com/maps/contrib/104268915754619204668\">dor kramer</a>"
+									],
+									"photo_reference": "AcJnMuGEtv3iPo4yAXMuL2WKZuhhpfWPVRUR1qHMoVnkqAgl0UBrbcrnE-Dmc6N-lHeFR6ScAMCAxVWa90TOsTuUZMvELHtQtVH6INp_RhfrBZbP33F54BG4I8S8qog7ceRgpsNUxORmLNoOPfa_gWtEAkjzcK9MoAKqR-RdkdO0VDqI1buh",
+									"width": 6936
+								},
+								{
+									"height": 16320,
+									"html_attributions": [
+										"<a href=\"https://maps.google.com/maps/contrib/114009246103562294648\">Jonnytor</a>"
+									],
+									"photo_reference": "AcJnMuEQ1MuXLFrW5-XVt0iPGiR859gWyB5gdAKWBaVPF-GrzFsyedfnyCLItO-TzFQq2yoapgbY9M7zBMcP9up4hCz0ixRoiWLWj-XtBANLBaQwoL8Al0hGe098XtsxRBOmV39izosGuYYfZ8cTma_1qm3Rfxshu0a7VMzNu9Uj7i0uNUTu",
+									"width": 12240
+								},
+								{
+									"height": 1350,
+									"html_attributions": [
+										"<a href=\"https://maps.google.com/maps/contrib/117704527044311355710\">Frederick Lamb</a>"
+									],
+									"photo_reference": "AcJnMuH-Zxn4KmmTIbhEA3VwWEpi8gvq5mt99cSqrbURysMz6kiVHsPYMtVv39xWqtGdJEWXpd-wy7698XRHcOdNFZ2CRf-PqY7Jzl_i3zD8SK8lpRclQdgD0LM1rSKtAjs4TUa_mgI5khnmyfrKL9_h3AW0p5y_ksZTN5LbSeiNG9cnwylr",
+									"width": 1080
+								},
+								{
+									"height": 3024,
+									"html_attributions": [
+										"<a href=\"https://maps.google.com/maps/contrib/117600224770167264030\">불가사리</a>"
+									],
+									"photo_reference": "AcJnMuEQXzxaXxKKUdVW2UAzLHwAYiTvKxIyVKzitx2uPQA7GZYtGPT4O5BDISus-DDfF5zQDYoWliBm3t_xk7UOhLtkUJgPGnccaJdmcgg94WG6Jq4StV2nw_xCe9r8W5IxYAZPb0UgodbziaPwPb4ym_sg10jAtEmRhF357JHv0-6cQmu0",
+									"width": 4032
+								},
+								{
+									"height": 3000,
+									"html_attributions": [
+										"<a href=\"https://maps.google.com/maps/contrib/116322699799117849373\">Ole Husted Ditlevsen</a>"
+									],
+									"photo_reference": "AcJnMuHa4fVRJu7KNnJXzIKsmytQIusP4OZZWOP-YKuZ4kMFJFZVGIoP74bD_UGjntL8dJ5-QDi4DJn6Lb0OLJOvQHhrOXMwqLrfy7Kx9W4s6PSeYe_YmC3Bb26aDRWbT2yvWOCCCtCa4_gpzieVNGj0kpVMaijD4LFP9okfjBxVW4g0DmBI",
+									"width": 4000
+								},
+								{
+									"height": 3456,
+									"html_attributions": [
+										"<a href=\"https://maps.google.com/maps/contrib/113326723683132601773\">Michael Seifried</a>"
+									],
+									"photo_reference": "AcJnMuEweMRYOF__CmrDhnE4nbUIBmbd8lwNO8JwE01rVn3kOy0TxFUq_-ok4L2QhvPr_gX5OlUzqo9P5mEz3Sff41VZMJvnNdRNyiv-vT7roCj22sd9u-89fcVuEmcOV8Qn5N997917QFHQKZNoTol7U51kIbPFj8oS_EUyaxHe1VOaNeGE",
+									"width": 4608
+								},
+								{
+									"height": 12000,
+									"html_attributions": [
+										"<a href=\"https://maps.google.com/maps/contrib/114218971998075377200\">Eyal Shemesh</a>"
+									],
+									"photo_reference": "AcJnMuGNJxim8xCMYv_SIeiFqGSLW_Pb0SXTd6YrUgVKDBft-RYQSX8iMR-NdUfbwL4IFC_ybZSQI5D5--W7Th5gWiCWWd_MY-3fpr8BGuXEyAV64MkB0BZxvOihfk6g4xUsB6U7528SBVUaRu6F5_CWhhVY_cIFHzTPJN16ykKqUL4-AKRC",
+									"width": 9000
+								},
+								{
+									"height": 4000,
+									"html_attributions": [
+										"<a href=\"https://maps.google.com/maps/contrib/104733711464376633323\">Józek Ostafin</a>"
+									],
+									"photo_reference": "AcJnMuG5PcyyM0KnjCOzORD6Ga_Bk149bGIbh_K-Yc7yH98Sfs5M2kK5kNYF6hvTPNJG4wq-jKeFFR5KIRGEA7WtU5siu5-C9Hv-uLCQfFIJifW58u0D5u_4STILgYe6WhzMLmHKyOdisR9OJBvYvBIDm6MEhQhaoBJkKkEeeeeU0GMe-X8v",
+									"width": 6000
+								}
+							],
+							"place_id": "ChIJqUCGZ09gLxMRLM42IPpl0co",
+							"plus_code": {
+								"compound_code": "VFXG+CP Rome, Metropolitan City of Rome Capital, Italy",
+								"global_code": "8FHJVFXG+CP"
+							},
+							"rating": 4.8,
+							"reference": "ChIJqUCGZ09gLxMRLM42IPpl0co",
+							"reviews": [
+								{
+									"author_name": "Betta Rautio",
+									"author_url": "https://www.google.com/maps/contrib/110135417422575002455/reviews",
+									"language": "en",
+									"original_language": "en",
+									"profile_photo_url": "https://lh3.googleusercontent.com/a-/ALV-UjUa6mBSPWsYa0xtDECTco6vMua4r3lZoh4ikrEpLozZoQ=s128-c0x00000000-cc-rp-mo-ba6",
+									"rating": 3,
+									"relative_time_description": "a week ago",
+									"text": "If you are a first time visitor to Rome I would recommend a visit.  However this is an iconic landmark with huge crowds and long waits every time we visit Rome in October.  It is nice to walk around the whole site and you will have an opportunity for some great photos.  Three stars for being over loved.  There are other places less crowded that could be visited and enjoyed in my humble opinion.",
+									"time": 1698243725,
+									"translated": false
+								},
+								{
+									"author_name": "Luke Marshall",
+									"author_url": "https://www.google.com/maps/contrib/100931623910472272534/reviews",
+									"language": "en",
+									"original_language": "en",
+									"profile_photo_url": "https://lh3.googleusercontent.com/a-/ALV-UjXUqRpbJSG6S8GxgYL5B650ozdrXPa3lGECuphJvifaJR8=s128-c0x00000000-cc-rp-mo-ba3",
+									"rating": 4,
+									"relative_time_description": "a week ago",
+									"text": "Very amazing building. One of the best preserved Roman buildings in the world, and it is very impressive to look at whether you're inside or outside. Buy tickets in advance to ensure you get in straight away. Once you're in however, there isn't too much to do unless you are a religious person, as most of the inside has been converted into a church.",
+									"time": 1698233972,
+									"translated": false
+								},
+								{
+									"author_name": "Michael Brady",
+									"author_url": "https://www.google.com/maps/contrib/109488316510188055334/reviews",
+									"language": "en",
+									"original_language": "en",
+									"profile_photo_url": "https://lh3.googleusercontent.com/a-/ALV-UjWupE1-JjfZ6TIMDQm-xKwKAVaPQwXouwZzEkNr348oj9k=s128-c0x00000000-cc-rp-mo",
+									"rating": 5,
+									"relative_time_description": "2 weeks ago",
+									"text": "No words.\nBreathtaking!\nThe inside of the dome is in perfect condition after 2000+ years. Honestly, it is so good it looks CGI generated.\nIt is easily one of the best concrete structures in the history of the world.\nGet tickets early and carefully. We were very lucky to see this on our last day in Roma.\nAny pictures included in my post simply do not do this justice.",
+									"time": 1698020822,
+									"translated": false
+								},
+								{
+									"author_name": "Mike Campbell",
+									"author_url": "https://www.google.com/maps/contrib/109972894027968471949/reviews",
+									"language": "en",
+									"original_language": "en",
+									"profile_photo_url": "https://lh3.googleusercontent.com/a/ACg8ocLQcDKpBDbWeL-jfGl-R2onVsl4sT9LskmCk3rXBoBp=s128-c0x00000000-cc-rp-mo-ba4",
+									"rating": 4,
+									"relative_time_description": "a week ago",
+									"text": "Very beautiful. It's in a very busy square, and the lines are long, but they move quickly. We bought tickets the day of without any problems. Once inside, you don't feel crowded or rushed. The best time to go is right at noon when the sun shines through the oculus onto the center of the floor.",
+									"time": 1698598508,
+									"translated": false
+								},
+								{
+									"author_name": "Nima M.",
+									"author_url": "https://www.google.com/maps/contrib/104836478334956435399/reviews",
+									"language": "en",
+									"original_language": "en",
+									"profile_photo_url": "https://lh3.googleusercontent.com/a/ACg8ocLHMGD00wAkpo2iMKlyOIa03wVt-dnGj0rCvW4K-itk=s128-c0x00000000-cc-rp-mo-ba5",
+									"rating": 5,
+									"relative_time_description": "a month ago",
+									"text": "Round church with square front and high roof!\nI loved that but not the ticket! There was long line but staff where quick. It took me 10 – 15minutes to get in. They were helpful and customer-oriented. Information were provided for each section. Just a few minutes’ walk to Trevi Fountain or Spanish Step. Seats provided inside to sit and enjoy!\nOverall, recommended.",
+									"time": 1695672200,
+									"translated": false
+								}
+							],
+							"types": ["tourist_attraction", "point_of_interest", "establishment"],
+							"url": "https://maps.google.com/?cid=14614574390750662188",
+							"user_ratings_total": 217224,
+							"utc_offset": 60,
+							"vicinity": "Piazza della Rotonda, Roma",
+							"website": "https://www.direzionemuseistataliroma.beniculturali.it/istituti/pantheon/",
+							"wheelchair_accessible_entrance": true
+						},
+						"time": "Thu Nov 09 2023 08:00:00 GMT+0100"
+					}
+				]
+			}
+		]
+	}
+]
