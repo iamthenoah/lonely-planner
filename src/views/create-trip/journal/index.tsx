@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import { View } from 'react-native'
 import { RouteProp, useRoute } from '@react-navigation/native'
 import { JournalHeader } from './components/journal-header'
 import { DaysTab } from './components/days-tab'
@@ -20,7 +19,7 @@ export const CreateTripJournal = () => {
 	const [day, setDay] = useState(route.params.day || 0)
 
 	const id = route.params.id
-	const trip = trips.get(id)
+	const trip = trips.get(id)!
 
 	const appendDay = () => {
 		trips.update(id, trip => trip.days.push({ places: [] }))
@@ -32,10 +31,6 @@ export const CreateTripJournal = () => {
 		} else {
 			setDay(0)
 		}
-	}
-
-	if (!trip) {
-		return <View />
 	}
 
 	return (

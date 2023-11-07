@@ -1,4 +1,3 @@
-import { PropsWithChildren } from 'react'
 import { StyleSheet, View } from 'react-native'
 import { useNavigation } from '@react-navigation/native'
 import { Widget } from '../../../components/widget'
@@ -9,9 +8,9 @@ export type ProgressProps = {
 	title: string
 }
 
-export type MapWidgetProps = PropsWithChildren & ProgressProps
+export type MapWidgetProps = ProgressProps
 
-export const CurrentTripWidget = ({ ...props }: MapWidgetProps) => {
+export const CurrentTripWidget = (props: MapWidgetProps) => {
 	const navigation = useNavigation()
 
 	return (

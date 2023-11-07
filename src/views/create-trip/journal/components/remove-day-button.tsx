@@ -12,12 +12,7 @@ export const RemoveDayButton = ({ id, day, onDayRemoved }: RemoveDayButtonProps)
 	const trips = useTrips()
 
 	const onPress = () => {
-		trips
-			.update(id, trip => {
-				trip.days.splice(day, 1)
-				return trip
-			})
-			.then(onDayRemoved)
+		trips.update(id, trip => trip.days.splice(day, 1)).then(onDayRemoved)
 	}
 
 	return (
@@ -33,7 +28,8 @@ const styles = StyleSheet.create({
 		display: 'flex',
 		flexDirection: 'row',
 		marginHorizontal: 20,
-		marginVertical: 10,
+		marginTop: 10,
+		marginBottom: 100,
 		gap: 20
 	},
 	text: {

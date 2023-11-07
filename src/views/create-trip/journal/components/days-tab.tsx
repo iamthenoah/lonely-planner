@@ -51,7 +51,7 @@ const styles = StyleSheet.create({
 		backgroundColor: 'white'
 	},
 	content: {
-		paddingVertical: 10,
+		paddingVertical: 5,
 		marginHorizontal: 10
 	},
 	add: {

@@ -4,14 +4,14 @@ import { Comment } from './comment'
 import { Link } from './link'
 
 export type DateInputProps = {
-	title?: string
+	title: string
 	date?: Date
 	minimum?: Date
 	hours?: boolean
 	onDate: (date: Date) => void
 }
 
-export const DateInput = ({ title, hours, date = new Date(), minimum = new Date(), onDate }: DateInputProps) => {
+export const DateInput = ({ title, hours, date = new Date(), minimum, onDate }: DateInputProps) => {
 	const mode = hours ? 'time' : 'date'
 
 	const onPress = () => {
@@ -42,4 +42,8 @@ const styles = StyleSheet.create({
 
 export const formatDate = (date: Date) => {
 	return date.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' })
+}
+
+export const formatHours = (date: Date) => {
+	return date.toLocaleString('en-US', { hour: '2-digit', minute: '2-digit', hour12: true })
 }
