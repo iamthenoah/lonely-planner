@@ -1,19 +1,28 @@
+import { ScrollView, View } from 'react-native'
 import { RouteProp, useRoute } from '@react-navigation/native'
-import { Comment } from '../../components/comment'
 import { PlaceInfo } from '../../types/api'
-import { SafeAreaView } from 'react-native-safe-area-context'
+import { PlaceMap } from './components/place-map'
+import { PlacePhotos } from './components/place-photos'
+import { PlaceHeader } from './components/place-header'
+import { PlaceTime, PlaceTimeProps } from './components/place-time'
 
 export type PlaceParams = RouteProp<{
-	params: { place: PlaceInfo }
+	params: PlaceTimeProps & {
+		place: PlaceInfo
+	}
 }>
 
 export const Place = () => {
-	const route = useRoute<PlaceParams>()
-	const place = route.params.place
+	const { place, ...info } = useRoute<PlaceParams>().params
 
 	return (
-		<SafeAreaView>
-			<Comment text={JSON.stringify(place, null, 2)} />
-		</SafeAreaView>
+		<View>
+			<PlaceHeader place={place} />
+			<ScrollView>
+				{info && <PlaceTime {...info} />}
+				<PlaceMap place={place} />
+				{place.photos && <PlacePhotos photos={place.photos} />}
+			</ScrollView>
+		</View>
 	)
 }
