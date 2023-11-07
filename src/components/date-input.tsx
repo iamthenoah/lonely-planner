@@ -4,7 +4,7 @@ import { Comment } from './comment'
 import { Link } from './link'
 
 export type DateInputProps = {
-	title: string
+	title?: string
 	date?: Date
 	minimum?: Date
 	hours?: boolean

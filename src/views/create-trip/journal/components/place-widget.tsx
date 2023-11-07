@@ -23,7 +23,7 @@ export const PlaceWidget = ({ id, day, index, place, editable }: PlaceWidgetProp
 	return (
 		<View style={styles.container}>
 			<View style={styles.button}>
-				<PlaceButton place={place.info} time={new Date(place.time)} />
+				<PlaceButton place={place.info} info={{ id, day, index, time: place.time }} />
 				{editable && <IconButton icon="close" color="red" seamless onPress={onRemove} />}
 			</View>
 			<ScrollView horizontal showsHorizontalScrollIndicator={false}>

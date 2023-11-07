@@ -1,45 +1,45 @@
+import { StyleSheet } from 'react-native'
 import { useNavigation } from '@react-navigation/native'
 import { SafeAreaView } from 'react-native-safe-area-context'
-import { StyleSheet } from 'react-native'
 import { PlaceInfo } from '../../../../types/api'
 import { Button } from '../../../../components/button'
 import { Widget } from '../../../../components/widget'
-import { useTrips } from '../../../../contexts/trip-context'
 import { PlaceButton } from '../../../../components/place-button'
 import { TripPlace } from '../../../../types/trip'
+
+export const getNextDefaultTime = (start: Date, day: number, previous?: TripPlace) => {
+	if (previous?.time) {
+		const next = new Date(previous?.time)
+		next.setMinutes(0)
+		next.setHours(next.getHours() + 1)
+		return next
+	}
+	const current = new Date()
+	current.setDate(start.getDate() + day)
+	current.setHours(8)
+	current.setMinutes(0)
+	return current
+}
 
 export type PlaceWidgetProps = {
 	id: string
 	day: number
+	index: number
+	time: string
 	place: PlaceInfo
-	previous?: TripPlace
 }
 
-export const PlaceWidget = ({ id, day, place, previous }: PlaceWidgetProps) => {
-	const trips = useTrips()
+export const PlaceWidget = ({ id, index, day, place, time }: PlaceWidgetProps) => {
 	const navigation = useNavigation<any>()
 
-	const getTime = () => {
-		if (previous?.time) {
-			const next = new Date(previous?.time)
-			next.setHours(next.getHours() + 1)
-			return next
-		}
-		const current = new Date()
-		current.setHours(8)
-		return current
-	}
-
 	const onPress = async () => {
-		const data = { info: place, time: getTime().toString() }
-		trips.update(id, trip => trip.days[day].places.push(data))
 		navigation.navigate('/trip/create/journal', { id, day })
 	}
 
 	return (
 		<SafeAreaView style={styles.container}>
 			<Widget shadow style={styles.content}>
-				<PlaceButton place={place} time={getTime()} />
+				<PlaceButton place={place} info={{ id, day, index, time }} />
 				<Button text="Add Location" onPress={onPress} />
 			</Widget>
 		</SafeAreaView>

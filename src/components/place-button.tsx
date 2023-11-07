@@ -1,9 +1,11 @@
 import { useNavigation } from '@react-navigation/native'
 import { Image, StyleSheet, TouchableOpacity, View } from 'react-native'
+import { PlaceTimeProps } from '../views/place/components/place-time'
 import { PlaceInfo } from '../types/api'
 import { getImage } from '../apis/google'
 import { Title } from './title'
 import { Comment } from './comment'
+import { formatHours } from './date-input'
 
 export const truncate = (text: string, size: number) => {
 	return text.length > size ? text.substring(0, size) + '...' : text
@@ -11,18 +13,14 @@ export const truncate = (text: string, size: number) => {
 
 export type PlaceButtonProps = {
 	place: PlaceInfo
-	time?: Date
+	info?: PlaceTimeProps
 }
 
-export const PlaceButton = ({ place, time }: PlaceButtonProps) => {
+export const PlaceButton = ({ place, info }: PlaceButtonProps) => {
 	const navigation = useNavigation<any>()
 
-	const text = time
-		? 'At ' + time.toLocaleString('en-US', { hour: 'numeric', hour12: true })
-		: truncate(place.formatted_address, 30)
-
 	const onPress = () => {
-		navigation.navigate('/place', { place, time: time?.toString() })
+		navigation.navigate('/place', { ...info, place })
 	}
 
 	return (
@@ -30,7 +28,7 @@ export const PlaceButton = ({ place, time }: PlaceButtonProps) => {
 			{place.photos && <Image style={styles.image} source={{ uri: getImage(place.photos[0].photo_reference) }} />}
 			<View>
 				<Title text={truncate(place.name, 17)} />
-				<Comment text={text} />
+				<Comment text={info ? 'At ' + formatHours(new Date(info.time)) : truncate(place.formatted_address, 30)} />
 			</View>
 		</TouchableOpacity>
 	)

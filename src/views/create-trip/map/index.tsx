@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import { RouteProp, useRoute } from '@react-navigation/native'
 import { StyleSheet } from 'react-native'
 import { MapHeader } from './components/map-header'
-import { PlaceWidget } from './components/place-widget'
+import { PlaceWidget, getNextDefaultTime } from './components/place-widget'
 import MapView, { LatLng, MapPressEvent, Marker, Region } from 'react-native-maps'
 import { getNearestPlace, getPlaceInfo } from '../../../apis/google'
 import { PlaceInfo } from '../../../types/api'
@@ -17,7 +17,6 @@ export type CreateTripMapParams = RouteProp<{
 export const CreateTripMap = () => {
 	const { id, day, count } = useRoute<CreateTripMapParams>().params
 	const trips = useTrips()
-	const previous = trips.get(id)?.days[day].places[count - 1]
 
 	const [place, setPlace] = useState<PlaceInfo | null>(null)
 	const [marker, setMarker] = useState<LatLng | null>(null)
@@ -50,12 +49,29 @@ export const CreateTripMap = () => {
 		const latlon = event.nativeEvent.coordinate
 		const places = await getNearestPlace(latlon.latitude, latlon.longitude)
 		const place = await getPlaceInfo(places[0].place_id)
+
+		// when the user presses a point on the map, the location & default time is automatically
+		// added to the trip, this is so that when the `place` view is shown, updating the time
+		// is possible.
+		// i am sorry you have to deal with this bs...
+		trips.update(id, trip => {
+			const data = {
+				info: place,
+				time: getNextDefaultTime(new Date(trip.dates.start), day, trip.days[day].places[count - 1]).toString()
+			}
+
+			if (trip.days[day].places.length === count) {
+				trip.days[day].places.push(data)
+			} else {
+				trip.days[day].places = trip.days[day].places.map((place, i) => (i === count ? data : place))
+			}
+		})
 		onPlace(place)
 	}
 
 	return (
 		<Container>
-			<MapHeader onPlace={onPlace} />
+			<MapHeader onPlace={onPlace} id={id} day={day} index={count} />
 			<MapView
 				moveOnMarkerPress
 				showsUserLocation
@@ -66,7 +82,9 @@ export const CreateTripMap = () => {
 			>
 				{marker && <Marker coordinate={marker} />}
 			</MapView>
-			{place && <PlaceWidget id={id} day={day} place={place} previous={previous} />}
+			{place && (
+				<PlaceWidget id={id} day={day} index={count} place={place} time={trips.get(id)!.days[day].places[count].time} />
+			)}
 		</Container>
 	)
 }
