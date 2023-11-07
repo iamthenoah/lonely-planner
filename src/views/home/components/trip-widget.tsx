@@ -28,19 +28,19 @@ export const TripWidget = ({ trip }: TripWidgetProps) => {
 
 const styles = StyleSheet.create({
 	container: {
-		width: 100,
+		width: 200,
 		height: 100,
-		alignItems: 'center',
+		alignItems: 'flex-start',
 		justifyContent: 'flex-end',
-		padding: 10
+		padding: 15
 	},
 	location: {
-		fontSize: 16,
+		fontSize: 20,
 		fontWeight: 'bold',
 		color: 'white'
 	},
 	date: {
-		fontSize: 10,
+		fontSize: 12,
 		fontWeight: 'bold',
 		color: 'white'
 	}

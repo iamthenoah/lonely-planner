@@ -13,11 +13,9 @@ export const Home = () => {
 	return (
 		<Container>
 			<ScrollView>
-				<Content>
-					{ongoing && <CurrentTripSection trip={ongoing} />}
-					<TripsSection />
-					<DiscoverSection />
-				</Content>
+				{ongoing && <CurrentTripSection trip={ongoing} />}
+				<TripsSection />
+				<DiscoverSection />
 			</ScrollView>
 		</Container>
 	)

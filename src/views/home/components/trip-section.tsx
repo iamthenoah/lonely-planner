@@ -3,6 +3,7 @@ import { Section } from '../../../components/layout/section'
 import { Link } from '../../../components/link'
 import { useNavigation } from '@react-navigation/native'
 import { Trip } from '../../../types/trip'
+import { Content } from '../../../components/layout/content'
 
 export const getCurrentTripDay = (trip: Trip) => {
 	const start = new Date(trip.dates.start)
@@ -34,16 +35,20 @@ export const CurrentTripSection = ({ trip }: CurrentTripSectionProps) => {
 	const navigation = useNavigation<any>()
 
 	return (
-		<Section
-			name="Current Trip"
-			action={
-				<Link
-					text="view trip"
-					onPress={() => navigation.navigate('/trip/create/journal', { id: trip.id, day: getCurrentTripDay(trip) - 1 })}
-				/>
-			}
-		>
-			<CurrentTripWidget title={'Day ' + getCurrentTripDay(trip)} place={getNextPlace(trip)} />
-		</Section>
+		<Content>
+			<Section
+				name="Current Trip"
+				action={
+					<Link
+						text="view trip"
+						onPress={() =>
+							navigation.navigate('/trip/create/journal', { id: trip.id, day: getCurrentTripDay(trip) - 1 })
+						}
+					/>
+				}
+			>
+				<CurrentTripWidget title={'Day ' + getCurrentTripDay(trip)} place={getNextPlace(trip)} />
+			</Section>
+		</Content>
 	)
 }
