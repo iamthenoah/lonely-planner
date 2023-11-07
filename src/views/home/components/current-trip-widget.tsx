@@ -9,7 +9,7 @@ import { Comment } from '../../../components/comment'
 
 export type ProgressProps = {
 	title: string
-	place: TripPlace
+	place?: TripPlace
 }
 
 export type MapWidgetProps = ProgressProps
@@ -40,8 +40,12 @@ const Footer = ({ title, place }: ProgressProps) => {
 		<View style={styles.footer}>
 			<Title text={title} />
 			<View style={styles.next}>
-				<Title text={place.info.name} />
-				<Comment text={formatHours(new Date(place.time))} />
+				{place && (
+					<>
+						<Title text={place.info.name} />
+						<Comment text={formatHours(new Date(place.time))} />
+					</>
+				)}
 			</View>
 		</View>
 	)

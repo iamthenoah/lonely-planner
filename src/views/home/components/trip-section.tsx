@@ -6,7 +6,7 @@ import { Trip } from '../../../types/trip'
 
 export const getCurrentTripDay = (trip: Trip) => {
 	const start = new Date(trip.dates.start)
-	const delta = start.getTime() - new Date().getTime()
+	const delta = new Date().getTime() - start.getTime()
 	const days = Math.ceil(delta / (1000 * 3600 * 24))
 	return days + 1
 }
