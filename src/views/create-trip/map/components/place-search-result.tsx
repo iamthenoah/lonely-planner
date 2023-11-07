@@ -23,6 +23,7 @@ export const PlaceSearchResult = ({ place, onPress }: SearchResultProps) => {
 
 const styles = StyleSheet.create({
 	container: {
-		paddingVertical: 10
+		paddingVertical: 10,
+		paddingHorizontal: 25
 	}
 })

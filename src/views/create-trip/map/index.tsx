@@ -83,7 +83,13 @@ export const CreateTripMap = () => {
 				{marker && <Marker coordinate={marker} />}
 			</MapView>
 			{place && (
-				<PlaceWidget id={id} day={day} index={count} place={place} time={trips.get(id)!.days[day].places[count].time} />
+				<PlaceWidget
+					id={id}
+					day={day}
+					index={count}
+					place={place}
+					time={trips.get(id)!.days[day].places[count]?.time}
+				/>
 			)}
 		</Container>
 	)

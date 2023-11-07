@@ -10,7 +10,10 @@ export type IconButtonProps = {
 
 export const IconButton = ({ icon, color = '#0057D9', seamless, onPress }: IconButtonProps) => {
 	return (
-		<TouchableOpacity style={{ ...styles.container, borderColor: seamless ? 'white' : '#EDEEEF' }} onPress={onPress}>
+		<TouchableOpacity
+			style={{ ...styles.container, borderColor: seamless ? 'transparent' : '#EDEEEF' }}
+			onPress={onPress}
+		>
 			<Ionicons size={20} color={color} name={icon as any} />
 		</TouchableOpacity>
 	)
@@ -22,7 +25,6 @@ const styles = StyleSheet.create({
 		width: 40,
 		height: 40,
 		borderWidth: 2,
-		backgroundColor: 'white',
 		alignItems: 'center',
 		justifyContent: 'center'
 	}
