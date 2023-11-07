@@ -7,19 +7,20 @@ import { PlaceHeader } from './components/place-header'
 import { PlaceTime, PlaceTimeProps } from './components/place-time'
 
 export type PlaceParams = RouteProp<{
-	params: PlaceTimeProps & {
+	params: {
 		place: PlaceInfo
+		info: PlaceTimeProps
 	}
 }>
 
 export const Place = () => {
-	const { place, ...info } = useRoute<PlaceParams>().params
+	const { place, info } = useRoute<PlaceParams>().params
 
 	return (
 		<View>
 			<PlaceHeader place={place} />
 			<ScrollView>
-				{info.time && <PlaceTime {...info} />}
+				{info.id && <PlaceTime {...info} />}
 				<PlaceMap place={place} />
 				{place.photos && <PlacePhotos photos={place.photos} />}
 			</ScrollView>
