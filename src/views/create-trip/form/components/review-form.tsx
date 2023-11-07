@@ -3,6 +3,7 @@ import { Info } from '../../../../components/info'
 import { Widget } from '../../../../components/widget'
 import { TripDate } from '../../../../types/trip'
 import { PlaceInfo } from '../../../../types/api'
+import { formatDate } from '../../../../components/date-input'
 import format from 'humanize-duration'
 
 export type ReviewFormProps = {
@@ -15,8 +16,8 @@ export const ReviewForm = ({ place, dates }: ReviewFormProps) => {
 		<View style={styles.container}>
 			<Widget style={styles.content}>
 				<Info comment="Location" text={place.name} />
-				<Info comment="Start date" text={new Date(dates.start).toDateString()} />
-				<Info comment="End date" text={new Date(dates.end).toDateString()} />
+				<Info comment="Start date" text={formatDate(new Date(dates.start))} />
+				<Info comment="End date" text={formatDate(new Date(dates.end))} />
 				<Info
 					comment="Duration"
 					text={format(new Date(dates.end).getTime() - new Date(dates.start).getTime(), { units: ['d'], round: true })}

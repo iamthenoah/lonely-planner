@@ -1,11 +1,15 @@
 import { StyleSheet, View } from 'react-native'
+import MapView from 'react-native-maps'
 import { useNavigation } from '@react-navigation/native'
 import { Widget } from '../../../components/widget'
 import { Title } from '../../../components/title'
-import MapView from 'react-native-maps'
+import { TripPlace } from '../../../types/trip'
+import { formatHours } from '../../../components/date-input'
+import { Comment } from '../../../components/comment'
 
 export type ProgressProps = {
 	title: string
+	place: TripPlace
 }
 
 export type MapWidgetProps = ProgressProps
@@ -31,10 +35,14 @@ export const CurrentTripWidget = (props: MapWidgetProps) => {
 	)
 }
 
-const Footer = ({ title }: ProgressProps) => {
+const Footer = ({ title, place }: ProgressProps) => {
 	return (
 		<View style={styles.footer}>
 			<Title text={title} />
+			<View style={styles.next}>
+				<Title text={place.info.name} />
+				<Comment text={formatHours(new Date(place.time))} />
+			</View>
 		</View>
 	)
 }
@@ -47,7 +55,17 @@ const styles = StyleSheet.create({
 		marginVertical: 10
 	},
 	footer: {
-		padding: 15
+		padding: 15,
+		display: 'flex',
+		flexDirection: 'row',
+		justifyContent: 'space-between',
+		alignItems: 'center'
+	},
+	next: {
+		display: 'flex',
+		flexDirection: 'row',
+		alignItems: 'center',
+		gap: 10
 	},
 	map: {
 		width: '100%',

@@ -1,5 +1,4 @@
 import { useNavigation } from '@react-navigation/native'
-import { Comment } from '../../../components/comment'
 import { IconButton } from '../../../components/icon-button'
 import { Header } from '../../../components/layout/header'
 import { PlaceInfo } from '../../../types/api'

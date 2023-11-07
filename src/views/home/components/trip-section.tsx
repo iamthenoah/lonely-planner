@@ -11,6 +11,21 @@ export const getCurrentTripDay = (trip: Trip) => {
 	return days + 1
 }
 
+export const getNextPlace = (trip: Trip) => {
+	const day = getCurrentTripDay(trip)
+	const current = new Date().getTime()
+	const places = trip.days[day - 1].places
+
+	for (const place of places) {
+		const time = new Date(place.time).getTime()
+
+		if (time > current) {
+			return place
+		}
+	}
+	return places[0]
+}
+
 export type CurrentTripSectionProps = {
 	trip: Trip
 }
@@ -28,7 +43,7 @@ export const CurrentTripSection = ({ trip }: CurrentTripSectionProps) => {
 				/>
 			}
 		>
-			<CurrentTripWidget title={'Day ' + getCurrentTripDay(trip)} />
+			<CurrentTripWidget title={'Day ' + getCurrentTripDay(trip)} place={getNextPlace(trip)} />
 		</Section>
 	)
 }

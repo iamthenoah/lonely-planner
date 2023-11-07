@@ -3,9 +3,8 @@ import { Image, StyleSheet, TouchableOpacity, View } from 'react-native'
 import { PlaceTimeProps } from '../views/place/components/place-time'
 import { PlaceInfo } from '../types/api'
 import { getImage } from '../apis/google'
-import { Title } from './title'
-import { Comment } from './comment'
 import { formatHours } from './date-input'
+import { Info } from './info'
 
 export const truncate = (text: string, size: number) => {
 	return text.length > size ? text.substring(0, size) + '...' : text
@@ -27,8 +26,11 @@ export const PlaceButton = ({ place, info }: PlaceButtonProps) => {
 		<TouchableOpacity onPress={onPress} style={styles.container}>
 			{place.photos && <Image style={styles.image} source={{ uri: getImage(place.photos[0].photo_reference) }} />}
 			<View>
-				<Title text={truncate(place.name, 17)} />
-				<Comment text={info ? 'At ' + formatHours(new Date(info.time)) : truncate(place.formatted_address, 30)} />
+				<Info
+					flipped
+					text={truncate(place.name, 17)}
+					comment={info ? 'At ' + formatHours(new Date(info.time)) : truncate(place.formatted_address, 30)}
+				/>
 			</View>
 		</TouchableOpacity>
 	)

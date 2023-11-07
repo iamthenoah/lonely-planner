@@ -19,18 +19,23 @@ export const CreateTripJournal = () => {
 	const [day, setDay] = useState(route.params.day || 0)
 
 	const id = route.params.id
-	const trip = trips.get(id)!
+	const trip = trips.get(id)
 
 	const appendDay = () => {
 		trips.update(id, trip => trip.days.push({ places: [] }))
 	}
 
 	const removeDay = async () => {
+		console.log(trip?.days.length)
 		if (trip?.days.length === 0) {
 			trips.remove(id).then(() => navigation.navigate('/home'))
 		} else {
 			setDay(0)
 		}
+	}
+
+	if (!trip || trip?.days.length === 0) {
+		return undefined
 	}
 
 	return (

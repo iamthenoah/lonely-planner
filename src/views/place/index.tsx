@@ -19,7 +19,7 @@ export const Place = () => {
 		<View>
 			<PlaceHeader place={place} />
 			<ScrollView>
-				{info && <PlaceTime {...info} />}
+				{info.time && <PlaceTime {...info} />}
 				<PlaceMap place={place} />
 				{place.photos && <PlacePhotos photos={place.photos} />}
 			</ScrollView>
