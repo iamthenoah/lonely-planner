@@ -10,14 +10,16 @@ import { TripPlace } from '../../../../types/trip'
 export const getNextDefaultTime = (start: Date, day: number, previous?: TripPlace) => {
 	if (previous?.time) {
 		const next = new Date(previous?.time)
+		next.setSeconds(0)
 		next.setMinutes(0)
 		next.setHours(next.getHours() + 1)
 		return next
 	}
 	const current = new Date()
 	current.setDate(start.getDate() + day)
-	current.setHours(8)
+	current.setSeconds(0)
 	current.setMinutes(0)
+	current.setHours(8)
 	return current
 }
 

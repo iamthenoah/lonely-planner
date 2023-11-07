@@ -41,7 +41,7 @@ export const CreateTripJournal = () => {
 	return (
 		<Container>
 			<JournalHeader id={id} />
-			<DaysTab editable days={trip.days.length} onDayChange={setDay} onDayAdded={appendDay} />
+			<DaysTab editable days={trip.days.length} onDayChange={setDay} onDayAdded={appendDay} initTab={day} />
 			<TripDayPanel editable id={id} day={{ ...trip.days[day], index: day }} onDayRemoved={removeDay} />
 		</Container>
 	)

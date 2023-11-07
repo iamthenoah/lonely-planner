@@ -9,22 +9,24 @@ export const getCurrentTripDay = (trip: Trip) => {
 	const start = new Date(trip.dates.start)
 	const delta = new Date().getTime() - start.getTime()
 	const days = Math.ceil(delta / (1000 * 3600 * 24))
-	return days + 1
+	return days
 }
 
 export const getNextPlace = (trip: Trip) => {
 	const day = getCurrentTripDay(trip)
 	const current = new Date().getTime()
-	const places = trip.days[day - 1].places
+	const places = trip.days[day - 1]?.places
 
-	for (const place of places) {
-		const time = new Date(place.time).getTime()
+	if (places) {
+		for (const place of places) {
+			const time = new Date(place.time).getTime()
 
-		if (time > current) {
-			return place
+			if (time >= current) {
+				return place
+			}
 		}
+		return places[places.length - 1]
 	}
-	return places[0]
 }
 
 export type CurrentTripSectionProps = {
@@ -34,19 +36,13 @@ export type CurrentTripSectionProps = {
 export const CurrentTripSection = ({ trip }: CurrentTripSectionProps) => {
 	const navigation = useNavigation<any>()
 
+	const onPress = () => {
+		navigation.navigate('/trip/create/journal', { id: trip.id, day: getCurrentTripDay(trip) - 1 })
+	}
+
 	return (
 		<Content>
-			<Section
-				name="Current Trip"
-				action={
-					<Link
-						text="view trip"
-						onPress={() =>
-							navigation.navigate('/trip/create/journal', { id: trip.id, day: getCurrentTripDay(trip) - 1 })
-						}
-					/>
-				}
-			>
+			<Section name="Current Trip" action={<Link text="view trip" onPress={onPress} />}>
 				<CurrentTripWidget title={'Day ' + getCurrentTripDay(trip)} place={getNextPlace(trip)} />
 			</Section>
 		</Content>

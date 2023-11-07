@@ -37,11 +37,11 @@ export const TripProvider = ({ children }: PropsWithChildren) => {
 	}
 
 	const getOngoing = () => {
-		const today = new Date()
+		const today = new Date().getTime()
 
 		for (const trip of trips) {
-			const start = new Date(trip.dates.start)
-			const end = new Date(trip.dates.end)
+			const start = new Date(trip.dates.start).getTime()
+			const end = new Date(trip.dates.end).getTime()
 
 			if (start <= today && today <= end) {
 				return trip

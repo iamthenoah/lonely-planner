@@ -1,5 +1,4 @@
 import { ScrollView, StyleSheet, View } from 'react-native'
-import { Section } from '../../../components/layout/section'
 import { CreateTripWidget } from './create-trip-widget'
 import { TripWidget } from './trip-widget'
 import { useTrips } from '../../../contexts/trip-context'

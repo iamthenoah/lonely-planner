@@ -4,14 +4,15 @@ import { Button } from '../../../../components/button'
 import { IconButton } from '../../../../components/icon-button'
 
 export type DaysTabProps = {
+	initTab?: number
 	days: number
 	editable?: boolean
 	onDayChange: (day: number) => void
 	onDayAdded: (day: number) => void
 }
 
-export const DaysTab = ({ days, editable, onDayChange, onDayAdded }: DaysTabProps) => {
-	const [tab, setTab] = useState(0)
+export const DaysTab = ({ initTab = 0, days, editable, onDayChange, onDayAdded }: DaysTabProps) => {
+	const [tab, setTab] = useState(initTab)
 
 	const onPress = (day: number) => {
 		setTab(day)

@@ -14,10 +14,12 @@ export const PlacePhotos = ({ photos }: PlacePhotosProps) => {
 			<Content>
 				<Title text="Photos" />
 			</Content>
-			<ScrollView horizontal style={styles.photos} showsHorizontalScrollIndicator={false}>
-				{Array.from(photos).map(photo => (
-					<Image key={Math.random()} style={styles.image} source={{ uri: getImage(photo.photo_reference) }} />
-				))}
+			<ScrollView horizontal showsHorizontalScrollIndicator={false}>
+				<View style={styles.photos}>
+					{Array.from(photos).map(photo => (
+						<Image key={Math.random()} style={styles.image} source={{ uri: getImage(photo.photo_reference) }} />
+					))}
+				</View>
 			</ScrollView>
 		</View>
 	)
@@ -27,11 +29,11 @@ const styles = StyleSheet.create({
 	photos: {
 		display: 'flex',
 		flexDirection: 'row',
-		paddingLeft: 15,
-		marginTop: 10
+		paddingHorizontal: 25,
+		marginTop: 10,
+		gap: 15
 	},
 	image: {
-		marginLeft: 10,
 		borderRadius: 10,
 		width: 200,
 		height: 200
