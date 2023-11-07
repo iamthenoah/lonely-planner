@@ -36,6 +36,23 @@ export const CreateTripMap = () => {
 		setPlace(place)
 
 		if (place) {
+			// when the user presses a point on the map, the location & default time is automatically
+			// added to the trip, this is so that when the `place` view is shown, updating the time
+			// is possible.
+			// i am sorry you have to deal with this bs...
+			trips.update(id, trip => {
+				const data = {
+					info: place,
+					time: getNextDefaultTime(new Date(trip.dates.start), day, trip.days[day].places[count - 1]).toString()
+				}
+
+				if (trip.days[day].places.length === count) {
+					trip.days[day].places.push(data)
+				} else {
+					trip.days[day].places = trip.days[day].places.map((place, i) => (i === count ? data : place))
+				}
+			})
+
 			const longitude = place.geometry.location.lng
 			const latitude = place.geometry.location.lat
 			const latlon = { longitude, latitude }
@@ -50,22 +67,6 @@ export const CreateTripMap = () => {
 		const places = await getNearestPlace(latlon.latitude, latlon.longitude)
 		const place = await getPlaceInfo(places[0].place_id)
 
-		// when the user presses a point on the map, the location & default time is automatically
-		// added to the trip, this is so that when the `place` view is shown, updating the time
-		// is possible.
-		// i am sorry you have to deal with this bs...
-		trips.update(id, trip => {
-			const data = {
-				info: place,
-				time: getNextDefaultTime(new Date(trip.dates.start), day, trip.days[day].places[count - 1]).toString()
-			}
-
-			if (trip.days[day].places.length === count) {
-				trip.days[day].places.push(data)
-			} else {
-				trip.days[day].places = trip.days[day].places.map((place, i) => (i === count ? data : place))
-			}
-		})
 		onPlace(place)
 	}
 
