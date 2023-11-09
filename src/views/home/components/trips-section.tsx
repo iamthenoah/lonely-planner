@@ -34,6 +34,7 @@ const styles = StyleSheet.create({
 	trips: {
 		marginHorizontal: 25,
 		display: 'flex',
-		flexDirection: 'row'
+		flexDirection: 'row',
+		gap: 10
 	}
 })

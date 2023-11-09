@@ -9,7 +9,7 @@ import { PlaceTime, PlaceTimeProps } from './components/place-time'
 export type PlaceParams = RouteProp<{
 	params: {
 		place: PlaceInfo
-		info: PlaceTimeProps
+		info?: PlaceTimeProps
 	}
 }>
 
@@ -20,7 +20,7 @@ export const Place = () => {
 		<View>
 			<PlaceHeader place={place} />
 			<ScrollView>
-				{info.id && <PlaceTime {...info} />}
+				{info?.id && <PlaceTime {...info} />}
 				<PlaceMap place={place} />
 				{place.photos && <PlacePhotos photos={place.photos} />}
 			</ScrollView>
