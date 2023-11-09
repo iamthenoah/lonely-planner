@@ -3,27 +3,26 @@ import MapView from 'react-native-maps'
 import { useNavigation } from '@react-navigation/native'
 import { Widget } from '../../../components/widget'
 import { Title } from '../../../components/title'
-import { Trip, TripPlace } from '../../../types/trip'
+import { Trip } from '../../../types/trip'
 import { formatHours } from '../../../components/date-input'
 import { Comment } from '../../../components/comment'
-import { getCurrentTripDay } from './trip-section'
 
 export type ProgressProps = {
 	day: number
 	trip: Trip
-	place?: TripPlace
+	index: number
 }
 
 export type MapWidgetProps = ProgressProps
 
-export const CurrentTripWidget = ({ day, trip, place }: MapWidgetProps) => {
+export const CurrentTripWidget = ({ index, day, trip }: MapWidgetProps) => {
 	const navigation = useNavigation<any>()
 
 	return (
 		<Widget
-			footer={<Footer day={day} trip={trip} place={place} />}
+			footer={<Footer day={day} trip={trip} index={index} />}
 			shadow
-			onPress={() => navigation.navigate('/map', { trip, day })}
+			onPress={() => navigation.navigate('/map', { index, trip, day })}
 		>
 			<MapView
 				style={styles.map}
@@ -41,10 +40,12 @@ export const CurrentTripWidget = ({ day, trip, place }: MapWidgetProps) => {
 	)
 }
 
-const Footer = ({ place, day }: ProgressProps) => {
+const Footer = ({ trip, day, index }: ProgressProps) => {
+	const place = trip.days[day].places[index]
+
 	return (
 		<View style={styles.footer}>
-			<Title text={'Day ' + day} />
+			<Title text={'Day ' + (day + 1)} />
 			<View style={styles.next}>
 				{place && (
 					<>

@@ -8,17 +8,14 @@ import { Trip, TripPlace } from '../../types/trip'
 import { PlaceSection } from './components/place-section'
 
 export type TripMapParams = RouteProp<{
-	params: { trip: Trip; day: number }
+	params: { trip: Trip; day: number; index?: number }
 }>
 
 export const TripMap = () => {
-	const { trip, day } = useRoute<TripMapParams>().params
-	const places = trip.days[day - 1].places
+	const { index, day, trip } = useRoute<TripMapParams>().params
+	const places = trip.days[day].places
 
-	const [marker, setMarker] = useState<LatLng>({
-		longitude: places[0].info.geometry.location.lng,
-		latitude: places[0].info.geometry.location.lat
-	})
+	const [marker, setMarker] = useState<LatLng>()
 
 	const mapRef = useRef<MapView>(null)
 	const region = useRef<Animated.Value>(new Animated.Value(0)).current
@@ -45,10 +42,14 @@ export const TripMap = () => {
 	return (
 		<Container>
 			<MapHeader day={day} id={trip.id} />
-			<MapView style={styles.map} region={{ ...marker, latitudeDelta: 0.005, longitudeDelta: 0.005 }} ref={mapRef}>
-				<Marker coordinate={marker} />
+			<MapView
+				ref={mapRef}
+				style={styles.map}
+				region={marker ? { ...marker, latitudeDelta: 0.005, longitudeDelta: 0.005 } : undefined}
+			>
+				{marker && <Marker coordinate={marker} />}
 			</MapView>
-			<PlaceSection places={places} onPlaceChange={onPlaceChange} />
+			<PlaceSection index={index} places={places} onPlaceChange={onPlaceChange} />
 		</Container>
 	)
 }
