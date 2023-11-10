@@ -1,8 +1,8 @@
 import { StyleSheet, View } from 'react-native'
+import { formatAgo } from '../../../../components/date-input'
 import { Subtitle } from '../../../../components/subtitle'
 import { TripDate } from '../../../../types/trip'
 import { TripDates } from './trip-dates'
-import format from 'humanize-duration'
 
 export type DateFormProps = {
 	date?: TripDate
@@ -12,7 +12,7 @@ export type DateFormProps = {
 export const DateForm = ({ date, onDate }: DateFormProps) => {
 	const getTimeText = () => {
 		if (date) {
-			const days = format(date.end.getTime() - date.start.getTime(), { units: ['d'], round: true })
+			const days = formatAgo(new Date(date.start), new Date(date.end))
 
 			if (days != '0 days') {
 				return 'Duration: ' + days

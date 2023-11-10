@@ -2,6 +2,7 @@ import DateTimePicker, { DateTimePickerAndroid } from '@react-native-community/d
 import { Platform, StyleSheet, View } from 'react-native'
 import { Comment } from './comment'
 import { Link } from './link'
+import format from 'humanize-duration'
 
 export type DateInputProps = {
 	title?: string
@@ -46,4 +47,8 @@ export const formatDate = (date: Date) => {
 
 export const formatHours = (date: Date) => {
 	return date.toLocaleString('en-US', { hour: '2-digit', minute: '2-digit', hour12: true })
+}
+
+export const formatAgo = (start: Date, end: Date, hours?: boolean) => {
+	return format(end.getTime() - start.getTime(), { units: [hours ? 'h' : 'd'], round: true })
 }
