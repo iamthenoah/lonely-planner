@@ -1,7 +1,7 @@
 import { Dimensions, NativeScrollEvent, NativeSyntheticEvent, ScrollView, StyleSheet, View } from 'react-native'
 import { TripPlace } from '../../../types/trip'
 import { PlaceWidget } from './place-widget'
-import { useEffect } from 'react'
+import { useRef } from 'react'
 
 export type PlaceSectionProps = {
 	index?: number
@@ -11,10 +11,12 @@ export type PlaceSectionProps = {
 
 export const PlaceSection = ({ index = 0, places, onPlaceChange }: PlaceSectionProps) => {
 	const { width } = Dimensions.get('screen')
+	const scroller = useRef<ScrollView>(null)
 
-	useEffect(() => {
-		onPlaceChange(places[index])
-	}, [])
+	const setPlace = (index: number) => {
+		scroller.current?.scrollTo({ x: index * width })
+		places[index] && onPlaceChange(places[index])
+	}
 
 	const onScrollStopped = (event: NativeSyntheticEvent<NativeScrollEvent>) => {
 		const index = Math.floor(event.nativeEvent.contentOffset.x / width)
@@ -30,6 +32,8 @@ export const PlaceSection = ({ index = 0, places, onPlaceChange }: PlaceSectionP
 			decelerationRate={0}
 			snapToInterval={width}
 			snapToAlignment={'center'}
+			onLayout={() => setPlace(index)}
+			ref={scroller}
 		>
 			<View style={styles.content}>
 				{places.map(place => (
