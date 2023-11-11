@@ -2,7 +2,7 @@
 	"expo": {
 		"name": "Lonely Planner",
 		"slug": "lonely-planner",
-		"version": "1.0.5",
+		"version": "1.0.6",
 		"orientation": "portrait",
 		"icon": "./assets/icon.png",
 		"userInterfaceStyle": "light",
@@ -37,6 +37,12 @@
 				"expo-location",
 				{
 					"locationAlwaysAndWhenInUsePermission": "Allow $(PRODUCT_NAME) to use your location? $(PRODUCT_NAME) does not collect this data and solely uses it to show your location on a map."
+				}
+			],
+			[
+				"expo-av",
+				{
+					"microphonePermission": "Allow $(PRODUCT_NAME) to access your microphone? $(PRODUCT_NAME) does not collect this data and solely uses it for making searches instead of using the keyboard."
 				}
 			]
 		]
