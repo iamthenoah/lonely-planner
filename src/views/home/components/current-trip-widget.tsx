@@ -7,7 +7,8 @@ import { formatHours } from '../../../components/date-input'
 import { Comment } from '../../../components/comment'
 import { Map } from '../../../components/map'
 
-export type MapWidgetProps = ProgressProps & {
+export type MapWidgetProps = {
+	day: number
 	trip: Trip
 	index: number
 }

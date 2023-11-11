@@ -14,9 +14,9 @@ export const Header = ({ left, center, right, seamless, children }: HeaderProps)
 		<View style={{ ...styles.container, borderColor: seamless ? 'white' : '#EDEEEF' }}>
 			<Content>
 				<View style={styles.content}>
-					<View style={styles.left}>{left && left}</View>
-					<View style={styles.center}>{center && center}</View>
-					<View style={styles.right}>{right && right}</View>
+					{left && <View>{left}</View>}
+					{center && <View style={styles.center}>{center}</View>}
+					{right && <View>{right}</View>}
 				</View>
 				{children && <View style={styles.children}>{children}</View>}
 			</Content>
@@ -32,17 +32,12 @@ const styles = StyleSheet.create({
 	content: {
 		alignItems: 'center',
 		flexDirection: 'row',
-		marginVertical: 15
-	},
-	left: {
-		flex: 1
+		width: '100%',
+		marginVertical: 15,
+		justifyContent: 'space-between'
 	},
 	center: {
 		alignItems: 'center'
-	},
-	right: {
-		flex: 1,
-		alignItems: 'flex-end'
 	},
 	children: {
 		marginBottom: 15

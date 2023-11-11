@@ -35,11 +35,13 @@ export const Map = ({ onPlace, place, interactive = true, style }: MapProps) => 
 	}
 
 	const onPress = async (event: MapPressEvent) => {
-		const coordinate = event.nativeEvent.coordinate
-		const places = await getNearestPlace(coordinate.latitude, coordinate.longitude)
-		const place = await getPlaceInfo(places[0].place_id)
-		setViewport(coordinate)
-		onPlace && onPlace(place)
+		if (onPlace) {
+			const coordinate = event.nativeEvent.coordinate
+			const places = await getNearestPlace(coordinate.latitude, coordinate.longitude)
+			const place = await getPlaceInfo(places[0].place_id)
+			setViewport(coordinate)
+			onPlace(place)
+		}
 	}
 
 	return (

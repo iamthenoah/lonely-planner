@@ -2,7 +2,7 @@ import { useNavigation } from '@react-navigation/native'
 import { IconButton } from '../../../components/icon-button'
 import { Header } from '../../../components/layout/header'
 import { PlaceInfo } from '../../../types/api'
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, Text } from 'react-native'
 import { truncate } from '../../../components/place-button'
 
 export type PlaceHeaderProps = {
