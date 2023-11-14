@@ -2,7 +2,7 @@
 	"expo": {
 		"name": "Trip Lookout",
 		"slug": "lonely-planner",
-		"version": "1.0.8",
+		"version": "1.0.9",
 		"orientation": "portrait",
 		"icon": "./assets/icon.png",
 		"userInterfaceStyle": "light",
@@ -36,7 +36,9 @@
 			[
 				"expo-location",
 				{
-					"locationAlwaysAndWhenInUsePermission": "Allow $(PRODUCT_NAME) to use your location? $(PRODUCT_NAME) does not collect this data. Your location will be used to show your location on a map within the app."
+					"locationAlwaysAndWhenInUsePermission": "Allow $(PRODUCT_NAME) to use your location? $(PRODUCT_NAME) does not collect this data and solely uses it to show your location on a map within the app.",
+					"locationAlwaysPermission": "Allow $(PRODUCT_NAME) to use your location? $(PRODUCT_NAME) does not collect this data and solely uses it to show your location on a map within the app.",
+					"locationWhenInUsePermission": "Allow $(PRODUCT_NAME) to use your location? $(PRODUCT_NAME) does not collect this data and solely uses it to show your location on a map within the app."
 				}
 			],
 			[
