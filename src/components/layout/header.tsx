@@ -9,7 +9,7 @@ export type HeaderProps = PropsWithChildren & {
 	seamless?: boolean
 }
 
-export const Header = ({ left, center, right, seamless, children }: HeaderProps) => {
+export const Header = ({ left = <></>, center, right = <></>, seamless, children }: HeaderProps) => {
 	return (
 		<View style={{ ...styles.container, borderColor: seamless ? 'white' : '#EDEEEF' }}>
 			<Content>

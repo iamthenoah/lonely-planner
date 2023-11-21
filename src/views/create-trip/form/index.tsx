@@ -14,7 +14,6 @@ import { useTrips } from '../../../contexts/trip-context'
 import { Header } from '../../../components/layout/header'
 import { IconButton } from '../../../components/icon-button'
 import { Container } from '../../../components/layout/container'
-import { Content } from '../../../components/layout/content'
 
 const buttons = [
 	['Next', 'cancel'],

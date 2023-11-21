@@ -10,6 +10,7 @@ export const Title = ({ text }: TitleProps) => {
 
 const styles = StyleSheet.create({
 	container: {
+		textTransform: 'capitalize',
 		fontSize: 22,
 		fontWeight: 'bold',
 		color: '#6A6A6A'
