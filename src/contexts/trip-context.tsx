@@ -55,27 +55,30 @@ export const TripProvider = ({ children }: PropsWithChildren) => {
 	}
 
 	const getPhotos = async (tripId: string, day: number, coordinates: LatLng) => {
-		const trip = get(tripId)!
+		const trip = get(tripId)
 
-		const date = new Date(trip.dates.start)
-		date.setDate(date.getDate() + day)
-		const createdAfter = new Date(date)
-		date.setDate(date.getDate() + 1)
-		const createdBefore = new Date(date)
+		if (trip) {
+			const date = new Date(trip.dates.start)
+			date.setDate(date.getDate() + day)
+			const createdAfter = new Date(date)
+			date.setDate(date.getDate() + 1)
+			const createdBefore = new Date(date)
 
-		const assets = await MediaLibrary.getAssetsAsync({ createdAfter, createdBefore })
-		const photos = []
+			const assets = await MediaLibrary.getAssetsAsync({ createdAfter, createdBefore })
+			const photos = []
 
-		if (assets) {
-			for (const asset of assets.assets) {
-				const photo = await MediaLibrary.getAssetInfoAsync(asset.id)
+			if (assets) {
+				for (const asset of assets.assets) {
+					const photo = await MediaLibrary.getAssetInfoAsync(asset.id)
 
-				if (photo.location && isWithin(photo.location, coordinates, 1)) {
-					photos.push(photo.uri)
+					if (photo.location && isWithin(photo.location, coordinates, 1)) {
+						photos.push(photo.uri)
+					}
 				}
 			}
+			return photos
 		}
-		return photos
+		return []
 	}
 
 	const getOngoing = () => {

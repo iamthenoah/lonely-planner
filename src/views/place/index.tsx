@@ -22,7 +22,7 @@ export const Place = () => {
 	const [photos, setPhotos] = useState<string[]>([])
 
 	useEffect(() => {
-		if (info) {
+		if (info?.id) {
 			const { lat, lng } = place.geometry.location
 			trips.getPhotos(info?.id, info.day, { latitude: lat, longitude: lng }).then(setPhotos)
 		} else if (place.photos) {
