@@ -23,7 +23,7 @@ const isWithin = (origin: LatLng, location: LatLng, distance: number) => {
 const TripContext = createContext<{
 	trips: Trip[]
 	get: (id: string) => Trip | null
-	getPhotos: (tripId: string, day: number, coordinate: LatLng) => Promise<MediaLibrary.Asset[]>
+	getPhotos: (tripId: string, day: number, coordinate: LatLng) => Promise<string[]>
 	getOngoing: () => Trip | null
 	create: (place: PlaceInfo, dates: TripDate) => Promise<Trip>
 	remove: (id: string) => Promise<void>
@@ -64,7 +64,6 @@ export const TripProvider = ({ children }: PropsWithChildren) => {
 		const createdBefore = new Date(date)
 
 		const assets = await MediaLibrary.getAssetsAsync({ createdAfter, createdBefore })
-
 		const photos = []
 
 		if (assets) {
@@ -72,7 +71,7 @@ export const TripProvider = ({ children }: PropsWithChildren) => {
 				const photo = await MediaLibrary.getAssetInfoAsync(asset.id)
 
 				if (photo.location && isWithin(photo.location, coordinates, 1)) {
-					photos.push(photo)
+					photos.push(photo.uri)
 				}
 			}
 		}

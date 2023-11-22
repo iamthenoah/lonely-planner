@@ -16,7 +16,7 @@ export type PlaceWidgetProps = {
 
 export const PlaceWidget = ({ id, day, index, place, editable }: PlaceWidgetProps) => {
 	const trips = useTrips()
-	const [photos, setPhotos] = useState<Asset[]>([])
+	const [photos, setPhotos] = useState<string[]>([])
 
 	useEffect(() => {
 		const { lat, lng } = place.info.geometry.location
@@ -35,7 +35,7 @@ export const PlaceWidget = ({ id, day, index, place, editable }: PlaceWidgetProp
 			</View>
 			<ScrollView horizontal showsHorizontalScrollIndicator={false}>
 				<View style={styles.photos}>
-					{editable && photos.map(({ uri }) => <Image key={Math.random()} style={styles.image} source={{ uri }} />)}
+					{editable && photos.map(uri => <Image key={Math.random()} style={styles.image} source={{ uri }} />)}
 				</View>
 			</ScrollView>
 		</View>
