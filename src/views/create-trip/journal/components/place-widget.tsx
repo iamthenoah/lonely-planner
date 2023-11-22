@@ -4,7 +4,6 @@ import { useTrips } from '../../../../contexts/trip-context'
 import { PlaceButton } from '../../../../components/place-button'
 import { TripPlace } from '../../../../types/trip'
 import { useEffect, useState } from 'react'
-import { Asset } from 'expo-media-library'
 
 export type PlaceWidgetProps = {
 	id: string
