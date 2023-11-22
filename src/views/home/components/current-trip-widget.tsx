@@ -1,28 +1,18 @@
 import { StyleSheet, View } from 'react-native'
-import { useNavigation } from '@react-navigation/native'
 import { Widget } from '../../../components/widget'
 import { Title } from '../../../components/title'
-import { Trip, TripPlace } from '../../../types/trip'
+import { TripPlace } from '../../../types/trip'
 import { formatHours } from '../../../components/date-input'
 import { Comment } from '../../../components/comment'
 import { Map } from '../../../components/map'
 
-export type MapWidgetProps = {
-	day: number
-	trip: Trip
-	index: number
+export type MapWidgetProps = ProgressProps & {
+	onPress: () => void
 }
 
-export const CurrentTripWidget = ({ index, day, trip }: MapWidgetProps) => {
-	const navigation = useNavigation<any>()
-	const place = trip.days[day].places[index]
-
+export const CurrentTripWidget = ({ day, place, onPress }: MapWidgetProps) => {
 	return (
-		<Widget
-			footer={<Footer day={day} place={place} />}
-			shadow
-			onPress={() => navigation.navigate('/map', { index, trip, day })}
-		>
+		<Widget footer={<Footer day={day} place={place} />} shadow onPress={onPress}>
 			<Map style={styles.map} place={place.info} interactive={false} />
 		</Widget>
 	)
@@ -38,12 +28,8 @@ const Footer = ({ place, day }: ProgressProps) => {
 		<View style={styles.footer}>
 			<Title text={'Day ' + (day + 1)} />
 			<View style={styles.next}>
-				{place && (
-					<>
-						<Title text={place.info.name} />
-						<Comment text={formatHours(new Date(place.time))} />
-					</>
-				)}
+				<Title text={place.info.name} />
+				<Comment text={formatHours(new Date(place.time))} />
 			</View>
 		</View>
 	)

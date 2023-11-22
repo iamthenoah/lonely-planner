@@ -1,6 +1,7 @@
 import { useEffect } from 'react'
 import { NavigationContainer } from '@react-navigation/native'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
+import * as MediaLibrary from 'expo-media-library'
 import * as Location from 'expo-location'
 import { Home } from './views/home'
 import { CreateTripForm } from './views/create-trip/form'
@@ -19,6 +20,7 @@ const modal: any = { ...options, presentation: 'modal', gestureEnabled: true }
 export default () => {
 	useEffect(() => {
 		Location.requestForegroundPermissionsAsync()
+		MediaLibrary.requestPermissionsAsync()
 	}, [])
 
 	return (
