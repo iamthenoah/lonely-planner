@@ -10,6 +10,7 @@ import { TripProvider } from './contexts/trip-context'
 import { Discover } from './views/discover'
 import { Place } from './views/place'
 import { TripMap } from './views/map'
+import { Onboarding } from './views/onboarding'
 
 const { Screen, Navigator } = createNativeStackNavigator()
 
@@ -32,6 +33,7 @@ export default () => {
 					<Screen name="/trip/discover" component={Discover} options={modal} />
 					<Screen name="/place" component={Place} options={modal} />
 					<Screen name="/map" component={TripMap} options={options} />
+					<Screen name="/onboarding" component={Onboarding} options={options} />
 				</Navigator>
 			</NavigationContainer>
 		</TripProvider>
