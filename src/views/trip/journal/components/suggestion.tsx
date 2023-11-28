@@ -16,6 +16,7 @@ export const Suggestion = ({ place }: SuggestionProps) => {
 
 const styles = StyleSheet.create({
 	container: {
+		flex: 1,
 		borderRadius: 20,
 		backgroundColor: '#d3e5ff'
 	}
