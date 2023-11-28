@@ -2,6 +2,7 @@ import { useEffect } from 'react'
 import { NavigationContainer } from '@react-navigation/native'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
 import * as Location from 'expo-location'
+import * as SplashScreen from 'expo-splash-screen'
 import { Home } from './views/home'
 import { CreateTripForm } from './views/create-trip/form'
 import { CreateTripMap } from './views/create-trip/map'
@@ -17,6 +18,8 @@ const { Screen, Navigator } = createNativeStackNavigator()
 
 const options = { headerShown: false, gestureEnabled: false }
 const modal: any = { ...options, presentation: 'modal', gestureEnabled: true }
+
+SplashScreen.preventAutoHideAsync()
 
 export default () => {
 	useEffect(() => {
