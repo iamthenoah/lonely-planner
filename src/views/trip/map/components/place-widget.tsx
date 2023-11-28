@@ -35,7 +35,7 @@ export const PlaceWidget = ({ id, index, day, place, time }: PlaceWidgetProps) =
 	const navigation = useNavigation<any>()
 
 	const onPress = async () => {
-		navigation.navigate('/trip/create/journal', { id, day })
+		navigation.navigate('/trip/journal', { id, day })
 	}
 
 	return (

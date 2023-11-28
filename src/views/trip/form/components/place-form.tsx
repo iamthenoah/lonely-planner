@@ -52,7 +52,8 @@ const styles = StyleSheet.create({
 		width: '80%'
 	},
 	places: {
-		width: '100%'
+		width: '100%',
+		overflow: 'visible'
 	},
 	place: {
 		padding: 20

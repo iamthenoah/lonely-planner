@@ -15,7 +15,7 @@ export const MapHeader = ({ id, day }: MapHeaderProps) => {
 		<Header
 			left={<IconButton icon="chevron-back" onPress={navigation.goBack} />}
 			center={<Title text={'Day ' + (day + 1)} />}
-			right={<IconButton icon="map-outline" onPress={() => navigation.navigate('/trip/create/journal', { id, day })} />}
+			right={<IconButton icon="map-outline" onPress={() => navigation.navigate('/trip/journal', { id, day })} />}
 		/>
 	)
 }

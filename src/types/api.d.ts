@@ -15,6 +15,11 @@ export type PlaceInfoApiResponse = {
 	result: PlaceInfo
 }
 
+export type PlaceInterest = {
+	info: PlaceInfo
+	type: string
+}
+
 export type Place = {
 	description: string
 	matched_substrings: MatchedSubstring[]

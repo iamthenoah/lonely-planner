@@ -32,11 +32,13 @@ export const PlaceWidget = ({ id, day, index, place, editable }: PlaceWidgetProp
 				<PlaceButton place={place.info} info={{ id, day, index, time: place.time }} />
 				{editable && <IconButton icon="close" color="red" seamless onPress={onRemove} />}
 			</View>
-			<ScrollView horizontal showsHorizontalScrollIndicator={false}>
-				<View style={styles.photos}>
-					{editable && photos.map(uri => <Image key={Math.random()} style={styles.image} source={{ uri }} />)}
-				</View>
-			</ScrollView>
+			{photos.length > 0 && (
+				<ScrollView horizontal showsHorizontalScrollIndicator={false}>
+					<View style={styles.photos}>
+						{editable && photos.map(uri => <Image key={Math.random()} style={styles.image} source={{ uri }} />)}
+					</View>
+				</ScrollView>
+			)}
 		</View>
 	)
 }

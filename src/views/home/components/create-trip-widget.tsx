@@ -7,7 +7,7 @@ export const CreateTripWidget = () => {
 	const navigation = useNavigation()
 
 	return (
-		<Widget style={styles.container} onPress={() => navigation.navigate('/trip/create/form' as never)}>
+		<Widget style={styles.container} onPress={() => navigation.navigate('/trip/form' as never)}>
 			<Link text="create" />
 		</Widget>
 	)
