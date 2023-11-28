@@ -8,7 +8,7 @@ import { DiscoverHeader } from './components/discover-header'
 import { DiscoverFooter } from './components/discover-footer'
 import { Modal } from '../../../components/layout/modal'
 
-const discover = require('../../assets/trips.json') as Trip[]
+const discover = require('../../../assets/trips.json') as Trip[]
 
 export type DiscoverParams = RouteProp<{
 	params: { id: string }
