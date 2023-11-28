@@ -26,6 +26,7 @@ export const Header = ({ left = <></>, center, right = <></>, seamless, children
 
 const styles = StyleSheet.create({
 	container: {
+		zIndex: 1000,
 		borderBottomWidth: 2,
 		backgroundColor: 'white'
 	},
