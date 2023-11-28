@@ -12,10 +12,7 @@ export const AddPlaceButton = ({ id, day, count }: AddPlaceButtonProps) => {
 	const navigation = useNavigation<any>()
 
 	return (
-		<TouchableOpacity
-			style={styles.container}
-			onPress={() => navigation.navigate('/trip/create/map', { id, day, count })}
-		>
+		<TouchableOpacity style={styles.container} onPress={() => navigation.navigate('/trip/map', { id, day, count })}>
 			<Ionicons size={20} color="#0057D9" name="add" />
 			<Text style={styles.text}>Add Location</Text>
 		</TouchableOpacity>

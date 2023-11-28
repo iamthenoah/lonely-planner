@@ -1,10 +1,10 @@
 import { useState } from 'react'
 import { useNavigation } from '@react-navigation/native'
 import { StyleSheet, View } from 'react-native'
-import { Button } from '../../../components/button'
-import { DateInput } from '../../../components/date-input'
-import { useTrips } from '../../../contexts/trip-context'
-import { Trip } from '../../../types/trip'
+import { Button } from '../../../../components/button'
+import { DateInput } from '../../../../components/date-input'
+import { useTrips } from '../../../../contexts/trip-context'
+import { Trip } from '../../../../types/trip'
 
 export type DiscoverFooterProps = {
 	trip: Trip
@@ -18,7 +18,7 @@ export const DiscoverFooter = ({ trip }: DiscoverFooterProps) => {
 	const onPress = async () => {
 		const { id } = await trips.duplicate(start, trip)
 		navigation.goBack()
-		navigation.navigate('/trip/create/journal', { id })
+		navigation.navigate('/trip/journal', { id })
 	}
 
 	return (

@@ -53,7 +53,8 @@ const styles = StyleSheet.create({
 	},
 	content: {
 		paddingVertical: 5,
-		marginHorizontal: 10
+		marginHorizontal: 10,
+		overflow: 'visible'
 	},
 	add: {
 		alignItems: 'center',

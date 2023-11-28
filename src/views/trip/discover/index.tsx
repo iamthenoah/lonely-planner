@@ -1,12 +1,12 @@
 import React, { useState } from 'react'
 import { View } from 'react-native'
-import { DaysTab } from '../trip/journal/components/days-tab'
-import { TripDayPanel } from '../trip/journal/components/trip-day-panel'
+import { DaysTab } from '../journal/components/days-tab'
+import { TripDayPanel } from '../journal/components/trip-day-panel'
 import { RouteProp, useRoute } from '@react-navigation/native'
-import { Trip } from '../../types/trip'
+import { Trip } from '../../../types/trip'
 import { DiscoverHeader } from './components/discover-header'
 import { DiscoverFooter } from './components/discover-footer'
-import { Modal } from '../../components/layout/modal'
+import { Modal } from '../../../components/layout/modal'
 
 const discover = require('../../assets/trips.json') as Trip[]
 

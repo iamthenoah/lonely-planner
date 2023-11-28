@@ -42,7 +42,7 @@ export const CurrentTripSection = ({ trip }: CurrentTripSectionProps) => {
 	const place = trip.days[day].places[index]
 
 	const onPress = () => {
-		navigation.navigate('/trip/create/journal', { id: trip.id, day })
+		navigation.navigate('/trip/journal', { id: trip.id, day })
 	}
 
 	return (

@@ -1,7 +1,7 @@
 import { useNavigation } from '@react-navigation/native'
-import { Info } from '../../../components/info'
-import { IconButton } from '../../../components/icon-button'
-import { Header } from '../../../components/layout/header'
+import { Info } from '../../../../components/info'
+import { IconButton } from '../../../../components/icon-button'
+import { Header } from '../../../../components/layout/header'
 
 export type DiscoverHeaderProps = {
 	place: string

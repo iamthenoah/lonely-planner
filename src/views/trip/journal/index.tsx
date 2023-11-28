@@ -7,15 +7,15 @@ import { useTrips } from '../../../contexts/trip-context'
 import { useNavigation } from '@react-navigation/native'
 import { Container } from '../../../components/layout/container'
 
-export type CreateTripJournalParams = RouteProp<{
+export type TripJournalParams = RouteProp<{
 	params: { id: string; day?: number }
 }>
 
-export const CreateTripJournal = () => {
+export const TripJournal = () => {
 	const navigation = useNavigation<any>()
 
 	const trips = useTrips()
-	const route = useRoute<CreateTripJournalParams>()
+	const route = useRoute<TripJournalParams>()
 	const [day, setDay] = useState(route.params.day || 0)
 
 	const id = route.params.id

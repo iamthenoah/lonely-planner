@@ -15,7 +15,7 @@ export const TripWidget = ({ trip }: TripWidgetProps) => {
 	const navigation = useNavigation<any>()
 
 	return (
-		<Widget onPress={() => navigation.navigate('/trip/create/journal', { id: trip.id })}>
+		<Widget onPress={() => navigation.navigate('/trip/journal', { id: trip.id })}>
 			<ImageBackground source={{ uri: getImage(trip.place.photos ? trip.place.photos[0].photo_reference : '') }}>
 				<LinearGradient style={styles.container} colors={['rgba(0,0,0,0)', 'rgba(0,0,0,.5)']}>
 					<Text style={styles.location}>{trip.place.name}</Text>

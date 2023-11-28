@@ -7,12 +7,12 @@ import { Container } from '../../../components/layout/container'
 import { useTrips } from '../../../contexts/trip-context'
 import { Map } from '../../../components/map'
 
-export type CreateTripMapParams = RouteProp<{
+export type TripMapParams = RouteProp<{
 	params: { id: string; day: number; count: number }
 }>
 
-export const CreateTripMap = () => {
-	const { id, day, count } = useRoute<CreateTripMapParams>().params
+export const TripMap = () => {
+	const { id, day, count } = useRoute<TripMapParams>().params
 	const [place, setPlace] = useState<PlaceInfo | null>()
 	const trips = useTrips()
 

@@ -5,10 +5,10 @@ import * as MediaLibrary from 'expo-media-library'
 import * as Location from 'expo-location'
 import { Home } from './views/home'
 import { CreateTripForm } from './views/trip/form'
-import { CreateTripMap } from './views/trip/map'
-import { CreateTripJournal } from './views/trip/journal'
+import { TripMap } from './views/trip/map'
+import { TripJournal } from './views/trip/journal'
 import { TripProvider } from './contexts/trip-context'
-import { Discover } from './views/discover'
+import { Discover } from './views/trip/discover'
 import { Place } from './views/place'
 import { TripMap } from './views/map'
 
@@ -28,9 +28,9 @@ export default () => {
 			<NavigationContainer>
 				<Navigator initialRouteName="/home" screenOptions={{ contentStyle: { backgroundColor: 'white' } }}>
 					<Screen name="/home" component={Home} options={options} />
-					<Screen name="/trip/create/form" component={CreateTripForm} options={options} />
-					<Screen name="/trip/create/map" component={CreateTripMap} options={options} />
-					<Screen name="/trip/create/journal" component={CreateTripJournal} options={options} />
+					<Screen name="/trip/form" component={CreateTripForm} options={options} />
+					<Screen name="/trip/map" component={TripMap} options={options} />
+					<Screen name="/trip/journal" component={TripJournal} options={options} />
 					<Screen name="/trip/discover" component={Discover} options={modal} />
 					<Screen name="/place" component={Place} options={modal} />
 					<Screen name="/map" component={TripMap} options={options} />
