@@ -1,12 +1,12 @@
-import { CurrentTripSection } from './components/trip-section'
+import { useEffect } from 'react'
+import { useUser } from '../../contexts/user-context'
+import { useNavigation } from '@react-navigation/native'
+import { CurrentTripSection } from './components/current-trip-section'
 import { TripsSection } from './components/trips-section'
 import { DiscoverSection } from './components/discover-section'
 import { useTrips } from '../../contexts/trip-context'
 import { ScrollView } from 'react-native'
 import { Container } from '../../components/layout/container'
-import { useEffect } from 'react'
-import { useUser } from '../../contexts/user-context'
-import { useNavigation } from '@react-navigation/native'
 
 export const Home = () => {
 	const trips = useTrips()
@@ -23,7 +23,7 @@ export const Home = () => {
 
 	return (
 		<Container>
-			<ScrollView>
+			<ScrollView style={{ overflow: 'visible' }}>
 				{ongoing && <CurrentTripSection trip={ongoing} />}
 				<TripsSection />
 				<DiscoverSection />

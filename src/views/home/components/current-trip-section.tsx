@@ -38,16 +38,20 @@ export type CurrentTripSectionProps = {
 export const CurrentTripSection = ({ trip }: CurrentTripSectionProps) => {
 	const navigation = useNavigation<any>()
 	const day = getCurrentTripDay(trip)
+	const index = getNextPlace(trip)
+	const place = trip.days[day].places[index]
 
 	const onPress = () => {
 		navigation.navigate('/trip/create/journal', { id: trip.id, day })
 	}
 
 	return (
-		<Content>
-			<Section name="Current Trip" action={<Link text="view day" onPress={onPress} />}>
-				<CurrentTripWidget trip={trip} day={day} index={getNextPlace(trip)} />
-			</Section>
-		</Content>
+		place && (
+			<Content>
+				<Section name="Current Trip" action={<Link text="view day" onPress={onPress} />}>
+					<CurrentTripWidget trip={trip} day={day} index={index} place={place} />
+				</Section>
+			</Content>
+		)
 	)
 }

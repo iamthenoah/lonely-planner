@@ -11,16 +11,16 @@ export type MapWidgetProps = {
 	day: number
 	trip: Trip
 	index: number
+	place: TripPlace
 }
 
-export const CurrentTripWidget = ({ index, day, trip }: MapWidgetProps) => {
+export const CurrentTripWidget = ({ index, day, trip, place }: MapWidgetProps) => {
 	const navigation = useNavigation<any>()
-	const place = trip.days[day].places[index]
 
 	return (
 		<Widget
-			footer={<Footer day={day} place={place} />}
 			shadow
+			footer={<Footer day={day} place={place} />}
 			onPress={() => navigation.navigate('/map', { index, trip, day })}
 		>
 			<Map style={styles.map} place={place.info} interactive={false} />
