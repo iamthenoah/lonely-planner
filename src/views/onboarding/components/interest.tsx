@@ -1,6 +1,6 @@
 import { useState } from 'react'
-import { Widget } from './widget'
-import { Title } from './title'
+import { Widget } from '../../../components/widget'
+import { Title } from '../../../components/title'
 
 export type InterestProps = {
 	title: string
@@ -13,16 +13,13 @@ export const Interest = ({ title, icon, onSelected, onDeselected }: InterestProp
 	const [selected, setSelected] = useState(false)
 
 	const onPress = () => {
-		setSelected(!selected)
+		setSelected(true)
+		console.log(selected)
 		selected ? onSelected() : onDeselected()
 	}
 
 	return (
-		<Widget
-			onPress={onPress}
-			shadow={selected}
-			style={{ borderColor: selected ? '#0057D9' : '#EDEEEF', borderWidth: selected ? 4 : 2 }}
-		>
+		<Widget onPress={onPress} style={{ borderColor: selected ? '#0057D9' : '#EDEEEF', borderWidth: selected ? 4 : 2 }}>
 			<Title text={title} />
 		</Widget>
 	)

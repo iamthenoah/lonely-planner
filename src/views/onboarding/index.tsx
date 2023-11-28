@@ -1,11 +1,11 @@
 import { useState } from 'react'
-import { Dimensions, FlatList, StyleSheet } from 'react-native'
+import { FlatList, StyleSheet } from 'react-native'
 import { useNavigation } from '@react-navigation/native'
 import { PoiInterest, Pois } from '../../types/poi'
 import { IconButton } from '../../components/icon-button'
 import { Container } from '../../components/layout/container'
 import { Header } from '../../components/layout/header'
-import { Interest } from '../../components/interest'
+import { Interest } from './components/interest'
 
 export const Onboarding = () => {
 	const [intrests, setIntrests] = useState<PoiInterest[]>([])
@@ -23,7 +23,7 @@ export const Onboarding = () => {
 		<Container>
 			<Header seamless right={<IconButton icon="close" onPress={() => navigation.navigate('/home')} />} />
 			<FlatList
-				style={styles.container}
+				style={{ overflow: 'visible' }}
 				data={Object.entries(Pois)}
 				numColumns={2}
 				keyExtractor={() => Math.random().toString()}
@@ -41,7 +41,5 @@ export const Onboarding = () => {
 }
 
 const styles = StyleSheet.create({
-	container: {
-		width: Dimensions.get('screen').width
-	}
+	container: {}
 })

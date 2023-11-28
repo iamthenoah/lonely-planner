@@ -1,6 +1,6 @@
-export const Restaurant = ['cafe', 'bakery', 'bar', 'buffet', 'restaurant', 'food', 'meal_delivery', 'meal_takeaway']
+export const restaurant = ['cafe', 'bakery', 'bar', 'buffet', 'restaurant', 'food', 'meal_delivery', 'meal_takeaway']
 
-export const Entertainment = [
+export const entertainment = [
 	'amusement_park',
 	'aquarium',
 	'bowling_alley',
@@ -13,9 +13,9 @@ export const Entertainment = [
 	'zoo'
 ]
 
-export const Explore = ['art_gallery', 'library', 'museum', 'park']
+export const explore = ['art_gallery', 'library', 'museum', 'park']
 
-export const Travel = [
+export const travel = [
 	'airport',
 	'bus_station',
 	'car_rental',
@@ -25,7 +25,7 @@ export const Travel = [
 	'travel_agency'
 ]
 
-export const Services = [
+export const services = [
 	'atm',
 	'bank',
 	'courthouse',
@@ -40,7 +40,7 @@ export const Services = [
 	'real_estate_agency'
 ]
 
-export const Shopping = [
+export const shopping = [
 	'bicycle_store',
 	'book_store',
 	'car_dealer',
@@ -62,11 +62,11 @@ export const Shopping = [
 	'store'
 ]
 
-export const Education = ['primary_school', 'school', 'secondary_school', 'university']
+export const education = ['primary_school', 'school', 'secondary_school', 'university']
 
-export const Fitness = ['gym', 'hair_care', 'spa']
+export const fitness = ['gym', 'hair_care', 'spa']
 
-export const Others = [
+export const others = [
 	'cemetery',
 	'church',
 	'city_hall',
@@ -88,15 +88,15 @@ export const Others = [
 ]
 
 export const Pois = {
-	restaurant: Restaurant,
-	entertainment: Entertainment,
-	explore: Explore,
-	travel: Travel,
-	services: Services,
-	shopping: Shopping,
-	education: Education,
-	fitness: Fitness,
-	others: Others
+	restaurant,
+	entertainment,
+	explore,
+	travel,
+	services,
+	shopping,
+	education,
+	fitness,
+	others
 }
 
 export type PoiInterest = keyof typeof Pois
