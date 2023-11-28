@@ -1,11 +1,9 @@
-import { Photo } from '../../../types/api'
 import { Image, ScrollView, StyleSheet, View } from 'react-native'
-import { getImage } from '../../../apis/google'
 import { Title } from '../../../components/title'
 import { Content } from '../../../components/layout/content'
 
 export type PlacePhotosProps = {
-	photos: Photo[]
+	photos: string[]
 }
 
 export const PlacePhotos = ({ photos }: PlacePhotosProps) => {
@@ -16,8 +14,8 @@ export const PlacePhotos = ({ photos }: PlacePhotosProps) => {
 			</Content>
 			<ScrollView horizontal showsHorizontalScrollIndicator={false}>
 				<View style={styles.photos}>
-					{Array.from(photos).map(photo => (
-						<Image key={Math.random()} style={styles.image} source={{ uri: getImage(photo.photo_reference) }} />
+					{photos.map(uri => (
+						<Image key={Math.random()} style={styles.image} source={{ uri }} />
 					))}
 				</View>
 			</ScrollView>

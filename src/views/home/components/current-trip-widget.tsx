@@ -1,11 +1,11 @@
 import { StyleSheet, View } from 'react-native'
-import { useNavigation } from '@react-navigation/native'
 import { Widget } from '../../../components/widget'
 import { Title } from '../../../components/title'
 import { Trip, TripPlace } from '../../../types/trip'
 import { formatHours } from '../../../components/date-input'
 import { Comment } from '../../../components/comment'
 import { Map } from '../../../components/map'
+import { useNavigation } from '@react-navigation/native'
 
 export type MapWidgetProps = {
 	day: number
@@ -38,12 +38,8 @@ const Footer = ({ place, day }: ProgressProps) => {
 		<View style={styles.footer}>
 			<Title text={'Day ' + (day + 1)} />
 			<View style={styles.next}>
-				{place && (
-					<>
-						<Title text={place.info.name} />
-						<Comment text={formatHours(new Date(place.time))} />
-					</>
-				)}
+				<Title text={place.info.name} />
+				<Comment text={formatHours(new Date(place.time))} />
 			</View>
 		</View>
 	)

@@ -2,8 +2,8 @@ import { Image, ScrollView, StyleSheet, View } from 'react-native'
 import { IconButton } from '../../../../components/icon-button'
 import { useTrips } from '../../../../contexts/trip-context'
 import { PlaceButton } from '../../../../components/place-button'
-import { getImage } from '../../../../apis/google'
 import { TripPlace } from '../../../../types/trip'
+import { useEffect, useState } from 'react'
 
 export type PlaceWidgetProps = {
 	id: string
@@ -15,6 +15,12 @@ export type PlaceWidgetProps = {
 
 export const PlaceWidget = ({ id, day, index, place, editable }: PlaceWidgetProps) => {
 	const trips = useTrips()
+	const [photos, setPhotos] = useState<string[]>([])
+
+	useEffect(() => {
+		const { lat, lng } = place.info.geometry.location
+		trips.getPhotos(id, day, { latitude: lat, longitude: lng }).then(setPhotos)
+	}, [id])
 
 	const onRemove = () => {
 		trips.update(id, trip => (trip.days[day].places = trip.days[day].places.filter((_, i) => i !== index)))
@@ -28,12 +34,7 @@ export const PlaceWidget = ({ id, day, index, place, editable }: PlaceWidgetProp
 			</View>
 			<ScrollView horizontal showsHorizontalScrollIndicator={false}>
 				<View style={styles.photos}>
-					{!editable &&
-						Array.from(place.info.photos || [])
-							.splice(1) // remove first image
-							.map(photo => (
-								<Image key={Math.random()} style={styles.image} source={{ uri: getImage(photo.photo_reference) }} />
-							))}
+					{editable && photos.map(uri => <Image key={Math.random()} style={styles.image} source={{ uri }} />)}
 				</View>
 			</ScrollView>
 		</View>

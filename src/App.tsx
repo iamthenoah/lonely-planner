@@ -1,6 +1,7 @@
 import { useEffect } from 'react'
 import { NavigationContainer } from '@react-navigation/native'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
+import * as MediaLibrary from 'expo-media-library'
 import * as Location from 'expo-location'
 import * as SplashScreen from 'expo-splash-screen'
 import { Home } from './views/home'
@@ -24,6 +25,7 @@ SplashScreen.preventAutoHideAsync()
 export default () => {
 	useEffect(() => {
 		Location.requestForegroundPermissionsAsync()
+		MediaLibrary.requestPermissionsAsync()
 	}, [])
 
 	return (

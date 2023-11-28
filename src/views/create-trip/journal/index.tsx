@@ -24,7 +24,6 @@ export const CreateTripJournal = () => {
 	}
 
 	const removeDay = async () => {
-		console.log(trip?.days.length)
 		if (trip?.days.length === 0) {
 			trips.remove(id).then(() => navigation.navigate('/home'))
 		} else {
