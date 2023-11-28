@@ -1,18 +1,28 @@
 import { StyleSheet, View } from 'react-native'
 import { Widget } from '../../../components/widget'
 import { Title } from '../../../components/title'
-import { TripPlace } from '../../../types/trip'
+import { Trip, TripPlace } from '../../../types/trip'
 import { formatHours } from '../../../components/date-input'
 import { Comment } from '../../../components/comment'
 import { Map } from '../../../components/map'
+import { useNavigation } from '@react-navigation/native'
 
-export type MapWidgetProps = ProgressProps & {
-	onPress: () => void
+export type MapWidgetProps = {
+	day: number
+	trip: Trip
+	index: number
+	place: TripPlace
 }
 
-export const CurrentTripWidget = ({ day, place, onPress }: MapWidgetProps) => {
+export const CurrentTripWidget = ({ index, day, trip, place }: MapWidgetProps) => {
+	const navigation = useNavigation<any>()
+
 	return (
-		<Widget footer={<Footer day={day} place={place} />} shadow onPress={onPress}>
+		<Widget
+			shadow
+			footer={<Footer day={day} place={place} />}
+			onPress={() => navigation.navigate('/map', { index, trip, day })}
+		>
 			<Map style={styles.map} place={place.info} interactive={false} />
 		</Widget>
 	)

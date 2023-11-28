@@ -35,7 +35,7 @@ export const CreateTripForm = () => {
 		setForm(Math.max(0, Math.min(form + 1, 2)))
 
 		if (form == 2 && date && place) {
-			trips.create(place, date).then(({ id }) => navigation.navigate('/trip/journal', { id }))
+			trips.create(place, date).then(({ id }) => navigation.navigate('/trip/journal', { id, home: true }))
 		}
 	}
 

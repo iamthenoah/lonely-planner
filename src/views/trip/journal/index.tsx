@@ -8,17 +8,15 @@ import { useNavigation } from '@react-navigation/native'
 import { Container } from '../../../components/layout/container'
 
 export type TripJournalParams = RouteProp<{
-	params: { id: string; day?: number }
+	params: { id: string; day?: number; home?: boolean }
 }>
 
 export const TripJournal = () => {
 	const navigation = useNavigation<any>()
-
 	const trips = useTrips()
-	const route = useRoute<TripJournalParams>()
-	const [day, setDay] = useState(route.params.day || 0)
+	const { id, day: today, home } = useRoute<TripJournalParams>().params
+	const [day, setDay] = useState(today || 0)
 
-	const id = route.params.id
 	const trip = trips.get(id)
 
 	const appendDay = () => {
@@ -39,7 +37,7 @@ export const TripJournal = () => {
 
 	return (
 		<Container>
-			<JournalHeader id={id} />
+			<JournalHeader id={id} home={home} />
 			<DaysTab editable days={trip.days.length} onDayChange={setDay} onDayAdded={appendDay} initTab={day} />
 			<TripDayPanel editable id={id} day={{ ...trip.days[day], index: day }} onDayRemoved={removeDay} />
 		</Container>
