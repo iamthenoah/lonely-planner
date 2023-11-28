@@ -8,16 +8,23 @@ export type Preferences = {
 
 const UserContext = createContext<{
 	preferences: Preferences | null
+	updateInterests: (interests: PoiInterest[]) => Promise<void>
 }>(null as any)
 
 export const useUser = () => useContext(UserContext)
 
-export const TripProvider = ({ children }: PropsWithChildren) => {
+export const UserProvider = ({ children }: PropsWithChildren) => {
 	const [preferences, setPreferences] = useState<Preferences | null>(null)
 
 	useEffect(() => {
-		AsyncStorage.getItem('preferences').then(raw => setPreferences(raw ? JSON.parse(raw) : null))
+		AsyncStorage.getItem('preferences').then(raw => raw && setPreferences(JSON.parse(raw)))
 	}, [])
 
-	return <UserContext.Provider value={{ preferences }}>{children}</UserContext.Provider>
+	const updateInterests = async (interests: PoiInterest[]) => {
+		const preferences = { interests }
+		await AsyncStorage.setItem('preferences', JSON.stringify(preferences))
+		setPreferences(preferences)
+	}
+
+	return <UserContext.Provider value={{ updateInterests, preferences }}>{children}</UserContext.Provider>
 }

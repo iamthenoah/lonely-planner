@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { FlatList, StyleSheet, View } from 'react-native'
 import { useNavigation } from '@react-navigation/native'
-import { Pois } from '../../types/poi'
+import { PoiInterest, Pois } from '../../types/poi'
 import { Container } from '../../components/layout/container'
 import { Interest } from './components/interest'
 import { Content } from '../../components/layout/content'
@@ -13,14 +13,13 @@ import { useUser } from '../../contexts/user-context'
 export const Onboarding = () => {
 	const user = useUser()
 	const navigation = useNavigation<any>()
-
 	const [intrests, setIntrests] = useState<number[]>([])
 
 	useEffect(() => {
-		if (!user) {
-			navigation.navigate('/onboarding')
+		if (user.preferences) {
+			navigation.navigate('/home')
 		}
-	}, [])
+	}, [user.preferences])
 
 	const onPress = (index: number) => {
 		if (intrests.indexOf(index) === -1) {
@@ -30,8 +29,8 @@ export const Onboarding = () => {
 		}
 	}
 
-	const onSave = () => {
-		navigation.navigate('/home')
+	const onSave = async () => {
+		await user.updateInterests(intrests.map(index => Object.keys(Pois)[index] as PoiInterest))
 	}
 
 	return (
