@@ -25,7 +25,7 @@ export default () => {
 	return (
 		<TripProvider>
 			<NavigationContainer>
-				<Navigator initialRouteName="/home" screenOptions={{ contentStyle: { backgroundColor: 'white' } }}>
+				<Navigator initialRouteName="/onboarding" screenOptions={{ contentStyle: { backgroundColor: 'white' } }}>
 					<Screen name="/home" component={Home} options={options} />
 					<Screen name="/trip/create/form" component={CreateTripForm} options={options} />
 					<Screen name="/trip/create/map" component={CreateTripMap} options={options} />
