@@ -6,9 +6,10 @@ import { useTrips } from '../../../../contexts/trip-context'
 
 export type JournalHeaderProps = {
 	id: string
+	home?: boolean
 }
 
-export const JournalHeader = ({ id }: JournalHeaderProps) => {
+export const JournalHeader = ({ id, home }: JournalHeaderProps) => {
 	const trips = useTrips()
 	const navigation = useNavigation<any>()
 
@@ -18,7 +19,9 @@ export const JournalHeader = ({ id }: JournalHeaderProps) => {
 
 	return (
 		<Header
-			left={<IconButton icon="chevron-back" onPress={navigation.goBack} />}
+			left={
+				<IconButton icon="chevron-back" onPress={() => (home ? navigation.navigate('/home') : navigation.goBack())} />
+			}
 			center={<Title text="Journal" />}
 			right={<IconButton icon="trash" color="red" onPress={onPress} />}
 		/>

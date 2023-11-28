@@ -49,11 +49,7 @@ export const CurrentTripSection = ({ trip }: CurrentTripSectionProps) => {
 		place && (
 			<Content>
 				<Section name="Current Trip" action={<Link text="view day" onPress={onPress} />}>
-					<CurrentTripWidget
-						day={day}
-						place={place}
-						onPress={() => navigation.navigate('/map', { index, trip, day })}
-					/>
+					<CurrentTripWidget trip={trip} day={day} index={index} place={place} />
 				</Section>
 			</Content>
 		)

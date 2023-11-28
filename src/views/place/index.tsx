@@ -33,7 +33,7 @@ export const Place = () => {
 	return (
 		<View>
 			<PlaceHeader place={place} />
-			<ScrollView>
+			<ScrollView style={{ overflow: 'visible' }}>
 				{info?.id && <PlaceTime {...info} />}
 				<PlaceMap place={place} />
 				<PlacePhotos photos={photos} />
