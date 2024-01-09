@@ -11,7 +11,7 @@ import {
 import axios from 'axios'
 import { PoiInterest, Pois } from '../types/poi'
 
-const API_KEY = 'AIzaSyDMXzu4w0VjSBILghLqzBBF8BBB_-EatU8'
+const API_KEY = '...'
 
 export const getPlaces = async (input: string, types?: string[]): Promise<Place[]> => {
 	// https://developers.google.com/maps/documentation/places/web-service/supported_types#table1
